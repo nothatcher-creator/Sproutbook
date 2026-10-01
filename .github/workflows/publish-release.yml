@@ -1,0 +1,47 @@
+name: Publish woodland preview
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-release.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sproutbook-v3-4-0-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_COMMIT: ${{ github.sha }}
+    steps:
+      - name: Download and verify the existing APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in SproutBook-3.4.0-debug.apk SproutBook-3.4.0-debug.apk.sha256 docs/RELEASE-3.4.0.md; do
+            output="${name##*/}"
+            gh api -H 'Accept: application/vnd.github.raw+json' "/repos/$GH_REPO/contents/$name?ref=$RELEASE_COMMIT" > "$output"
+          done
+          sha256sum -c SproutBook-3.4.0-debug.apk.sha256
+      - name: Publish the GitHub pre-release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v3.4.0 >/dev/null 2>&1; then
+            echo 'v3.4.0 already exists; leaving it unchanged.'
+            exit 0
+          fi
+          gh release create v3.4.0 \
+            SproutBook-3.4.0-debug.apk SproutBook-3.4.0-debug.apk.sha256 \
+            --target "$RELEASE_COMMIT" \
+            --title 'SproutBook 3.4.0 · Woodland preview' \
+            --notes-file RELEASE-3.4.0.md \
+            --prerelease

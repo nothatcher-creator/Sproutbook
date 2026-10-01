@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="50" viewBox="0 0 1200 50" role="img" aria-label="Soft meadow and leaf divider">
+  <path d="M0 44Q160 21 310 41T610 35T920 40T1200 32V50H0Z" fill="#91AA76" fill-opacity=".2"/>
+  <path d="M0 48Q210 38 410 46T810 45T1200 42" fill="none" stroke="#94AB79" stroke-opacity=".55"/>
+  <g fill="#9EB787"><path d="M580 35Q563 28 570 18Q584 18 580 35"/><path d="M584 31Q584 15 600 18Q600 29 584 31"/><path d="M616 36Q602 26 610 18Q624 22 616 36"/><path d="M620 32Q620 18 635 22Q633 35 620 32"/></g>
+</svg>
