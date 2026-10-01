@@ -10,6 +10,8 @@
   <a href="docs/INSTALL.md">Installation guide</a>
 </p>
 
+<p align="center"><a href="https://sproutbook-woodland.nothatch.chatgpt.site"><strong>Visit the SproutBook website · Try interactive demos · Suggest a feature</strong></a></p>
+
 ![SproutBook — a little calmer, a little more connected; a soft grassy woodland illustration](docs/assets/woodland-hero.jpg)
 
 <p align="center">
@@ -89,7 +91,7 @@ Parenting and health guidance is general education. For an emergency, contact em
 
 ## Follow along
 
-[Releases](https://github.com/nothatcher-creator/Sproutbook/releases) · [Report a problem or suggest an idea](https://github.com/nothatcher-creator/Sproutbook/issues) · [Figma design reference](https://www.figma.com/design/SjQl6MaLL4e5YqK10grN2c)
+[Showcase website](https://sproutbook-woodland.nothatch.chatgpt.site) · [Releases](https://github.com/nothatcher-creator/Sproutbook/releases) · [Report a problem or suggest an idea](https://github.com/nothatcher-creator/Sproutbook/issues) · [Figma design reference](https://www.figma.com/design/SjQl6MaLL4e5YqK10grN2c)
 
 This repository is the APK release home; it does not currently contain the Kotlin source project. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
 

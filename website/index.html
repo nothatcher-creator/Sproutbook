@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SproutBook · A little calmer, a little more connected</title>
+  <meta name="description" content="Discover SproutBook, the offline native Android parenting app. Explore interactive sample features, download the APK, and suggest what should grow next.">
+  <meta name="theme-color" content="#163b2b">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23163b2b'/%3E%3Cpath d='M16 25V14M16 18Q4 18 7 7Q18 6 16 18M16 14Q17 4 27 7Q28 18 16 14' fill='%23c0d39e' stroke='%23c0d39e' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">✽</span>SproutBook</a>
+  <nav aria-label="Main navigation"><a href="#explore">Try it</a><a href="#features">Features</a><a href="#requests">Suggest an idea</a></nav>
+  <a class="button small download-link" href="https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk">Download APK</a>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-art" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">A HOME FOR YOUR GROWING FAMILY</p>
+      <h1 id="hero-title">The little things.<br><em>All together.</em></h1>
+      <p class="hero-copy">The last feed. The next appointment. That first little smile. A calmer place to care, plan, and remember.</p>
+      <div class="hero-actions"><a class="button download-link" href="https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk">Download for Android</a><a class="text-link" href="#explore">Take a little look inside</a></div>
+      <p class="download-meta">3.4.0 preview · Android 8.0+ · 12.5 MiB</p>
+    </div>
+    <div class="hero-note"><span aria-hidden="true">✽</span><p>Native Android.<br>Family records work offline.</p></div>
+  </section>
+  <div class="promise-strip"><span>One family, many chapters</span><span>No account needed</span><span>Your records on your device</span></div>
+
+  <section class="explore section-wrap" id="explore" aria-labelledby="explore-title">
+    <div class="section-intro"><p class="eyebrow">A LITTLE HANDS-ON</p><h2 id="explore-title">Meet your everyday companions.</h2><p>Try a few small moments of SproutBook. These are simplified website demos using sample data, separate from your family's app records.</p></div>
+    <div class="explore-layout">
+      <div class="demo-choices" role="tablist" aria-label="Interactive feature demos" aria-orientation="vertical">
+        <button type="button" class="demo-choice active" id="tab-memory" role="tab" aria-selected="true" aria-controls="panel-memory" data-demo="memory"><img src="assets/memory.svg" alt=""><span><strong>A tree full of little moments</strong><small>Add a memory. Find it on your tree.</small></span><span class="choice-number" aria-hidden="true">01</span></button>
+        <button type="button" class="demo-choice" id="tab-feeding" role="tab" aria-selected="false" aria-controls="panel-feeding" tabindex="-1" data-demo="feeding"><img src="assets/feeding.svg" alt=""><span><strong>A feed, logged in seconds</strong><small>Bottle, breastfeeding, and pumping.</small></span><span class="choice-number" aria-hidden="true">02</span></button>
+        <button type="button" class="demo-choice" id="tab-teeth" role="tab" aria-selected="false" aria-controls="panel-teeth" tabindex="-1" data-demo="teeth"><span class="tooth-icon" aria-hidden="true">♡</span><span><strong>Every tiny tooth has a story</strong><small>Tap for details. Hold to change.</small></span><span class="choice-number" aria-hidden="true">03</span></button>
+        <p class="demo-footnote">Made for busy hands and tired eyes.<br>Get the Android app for the complete experience.</p>
+      </div>
+      <div class="phone-shell">
+        <div class="phone-top"><span class="avatar">W</span><span><strong>Willow</strong><small>Baby · Sample profile</small></span><span class="sample-pill">DEMO</span></div>
+        <div id="panel-memory" class="demo-panel" role="tabpanel" aria-labelledby="tab-memory">
+          <div class="mini-heading"><h3>Willow's memory tree</h3><p id="memory-count">4 moments, growing together</p></div>
+          <div class="tree-frame"><svg class="tree-branches" viewBox="0 0 340 230" aria-hidden="true"><path d="M167 220Q169 175 170 127M170 170Q119 142 78 107M171 142Q216 124 257 90M169 126Q143 85 116 63M170 128Q186 83 205 51M132 146Q91 143 51 131M213 120Q246 142 287 122M155 103Q146 62 152 31"/></svg><div id="tree-leaves"></div></div>
+          <div class="memory-detail" aria-live="polite"><span id="memory-category">FIRST</span><strong id="memory-detail-title">That first little smile</strong><p id="memory-note">A sleepy smile after breakfast. One to keep.</p></div>
+          <form id="memory-form" class="mini-form"><label for="memory-title">A moment to remember</label><div class="inline-field"><input id="memory-title" maxlength="65" required placeholder="e.g. A sunny walk together"><button class="mini-button" type="submit">Add leaf</button></div></form>
+          <button type="button" class="reset-link" id="reset-memory">Reset sample memories</button>
+        </div>
+        <div id="panel-feeding" class="demo-panel" role="tabpanel" aria-labelledby="tab-feeding" hidden>
+          <div class="mini-heading"><h3>A little nourishment</h3><p>One connected feeding hub</p></div>
+          <div class="segmented" aria-label="Feeding type"><button type="button" class="selected" data-feed="Bottle" aria-pressed="true">Bottle</button><button type="button" data-feed="Breast" aria-pressed="false">Breast</button><button type="button" data-feed="Pump" aria-pressed="false">Pump</button></div>
+          <form id="feeding-form" class="mini-form feed-form"><label id="amount-label" for="feed-amount">Amount (mL)</label><div class="amount-field"><input id="feed-amount" type="number" min="1" max="1000" step="1" value="120" required><span id="feed-unit-label">mL</span></div><div class="unit-line"><span id="feed-hint">Bottle amount</span><button id="unit-toggle" class="reset-link" type="button">Use fl oz</button></div><button class="mini-button full" type="submit">Save sample feeding</button></form>
+          <div class="feeding-summary"><div><strong id="daily-total">210 mL</strong><small>Bottles + pumps today</small></div><div><strong id="feed-count">2</strong><small>Sample logs</small></div></div>
+          <h4>Recent feeds</h4><ul id="feed-history" class="feed-history" aria-live="polite"></ul><button type="button" class="reset-link" id="reset-feeding">Reset sample feeds</button>
+        </div>
+        <div id="panel-teeth" class="demo-panel" role="tabpanel" aria-labelledby="tab-teeth" hidden>
+          <div class="mini-heading"><h3>Little teeth</h3><p>Tap a tooth to see its details</p></div>
+          <div id="teeth-summary" class="teeth-summary" aria-live="polite">1 erupted · 1 observed · 18 not seen</div>
+          <div class="mouth"><div id="upper-teeth" class="arch upper" aria-label="Upper baby teeth"></div><div class="mouth-label">UPPER <span>Baby teeth</span> LOWER</div><div id="lower-teeth" class="arch lower" aria-label="Lower baby teeth"></div></div>
+          <div class="tooth-detail"><strong id="tooth-title">Upper central incisor · right</strong><p id="tooth-state">Erupted</p><label for="tooth-stage">Hold a tooth to unlock its stage</label><select id="tooth-stage" disabled><option>Not seen</option><option>Observed</option><option>Erupted</option></select><button class="mini-button full" id="unlock-tooth" type="button">Unlock selected tooth</button></div>
+          <p class="tiny-note">Hold for a moment to edit. Keyboard users can use Unlock selected tooth.</p><button type="button" class="reset-link" id="reset-teeth">Reset sample teeth</button>
+        </div>
+        <div class="phone-bottom" aria-hidden="true"><span>Today</span><span>Schedule</span><span class="current">Care</span><span>More</span></div>
+      </div>
+      <aside class="demo-aside"><span class="aside-kicker">SMALL MOMENTS.<br>ROOM TO GROW.</span><p>Every child has their own story. SproutBook keeps their care and memories together as life changes.</p><span class="aside-line"></span><p class="aside-small">The full app includes offline storage, child switching, native audio, and your own memory tree.</p></aside>
+    </div>
+    <div class="demo-message" id="demo-message" role="status" aria-live="polite"></div>
+  </section>
+
+  <section class="chapters" aria-labelledby="chapters-title"><div class="section-wrap"><div class="section-intro"><p class="eyebrow">FROM THE VERY BEGINNING</p><h2 id="chapters-title">An app that grows with them.</h2><p>Choose a chapter to see what comes into focus. Earlier records stay with your child.</p></div><div class="stage-choices" aria-label="Choose a life stage"><button type="button" data-stage="Pregnancy" class="selected" aria-pressed="true">Pregnancy</button><button type="button" data-stage="Baby" aria-pressed="false">Baby</button><button type="button" data-stage="Toddler" aria-pressed="false">Toddler</button><button type="button" data-stage="Child" aria-pressed="false">Child</button><button type="button" data-stage="Teen" aria-pressed="false">Teen</button></div><div class="stage-story" aria-live="polite"><span id="stage-number">CHAPTER 01</span><h3 id="stage-title">Getting ready for a new beginning.</h3><p id="stage-copy">Due dates, appointments, kick sessions, contraction timing, preparation lists, and the questions you want to remember.</p><div id="stage-tags"><span>Appointments</span><span>Pregnancy tools</span><span>Birth preparation</span></div></div></div></section>
+
+  <section class="section-wrap features" id="features" aria-labelledby="features-title"><div class="section-intro"><p class="eyebrow">LESS SCATTERED. MORE CONNECTED.</p><h2 id="features-title">Four places. A whole family's day.</h2></div><div class="feature-grid">
+    <article><img src="assets/today-art.jpg" alt="Soft woodland illustration from SproutBook's Today tab" loading="lazy" width="768" height="512"><div><span class="feature-number">01 / TODAY</span><h3>A calmer morning.</h3><p>Quick care logs, recent feeding and sleep, upcoming appointments, low supplies, and little memories.</p></div></article>
+    <article><img src="assets/schedule-art.jpg" alt="Woodland artwork from the Schedule tab" loading="lazy" width="768" height="512"><div><span class="feature-number">02 / SCHEDULE</span><h3>Plans in one place.</h3><p>A connected calendar for appointments, birthdays, due dates, and reminders. Hold a date to start a new appointment.</p></div></article>
+    <article><img src="assets/care-art.jpg" alt="Woodland artwork from the Care tab" loading="lazy" width="768" height="512"><div><span class="feature-number">03 / CARE</span><h3>The everyday essentials.</h3><p>Feeding, sleep, eight native sounds, solids, meals, teeth, milestones, pregnancy tools, and practical parent advice.</p></div></article>
+    <article><img src="assets/more-art.jpg" alt="Woodland artwork from the More tab" loading="lazy" width="768" height="512"><div><span class="feature-number">04 / MORE</span><h3>Room for your family.</h3><p>Profiles, inventory, emergency information, health notes, caregiver mode, settings, and local backups.</p></div></article>
+  </div></section>
+
+  <section class="care-gallery section-wrap"><div class="section-intro"><p class="eyebrow">A LOOK AT THE APP</p><h2>Small details, thoughtfully kept.</h2><p>Real screenshots from the earlier 3.3 care update. These tools remain in 3.4, with newer painted headers and custom icons.</p></div><div class="screenshots"><figure><img src="assets/teeth-screen-v33.png" alt="Real app screenshot of the baby tooth tracker" loading="lazy" width="360" height="800"><figcaption>Teeth, with a careful touch.</figcaption></figure><figure><img src="assets/sound-screen-v33.png" alt="Real app screenshot showing the native sound machine" loading="lazy" width="360" height="800"><figcaption>A softer soundtrack.</figcaption></figure><figure><img src="assets/advice-mom-screen-v33.png" alt="Real app screenshot of searchable parent advice" loading="lazy" width="360" height="800"><figcaption>Support when you need it.</figcaption></figure></div></section>
+
+  <section class="requests section-wrap" id="requests" aria-labelledby="requests-title"><div class="request-copy"><p class="eyebrow">WHAT SHOULD GROW NEXT?</p><h2 id="requests-title">Your everyday ideas belong here.</h2><p>A small shortcut, a missing tool, a better way to keep track. Tell us what would make SproutBook more useful for your family.</p><a class="text-link" href="https://github.com/nothatcher-creator/Sproutbook/issues" target="_blank" rel="noopener noreferrer">Browse requests on GitHub</a><p class="request-note">Requests are public. Use examples instead of real children's names, medical records, or emergency contacts.</p></div>
+    <form id="request-form" class="request-form"><label for="request-title">What would you like to add?</label><input id="request-title" name="title" required minlength="5" maxlength="100" placeholder="A quick way to…"><label for="request-area">Which part of SproutBook?</label><select id="request-area" name="area"><option>Everyday care</option><option>Memory tree</option><option>Schedule</option><option>Feeding</option><option>Sleep & sounds</option><option>Pregnancy</option><option>Caregiver tools</option><option>Accessibility</option><option>Something else</option></select><label for="request-details">How would this help?</label><textarea id="request-details" name="details" rows="4" required minlength="10" maxlength="1500" placeholder="What happens now, and what would make it easier? Please use sample data."></textarea><button type="submit" class="button full">Continue to GitHub</button><p class="form-note">Opens a pre-filled issue for you to review and submit. A GitHub account is required.</p><p id="request-feedback" role="status" aria-live="polite"></p></form>
+  </section>
+
+  <section class="download-section section-wrap" id="download"><div><p class="eyebrow">A LITTLE CALMER, A LITTLE MORE CONNECTED</p><h2>Make room for the little things.</h2><p>Install the native Android preview and make it your family's own.</p></div><div class="download-box"><a class="button download-link" href="https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk">Download SproutBook APK</a><p>3.4.0 preview · Android 8.0+ · 12.5 MiB</p><a href="https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/INSTALL.md" target="_blank" rel="noopener noreferrer">Installation guide</a><span aria-hidden="true"> · </span><a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/V1.0" target="_blank" rel="noopener noreferrer">Release notes</a></div></section>
+  <section class="release-details section-wrap"><details><summary>About this preview and your data</summary><p>This is a debug-signed preview. The final large-text check, Android animation-setting fix, wider physical-device checks, and production signing remain before a general release. Reduce motion is enabled by default; keep it enabled for a static background.</p><p>The app stores records locally with no account requirement or Internet permission. Backups are readable exports; keep them private. Grandparent mode prevents accidental edits and is not a security boundary. Website demos are temporary sample state and are not saved to the app.</p><p>Guidance is general education, not diagnosis. For an emergency, contact emergency services.</p><a href="https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/PRIVACY.md" target="_blank" rel="noopener noreferrer">Read data and privacy notes</a></details></section>
+</main>
+<footer class="section-wrap"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">✽</span>SproutBook</a><p>A small place to remember, plan, and grow together.</p><a href="https://github.com/nothatcher-creator/Sproutbook" target="_blank" rel="noopener noreferrer">Made by Nothatcher · GitHub</a></footer>
+<noscript><p class="noscript">Interactive demos need JavaScript. APK downloads and GitHub links still work.</p></noscript>
+</body></html>
