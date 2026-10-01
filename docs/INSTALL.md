@@ -1,6 +1,6 @@
 # Install SproutBook
 
-[Download the 3.4.0 APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.4.0/SproutBook-3.4.0-debug.apk) · [Direct download](https://raw.githubusercontent.com/nothatcher-creator/Sproutbook/main/SproutBook-3.4.0-debug.apk)
+[Download the 3.4.0 APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk) · [Direct download](https://raw.githubusercontent.com/nothatcher-creator/Sproutbook/main/SproutBook-3.4.0-debug.apk)
 
 Requires Android 8.0 or newer. This is a debug-signed evaluation build, not a Google Play production release.
 

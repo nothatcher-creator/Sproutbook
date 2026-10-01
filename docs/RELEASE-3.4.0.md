@@ -2,7 +2,7 @@
 
 ![SproutBook woodland release artwork](https://raw.githubusercontent.com/nothatcher-creator/Sproutbook/main/docs/assets/woodland-hero.jpg)
 
-[Download Android APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.4.0/SproutBook-3.4.0-debug.apk) · [Installation guide](https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/INSTALL.md)
+[Download Android APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk) · [Installation guide](https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/INSTALL.md)
 
 A softer home for everyday parenting. This release brings the native Android app into a coordinated grassy woodland visual theme while retaining the existing care tools and local records.
 
@@ -22,7 +22,8 @@ Multi-child profiles; Today dashboard; memory trees and timelines; calendar and 
 
 | Item | Value |
 | --- | --- |
-| Version | 3.4.0 / 30400 |
+| App version | 3.4.0 / 30400 |
+| GitHub release tag | `V1.0` |
 | Package | `com.nothatcher.sproutbook` |
 | Minimum Android | Android 8.0 / API 26 |
 | APK | Debug-signed preview, 13,072,309 bytes |

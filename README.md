@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.4.0/SproutBook-3.4.0-debug.apk">
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk">
     <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.4.0 for Android" />
   </a>
 </p>
 <p align="center">
   <strong>Android 8.0+ · Version 3.4.0 · 12.5 MiB · Preview build</strong><br />
   <a href="https://raw.githubusercontent.com/nothatcher-creator/Sproutbook/main/SproutBook-3.4.0-debug.apk">Direct APK download</a> ·
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.4.0">Release notes</a> ·
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/V1.0">Release notes</a> ·
   <a href="docs/INSTALL.md">Installation guide</a>
 </p>
 
