@@ -140,6 +140,19 @@ metadata, native screenshot and feature-request context. Evidence:
 `docs/evidence/browser-2026-10-02/v351-browser.log` and `results.json`. Packaging
 and existing public Sites deployment are now the remaining delivery steps.
 
+Verified local artifacts in `artifacts/3.5.1/`: APK 15,097,626 bytes, source ZIP
+33,454,252 bytes. Source manifest checkpoint is `42d2ef64ac98a90a65df32d87c0dd8553e370a34`.
+ZIP CRC and every manifest file hash passed; no signing/credential files are
+packaged. Source halves reassemble byte-for-byte and each meets the hosting file
+limit. APK SHA-256:
+`bdbef96bdf73dd92d353d043b3e616e49e199915aedf8d003f547c95530c8bca`;
+source SHA-256:
+`5404e40d93fd2fb70238b06bbe0f7f1813519488f856ff7ef16418d033c2bbda`.
+New release static/version/checksum checks and DOM-simulated regressions passed
+again (`static-v351.log`, `dom-v351.log`). Existing hosted 3.5.0 downloads remain.
+Publication is pending; do not regenerate these frozen artifacts while updating
+publication documentation.
+
 1. Package the verified 3.5.1 APK/source/checksums, update download metadata and
    screenshots consistently, publish an evaluation pre-release and the existing
    Sites project, then checkpoint terminal release/deployment details here.

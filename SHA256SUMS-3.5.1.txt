@@ -1,0 +1,2 @@
+bdbef96bdf73dd92d353d043b3e616e49e199915aedf8d003f547c95530c8bca  SproutBook-3.5.1-debug.apk
+5404e40d93fd2fb70238b06bbe0f7f1813519488f856ff7ef16418d033c2bbda  SproutBook-3.5.1-source.zip

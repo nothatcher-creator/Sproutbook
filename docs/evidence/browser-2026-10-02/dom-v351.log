@@ -1,0 +1,1 @@
+PASS: sample memory/feeding/teeth/stage/request regression; scroll advance + reverse; SVG pause; reduced motion; preference; hidden-page and idle frame gating. DOM simulation only, not rendered-browser QA.
