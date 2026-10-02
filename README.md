@@ -87,7 +87,7 @@ This is a **debug-signed evaluation pre-release**, using the existing evaluation
 
 [**Open the woodland website**](https://sproutbook-woodland.nothatch.chatgpt.site)
 
-Scroll through a new beginning, a tree of memories, and a quiet night. The supplied animations follow your scroll position in either direction. Turn motion off for a still experience. Try the sample memory, feeding, and tooth demos, then suggest a feature through the pre-filled GitHub request form.
+Travel from sunrise above the canopy to a memory oak, woodland noticeboard, feeding picnic, quiet nursery, and growing sapling. Layered scenery, animals, leaves, and native app screens follow your scrolling in both directions. The journey ends at a nighttime clearing with the Android download. Reduced motion and motion-off keep a complete static experience. Try the preserved sample memory, feeding, and tooth demos, then suggest a feature through the pre-filled GitHub request form. [Read the website verification](website/QA-JOURNEY.md).
 
 The APK download stays at the top of both the website and this README. Website demos use temporary sample data and never connect to your family's app records.
 

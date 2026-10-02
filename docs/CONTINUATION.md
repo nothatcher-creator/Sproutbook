@@ -3,6 +3,48 @@
 Updated: 2026-10-02 UTC. This document describes this session's work; older QA
 ledgers are historical evidence, not fresh validation.
 
+## Woodland journey follow-up
+
+Website-only enhancement, 2026-10-02: sunrise canopy → memory oak → appointment
+noticeboard → feeding picnic → evening nursery → growing sapling → interactive
+clearing and native screenshots → nighttime download. Four depth layers,
+scroll-reversible plants/animals/cards/phones, three matching optimized generated
+assets, original painted scenes and motion graphics. The APK and all native
+source/signing/release artifacts remain 3.5.1 and were not rebuilt for this task.
+
+- Actual local Chromium 153 and WebKit 26.6: all five viewport cases per engine
+  passed (1440×900, 390×844, 360×640, 320×700, 667×375), including preserved sample
+  demos, reverse poses, wheel, preferences, asset loading and script errors.
+- Four no-JavaScript static cases and two 200% text Chromium cases passed.
+- Static asset/version/download SHA-256 verification and app.js DOM simulation
+  passed separately. These are not native tests. Physical phone browsers,
+  screen-reader speech, GPU/frame rate and battery performance remain unmeasured.
+- Details, reproducible verifiers, performance limits and committed evidence:
+  `website/QA-JOURNEY.md`, `website/STORY-JOURNEY.md`,
+  `website/docs/evidence/woodland-journey-2026-10-02/`.
+- Source Site: `/workspace/sproutbook-showcase`, existing public deployment.
+  Opening fetched the exact source branch with no conflicts or pre-existing
+  uncommitted changes. Bundled skill workflow scripts were unavailable in the
+  cloud skill package; the existing hidden-stdin Sites Git helper was reused.
+- Publication: SUCCESS, 2026-10-02 23:21:55 UTC. Existing public Site version 4,
+  source `b48193de6014bac30e6978f5d989ec395b476185`, saved version
+  `appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_d1a14664ec30819183f1e47622559cb6`,
+  deployment `appgdep_6ac03c8948288191a90f2a3bb7e7b143`, native status `succeeded`.
+  URL https://sproutbook-woodland.nothatch.chatgpt.site
+- Actual live Chromium: all five viewport regressions and both no-JavaScript
+  cases passed after publication. Local WebKit and 200% checks remain separately
+  identified. Live scripts/styles returned HTTP 200 and must revalidate caches.
+- Site source checkout remains clean at the published source commit. Its saved
+  QA snapshot predates publication; final GitHub QA/continuation records are the
+  authoritative delivery ledger. GitHub website source uses public release
+  download URLs; hosted Site keeps verified local APK/checksum downloads. The
+  actual artwork, markup, CSS and controller are mirrored. Frozen release ZIPs
+  and checksums were not regenerated.
+
+Next: physical Android Chrome/iPhone Safari scroll smoothness,
+reduced-motion/assistive-technology review and optional GPU/battery measurement. Do not claim a hardware FPS result from
+headless callback timing.
+
 ## Recovery
 
 - Repository: https://github.com/nothatcher-creator/Sproutbook, clean `main` at

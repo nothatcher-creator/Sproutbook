@@ -1,3 +1,5 @@
+Current journey verification: [QA-JOURNEY.md](QA-JOURNEY.md). The ledger below records the previous three-chapter panel and 3.5.1 download publication.
+
 # Website verification
 
 2026-10-02: actual rendered Chromium 153.0.8010.12 with Playwright 1.63.0,
