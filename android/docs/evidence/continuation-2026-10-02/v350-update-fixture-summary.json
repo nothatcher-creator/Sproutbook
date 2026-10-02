@@ -1,0 +1,11 @@
+{
+  "passed": 1,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.FeatureFlowTest#childSwitchAndGrandparentGuard": {
+      "result": "PASS",
+      "evidence": "v350-update-fixture.log"
+    }
+  }
+}

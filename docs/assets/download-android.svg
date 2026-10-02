@@ -4,6 +4,6 @@
   <rect x="1" y="1" width="478" height="86" rx="28" fill="#234A36" stroke="#91AD73" stroke-width="2"/>
   <path d="M44 58V34M44 44C28 44 24 28 29 24C43 22 47 34 44 44M44 39C45 25 61 22 66 27C68 39 54 45 44 39" fill="#BCD09B" stroke="#BCD09B" stroke-width="2" stroke-linejoin="round"/>
   <text x="83" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#FFF6DF">Download SproutBook</text>
-  <text x="84" y="65" font-family="Arial, sans-serif" font-size="16" fill="#D4DFBE">Android APK · 3.5.0</text>
+  <text x="84" y="65" font-family="Arial, sans-serif" font-size="16" fill="#D4DFBE">Android APK · 3.5.1</text>
   <path d="M438 28v24m-9-8 9 9 9-9m-23 17h28" fill="none" stroke="#E0C78E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

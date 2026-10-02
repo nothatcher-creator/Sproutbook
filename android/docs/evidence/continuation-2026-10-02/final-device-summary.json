@@ -1,0 +1,91 @@
+{
+  "passed": 21,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.HealthLinkRepositoryTest#visitSearchFiltersBeforeLimitKeepsChildOwnershipAndTreatsWildcardsLiterally": {
+      "result": "PASS",
+      "evidence": "health-first-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkRepositoryTest#exactLinkAndInstantSurviveReopenStageChangeAndBackup": {
+      "result": "PASS",
+      "evidence": "health-first-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#duplicateVisitLabelsLinkTheChosenVisit": {
+      "result": "PASS",
+      "evidence": "large-text.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#notesOnlyEditKeepsTheLaterRepeatedHour": {
+      "result": "PASS",
+      "evidence": "health-first-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#searchReachesOlderVisitCancelKeepsDraftAndClearRemovesOnlyLink": {
+      "result": "PASS",
+      "evidence": "health-first-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#caregiverClosesPickerAndChildSwitchDiscardsUnsavedDraft": {
+      "result": "PASS",
+      "evidence": "health-first-device.log"
+    },
+    "com.nothatcher.sproutbook.FoundationTest#profilesSurviveReopenAndStayIndependent": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.MigrationTest#v3InstallationMigratesWithoutLosingChild": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.MigrationTest#originalSchemaMigratesWithoutLosingChild": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.MigrationTest#v31InstallationMigratesWithoutLosingCareRecords": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.BackupTest#exportReviewRestorePhotosAndInvalidRollback": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#toothTapOnlyViewsLongPressChanges": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#arrangeLeafSnapsAndScrollDoesNotOpenIt": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#longPressDragSnapsToBranch": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#scrollingAcrossToothNeverChangesOrOpensIt": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#calendarLongPressKeepsDate": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#healthRecordSavesEditsAndDeletes": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#childSwitchAndGrandparentGuard": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.CareUpgradeTest#soundButtonsPauseResumeSwitchAndStopActualService": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.NavigationTest#profileCreationEnablesSafeNavigation": {
+      "result": "PASS",
+      "evidence": "native-regression.log"
+    },
+    "com.nothatcher.sproutbook.WoodlandVisualTest#lightThemeLargeTextAndLoggingControlsRemainUsable": {
+      "result": "PASS",
+      "evidence": "large-text.log"
+    }
+  }
+}

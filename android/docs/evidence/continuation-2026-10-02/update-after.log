@@ -1,0 +1,30 @@
+{
+  "version": "versionName=3.5.1",
+  "table_counts": {
+    "appointments": 0,
+    "bottlePreps": 0,
+    "children": 2,
+    "diapers": 0,
+    "emergencyCards": 0,
+    "feeds": 1,
+    "foods": 0,
+    "healthRecords": 0,
+    "inventorys": 0,
+    "meals": 0,
+    "memorys": 0,
+    "milestones": 0,
+    "milkContainers": 0,
+    "pottyLogs": 0,
+    "pregnancyEvents": 0,
+    "prepItems": 0,
+    "routineCompletions": 0,
+    "routines": 0,
+    "shoppingItems": 0,
+    "sleeps": 0,
+    "tooths": 0
+  },
+  "rows_sha256": "1600fa601ad7c0560d978c1bcd1fe24af73d7e05311f598b3a93e9bed083783d",
+  "settings_sha256": "6d01ff668f71a0b105ef69a5d968f2f35c9b24c50f2d096b73fad4c1340f6691",
+  "integrity_check": "ok"
+}
+PASS: every family table and DataStore byte preserved across install-as-update.

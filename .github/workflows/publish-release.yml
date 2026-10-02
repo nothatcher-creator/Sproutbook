@@ -1,16 +1,18 @@
-name: Publish woodland motion release
+name: Publish verified SproutBook evaluation release
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/publish-release.yml']
   workflow_dispatch:
+    inputs:
+      version:
+        description: Semantic version of built, tested artifacts already hosted on Sites
+        required: true
+        default: '3.5.1'
 
 permissions:
   contents: write
 
 concurrency:
-  group: sproutbook-woodland-release
+  group: sproutbook-evaluation-release
   cancel-in-progress: false
 
 jobs:
@@ -21,31 +23,39 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
       RELEASE_COMMIT: ${{ github.sha }}
+      RELEASE_VERSION: ${{ inputs.version }}
       DOWNLOAD_BASE: https://sproutbook-woodland.nothatch.chatgpt.site/downloads
     steps:
-      - name: Download and verify the completed 3.5 artifacts
+      - name: Download and verify the completed artifacts
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-3.5.0-debug.apk" --output SproutBook-3.5.0-debug.apk
+          [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-$RELEASE_VERSION-debug.apk" --output "SproutBook-$RELEASE_VERSION-debug.apk"
           # Static hosting limits individual files. Reassemble the original source ZIP without changing any bytes.
           for part in 1 2; do
-            curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-3.5.0-source.zip.part$part" --output "source.part$part"
+            curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-$RELEASE_VERSION-source.zip.part$part" --output "source.part$part"
           done
-          cat source.part1 source.part2 > SproutBook-3.5.0-source.zip
-          for name in SHA256SUMS-3.5.0.txt docs/RELEASE-3.5.0.md; do
+          cat source.part1 source.part2 > "SproutBook-$RELEASE_VERSION-source.zip"
+          for name in "SHA256SUMS-$RELEASE_VERSION.txt" "docs/RELEASE-$RELEASE_VERSION.md"; do
             output="${name##*/}"
             gh api -H 'Accept: application/vnd.github.raw+json' "/repos/$GH_REPO/contents/$name?ref=$RELEASE_COMMIT" > "$output"
           done
-          sha256sum -c SHA256SUMS-3.5.0.txt
-          unzip -tq SproutBook-3.5.0-source.zip
+          sha256sum -c "SHA256SUMS-$RELEASE_VERSION.txt"
+          unzip -tq "SproutBook-$RELEASE_VERSION-source.zip"
+          python3 - <<'PY'
+          import os, zipfile
+          with zipfile.ZipFile(f"SproutBook-{os.environ['RELEASE_VERSION']}-source.zip") as source:
+              names = source.namelist()
+              assert any('/android/app/src/main/' in name and name.endswith('.kt') for name in names)
+              assert not any(name.lower().endswith(('.keystore', '.jks', '.p12')) for name in names)
+          PY
       - name: Publish APK and complete source as a new prerelease
         shell: bash
         run: |
           set -euo pipefail
-          if gh release view v3.5.0 >/dev/null 2>&1; then
-            gh release edit v3.5.0 --title 'SproutBook 3.5.0 · Woodland in motion' --notes-file RELEASE-3.5.0.md --prerelease
-          else
-            gh release create v3.5.0 --target "$RELEASE_COMMIT" --title 'SproutBook 3.5.0 · Woodland in motion' --notes-file RELEASE-3.5.0.md --prerelease
+          if gh release view "v$RELEASE_VERSION" >/dev/null 2>&1; then
+            echo "Release v$RELEASE_VERSION already exists; refusing to replace published artifacts."
+            exit 1
           fi
-          gh release upload v3.5.0 SproutBook-3.5.0-debug.apk SproutBook-3.5.0-source.zip SHA256SUMS-3.5.0.txt --clobber
+          gh release create "v$RELEASE_VERSION" --target "$RELEASE_COMMIT" --title "SproutBook $RELEASE_VERSION · Native care maintenance" --notes-file "RELEASE-$RELEASE_VERSION.md" --prerelease "SproutBook-$RELEASE_VERSION-debug.apk" "SproutBook-$RELEASE_VERSION-source.zip" "SHA256SUMS-$RELEASE_VERSION.txt"

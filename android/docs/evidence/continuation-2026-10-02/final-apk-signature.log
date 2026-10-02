@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Android Debug, O=SproutBook Development, C=CA
+Signer #1 certificate SHA-256 digest: 9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3
+Signer #1 certificate SHA-1 digest: a8aa02240f4ccfa971b828cbcc06f09d0269c3a1
+Signer #1 certificate MD5 digest: c7244d70a383bfa31ff472e1b3d745c0
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: ff4c62c9862328d52259a8845a0ec8792d63153d7aad7752eeeb3fe3c0c02110
+Signer #1 public key SHA-1 digest: 3e06b0b3d992f29fbdd7a5e25d7cac7b59163496
+Signer #1 public key MD5 digest: 658a24e652e99137e543686f31648dee

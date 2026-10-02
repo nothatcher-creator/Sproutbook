@@ -1,9 +1,42 @@
 # Website verification
 
-2026-10-01: JavaScript syntax passed. Static HTML was checked for duplicate IDs, missing assets and broken local section targets.
+2026-10-02: actual rendered Chromium 153.0.8010.12 with Playwright 1.63.0,
+using desktop 1440x900 and mobile-layout viewports 390x844, 360x640 and 667x375.
+Evidence and selected screenshots: `../docs/evidence/browser-2026-10-02/`.
+Repeat with `tools/verify-browser.cjs`; install Playwright and its Chromium engine.
 
-Executed DOM interaction checks passed for: memory add/reset and leaf detail; tab switching; feeding save, units, breastfeeding duration and reset; tooth normal tap, hold-to-unlock, stage change, movement cancellation and reset; life-stage selection; encoded GitHub request title/body and fallback link; invalid sample input preserving state. The APK link targets the verified existing V1.0 release asset for native app version 3.4.0.
+The published 3.5.0 baseline failed a real pointer click on every upper tooth.
+The full-size lower arch intercepted the upper arch's controls. Containers now
+ignore pointer events while their tooth buttons retain them. The same browser
+flow passed on the local Sites-source preview after the CSS fix.
 
-The three optional WebMCP tools were checked with representative valid and invalid calls against a simulated registry and state read-back. Validation in a supported real browser was unavailable. No rendered-browser, mobile viewport screenshot or visual QA is claimed. The site's static deployment does not provide a compatible managed browser preview in this environment.
+Four final viewport runs passed again with the 3.5.1 download metadata, native
+health-picker screenshot, and 3.5.1 feature-request context (`v351-browser.log`
+and `results.json`):
 
-The website uses only temporary sample state. GitHub requests are staged for the visitor to review and submit, not sent automatically. App screenshots are labelled as earlier 3.3 UI.
+- APK download visible at the top; no horizontal page overflow.
+- Scroll-controlled SVG timelines advance and reverse to identical rendered
+  frames; all three chapters are readable; normal wheel scrolling remains intact.
+- SVG clocks stay paused while idle; the short-height layout stacks chapters.
+- Motion-off persists after reload. A live reduced-motion preference switches to
+  the still, stacked layout and disables the override control.
+- Sample memory add/reset, feeding save/reset, all twenty tooth taps, long press,
+  movement cancellation, tap relocking, explicit unlock/stage change/reset, and
+  life-stage selection work through rendered controls.
+- Feature requests produce meaningful feedback and a correctly encoded GitHub
+  draft. Popup navigation was intercepted in the test; no request was submitted.
+- No JavaScript page errors were observed.
+
+Static asset/ID/link/version/checksum checks and the existing DOM-simulated
+regressions also passed in the recovered Sites source checkout. Those are separate
+checks and are not described as browser tests. WebMCP registry tests are simulated;
+no supported real WebMCP browser claim is made.
+
+Limits: these are actual headless Chromium renders on Linux, with viewport
+emulation. No physical-phone browser, Safari/Firefox, screen reader speech,
+hardware frame-rate, or battery claim is made. Website demos use temporary sample
+data separate from family Android records. Native app QA has its own ledger.
+
+Publication of this fix is pending the existing Sites deployment; GitHub's
+`website/` directory alone does not publish it. Final deployment details will be
+recorded in `../docs/CONTINUATION.md`.

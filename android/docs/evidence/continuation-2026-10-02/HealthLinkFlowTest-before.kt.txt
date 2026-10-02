@@ -1,0 +1,55 @@
+package com.nothatcher.sproutbook
+
+import androidx.compose.ui.test.*
+import com.nothatcher.sproutbook.data.*
+import com.nothatcher.sproutbook.ui.dateOf
+import java.time.Instant
+import java.util.TimeZone
+import kotlinx.coroutines.runBlocking
+import org.junit.Assert.assertEquals
+import org.junit.Test
+
+/** Synthetic records on a dedicated emulator only; FlowFixture resets family data. */
+class HealthLinkFlowTest : FlowFixture() {
+    @Test
+    fun duplicateVisitLabelsLinkTheChosenVisit() {
+        val morning = Instant.parse("2025-05-12T10:00:00Z").toEpochMilli()
+        runBlocking {
+            app.repository.saveAppointment(Appointment(id = "morning", childId = "qa-child",
+                title = "Check-up", startsAt = morning, location = "North clinic"))
+            app.repository.saveAppointment(Appointment(id = "afternoon", childId = "qa-child",
+                title = "Check-up", startsAt = morning + 5 * 3600000, location = "South clinic"))
+        }
+        care("Health journal")
+        pageClick("Add health record")
+        compose.onNodeWithText("Title").performScrollTo().performTextInput("Visit notes")
+        // The original selector sorts newest first. Choose its second, older visit.
+        compose.onAllNodesWithText("Check-up · ${dateOf(morning)}").onLast()
+            .performScrollTo().performClick()
+        compose.onNodeWithText("Save health record").performScrollTo().performClick()
+        awaitDb { app.db.healthRecords().all().size == 1 }
+        assertEquals("morning", runBlocking { app.db.healthRecords().all().single().appointmentId })
+    }
+
+    @Test
+    fun notesOnlyEditKeepsTheLaterRepeatedHour() {
+        val previousZone = TimeZone.getDefault()
+        try {
+            TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"))
+            val original = Instant.parse("2025-11-02T06:30:15.123Z").toEpochMilli()
+            runBlocking {
+                app.repository.saveHealth(HealthRecord(id = "overlap", childId = "qa-child",
+                    kind = "Doctor note", recordedAt = original, title = "After clock change"))
+            }
+            care("Health journal")
+            pageClick("After clock change")
+            compose.onNodeWithText("Notes / clinician instructions").performScrollTo()
+                .performTextInput("Reviewed at follow-up")
+            compose.onNodeWithText("Save health record").performScrollTo().performClick()
+            awaitDb { app.db.healthRecords().get("overlap")?.notes == "Reviewed at follow-up" }
+            assertEquals(original, runBlocking { app.db.healthRecords().get("overlap")!!.recordedAt })
+        } finally {
+            TimeZone.setDefault(previousZone)
+        }
+    }
+}

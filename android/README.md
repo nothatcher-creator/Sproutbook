@@ -1,4 +1,4 @@
-# SproutBook · native Android 3.5.0
+# SproutBook · native Android 3.5.1
 
 A fresh Kotlin / Jetpack Compose parenting application. Package: `com.nothatcher.sproutbook`. There is no WebView, website runtime, Godot dependency, account requirement or Internet permission.
 
@@ -18,6 +18,21 @@ Run instrumentation tests only on a dedicated emulator or test installation: the
 The wrapper pins Gradle 9.3.1 and verifies its distribution checksum. The optional `SPROUT_BUILD_ROOT` environment variable moves build outputs outside the checkout. `tools/bootstrap.py` and `tools/emulator.py` document the temporary Linux QA toolchain; normal Android Studio installation is preferred for development.
 
 Debug APKs use the development signing key and are installable for evaluation. Release outputs are unsigned until you supply your own upload keystore through Android Studio's **Generate Signed Bundle / APK** workflow. Keep keystores and passwords outside this repository. Preserve the same signing identity for future updates. Do not distribute a debug key as a production signing identity.
+
+Supply the existing evaluation key from outside the checkout with
+`SPROUT_DEBUG_KEYSTORE=/absolute/path/development-signing.keystore` or
+`-Psprout.debugKeystore=/absolute/path/development-signing.keystore`.
+The existing debug alias/password is the standard Android debug value. If the
+key is unavailable, debug signing fails instead of generating another identity.
+Certificate SHA-256 must match
+`9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3`
+to update the published 3.4/3.5 evaluation installation. A production-signed app
+requires its original private production identity; the evaluation key cannot
+update it. No signing key is committed or included in the new source archive.
+
+On small ephemeral Linux hosts, set `SPROUT_TOOLCHAIN_ROOT` to a filesystem with
+at least 8 GiB free before running the optional bootstrap/emulator scripts.
+The emulator uses the current user's Android directory (or `ANDROID_AVD_HOME`).
 
 The delivered source archive also contains `release-artifacts/` with the R8-shrunk unsigned APK and Android App Bundle from the verified release build. Sign a release with your own upload key before distribution.
 
@@ -92,7 +107,13 @@ Read `docs/QA.md`, `docs/Review.md`, `docs/Progress.md` and `docs/Plan.md`. The 
 
 Branding is centralized in `res/values/strings.xml`, `res/drawable/ic_sprout.xml` and `ui/Theme.kt`. Future enhancements in the project plan are not presented as working UI buttons.
 
-For repeatable evaluation updates, `development-signing.keystore` is included with
-the standard Android debug alias/password (`androiddebugkey` / `android`). It is
-public development material, never a release signing identity. The debug build
-uses this file so reinstalling a later evaluation build can preserve local records.
+## Health journal maintenance · 3.5.1
+
+Link health notes to the exact appointment through a searchable native picker.
+Full date, time and place distinguish repeat visits; older results can be loaded
+without a fixed history cutoff. Cancel keeps the draft link, and choosing no linked
+appointment clears only that link. The picker shows only the selected child's
+visits and closes when caregiver mode or child context changes. Notes-only edits
+preserve the original timestamp, including the later daylight-saving overlap hour.
+Room schema 11 and backup format 3 remain unchanged. Fresh evidence and remaining
+limits are recorded in `../docs/CONTINUATION.md` and `docs/QA-3.5.1.md`.

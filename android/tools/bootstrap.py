@@ -1,6 +1,6 @@
 """Reproducible local tool bootstrap for ephemeral Linux QA hosts (not needed in Android Studio)."""
 import os,pathlib,urllib.request,zipfile,tarfile,hashlib,xml.etree.ElementTree as ET,concurrent.futures,shutil
-root=pathlib.Path('/tmp/sprout-toolchain');root.mkdir(exist_ok=True)
+root=pathlib.Path(os.environ.get('SPROUT_TOOLCHAIN_ROOT','/tmp/sprout-toolchain'));root.mkdir(parents=True,exist_ok=True)
 archive_cache=pathlib.Path(os.environ.get('SPROUT_ARCHIVE_CACHE',str(root)));archive_cache.mkdir(parents=True,exist_ok=True)
 def download(url,name,sha1=None):
  p=root/name

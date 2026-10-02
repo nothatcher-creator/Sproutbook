@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-debug.apk">
-    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.5.0 for Android" />
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.1/SproutBook-3.5.1-debug.apk">
+    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.5.1 for Android" />
   </a>
 </p>
 <p align="center">
-  <strong>Android 8.0+ · Version 3.5.0 · 14.1 MiB · Preview build</strong><br />
-  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.0-debug.apk">Direct APK download</a> ·
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.5.0">Release notes</a> ·
+  <strong>Android 8.0+ · Version 3.5.1 · 14.4 MiB · Preview build</strong><br />
+  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.1-debug.apk">Direct APK download</a> ·
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.5.1">Release notes</a> ·
   <a href="docs/INSTALL.md">Installation guide</a>
 </p>
 
@@ -61,6 +61,10 @@ From pregnancy through the teen years, each child has their own profile and reco
 
 *Actual 3.5 emulator screenshots, using sample family data.*
 
+<img src="docs/assets/health-link-screen-v351.png" width="230" alt="Actual SproutBook 3.5.1 native appointment picker showing visit time and clinic" />
+
+*The 3.5.1 health picker, captured on the Android emulator with sample visits.*
+
 ![A soft grassy woodland divider](docs/assets/meadow-divider.svg)
 
 ## Install in a few steps
@@ -69,15 +73,15 @@ From pregnancy through the teen years, each child has their own profile and reco
 2. Open the APK on your Android phone. If prompted, allow installation from the browser or Files app you used.
 3. Install, open SproutBook, and add your child's profile.
 
-For updates, keep your existing app installed and use the same signing identity. Export a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](SHA256SUMS-3.5.0.txt) to verify the download.
+For updates, keep your existing app installed and use the same signing identity. Export a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](SHA256SUMS-3.5.1.txt) to verify the download.
 
-## The woodland motion update
+## Care notes, connected to the right visit
 
-**3.5.0** brings your animated woodland asset pack into the native app: 46 motion assets in two themes, with static fallbacks, animated selected tabs, banner details, button responses, and save feedback. The painted scenes, custom icons, forest greens, and warm cream carry through dark and light themes.
+**3.5.1** adds a searchable native appointment picker to the health journal. Date, time, and place distinguish repeat check-ups; older visits stay reachable. Cancel keeps your draft link, and clearing a link leaves the appointment intact. Editing notes keeps the original recorded time, including daylight-saving clock changes.
 
-Motion respects the app's **Reduce motion** preference, Android's animation setting, battery saver, lifecycle, and visibility. Reduce motion remains enabled by default for new installs. Artwork is bundled locally and works offline.
+The 3.5 woodland motion pack, painted scenes, custom icons, forest greens, and warm cream remain in both themes. Motion respects Reduce motion, Android's animation setting, battery saver, lifecycle, and visibility. Reduce motion stays enabled by default for new installs; artwork works offline.
 
-The native update passed **79 unit tests and 12 focused Android checks**, including the tooth/calendar/memory gestures, sound service controls, multiple children, caregiver protections, motion settings, and light-theme feeding at 150% text size. This is a **debug-signed evaluation pre-release**. Physical-device performance checks and production signing remain. See [the release notes](docs/RELEASE-3.5.0.md) for exact evidence and limits.
+This is a **debug-signed evaluation pre-release**, using the existing evaluation signing identity. Room schema 11 and backup format 3 stay compatible. Fresh build, unit, emulator, update-preservation, and rendered-browser results are recorded in [the release notes](docs/RELEASE-3.5.1.md) and [native QA](android/docs/QA-3.5.1.md). Physical-device performance, spoken TalkBack, Android 17 behavior, and production signing remain open.
 
 ## Wander through the showcase
 
@@ -99,6 +103,6 @@ Parenting and health guidance is general education. For an emergency, contact em
 
 [Showcase website](https://sproutbook-woodland.nothatch.chatgpt.site) · [Releases](https://github.com/nothatcher-creator/Sproutbook/releases) · [Report a problem or suggest an idea](https://github.com/nothatcher-creator/Sproutbook/issues) · [Figma design reference](https://www.figma.com/design/SjQl6MaLL4e5YqK10grN2c)
 
-The [3.5 release includes the complete Kotlin source project](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-source.zip), editable artwork, motion assets, QA evidence, and unsigned release outputs. This repository contains the release documentation and showcase website source. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
+The [3.5.1 release includes the complete Kotlin source project](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.1/SproutBook-3.5.1-source.zip), editable artwork, motion assets, QA evidence, and unsigned release outputs. The recovered native project is now in [`android/`](android/); showcase source stays in [`website/`](website/). Build instructions and the persistent [continuation checkpoint](docs/CONTINUATION.md) let another session continue from verified work. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
 
 <p align="center"><em>A small place to remember, plan, and grow together.</em></p>

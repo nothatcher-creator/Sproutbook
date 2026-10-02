@@ -1,0 +1,6 @@
+Starting: Intent { cmp=com.nothatcher.sproutbook/.MainActivity }
+Status: timeout
+LaunchState: UNKNOWN (-1)
+Activity: com.nothatcher.sproutbook/.MainActivity
+WaitTime: 11248
+Complete

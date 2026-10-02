@@ -1,0 +1,17 @@
+{
+  "passed": 0,
+  "failed": 2,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#duplicateVisitLabelsLinkTheChosenVisit": {
+      "result": "FAIL",
+      "evidence": "health-red-device.log",
+      "reason": "org.junit.ComparisonFailure: expected:<[morning]> but was:<[afternoon]>"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#notesOnlyEditKeepsTheLaterRepeatedHour": {
+      "result": "FAIL",
+      "evidence": "health-red-device.log",
+      "reason": "java.lang.AssertionError: expected:<1762065015123> but was:<1762061415123>"
+    }
+  }
+}

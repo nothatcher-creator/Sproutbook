@@ -1,0 +1,77 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.HealthLinkFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.HealthLinkFlowTest:
+INSTRUMENTATION_STATUS: test=duplicateVisitLabelsLinkTheChosenVisit
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.HealthLinkFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=org.junit.ComparisonFailure: expected:<[morning]> but was:<[afternoon]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HealthLinkFlowTest.duplicateVisitLabelsLinkTheChosenVisit(HealthLinkFlowTest.kt:31)
+
+INSTRUMENTATION_STATUS: stream=
+Error in duplicateVisitLabelsLinkTheChosenVisit(com.nothatcher.sproutbook.HealthLinkFlowTest):
+org.junit.ComparisonFailure: expected:<[morning]> but was:<[afternoon]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HealthLinkFlowTest.duplicateVisitLabelsLinkTheChosenVisit(HealthLinkFlowTest.kt:31)
+
+INSTRUMENTATION_STATUS: test=duplicateVisitLabelsLinkTheChosenVisit
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.HealthLinkFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=notesOnlyEditKeepsTheLaterRepeatedHour
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.HealthLinkFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected:<1762065015123> but was:<1762061415123>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.nothatcher.sproutbook.HealthLinkFlowTest.notesOnlyEditKeepsTheLaterRepeatedHour(HealthLinkFlowTest.kt:50)
+
+INSTRUMENTATION_STATUS: stream=
+Error in notesOnlyEditKeepsTheLaterRepeatedHour(com.nothatcher.sproutbook.HealthLinkFlowTest):
+java.lang.AssertionError: expected:<1762065015123> but was:<1762061415123>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.nothatcher.sproutbook.HealthLinkFlowTest.notesOnlyEditKeepsTheLaterRepeatedHour(HealthLinkFlowTest.kt:50)
+
+INSTRUMENTATION_STATUS: test=notesOnlyEditKeepsTheLaterRepeatedHour
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 79.329
+There were 2 failures:
+1) duplicateVisitLabelsLinkTheChosenVisit(com.nothatcher.sproutbook.HealthLinkFlowTest)
+org.junit.ComparisonFailure: expected:<[morning]> but was:<[afternoon]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HealthLinkFlowTest.duplicateVisitLabelsLinkTheChosenVisit(HealthLinkFlowTest.kt:31)
+2) notesOnlyEditKeepsTheLaterRepeatedHour(com.nothatcher.sproutbook.HealthLinkFlowTest)
+java.lang.AssertionError: expected:<1762065015123> but was:<1762061415123>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.nothatcher.sproutbook.HealthLinkFlowTest.notesOnlyEditKeepsTheLaterRepeatedHour(HealthLinkFlowTest.kt:50)
+
+FAILURES!!!
+Tests run: 2,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

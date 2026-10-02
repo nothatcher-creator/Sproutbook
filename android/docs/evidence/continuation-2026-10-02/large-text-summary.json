@@ -1,0 +1,15 @@
+{
+  "passed": 2,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.WoodlandVisualTest#lightThemeLargeTextAndLoggingControlsRemainUsable": {
+      "result": "PASS",
+      "evidence": "large-text.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#duplicateVisitLabelsLinkTheChosenVisit": {
+      "result": "PASS",
+      "evidence": "large-text.log"
+    }
+  }
+}

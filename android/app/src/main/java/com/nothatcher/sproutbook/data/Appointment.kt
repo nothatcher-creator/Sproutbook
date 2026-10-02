@@ -33,6 +33,16 @@ data class Appointment(
 
 @Dao
 interface AppointmentDao {
+    @Query("SELECT * FROM appointments WHERE childId=:childId AND id=:id")
+    fun observeOne(childId: String, id: String): Flow<Appointment?>
+
+    @Query(
+        "SELECT * FROM appointments WHERE childId=:childId " +
+            "AND (instr(lower(title), lower(:query)) > 0 OR instr(lower(location), lower(:query)) > 0) " +
+            "ORDER BY startsAt DESC, id ASC LIMIT :limit"
+    )
+    fun search(childId: String, query: String, limit: Int): Flow<List<Appointment>>
+
     @Query("SELECT * FROM appointments WHERE childId=:childId ORDER BY startsAt DESC LIMIT :limit")
     fun observe(childId: String, limit: Int = 500): Flow<List<Appointment>>
 

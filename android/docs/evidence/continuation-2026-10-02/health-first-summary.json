@@ -1,0 +1,32 @@
+{
+  "passed": 5,
+  "failed": 1,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.HealthLinkRepositoryTest#visitSearchFiltersBeforeLimitKeepsChildOwnershipAndTreatsWildcardsLiterally": {
+      "result": "PASS",
+      "evidence": "health-green-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkRepositoryTest#exactLinkAndInstantSurviveReopenStageChangeAndBackup": {
+      "result": "PASS",
+      "evidence": "health-green-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#duplicateVisitLabelsLinkTheChosenVisit": {
+      "result": "FAIL",
+      "evidence": "health-green-device.log",
+      "reason": "java.lang.AssertionError: Action performScrollTo() failed."
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#notesOnlyEditKeepsTheLaterRepeatedHour": {
+      "result": "PASS",
+      "evidence": "health-green-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#searchReachesOlderVisitCancelKeepsDraftAndClearRemovesOnlyLink": {
+      "result": "PASS",
+      "evidence": "health-green-device.log"
+    },
+    "com.nothatcher.sproutbook.HealthLinkFlowTest#caregiverClosesPickerAndChildSwitchDiscardsUnsavedDraft": {
+      "result": "PASS",
+      "evidence": "health-green-device.log"
+    }
+  }
+}

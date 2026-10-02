@@ -6,6 +6,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
+import com.nothatcher.sproutbook.core.RecordTime
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.ui.*
 import java.time.*
@@ -19,9 +20,6 @@ fun HealthScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit =
         remember(child.id, filter, limit) {
                 vm.repo.db.healthRecords().history(child.id, filter, limit + 1)
             }
-            .collectAsStateWithLifecycle(emptyList())
-    val appointments by
-        remember(child.id) { vm.repo.db.appointments().observe(child.id, 10000) }
             .collectAsStateWithLifecycle(emptyList())
     var edit by remember { mutableStateOf<HealthRecord?>(null) }
     Page("Health journal", "Observations and records for better care conversations") {
@@ -64,10 +62,14 @@ fun HealthScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit =
         var unit by remember { mutableStateOf(h.unit) }
         var notes by remember { mutableStateOf(h.notes) }
         var appointment by remember { mutableStateOf(h.appointmentId) }
-        var date by remember { mutableStateOf(dateOf(h.recordedAt)) }
+        val linkedVisit by remember(child.id, appointment) {
+            vm.repo.db.appointments().observeOne(child.id, appointment.orEmpty())
+        }.collectAsStateWithLifecycle(initialValue = null)
+        val editZone = remember { ZoneId.systemDefault() }
+        var date by remember { mutableStateOf(Instant.ofEpochMilli(h.recordedAt).atZone(editZone).toLocalDate()) }
         var time by remember {
             mutableStateOf(
-                Instant.ofEpochMilli(h.recordedAt).atZone(ZoneId.systemDefault()).toLocalTime()
+                Instant.ofEpochMilli(h.recordedAt).atZone(editZone).toLocalTime()
             )
         }
         var deleting by remember { mutableStateOf(false) }
@@ -77,9 +79,10 @@ fun HealthScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit =
                 Muted("$kind · ${stamp(h.recordedAt,state.prefs.time24)}")
                 Text("$value $unit")
                 Text(notes)
-                appointments
-                    .firstOrNull { it.id == appointment }
-                    ?.let { Muted("Visit · ${it.title}") }
+                linkedVisit?.takeIf { it.id == appointment }?.let {
+                    Muted("Visit · ${it.title}")
+                    Muted(visitDetails(it, state.prefs.time24))
+                }
             } else {
                 Choices(healthKinds, kind) { kind = it }
                 Field("Title", title, { title = it })
@@ -95,17 +98,8 @@ fun HealthScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit =
                 TimeButton(time, state.prefs.time24) { time = it }
                 Field("Notes / clinician instructions", notes, { notes = it }, lines = 3)
                 Section("Linked appointment (optional)")
-                Choices(
-                    listOf("None") + appointments.map { "${it.title} · ${dateOf(it.startsAt)}" },
-                    appointments
-                        .firstOrNull { it.id == appointment }
-                        ?.let { "${it.title} · ${dateOf(it.startsAt)}" } ?: "None",
-                ) { label ->
-                    appointment =
-                        appointments
-                            .firstOrNull { "${it.title} · ${dateOf(it.startsAt)}" == label }
-                            ?.id
-                }
+                AppointmentLinkPicker(vm.repo.db.appointments(), child.id, appointment,
+                    linkedVisit, state.prefs.time24) { appointment = it }
                 Action("Save health record") {
                     vm.perform {
                         vm.repo.saveHealth(
@@ -115,7 +109,7 @@ fun HealthScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit =
                                 value = value,
                                 unit = unit,
                                 notes = notes,
-                                recordedAt = at(date, time),
+                                recordedAt = RecordTime.edited(h.recordedAt, date, time, editZone),
                                 appointmentId = appointment,
                             )
                         )

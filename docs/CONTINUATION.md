@@ -64,8 +64,67 @@ Use a dedicated emulator. Do not commit signing material or credentials.
   draft feedback. Screenshots/results: `artifacts/browser-baseline/` and
   `artifacts/browser-fixed/`. Browser checks do not establish hardware frame rate.
 - Dedicated API 29 software emulator is running at `emulator-5554`, 360x800/dpi160,
-  without KVM or audio output. A boot System UI ANR was dismissed before app tests.
-  Native regression and performance checks are pending; no physical-device test.
+  without KVM or audio output. Boot System UI ANRs were dismissed using current
+  UI hierarchies before app tests. After a stopped process, stale locks were removed
+  only from this test AVD. No physical-device test has happened.
+- RED native tests reproduced both health bugs on the original 3.5.0 app:
+  same-title/date appointments selected the other visit, and a notes-only edit
+  shifted the later New York repeated hour back one hour. Both tests failed as
+  expected; `health-red-device.log` and `health-red-summary.json` preserve evidence.
+- Implemented a child-constrained, searchable native appointment picker with full
+  date/time/place, explicit empty/loading states, lazy pages of 50, and exact IDs.
+  Cancel changes no draft link; clear removes only the link. Reused
+  `RecordTime.edited` to preserve the original recorded instant. Room schema 11 and
+  backup format 3 remain unchanged. Candidate version is 3.5.1 / 30501.
+- Read-only independent review found no Critical/Important issue. Corrected its
+  minor finding: candidate state resets for a new search, and stale linked-visit
+  emissions cannot render the wrong summary. Pagination keeps existing rows while
+  the next page loads. Review ran no tests and accessed no signing material.
+- Final candidate debug/test build passed after the review correction (82 tasks,
+  17 executed / 65 up-to-date, 2m 5s). App unit test reran and passed; unchanged core
+  tests were up-to-date after the 78-test baseline. Initial 3.5.1 R8 release APK, AAB,
+  and vital lint build passed (59 tasks, 5m 38s); outputs are unsigned. Final R8
+  APK/AAB, vital lint and corrected test APK rebuild passed after review: 114 tasks,
+  19 executed / 95 up-to-date, 3m 32s.
+- An initial pre-update fixture run was interrupted by an install and reported
+  `Process crashed`; it is NOT counted as a pass. Its snapshot failed the intended
+  two-child fixture assertion. The clean, sequential retry against 3.5.0 passed
+  (1 test, 76.737s). See
+  `v350-pre-update-child-guard.log`; do not use it as passing evidence.
+- Install-as-update PASS: rebuilt original-source 3.5.0 → 3.5.1 with two children, teen stage, selected
+  child, a feeding record and caregiver preference retained. Wi-Fi/data disabled;
+  actual native UI showed Ash, teen dashboard and read-only mode. SQLite integrity
+  checks passed; every family table's rows and DataStore bytes matched exactly
+  before/after. `update-preservation.json` and `update-offline-ui.xml` preserve
+  evidence. Test snapshots in ignored `artifacts/update-persistence/` are synthetic.
+- Missing-key check PASS: overriding the evaluation key with a nonexistent path
+  caused `validateSigningDebug` to fail; no replacement file appeared. Expected
+  failure is in `signing-missing-key.log`. Final APK uses the preserved certificate.
+- All 6 new native health tests PASS across completed runs. Initial run had 5 passes
+  and one test timing failure (unloaded lazy row); added a loading wait/list scroll,
+  and the corrected duplicate-selection rerun passed. `health-final-summary.json`
+  records final outcomes; initial failure logs remain. Native UI also verified
+  pagination, hardware Back, no-match Cancel, clear-without-delete, caregiver closing
+  the picker, and discard on child switch. Repository tests checked literal `%`/`_`
+  search, two-child ownership, reopen, stage changes, exact link/time and actual
+  BackupManager export/review/restore. Final APK certificate/manifest and the complete
+  original motion asset contract passed separate checks.
+- Existing affected regressions PASS: 14 completed tests, 210.517s, zero failures,
+  errors or skips. Foundation/reopen (1), migrations (3), backup/photos/rollback (1),
+  gestures (5), health CRUD (1), child/caregiver (1), native sound controls (1), and
+  four-tab navigation (1). `native-regression-summary.json` lists exact methods.
+- Large text PASS: two completed tests at font scale 1.5, 80.197s, no skips. Light
+  theme feeding saved 80 mL; the dark-theme native health picker selected the exact
+  repeated-title visit. Normal/large picker and light feeding screenshots were
+  captured from native Android and visually inspected. The final ledger has
+  21 unique passing methods (`final-device-summary.json`).
+- Bounded performance capture: one stable 8-second health-picker idle sample at
+  150% text, Reduce motion enabled / Android animation scales 0, 0 app frames after
+  gfxinfo reset. PSS 95,834 → 94,928 KiB and 1 Activity in both snapshots. Raw
+  frames/memory/UI evidence is in `performance/`. This is not smoothness, battery or
+  leak evidence. First post-instrumentation UI query returned no XML; discarded,
+  then retried with fresh valid trees. Final crash buffer empty. Font scale restored
+  to 1.0 after QA.
 - Existing public Sites project recovered:
   `appgprj_6abeb834e1a88191a8c4907b567c3472`, saved version 2. Hosted source checkout
   is `/workspace/sproutbook-showcase`, starting commit
@@ -76,16 +135,14 @@ Use a dedicated emulator. Do not commit signing material or credentials.
 
 ## Next steps
 
-1. Recover native health regressions: duplicate appointment labels select the first
-   visit, and notes-only edits reconstruct the earlier DST overlap instant. New
-   `HealthLinkFlowTest` is being compiled against unchanged app behavior.
-2. Complete the health editor improvement: identity-based searchable visit picker
-   with full date/time/place, lazy results, caregiver protection, and preservation
-   of the original recorded instant via existing `RecordTime.edited`.
-3. Finish all-tooth hit/hold/scroll checks, publish the verified showcase fix through
-   the existing Sites integration, and record the terminal deployment result.
-4. Compile, test affected persistence/child/caregiver/gesture flows, document exact
-   results and limits, and checkpoint source and verified artifacts.
+All four rendered-browser cases passed again against final local 3.5.1 website
+metadata, native screenshot and feature-request context. Evidence:
+`docs/evidence/browser-2026-10-02/v351-browser.log` and `results.json`. Packaging
+and existing public Sites deployment are now the remaining delivery steps.
+
+1. Package the verified 3.5.1 APK/source/checksums, update download metadata and
+   screenshots consistently, publish an evaluation pre-release and the existing
+   Sites project, then checkpoint terminal release/deployment details here.
 
 Hardware audio quality, battery use, spoken TalkBack, Android 17 background behavior,
 and production signing were already open gates at 3.5.0. Do not claim them passed.

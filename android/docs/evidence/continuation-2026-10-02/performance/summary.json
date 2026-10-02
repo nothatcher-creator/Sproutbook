@@ -1,0 +1,10 @@
+{
+  "flow": "Native health appointment picker, stable idle at 150% text size",
+  "version": "3.5.1 / 30501, debug",
+  "device": "API 29 software emulator, 360x800/dpi160, no KVM, 2 guest cores",
+  "samples": 1,
+  "idle_interval_seconds": 8.0,
+  "app_frames": 0,
+  "motion": "Reduce motion enabled and all Android animation scales zero",
+  "limits": "No physical-device frame rate, battery, leak, CPU profile, or audio-quality inference"
+}

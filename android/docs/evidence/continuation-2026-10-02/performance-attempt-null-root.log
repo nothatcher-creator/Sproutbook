@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/sproutbook-picker-perf.py", line 34, in <module>
+    click('Care')
+  File "/workspace/scratch/sproutbook-picker-perf.py", line 20, in click
+    data,root=tree(); target=node(root,label)
+              ^^^^^^
+  File "/workspace/scratch/sproutbook-picker-perf.py", line 12, in tree
+    root=ET.fromstring(data)
+         ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/xml/etree/ElementTree.py", line 1335, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: syntax error: line 1, column 0

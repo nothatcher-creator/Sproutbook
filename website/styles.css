@@ -16,3 +16,5 @@
 @media(max-height:650px) and (min-width:721px){.motion-enabled .story-stage{min-height:420px}.story-copy{padding-block:30px 70px}.story-step h3{font-size:2.8rem}.story-step .eyebrow{margin-bottom:12px}.story-step p:not(.eyebrow){font-size:.9rem}.story-tag{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.woodland-story{height:auto!important;min-height:0!important}.story-stage{position:relative!important;height:auto!important}.hero-art,[data-scroll-art] img{transform:none!important}}
 @media(max-height:620px) and (max-width:720px){.motion-enabled .woodland-story{height:auto;min-height:0}.motion-enabled .story-stage{position:relative;top:auto;height:auto;min-height:0;max-height:none}.motion-enabled .story-copy{height:auto;display:flex;align-items:start;padding:34px 26px 270px;gap:30px}.motion-enabled .story-step{opacity:1;transform:none}.motion-enabled .story-progress{display:none}}
+/* Both arches span the diagram; only teeth should receive pointer events. */
+.arch{pointer-events:none}.arch .tooth{pointer-events:auto}

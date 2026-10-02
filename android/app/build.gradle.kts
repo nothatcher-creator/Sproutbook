@@ -2,11 +2,13 @@ plugins { id("com.android.application"); id("org.jetbrains.kotlin.plugin.compose
 android {
  namespace = "com.nothatcher.sproutbook"
  compileSdk { version = release(37) { minorApiLevel = 0 } }
- defaultConfig { applicationId = "com.nothatcher.sproutbook"; minSdk = 26; targetSdk = 37; versionCode = 30500; versionName = "3.5.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+ defaultConfig { applicationId = "com.nothatcher.sproutbook"; minSdk = 26; targetSdk = 37; versionCode = 30501; versionName = "3.5.1"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
  sourceSets.getByName("androidTest").assets.srcDir("$projectDir/schemas")
  buildFeatures { compose = true; buildConfig = true }
  compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
- signingConfigs.getByName("debug") { storeFile = rootProject.file("development-signing.keystore"); storePassword = "android"; keyAlias = "androiddebugkey"; keyPassword = "android" }
+ // An absent evaluation key fails signing; Gradle must never generate a replacement.
+ val evaluationKey = providers.gradleProperty("sprout.debugKeystore").orElse(providers.environmentVariable("SPROUT_DEBUG_KEYSTORE"))
+ signingConfigs.getByName("debug") { storeFile = rootProject.file(evaluationKey.orNull ?: "development-signing.keystore"); storePassword = "android"; keyAlias = "androiddebugkey"; keyPassword = "android" }
  buildTypes { release { isMinifyEnabled = true; proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro") } }
 }
 kotlin { compilerOptions { jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17); optIn.addAll("androidx.compose.material3.ExperimentalMaterial3Api", "androidx.compose.foundation.ExperimentalFoundationApi") } }
