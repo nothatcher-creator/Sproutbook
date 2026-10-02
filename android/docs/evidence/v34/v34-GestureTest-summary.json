@@ -1,0 +1,27 @@
+{
+  "passed": 5,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.GestureTest#toothTapOnlyViewsLongPressChanges": {
+      "result": "PASS",
+      "evidence": "v34-GestureTest.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#arrangeLeafSnapsAndScrollDoesNotOpenIt": {
+      "result": "PASS",
+      "evidence": "v34-GestureTest.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#longPressDragSnapsToBranch": {
+      "result": "PASS",
+      "evidence": "v34-GestureTest.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#scrollingAcrossToothNeverChangesOrOpensIt": {
+      "result": "PASS",
+      "evidence": "v34-GestureTest.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#calendarLongPressKeepsDate": {
+      "result": "PASS",
+      "evidence": "v34-GestureTest.log"
+    }
+  }
+}

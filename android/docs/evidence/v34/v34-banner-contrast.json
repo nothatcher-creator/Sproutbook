@@ -1,0 +1,9 @@
+{
+  "method": "Conservative entire raster pixel sweep at weakest gradient scrim .78 and solid subtitle foreground. Actual text inset uses stronger scrim; anti-aliased glyph edges are not measured.",
+  "minimum_subtitle_contrast": {
+    "woodland_scene_care.jpg": 4.83,
+    "woodland_scene_today.jpg": 4.84,
+    "woodland_scene_more.jpg": 5.3,
+    "woodland_scene_schedule.jpg": 4.84
+  }
+}

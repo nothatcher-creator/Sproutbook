@@ -1,0 +1,215 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.NativeControlsTest:
+INSTRUMENTATION_STATUS: test=nursingAndPumpingSaveTheirOwnFields
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=nursingAndPumpingSaveTheirOwnFields
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sleepAndSoundControlsReachNativeService
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:51)
+	at com.nothatcher.sproutbook.NativeControlsTest.sleepAndSoundControlsReachNativeService(NativeControlsTest.kt:43)
+
+INSTRUMENTATION_STATUS: stream=
+Error in sleepAndSoundControlsReachNativeService(com.nothatcher.sproutbook.NativeControlsTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:51)
+	at com.nothatcher.sproutbook.NativeControlsTest.sleepAndSoundControlsReachNativeService(NativeControlsTest.kt:43)
+
+INSTRUMENTATION_STATUS: test=sleepAndSoundControlsReachNativeService
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=milestoneCompletionCreatesLeafFromLabelledSwitches
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=milestoneCompletionCreatesLeafFromLabelledSwitches
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=healthRecordSavesEditsAndDeletes
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=healthRecordSavesEditsAndDeletes
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=emergencyCardEditsAndCopiesOffline
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Allergies' (ignoreCase: false))
+Nodes found:
+1) Node #1736 at (l=38.0, t=-12.0, r=103.0, b=12.0)px
+Text = '[Allergies]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 7 siblings
+2) Node #1773 at (l=20.0, t=96.0, r=340.0, b=184.0)px
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Allergies]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 8 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextInput(TextActions.kt:41)
+	at com.nothatcher.sproutbook.NativeControlsTest.emergencyCardEditsAndCopiesOffline(NativeControlsTest.kt:69)
+
+INSTRUMENTATION_STATUS: stream=
+Error in emergencyCardEditsAndCopiesOffline(com.nothatcher.sproutbook.NativeControlsTest):
+java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Allergies' (ignoreCase: false))
+Nodes found:
+1) Node #1736 at (l=38.0, t=-12.0, r=103.0, b=12.0)px
+Text = '[Allergies]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 7 siblings
+2) Node #1773 at (l=20.0, t=96.0, r=340.0, b=184.0)px
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Allergies]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 8 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextInput(TextActions.kt:41)
+	at com.nothatcher.sproutbook.NativeControlsTest.emergencyCardEditsAndCopiesOffline(NativeControlsTest.kt:69)
+
+INSTRUMENTATION_STATUS: test=emergencyCardEditsAndCopiesOffline
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.FeatureFlowTest:
+INSTRUMENTATION_STATUS: test=feedingAddEditDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=feedingAddEditDelete
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.GestureTest:
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 292.99
+There were 2 failures:
+1) sleepAndSoundControlsReachNativeService(com.nothatcher.sproutbook.NativeControlsTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:51)
+	at com.nothatcher.sproutbook.NativeControlsTest.sleepAndSoundControlsReachNativeService(NativeControlsTest.kt:43)
+2) emergencyCardEditsAndCopiesOffline(com.nothatcher.sproutbook.NativeControlsTest)
+java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Allergies' (ignoreCase: false))
+Nodes found:
+1) Node #1736 at (l=38.0, t=-12.0, r=103.0, b=12.0)px
+Text = '[Allergies]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 7 siblings
+2) Node #1773 at (l=20.0, t=96.0, r=340.0, b=184.0)px
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Allergies]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 8 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextInput(TextActions.kt:41)
+	at com.nothatcher.sproutbook.NativeControlsTest.emergencyCardEditsAndCopiesOffline(NativeControlsTest.kt:69)
+
+FAILURES!!!
+Tests run: 7,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,22 @@
+{
+  "version": "3.1.0",
+  "version_code": 30100,
+  "package": "com.nothatcher.sproutbook",
+  "database_version": 10,
+  "backup_version": 2,
+  "core_tests_passed": 59,
+  "android_tests_passed": 44,
+  "release_smoke": "PASS",
+  "SproutBook-3.1.0-debug.apk": {
+    "bytes": 12264668,
+    "sha256": "358ce0690c91b917b64e0fc312e37debd39fe01a4191d650fdc4efcfe19927a7"
+  },
+  "SproutBook-3.1.0-release-unsigned.apk": {
+    "bytes": 2193282,
+    "sha256": "d72ee42c89b487c6763b2f2effd203b098ad9722454a139a05831d57e6e64c5e"
+  },
+  "SproutBook-3.1.0-release-unsigned.aab": {
+    "bytes": 4603428,
+    "sha256": "b05382bd070dad102a61df4bb7e7dd1de3e7edfbd47e91f8cbf3c45bcbff637d"
+  }
+}

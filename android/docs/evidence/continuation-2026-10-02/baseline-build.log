@@ -1,0 +1,139 @@
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Configure project :app
+w: file:///workspace/Sproutbook/android/app/build.gradle.kts:6:45: 'fun srcDir(srcDir: Any): Any' is deprecated. Use `directories` mutable set instead.
+Checking the license for package Android SDK Platform 37.0 in /workspace/scratch/sprout-toolchain/android-sdk/licenses
+License for package Android SDK Platform 37.0 accepted.
+Preparing "Install Android SDK Platform 37.0 (revision 2)".
+Warning: Package "Android SDK Platform 37.0" (platforms;android-37.0) should be installed in 
+"/workspace/scratch/sprout-toolchain/android-sdk/platforms/android-37.0" but 
+it already exists.
+Installing in "/workspace/scratch/sprout-toolchain/android-sdk/platforms/android-37.0-2" instead.
+"Install Android SDK Platform 37.0 (revision 2)" ready.
+Installing Android SDK Platform 37.0 in /workspace/scratch/sprout-toolchain/android-sdk/platforms/android-37.0-2
+"Install Android SDK Platform 37.0 (revision 2)" complete.
+"Install Android SDK Platform 37.0 (revision 2)" finished.
+Observed package id 'platforms;android-37.0' in inconsistent location '/workspace/scratch/sprout-toolchain/android-sdk/platforms/android-37.0-2' (Expected '/workspace/scratch/sprout-toolchain/android-sdk/platforms/android-37.0')
+
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:processResources NO-SOURCE
+> Task :core:processTestResources NO-SOURCE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :core:compileKotlin
+> Task :app:processDebugNavigationResources
+> Task :core:compileJava NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :core:compileTestKotlin
+> Task :app:kspDebugKotlin
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:testClasses UP-TO-DATE
+
+> Task :core:test
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :app:javaPreCompileDebug
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:compileDebugNavigationResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:checkDebugDuplicateClasses
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebug
+
+> Task :app:compileDebugJavaWithJavac
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:dexBuilderDebug
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+> Task :app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeLibDexDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so. Run with --info option to learn more.
+
+> Task :app:validateSigningDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:processDebugAndroidTestManifest
+> Task :app:generateDebugAndroidTestBuildConfig
+> Task :app:generateDebugAndroidTestResources
+> Task :app:packageDebugAndroidTestResources
+> Task :app:processDebugAndroidTestNavigationResources
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:parseDebugAndroidTestLocalResources
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:generateDebugAndroidTestRFile
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:kspDebugAndroidTestKotlin
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:compileDebugAndroidTestNavigationResources
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestResources
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:compileDebugAndroidTestKotlin
+> Task :app:compileDebugAndroidTestJavaWithJavac
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 8m 9s
+82 actionable tasks: 82 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

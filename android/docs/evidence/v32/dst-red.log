@@ -1,0 +1,170 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.RepeatedHourFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.RepeatedHourFlowTest:
+INSTRUMENTATION_STATUS: test=unchangedFrozenContainerCanBeUsedDuringRepeatedHour
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.RepeatedHourFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to assert the following: (is enabled)
+Semantics of the node:
+Node #325 at (l=20.0, t=638.0, r=340.0, b=688.0)px
+Role = 'Button'
+Text = '[Mark used]'
+[Disabled]
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 12 siblings
+Selector used: (Text + InputText + EditableText contains 'Mark used' (ignoreCase: false))
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsEnabled(Assertions.kt:56)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.unchangedFrozenContainerCanBeUsedDuringRepeatedHour$lambda$0(RepeatedHourFlowTest.kt:43)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda2.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.unchangedFrozenContainerCanBeUsedDuringRepeatedHour(RepeatedHourFlowTest.kt:39)
+
+INSTRUMENTATION_STATUS: stream=
+Error in unchangedFrozenContainerCanBeUsedDuringRepeatedHour(com.nothatcher.sproutbook.RepeatedHourFlowTest):
+java.lang.AssertionError: Failed to assert the following: (is enabled)
+Semantics of the node:
+Node #325 at (l=20.0, t=638.0, r=340.0, b=688.0)px
+Role = 'Button'
+Text = '[Mark used]'
+[Disabled]
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 12 siblings
+Selector used: (Text + InputText + EditableText contains 'Mark used' (ignoreCase: false))
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsEnabled(Assertions.kt:56)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.unchangedFrozenContainerCanBeUsedDuringRepeatedHour$lambda$0(RepeatedHourFlowTest.kt:43)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda2.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.unchangedFrozenContainerCanBeUsedDuringRepeatedHour(RepeatedHourFlowTest.kt:39)
+
+INSTRUMENTATION_STATUS: test=unchangedFrozenContainerCanBeUsedDuringRepeatedHour
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.RepeatedHourFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=pottyNotesPreserveRepeatedHourTimestamp
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.RepeatedHourFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected:<1762065000125> but was:<1762061400125>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.pottyNotesPreserveRepeatedHourTimestamp$lambda$2(RepeatedHourFlowTest.kt:77)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.pottyNotesPreserveRepeatedHourTimestamp(RepeatedHourFlowTest.kt:61)
+
+INSTRUMENTATION_STATUS: stream=
+Error in pottyNotesPreserveRepeatedHourTimestamp(com.nothatcher.sproutbook.RepeatedHourFlowTest):
+java.lang.AssertionError: expected:<1762065000125> but was:<1762061400125>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.pottyNotesPreserveRepeatedHourTimestamp$lambda$2(RepeatedHourFlowTest.kt:77)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.pottyNotesPreserveRepeatedHourTimestamp(RepeatedHourFlowTest.kt:61)
+
+INSTRUMENTATION_STATUS: test=pottyNotesPreserveRepeatedHourTimestamp
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.RepeatedHourFlowTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=usedContainerNotesPreserveRepeatedHourTimestamp
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.RepeatedHourFlowTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:52)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.usedContainerNotesPreserveRepeatedHourTimestamp$lambda$1(RepeatedHourFlowTest.kt:56)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.usedContainerNotesPreserveRepeatedHourTimestamp(RepeatedHourFlowTest.kt:49)
+
+INSTRUMENTATION_STATUS: stream=
+Error in usedContainerNotesPreserveRepeatedHourTimestamp(com.nothatcher.sproutbook.RepeatedHourFlowTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:52)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.usedContainerNotesPreserveRepeatedHourTimestamp$lambda$1(RepeatedHourFlowTest.kt:56)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.usedContainerNotesPreserveRepeatedHourTimestamp(RepeatedHourFlowTest.kt:49)
+
+INSTRUMENTATION_STATUS: test=usedContainerNotesPreserveRepeatedHourTimestamp
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 183.784
+There were 3 failures:
+1) unchangedFrozenContainerCanBeUsedDuringRepeatedHour(com.nothatcher.sproutbook.RepeatedHourFlowTest)
+java.lang.AssertionError: Failed to assert the following: (is enabled)
+Semantics of the node:
+Node #325 at (l=20.0, t=638.0, r=340.0, b=688.0)px
+Role = 'Button'
+Text = '[Mark used]'
+[Disabled]
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 12 siblings
+Selector used: (Text + InputText + EditableText contains 'Mark used' (ignoreCase: false))
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsEnabled(Assertions.kt:56)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.unchangedFrozenContainerCanBeUsedDuringRepeatedHour$lambda$0(RepeatedHourFlowTest.kt:43)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda2.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.unchangedFrozenContainerCanBeUsedDuringRepeatedHour(RepeatedHourFlowTest.kt:39)
+2) pottyNotesPreserveRepeatedHourTimestamp(com.nothatcher.sproutbook.RepeatedHourFlowTest)
+java.lang.AssertionError: expected:<1762065000125> but was:<1762061400125>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.pottyNotesPreserveRepeatedHourTimestamp$lambda$2(RepeatedHourFlowTest.kt:77)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.pottyNotesPreserveRepeatedHourTimestamp(RepeatedHourFlowTest.kt:61)
+3) usedContainerNotesPreserveRepeatedHourTimestamp(com.nothatcher.sproutbook.RepeatedHourFlowTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:52)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.usedContainerNotesPreserveRepeatedHourTimestamp$lambda$1(RepeatedHourFlowTest.kt:56)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.inRepeatedHour(RepeatedHourFlowTest.kt:19)
+	at com.nothatcher.sproutbook.RepeatedHourFlowTest.usedContainerNotesPreserveRepeatedHourTimestamp(RepeatedHourFlowTest.kt:49)
+
+FAILURES!!!
+Tests run: 3,  Failures: 3
+
+
+INSTRUMENTATION_CODE: -1

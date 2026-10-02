@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.BackupFormatTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-09-30T10:35:21.519Z" hostname="1e94ceee1825" time="0.097">
+  <properties/>
+  <testcase name="rejectPhotoPathTraversal" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.056"/>
+  <testcase name="rejectFutureHistoricalRecords" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.01"/>
+  <testcase name="rejectShoppingForeignChildLink" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.002"/>
+  <testcase name="newBackupRequiresNewTables" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectDuplicateTreeSlots" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.007"/>
+  <testcase name="rejectDuplicateIdentities" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="futurePlanningRemainsValid" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.009"/>
+  <testcase name="rejectInvalidPreparedBottle" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="legacyBackupUpgradesWithoutLosingRecords" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectFutureVersion" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectOrphanRecord" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.002"/>
+  <testcase name="rejectInvalidEnum" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="pastRemindersDoNotSpam" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="missingOptionalFieldsRepair" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectToothIndexBeforeIntegerNarrowing" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectMissingTables" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectWrongTypes" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

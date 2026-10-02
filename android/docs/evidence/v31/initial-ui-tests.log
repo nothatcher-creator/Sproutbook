@@ -1,0 +1,521 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.NewCareFlowTest:
+INSTRUMENTATION_STATUS: test=newToolsAreReadOnlyForCaregivers
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains 'Growth journal' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #160 at (l=0.0, t=120.0, r=360.0, b=672.0)px
+CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@97434d'
+IsTraversalGroup = 'true'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+Has 8 children, 5 siblings
+Selector used: (ScrollToIndex is defined)
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:261)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:34)
+	at com.nothatcher.sproutbook.FlowFixture.care(FeatureFlowTest.kt:41)
+	at com.nothatcher.sproutbook.NewCareFlowTest.newToolsAreReadOnlyForCaregivers(NewCareFlowTest.kt:15)
+
+INSTRUMENTATION_STATUS: stream=
+Error in newToolsAreReadOnlyForCaregivers(com.nothatcher.sproutbook.NewCareFlowTest):
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains 'Growth journal' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #160 at (l=0.0, t=120.0, r=360.0, b=672.0)px
+CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@97434d'
+IsTraversalGroup = 'true'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+Has 8 children, 5 siblings
+Selector used: (ScrollToIndex is defined)
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:261)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:34)
+	at com.nothatcher.sproutbook.FlowFixture.care(FeatureFlowTest.kt:41)
+	at com.nothatcher.sproutbook.NewCareFlowTest.newToolsAreReadOnlyForCaregivers(NewCareFlowTest.kt:15)
+
+INSTRUMENTATION_STATUS: test=newToolsAreReadOnlyForCaregivers
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=diaperQuickLogEditDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=diaperQuickLogEditDelete
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=prepareUseBottleAndShopping
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains 'Shopping list' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #675 at (l=0.0, t=92.0, r=360.0, b=672.0)px
+CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@f6e6e60'
+IsTraversalGroup = 'true'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+Has 7 children, 5 siblings
+Selector used: (ScrollToIndex is defined)
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:261)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:34)
+	at com.nothatcher.sproutbook.FlowFixture.care(FeatureFlowTest.kt:41)
+	at com.nothatcher.sproutbook.NewCareFlowTest.prepareUseBottleAndShopping(NewCareFlowTest.kt:103)
+
+INSTRUMENTATION_STATUS: stream=
+Error in prepareUseBottleAndShopping(com.nothatcher.sproutbook.NewCareFlowTest):
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains 'Shopping list' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #675 at (l=0.0, t=92.0, r=360.0, b=672.0)px
+CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@f6e6e60'
+IsTraversalGroup = 'true'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+Has 7 children, 5 siblings
+Selector used: (ScrollToIndex is defined)
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:261)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:34)
+	at com.nothatcher.sproutbook.FlowFixture.care(FeatureFlowTest.kt:41)
+	at com.nothatcher.sproutbook.NewCareFlowTest.prepareUseBottleAndShopping(NewCareFlowTest.kt:103)
+
+INSTRUMENTATION_STATUS: test=prepareUseBottleAndShopping
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unsavedUnlinkCannotReplenishSupplies
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unsavedUnlinkCannotReplenishSupplies
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=growthAddEditDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Measurement' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextReplacement(TextActions.kt:68)
+	at com.nothatcher.sproutbook.NewCareFlowTest.growthAddEditDelete(NewCareFlowTest.kt:42)
+
+INSTRUMENTATION_STATUS: stream=
+Error in growthAddEditDelete(com.nothatcher.sproutbook.NewCareFlowTest):
+java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Measurement' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextReplacement(TextActions.kt:68)
+	at com.nothatcher.sproutbook.NewCareFlowTest.growthAddEditDelete(NewCareFlowTest.kt:42)
+
+INSTRUMENTATION_STATUS: test=growthAddEditDelete
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=noteEditsPreservePreciseAndUnknownGrowthUnits
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=noteEditsPreservePreciseAndUnknownGrowthUnits
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=noteEditsPreserveUnknownGrowthUnits
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NewCareFlowTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=noteEditsPreserveUnknownGrowthUnits
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.FeatureFlowTest:
+INSTRUMENTATION_STATUS: test=formulaResetsWhenChildChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=formulaResetsWhenChildChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=feedingAddEditDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=feedingAddEditDelete
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=olderFeedingRemainsReachable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=olderFeedingRemainsReachable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=childSwitchAndGrandparentGuard
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.FeatureFlowTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=childSwitchAndGrandparentGuard
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.GestureTest:
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=arrangeLeafSnapsAndScrollDoesNotOpenIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=arrangeLeafSnapsAndScrollDoesNotOpenIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=longPressDragSnapsToBranch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=longPressDragSnapsToBranch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=scrollingAcrossToothNeverChangesOrOpensIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=scrollingAcrossToothNeverChangesOrOpensIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=calendarLongPressKeepsDate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=calendarLongPressKeepsDate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NavigationSweepTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.NavigationSweepTest:
+INSTRUMENTATION_STATUS: test=everyCareDestinationAndSettingsToolsOpen
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NavigationSweepTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=everyCareDestinationAndSettingsToolsOpen
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.CareFlowTest:
+INSTRUMENTATION_STATUS: test=pregnancySessionsPersist
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=pregnancySessionsPersist
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=foodAndMealSave
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=foodAndMealSave
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=memoryAddTimelineEditDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=memoryAddTimelineEditDelete
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=inventorySaveAdjustAndDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=inventorySaveAdjustAndDelete
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.NativeControlsTest:
+INSTRUMENTATION_STATUS: test=nursingAndPumpingSaveTheirOwnFields
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=nursingAndPumpingSaveTheirOwnFields
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sleepAndSoundControlsReachNativeService
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sleepAndSoundControlsReachNativeService
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=milestoneCompletionCreatesLeafFromLabelledSwitches
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=milestoneCompletionCreatesLeafFromLabelledSwitches
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=healthRecordSavesEditsAndDeletes
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=healthRecordSavesEditsAndDeletes
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=emergencyCardEditsAndCopiesOffline
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=emergencyCardEditsAndCopiesOffline
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeAccessibilityTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.TreeAccessibilityTest:
+INSTRUMENTATION_STATUS: test=nativeAccessibilityCanInspectFullCanopyAndArrange
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeAccessibilityTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=27
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=nativeAccessibilityCanInspectFullCanopyAndArrange
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 519.546
+There were 3 failures:
+1) newToolsAreReadOnlyForCaregivers(com.nothatcher.sproutbook.NewCareFlowTest)
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains 'Growth journal' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #160 at (l=0.0, t=120.0, r=360.0, b=672.0)px
+CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@97434d'
+IsTraversalGroup = 'true'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+Has 8 children, 5 siblings
+Selector used: (ScrollToIndex is defined)
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:261)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:34)
+	at com.nothatcher.sproutbook.FlowFixture.care(FeatureFlowTest.kt:41)
+	at com.nothatcher.sproutbook.NewCareFlowTest.newToolsAreReadOnlyForCaregivers(NewCareFlowTest.kt:15)
+2) prepareUseBottleAndShopping(com.nothatcher.sproutbook.NewCareFlowTest)
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains 'Shopping list' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #675 at (l=0.0, t=92.0, r=360.0, b=672.0)px
+CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@f6e6e60'
+IsTraversalGroup = 'true'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+Has 7 children, 5 siblings
+Selector used: (ScrollToIndex is defined)
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:261)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:34)
+	at com.nothatcher.sproutbook.FlowFixture.care(FeatureFlowTest.kt:41)
+	at com.nothatcher.sproutbook.NewCareFlowTest.prepareUseBottleAndShopping(NewCareFlowTest.kt:103)
+3) growthAddEditDelete(com.nothatcher.sproutbook.NewCareFlowTest)
+java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Measurement' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextReplacement(TextActions.kt:68)
+	at com.nothatcher.sproutbook.NewCareFlowTest.growthAddEditDelete(NewCareFlowTest.kt:42)
+
+FAILURES!!!
+Tests run: 27,  Failures: 3
+
+
+INSTRUMENTATION_CODE: -1

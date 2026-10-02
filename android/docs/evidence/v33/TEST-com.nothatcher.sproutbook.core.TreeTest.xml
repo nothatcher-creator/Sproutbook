@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.TreeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-01T08:42:32.727Z" hostname="d8f2b7689c7c" time="0.002">
+  <properties/>
+  <testcase name="exactBranchSnaps" classname="com.nothatcher.sproutbook.core.TreeTest" time="0.001"/>
+  <testcase name="fullCanopyGetsAnotherChapter" classname="com.nothatcher.sproutbook.core.TreeTest" time="0.0"/>
+  <testcase name="occupiedAnchorSwapsBothLeaves" classname="com.nothatcher.sproutbook.core.TreeTest" time="0.001"/>
+  <testcase name="firstLeafStartsAtFirstAnchor" classname="com.nothatcher.sproutbook.core.TreeTest" time="0.0"/>
+  <testcase name="farDropDoesNotMoveLeaf" classname="com.nothatcher.sproutbook.core.TreeTest" time="0.0"/>
+  <testcase name="vacantAnchorReused" classname="com.nothatcher.sproutbook.core.TreeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

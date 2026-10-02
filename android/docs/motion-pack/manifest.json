@@ -1,0 +1,473 @@
+{
+  "name": "SproutBook Woodland Motion",
+  "version": "1.0.0",
+  "asset_count": 46,
+  "variants": [
+    "light",
+    "dark"
+  ],
+  "fps": 24,
+  "reference": "SproutBook 3.4.0 source, current palette and outline icons",
+  "assets": [
+    {
+      "id": "icon-add",
+      "label": "Add",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing add icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-advice",
+      "label": "Advice",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing advice icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-back",
+      "label": "Back",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing back icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-care",
+      "label": "Care",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing care icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-clock",
+      "label": "Clock",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing clock icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-delete",
+      "label": "Delete",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing delete icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-diapers",
+      "label": "Diapers",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing diapers icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-feeding",
+      "label": "Feeding",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing feeding icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-growth",
+      "label": "Growth",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing growth icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-health",
+      "label": "Health",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing health icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-help",
+      "label": "Help",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing help icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-inventory",
+      "label": "Inventory",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing inventory icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-memory",
+      "label": "Memory",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing memory icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-milestones",
+      "label": "Milestones",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing milestones icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-more",
+      "label": "More",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing more icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-next",
+      "label": "Next",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing next icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-pause",
+      "label": "Pause",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing pause icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-photo",
+      "label": "Photo",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing photo icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-play",
+      "label": "Play",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing play icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-pregnancy",
+      "label": "Pregnancy",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing pregnancy icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-profile",
+      "label": "Profile",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing profile icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-pump",
+      "label": "Pump",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing pump icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-routine",
+      "label": "Routine",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing routine icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-save",
+      "label": "Save",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing save icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-schedule",
+      "label": "Schedule",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing schedule icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-settings",
+      "label": "Settings",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing settings icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-shopping",
+      "label": "Shopping",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing shopping icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-sleep",
+      "label": "Sleep",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing sleep icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-solids",
+      "label": "Solids",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing solids icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-sound",
+      "label": "Sound",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing sound icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-stop",
+      "label": "Stop",
+      "duration": 1.25,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing stop icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-teeth",
+      "label": "Teeth",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing teeth icon replacement; active state or entry animation"
+    },
+    {
+      "id": "icon-today",
+      "label": "Today",
+      "duration": 3,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Care icons",
+      "use": "Existing today icon replacement; active state or entry animation"
+    },
+    {
+      "id": "brand-sprout-book",
+      "label": "SproutBook mark",
+      "duration": 4,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Brand",
+      "use": "Welcome, splash or About screen"
+    },
+    {
+      "id": "loader-sprout",
+      "label": "Sprout loader",
+      "duration": 2.5,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Feedback",
+      "use": "Indeterminate loading; pair with a text label"
+    },
+    {
+      "id": "memory-tree",
+      "label": "Memory Tree",
+      "duration": 5,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Memories",
+      "use": "Memory Tree empty state or header; keep interactive leaves separate"
+    },
+    {
+      "id": "memory-leaf",
+      "label": "Memory leaf",
+      "duration": 4,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Memories",
+      "use": "Memory decoration or new memory confirmation"
+    },
+    {
+      "id": "feedback-saved",
+      "label": "Saved gently",
+      "duration": 1.5,
+      "mode": "once",
+      "w": 64,
+      "h": 64,
+      "category": "Feedback",
+      "use": "Successful save; play once"
+    },
+    {
+      "id": "milestone-bloom",
+      "label": "Milestone bloom",
+      "duration": 4,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Memories",
+      "use": "Milestone achievement accent"
+    },
+    {
+      "id": "woodland-floating-leaf",
+      "label": "Floating leaf",
+      "duration": 5,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Woodland",
+      "use": "Single ambient leaf; low-opacity overlay"
+    },
+    {
+      "id": "woodland-fireflies",
+      "label": "Firefly veil",
+      "duration": 6,
+      "mode": "loop",
+      "w": 320,
+      "h": 112,
+      "category": "Woodland",
+      "use": "Sparse background overlay; display at 20\u201335% opacity"
+    },
+    {
+      "id": "woodland-grass-border",
+      "label": "Meadow border",
+      "duration": 5,
+      "mode": "loop",
+      "w": 320,
+      "h": 96,
+      "category": "Woodland",
+      "use": "Bottom edge of a banner; keep away from controls"
+    },
+    {
+      "id": "woodland-dawn",
+      "label": "Morning meadow",
+      "duration": 8,
+      "mode": "loop",
+      "w": 320,
+      "h": 128,
+      "category": "Woodland",
+      "use": "Today banner; transparent sky for app background"
+    },
+    {
+      "id": "woodland-night",
+      "label": "Sleepy moon",
+      "duration": 6,
+      "mode": "loop",
+      "w": 320,
+      "h": 128,
+      "category": "Woodland",
+      "use": "Sleep and sound banner"
+    },
+    {
+      "id": "woodland-butterfly",
+      "label": "Little butterfly",
+      "duration": 2.5,
+      "mode": "loop",
+      "w": 64,
+      "h": 64,
+      "category": "Woodland",
+      "use": "Small decorative accent"
+    },
+    {
+      "id": "brand-wordmark",
+      "label": "SproutBook wordmark",
+      "duration": 4,
+      "mode": "loop",
+      "w": 240,
+      "h": 72,
+      "category": "Brand",
+      "use": "Welcome and app showcase; transparent outlined wordmark"
+    }
+  ]
+}

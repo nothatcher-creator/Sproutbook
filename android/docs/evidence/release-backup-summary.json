@@ -1,0 +1,29 @@
+{
+  "format": "sproutbook",
+  "version": 1,
+  "record_counts": {
+    "children": 4,
+    "appointments": 300,
+    "memorys": 500,
+    "feeds": 500,
+    "sleeps": 0,
+    "foods": 0,
+    "meals": 0,
+    "tooths": 0,
+    "milestones": 0,
+    "pregnancyEvents": 0,
+    "prepItems": 0,
+    "inventorys": 0,
+    "emergencyCards": 0,
+    "healthRecords": 0
+  },
+  "photo_count": 0,
+  "export_bytes": 262094,
+  "variant": "R8-shrunk release, public development key used only for QA",
+  "restore_review": "4 children, 1304 records, 0 photos confirmed in native dialog",
+  "restore_feedback": "Backup restored. Reminders are off.",
+  "re_export_tables_identical": true,
+  "re_export_photos_identical": true,
+  "re_export_settings_identical": true,
+  "final_crash_buffer_empty": true
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.AdviceCatalogTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-30T21:34:22.465Z" hostname="b254a0af6f07" time="0.045">
+  <properties/>
+  <testcase name="helpStartsWithEmergencyAndAlwaysThreeSteps" classname="com.nothatcher.sproutbook.core.AdviceCatalogTest" time="0.031"/>
+  <testcase name="searchFindsLatchAcrossCaseAndTrimsInput" classname="com.nothatcher.sproutbook.core.AdviceCatalogTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

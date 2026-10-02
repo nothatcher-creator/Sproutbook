@@ -1,0 +1,183 @@
+{
+  "passed": 44,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.NavigationTest#profileCreationEnablesSafeNavigation": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareRepositoryTest#transactionsChildIsolationBackupAndReadOnly": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.NewCareRepositoryTest#failedRestockRollsBackAndDeletedParentsClearLinks": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.FoundationTest#profilesSurviveReopenAndStayIndependent": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.MigrationTest#v3InstallationMigratesWithoutLosingChild": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.MigrationTest#originalSchemaMigratesWithoutLosingChild": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.RepositoryTest#leafCreationIsAtomicAndCaregiverModeGuardsWrites": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.BackupTest#exportReviewRestorePhotosAndInvalidRollback": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.ReviewRegressionTest#collidingMilestoneLeafNeverCrossesChildren": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.ReviewRegressionTest#excessiveNotesAreRejectedBeforeSaving": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.ReviewRegressionTest#excessivePumpTotalCannotPoisonBackup": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.CrudAndHistoryTest#pagingHasNoHistoricalCutoffAndFiltersBeforeLimit": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.CrudAndHistoryTest#connectedRecordsCreateUpdateDelete": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.SoundTest#nativeAudioStartsAndStopsEverySound": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.NotificationTest#appointmentNotificationsRequireOptInAndFreshRecord": {
+      "result": "PASS",
+      "evidence": "data-tests.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#newToolsAreReadOnlyForCaregivers": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#diaperQuickLogEditDelete": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#prepareUseBottleAndShopping": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#unsavedUnlinkCannotReplenishSupplies": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#growthAddEditDelete": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#noteEditsPreservePreciseAndUnknownGrowthUnits": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewCareFlowTest#noteEditsPreserveUnknownGrowthUnits": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#formulaResetsWhenChildChanges": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#feedingAddEditDelete": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#olderFeedingRemainsReachable": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#childSwitchAndGrandparentGuard": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#toothTapOnlyViewsLongPressChanges": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#arrangeLeafSnapsAndScrollDoesNotOpenIt": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#longPressDragSnapsToBranch": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#scrollingAcrossToothNeverChangesOrOpensIt": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#calendarLongPressKeepsDate": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.NavigationSweepTest#everyCareDestinationAndSettingsToolsOpen": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.CareFlowTest#pregnancySessionsPersist": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.CareFlowTest#foodAndMealSave": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.CareFlowTest#memoryAddTimelineEditDelete": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.CareFlowTest#inventorySaveAdjustAndDelete": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#nursingAndPumpingSaveTheirOwnFields": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#sleepAndSoundControlsReachNativeService": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#milestoneCompletionCreatesLeafFromLabelledSwitches": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#healthRecordSavesEditsAndDeletes": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#emergencyCardEditsAndCopiesOffline": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.TreeAccessibilityTest#nativeAccessibilityCanInspectFullCanopyAndArrange": {
+      "result": "PASS",
+      "evidence": "ui-tests.log"
+    },
+    "com.nothatcher.sproutbook.DensityTest#denseFamilyKeepsTreeInChapters": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    },
+    "com.nothatcher.sproutbook.NewHomeFlowTest#liveDashboardLinksAndAccessibleRecordedChart": {
+      "result": "PASS",
+      "evidence": "v31-final-device.log"
+    }
+  }
+}

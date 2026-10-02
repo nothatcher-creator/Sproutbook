@@ -1,0 +1,23 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.FeatureFlowTest#formulaResetsWhenChildChanges": {
+      "result": "PASS",
+      "evidence": "v34-FeatureFlowTest.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#feedingAddEditDelete": {
+      "result": "PASS",
+      "evidence": "v34-FeatureFlowTest.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#olderFeedingRemainsReachable": {
+      "result": "PASS",
+      "evidence": "v34-FeatureFlowTest.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#childSwitchAndGrandparentGuard": {
+      "result": "PASS",
+      "evidence": "v34-FeatureFlowTest.log"
+    }
+  }
+}

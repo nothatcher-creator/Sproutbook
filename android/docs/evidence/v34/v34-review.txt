@@ -1,0 +1,5 @@
+Read-only independent review of baseline 23e9356 to current woodland UI update.
+Initial findings: banner imagery could lower subtitle contrast; local modal editors did not stop decorative motion.
+Corrections: native banner gradient scrim (.88/.84/.78 alpha forest) with conservative pixel contrast measurement; LocalWindowInfo focus gate with unit coverage.
+Follow-up review: both findings addressed, no additional critical/important/minor issues found by inspection.
+Reviewer did not execute tests. Device evidence and build results are recorded separately.

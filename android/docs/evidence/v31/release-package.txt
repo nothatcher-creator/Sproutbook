@@ -1,0 +1,164 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        a75a51a com.nothatcher.sproutbook/.MainActivity filter 183585a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.intent.action.BATTERY_OKAY:
+        881684b com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter 2d57768
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.ACTION_POWER_DISCONNECTED:
+        1e27228 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter 9743a8b
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        f22fb41 com.nothatcher.sproutbook/androidx.profileinstaller.ProfileInstallReceiver filter a6dcb80
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      android.intent.action.DEVICE_STORAGE_LOW:
+        fb8f8e6 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 1b5b781
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      android.net.conn.CONNECTIVITY_CHANGE:
+        57c3e27 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter 70ea026
+          Action: "android.net.conn.CONNECTIVITY_CHANGE"
+      android.intent.action.DEVICE_STORAGE_OK:
+        fb8f8e6 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 1b5b781
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        f22fb41 com.nothatcher.sproutbook/androidx.profileinstaller.ProfileInstallReceiver filter 4b498b2
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      android.intent.action.BATTERY_LOW:
+        881684b com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter 2d57768
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.TIMEZONE_CHANGED:
+        a0088d4 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 969f467
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      android.intent.action.TIME_SET:
+        a0088d4 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 969f467
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      androidx.profileinstaller.action.SKIP_FILE:
+        f22fb41 com.nothatcher.sproutbook/androidx.profileinstaller.ProfileInstallReceiver filter 3177003
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        f22fb41 com.nothatcher.sproutbook/androidx.profileinstaller.ProfileInstallReceiver filter 9c0d5b9
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        a0088d4 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 969f467
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      android.intent.action.ACTION_POWER_CONNECTED:
+        1e27228 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter 9743a8b
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+      androidx.work.diagnostics.REQUEST_DIAGNOSTICS:
+        3e30a7d com.nothatcher.sproutbook/androidx.work.impl.diagnostics.DiagnosticsReceiver filter 4854abd
+          Action: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+      androidx.work.impl.background.systemalarm.UpdateProxies:
+        e8bbd72 com.nothatcher.sproutbook/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter 93ea214
+          Action: "androidx.work.impl.background.systemalarm.UpdateProxies"
+
+Permissions:
+  Permission [com.nothatcher.sproutbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (d6495c3):
+    sourcePackage=com.nothatcher.sproutbook
+    uid=10116 gids=null type=0 prot=signature
+    perm=Permission{1475e40 com.nothatcher.sproutbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    packageSetting=PackageSetting{f9ad179 com.nothatcher.sproutbook/10116}
+
+Registered ContentProviders:
+  com.nothatcher.sproutbook/androidx.startup.InitializationProvider:
+    Provider{d543ebe com.nothatcher.sproutbook/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.nothatcher.sproutbook.androidx-startup]:
+    Provider{d543ebe com.nothatcher.sproutbook/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{cf0cb1f com.nothatcher.sproutbook}
+
+Key Set Manager:
+  [com.nothatcher.sproutbook]
+      Signing KeySets: 6
+
+Packages:
+  Package [com.nothatcher.sproutbook] (f9ad179):
+    userId=10116
+    pkg=Package{9641e6c com.nothatcher.sproutbook}
+    codePath=/data/app/com.nothatcher.sproutbook-B_qc_BIP-VUKKGQMCkx-uA==
+    resourcePath=/data/app/com.nothatcher.sproutbook-B_qc_BIP-VUKKGQMCkx-uA==
+    legacyNativeLibraryDir=/data/app/com.nothatcher.sproutbook-B_qc_BIP-VUKKGQMCkx-uA==/lib
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    versionCode=30100 minSdk=26 targetSdk=37
+    versionName=3.1.0
+    splits=[base]
+    apkSigningVersion=3
+    applicationInfo=ApplicationInfo{cf0cb1f com.nothatcher.sproutbook}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE ]
+    dataDir=/data/user/0/com.nothatcher.sproutbook
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-09-30 19:46:45
+    firstInstallTime=2026-09-30 17:06:52
+    lastUpdateTime=2026-09-30 19:46:46
+    signatures=PackageSignatures{46e0c35 version:3, signatures:[2147a886], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    declared permissions:
+      com.nothatcher.sproutbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.POST_NOTIFICATIONS
+      android.permission.FOREGROUND_SERVICE
+      android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+      android.permission.WAKE_LOCK
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.RECEIVE_BOOT_COMPLETED
+      com.nothatcher.sproutbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      com.nothatcher.sproutbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=123385 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      runtime permissions:
+      disabledComponents:
+        androidx.work.impl.background.systemalarm.RescheduleReceiver
+      enabledComponents:
+        androidx.work.impl.background.systemjob.SystemJobService
+
+Package Changes:
+  Sequence number=19
+  User 0:
+    seq=17, package=com.nothatcher.sproutbook.test
+    seq=18, package=com.nothatcher.sproutbook
+
+
+Dexopt state:
+  [com.nothatcher.sproutbook]
+    path: /data/app/com.nothatcher.sproutbook-B_qc_BIP-VUKKGQMCkx-uA==/base.apk
+      x86_64: [status=speed-profile] [reason=install]
+
+
+Compiler stats:
+  [com.nothatcher.sproutbook]
+     base.apk - 9194
+
+Active APEX packages:
+
+
+Inactive APEX packages:
+
+
+Factory APEX packages:
+
+
+  APEX session state:

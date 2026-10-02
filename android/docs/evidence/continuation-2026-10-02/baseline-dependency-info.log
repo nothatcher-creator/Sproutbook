@@ -1,0 +1,47 @@
+Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|127.* -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Initialized native services in: /workspace/scratch/sproutbook-gradle/native
+Initialized jansi services in: /workspace/scratch/sproutbook-gradle/native
+The client will now receive all logging from the daemon (pid: 1142). The daemon log file: /workspace/scratch/sproutbook-gradle/daemon/9.3.1/daemon-1142.out.log
+Starting 2nd build in daemon [uptime: 1 mins 29.252 secs, performance: 97%, GC rate: 0.00/s, heap usage: 0% of 1 GiB]
+Using 2 worker leases.
+Operational build model parameters: {requiresToolingModels=false, parallelProjectExecution=false, configureOnDemand=false, configurationCache=false, configurationCacheParallelStore=false, configurationCacheParallelLoad=true, isolatedProjects=false, parallelProjectConfiguration=false, intermediateModelCache=false, parallelToolingApiActions=false, invalidateCoupledProjects=false, modelAsProjectDependency=false, resilientModelBuilding=false}
+Not watching /workspace/Sproutbook/android since the file system is not supported
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/workspace/Sproutbook/android/settings.gradle.kts'.
+Projects loaded. Root project using build file '/workspace/Sproutbook/android/build.gradle.kts'.
+Included projects: [root project 'SproutBook', project ':app', project ':core']
+
+> Configure project :
+Evaluating root project 'SproutBook' using build file '/workspace/Sproutbook/android/build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '9.1.1', apply: false]
+Failed to get resource: GET. [HTTP HTTP/1.1 429 Too Many Requests: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/2.2.10/org.jetbrains.kotlin.jvm.gradle.plugin-2.2.10.pom)]
+Failed to get resource: GET. [HTTP HTTP/1.1 429 Too Many Requests: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/2.2.10/org.jetbrains.kotlin.jvm.gradle.plugin-2.2.10.pom)]
+Failed to get resource: GET. [HTTP HTTP/1.1 429 Too Many Requests: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/2.2.10/org.jetbrains.kotlin.jvm.gradle.plugin-2.2.10.pom)]
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.2.10', apply: false]
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/workspace/Sproutbook/android/build.gradle.kts' line: 1
+
+* What went wrong:
+Plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.2.10', apply: false] was not found in any of the following sources:
+
+- Gradle Core Plugins (plugin is not in 'org.gradle' namespace)
+- Included Builds (No included builds contain this plugin)
+- Plugin Repositories (could not resolve plugin artifact 'org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.2.10')
+  Searched in the following repositories:
+    Google
+    MavenRepo
+    Gradle Central Plugin Repository
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 4s
+Some of the file system contents retained in the virtual file system are on file systems that Gradle doesn't support watching. The relevant state was discarded to ensure changes to these locations are properly detected. You can override this by explicitly enabling file system watching.

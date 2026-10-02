@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.AdviceUpgradeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-01T08:42:32.346Z" hostname="d8f2b7689c7c" time="0.069">
+  <properties/>
+  <testcase name="practicalDadHandoverIsSearchableAndHasNoMedicalPrescription" classname="com.nothatcher.sproutbook.core.AdviceUpgradeTest" time="0.055"/>
+  <testcase name="allArticleKeysAreUniqueAndBothTabsHaveBroadCoverage" classname="com.nothatcher.sproutbook.core.AdviceUpgradeTest" time="0.004"/>
+  <testcase name="positionsCanBeFoundIndividuallyAndStayInTheirTab" classname="com.nothatcher.sproutbook.core.AdviceUpgradeTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

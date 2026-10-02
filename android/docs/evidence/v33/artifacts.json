@@ -1,0 +1,36 @@
+{
+  "core": {
+    "tests": 75,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "app": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "debug_apk": {
+    "name": "SproutBook-3.3.0-debug.apk",
+    "bytes": 12499746,
+    "sha256": "4e125586d801d4d76b63fe4340f3a4bf0b6fd63772be714c9b6ffe93100d8b89"
+  },
+  "release_artifacts": [
+    {
+      "name": "SproutBook-3.3.0-mapping.txt",
+      "bytes": 40013784,
+      "sha256": "e8a66a4932eced9839800b0b380f1e510b7a54be485a971a4fab9bf42407eff6"
+    },
+    {
+      "name": "SproutBook-3.3.0-release-unsigned.aab",
+      "bytes": 4760842,
+      "sha256": "60b8e0b4a94fc6c3e680c399d0c36222a221cf2db1da3bfd4e6bce51005327e9"
+    },
+    {
+      "name": "SproutBook-3.3.0-release-unsigned.apk",
+      "bytes": 2242430,
+      "sha256": "efbf7484809c0e83752bd0049ae22e53db4d63d8a17173c8f6249f39c98214c4"
+    }
+  ]
+}

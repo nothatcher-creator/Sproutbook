@@ -1,0 +1,107 @@
+{
+  "passed": 25,
+  "failed": 0,
+  "incomplete_logs": [],
+  "tests": {
+    "com.nothatcher.sproutbook.GestureTest#toothTapOnlyViewsLongPressChanges": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#arrangeLeafSnapsAndScrollDoesNotOpenIt": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#longPressDragSnapsToBranch": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#scrollingAcrossToothNeverChangesOrOpensIt": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.GestureTest#calendarLongPressKeepsDate": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.SoundTest#pausedSwitchDoesNotInterruptAnotherAudioFocusOwner": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.SoundTest#nativeAudioStartsAndStopsEverySound": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.SoundTest#pauseResumeFreezesCountdownAndSwitchKeepsPausedState": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.CareUpgradeTest#pendingSoundChoicesSurviveChangingTabs": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.CareUpgradeTest#soundButtonsPauseResumeSwitchAndStopActualService": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.CareUpgradeTest#toothDateSurvivesRestartAndCaregiverCannotEdit": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.CareUpgradeTest#adviceTabsSearchAndExpandNewArticles": {
+      "result": "PASS",
+      "evidence": "v33-care-clean.log"
+    },
+    "com.nothatcher.sproutbook.NavigationSweepTest#everyCareDestinationAndSettingsToolsOpen": {
+      "result": "PASS",
+      "evidence": "v33-navigation-final.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#nursingAndPumpingSaveTheirOwnFields": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#sleepAndSoundControlsReachNativeService": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#milestoneCompletionCreatesLeafFromLabelledSwitches": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#healthRecordSavesEditsAndDeletes": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.NativeControlsTest#emergencyCardEditsAndCopiesOffline": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#formulaResetsWhenChildChanges": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#feedingAddEditDelete": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#olderFeedingRemainsReachable": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.FeatureFlowTest#childSwitchAndGrandparentGuard": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.FoundationTest#profilesSurviveReopenAndStayIndependent": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.BackupTest#exportReviewRestorePhotosAndInvalidRollback": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    },
+    "com.nothatcher.sproutbook.DensityTest#denseFamilyKeepsTreeInChapters": {
+      "result": "PASS",
+      "evidence": "v33-regression-clean.log"
+    }
+  }
+}

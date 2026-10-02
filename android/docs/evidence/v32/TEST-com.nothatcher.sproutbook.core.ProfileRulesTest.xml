@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.ProfileRulesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-30T21:34:22.650Z" hostname="b254a0af6f07" time="0.001">
+  <properties/>
+  <testcase name="reasonableNameAccepted" classname="com.nothatcher.sproutbook.core.ProfileRulesTest" time="0.001"/>
+  <testcase name="futureBirthdayRejected" classname="com.nothatcher.sproutbook.core.ProfileRulesTest" time="0.0"/>
+  <testcase name="emptyFamilyHasNoSelection" classname="com.nothatcher.sproutbook.core.ProfileRulesTest" time="0.0"/>
+  <testcase name="emptyNameRejected" classname="com.nothatcher.sproutbook.core.ProfileRulesTest" time="0.0"/>
+  <testcase name="staleSelectionRepairs" classname="com.nothatcher.sproutbook.core.ProfileRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

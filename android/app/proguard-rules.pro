@@ -1,0 +1,2 @@
+-keep class com.nothatcher.sproutbook.data.** { *; }
+-keepattributes Signature,RuntimeVisibleAnnotations,AnnotationDefault

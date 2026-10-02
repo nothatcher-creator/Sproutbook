@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.nothatcher.sproutbook/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.nothatcher.sproutbook/.MainActivity
+TotalTime: 9725
+WaitTime: 9823
+Complete

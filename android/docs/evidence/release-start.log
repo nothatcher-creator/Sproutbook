@@ -1,0 +1,8 @@
+Starting: Intent { cmp=com.nothatcher.sproutbook/.MainActivity }
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: com.android.documentsui/.picker.PickActivity
+TotalTime: 0
+WaitTime: 376
+Complete

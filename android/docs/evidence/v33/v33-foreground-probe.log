@@ -1,0 +1,24 @@
+{'text': '', 'content-desc': '', 'resource-id': '', 'class': 'android.view.View', 'enabled': 'true', 'scrollable': 'true', 'bounds': '[0,92][360,672]'}
+{'text': 'Today', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[20,104][112,144]'}
+{'text': 'Thursday, October 1', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[20,144][146,164]'}
+{'text': 'YOUR BABY CHAPTER', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[38,196][178,216]'}
+{'text': 'Small moments.\nA whole lot of love.', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[38,226][284,298]'}
+{'text': "Willow's day, all in one place.", 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[38,308][212,328]'}
+{'text': 'Up next · Family plan 2', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[36,376][200,400]'}
+{'text': 'Oct 2 · 11:18 AM', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[36,400][139,420]'}
+{'text': '›', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[315,380][324,416]'}
+{'text': 'Help right now', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[36,466][141,490]'}
+{'text': 'Calm first steps, close at hand', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[36,490][223,510]'}
+{'text': '›', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[315,470][324,506]'}
+{'text': 'A little care, right here', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[20,540][181,564]'}
+{'text': 'Log sleep', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[36,594][107,618]'}
+{'text': 'Start a nap or settle in for the night', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[36,618][252,638]'}
+{'text': '›', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[315,598][324,634]'}
+{'text': 'W', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[30,46][45,70]'}
+{'text': 'Willow', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[71,38][119,62]'}
+{'text': 'Baby · Your growing family', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[71,62][243,78]'}
+{'text': '', 'content-desc': 'Switch child', 'resource-id': '', 'class': 'android.view.View', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[308,46][332,70]'}
+{'text': 'Today', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[22,720][61,736]'}
+{'text': 'Schedule', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[105,720][163,736]'}
+{'text': 'Care', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[211,720][241,736]'}
+{'text': 'More', 'content-desc': '', 'resource-id': '', 'class': 'android.widget.TextView', 'enabled': 'true', 'scrollable': 'false', 'bounds': '[301,720][334,736]'}

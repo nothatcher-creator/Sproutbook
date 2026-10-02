@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.EverydayBackupTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-30T21:34:22.633Z" hostname="b254a0af6f07" time="0.005">
+  <properties/>
+  <testcase name="version2PreservesDiaperAndAddsEmptyRoutineTables" classname="com.nothatcher.sproutbook.core.EverydayBackupTest" time="0.001"/>
+  <testcase name="version3AcceptsOwnedRoutinesPottyAndMilk" classname="com.nothatcher.sproutbook.core.EverydayBackupTest" time="0.002"/>
+  <testcase name="rejectsDuplicateCompletionAndInvalidVolume" classname="com.nothatcher.sproutbook.core.EverydayBackupTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,20 @@
+--------- beginning of main
+--------- beginning of system
+09-30 17:47:45.988  1752  1752 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+09-30 17:47:49.346  1752  1752 I AndroidRuntime: Using default boot image
+09-30 17:47:49.346  1752  1752 I AndroidRuntime: Leaving lock profiling enabled
+09-30 17:47:52.947  1753  1753 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+09-30 17:47:54.097  1753  1753 I AndroidRuntime: Using default boot image
+09-30 17:47:54.098  1753  1753 I AndroidRuntime: Leaving lock profiling enabled
+09-30 17:48:56.779  2191  2191 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+09-30 17:48:58.488  2222  2222 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+09-30 17:50:00.938  2861  2861 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+09-30 17:50:01.022  2861  2861 I AndroidRuntime: Using default boot image
+09-30 17:50:01.022  2861  2861 I AndroidRuntime: Leaving lock profiling enabled
+09-30 17:50:05.610  2861  2861 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+09-30 17:52:06.785  2922  3215 I SproutAudioQa: Before click: SoundState(playing=false, kind=Brown, volume=0.2, minutes=30, error=null); clock=2720
+09-30 17:52:08.365  2922  3215 I SproutAudioQa: After click: SoundState(playing=false, kind=Brown, volume=0.2, minutes=30, error=null); clock=2752
+09-30 17:52:08.851  2922  2922 D SproutAudio: Command play, kind=Brown, timer=15
+09-30 17:52:14.225  2922  2922 D SproutAudio: Command stop, kind=null, timer=-1
+09-30 17:52:14.999  2922  2922 D SproutAudio: Command stop, kind=null, timer=-1
+09-30 17:52:24.230  2861  2861 D AndroidRuntime: Shutting down VM

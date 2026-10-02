@@ -1,0 +1,44 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeAccessibilityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.TreeAccessibilityTest:
+INSTRUMENTATION_STATUS: test=nativeAccessibilityCanInspectFullCanopyAndArrange
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeAccessibilityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Custom actions must stay below Android's 32-action limit
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+
+INSTRUMENTATION_STATUS: stream=
+Error in nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest):
+java.lang.AssertionError: Custom actions must stay below Android's 32-action limit
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+
+INSTRUMENTATION_STATUS: test=nativeAccessibilityCanInspectFullCanopyAndArrange
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 63.88
+There was 1 failure:
+1) nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest)
+java.lang.AssertionError: Custom actions must stay below Android's 32-action limit
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

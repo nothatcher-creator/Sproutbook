@@ -1,0 +1,11 @@
+{
+  "wifi": "disabled; verified in dumpsys wifi",
+  "mobile_data": "disabled via svc data",
+  "database_integrity": "ok",
+  "record_counts": {
+    "children": 4,
+    "memorys": 500,
+    "feeds": 500,
+    "appointments": 300
+  }
+}

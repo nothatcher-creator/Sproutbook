@@ -1,0 +1,269 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.GestureTest:
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stack=java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+	at android.os.Parcel.createException(Parcel.java:2071)
+	at android.os.Parcel.readException(Parcel.java:2039)
+	at android.os.Parcel.readException(Parcel.java:1987)
+	at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:859)
+	at android.hardware.input.InputManager.injectInputEvent(InputManager.java:886)
+	at android.app.Instrumentation.sendKeySync(Instrumentation.java:1063)
+	at android.app.Instrumentation.sendKeyDownUpSync(Instrumentation.java:1073)
+	at com.nothatcher.sproutbook.FlowFixture.back(FeatureFlowTest.kt:47)
+	at com.nothatcher.sproutbook.GestureTest.toothTapOnlyViewsLongPressChanges(GestureTest.kt:35)
+	... 53 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.input.InputManagerService.injectInputEventInternal(InputManagerService.java:641)
+	at com.android.server.input.InputManagerService.injectInputEvent(InputManagerService.java:615)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:392)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+
+INSTRUMENTATION_STATUS: stream=
+Error in toothTapOnlyViewsLongPressChanges(com.nothatcher.sproutbook.GestureTest):
+java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+	at android.os.Parcel.createException(Parcel.java:2071)
+	at android.os.Parcel.readException(Parcel.java:2039)
+	at android.os.Parcel.readException(Parcel.java:1987)
+	at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:859)
+	at android.hardware.input.InputManager.injectInputEvent(InputManager.java:886)
+	at android.app.Instrumentation.sendKeySync(Instrumentation.java:1063)
+	at android.app.Instrumentation.sendKeyDownUpSync(Instrumentation.java:1073)
+	at com.nothatcher.sproutbook.FlowFixture.back(FeatureFlowTest.kt:47)
+	at com.nothatcher.sproutbook.GestureTest.toothTapOnlyViewsLongPressChanges(GestureTest.kt:35)
+	... 53 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.input.InputManagerService.injectInputEventInternal(InputManagerService.java:641)
+	at com.android.server.input.InputManagerService.injectInputEvent(InputManagerService.java:615)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:392)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=arrangeLeafSnapsAndScrollDoesNotOpenIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=arrangeLeafSnapsAndScrollDoesNotOpenIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=longPressDragSnapsToBranch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=longPressDragSnapsToBranch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=scrollingAcrossToothNeverChangesOrOpensIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=scrollingAcrossToothNeverChangesOrOpensIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=calendarLongPressKeepsDate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=calendarLongPressKeepsDate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.SoundTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.SoundTest:
+INSTRUMENTATION_STATUS: test=nativeAudioStartsAndStopsEverySound
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.SoundTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=nativeAudioStartsAndStopsEverySound
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.SoundTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=pauseResumeFreezesCountdownAndSwitchKeepsPausedState
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.SoundTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=pauseResumeFreezesCountdownAndSwitchKeepsPausedState
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.CareUpgradeTest:
+INSTRUMENTATION_STATUS: test=soundButtonsPauseResumeSwitchAndStopActualService
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=soundButtonsPauseResumeSwitchAndStopActualService
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=toothDateSurvivesRestartAndCaregiverCannotEdit
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stack=java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+	at android.os.Parcel.createException(Parcel.java:2071)
+	at android.os.Parcel.readException(Parcel.java:2039)
+	at android.os.Parcel.readException(Parcel.java:1987)
+	at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:859)
+	at android.hardware.input.InputManager.injectInputEvent(InputManager.java:886)
+	at android.app.Instrumentation.sendKeySync(Instrumentation.java:1063)
+	at android.app.Instrumentation.sendKeyDownUpSync(Instrumentation.java:1073)
+	at com.nothatcher.sproutbook.FlowFixture.back(FeatureFlowTest.kt:47)
+	at com.nothatcher.sproutbook.CareUpgradeTest.toothDateSurvivesRestartAndCaregiverCannotEdit(CareUpgradeTest.kt:46)
+	... 53 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.input.InputManagerService.injectInputEventInternal(InputManagerService.java:641)
+	at com.android.server.input.InputManagerService.injectInputEvent(InputManagerService.java:615)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:392)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+
+INSTRUMENTATION_STATUS: stream=
+Error in toothDateSurvivesRestartAndCaregiverCannotEdit(com.nothatcher.sproutbook.CareUpgradeTest):
+java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+	at android.os.Parcel.createException(Parcel.java:2071)
+	at android.os.Parcel.readException(Parcel.java:2039)
+	at android.os.Parcel.readException(Parcel.java:1987)
+	at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:859)
+	at android.hardware.input.InputManager.injectInputEvent(InputManager.java:886)
+	at android.app.Instrumentation.sendKeySync(Instrumentation.java:1063)
+	at android.app.Instrumentation.sendKeyDownUpSync(Instrumentation.java:1073)
+	at com.nothatcher.sproutbook.FlowFixture.back(FeatureFlowTest.kt:47)
+	at com.nothatcher.sproutbook.CareUpgradeTest.toothDateSurvivesRestartAndCaregiverCannotEdit(CareUpgradeTest.kt:46)
+	... 53 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.input.InputManagerService.injectInputEventInternal(InputManagerService.java:641)
+	at com.android.server.input.InputManagerService.injectInputEvent(InputManagerService.java:615)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:392)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+
+INSTRUMENTATION_STATUS: test=toothDateSurvivesRestartAndCaregiverCannotEdit
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=adviceTabsSearchAndExpandNewArticles
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=adviceTabsSearchAndExpandNewArticles
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 297.741
+There were 2 failures:
+1) toothTapOnlyViewsLongPressChanges(com.nothatcher.sproutbook.GestureTest)
+java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+	at android.os.Parcel.createException(Parcel.java:2071)
+	at android.os.Parcel.readException(Parcel.java:2039)
+	at android.os.Parcel.readException(Parcel.java:1987)
+	at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:859)
+	at android.hardware.input.InputManager.injectInputEvent(InputManager.java:886)
+	at android.app.Instrumentation.sendKeySync(Instrumentation.java:1063)
+	at android.app.Instrumentation.sendKeyDownUpSync(Instrumentation.java:1073)
+	at com.nothatcher.sproutbook.FlowFixture.back(FeatureFlowTest.kt:47)
+	at com.nothatcher.sproutbook.GestureTest.toothTapOnlyViewsLongPressChanges(GestureTest.kt:35)
+	... 53 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.input.InputManagerService.injectInputEventInternal(InputManagerService.java:641)
+	at com.android.server.input.InputManagerService.injectInputEvent(InputManagerService.java:615)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:392)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+2) toothDateSurvivesRestartAndCaregiverCannotEdit(com.nothatcher.sproutbook.CareUpgradeTest)
+java.lang.SecurityException: Injecting to another application requires INJECT_EVENTS permission
+	at android.os.Parcel.createException(Parcel.java:2071)
+	at android.os.Parcel.readException(Parcel.java:2039)
+	at android.os.Parcel.readException(Parcel.java:1987)
+	at android.hardware.input.IInputManager$Stub$Proxy.injectInputEvent(IInputManager.java:859)
+	at android.hardware.input.InputManager.injectInputEvent(InputManager.java:886)
+	at android.app.Instrumentation.sendKeySync(Instrumentation.java:1063)
+	at android.app.Instrumentation.sendKeyDownUpSync(Instrumentation.java:1073)
+	at com.nothatcher.sproutbook.FlowFixture.back(FeatureFlowTest.kt:47)
+	at com.nothatcher.sproutbook.CareUpgradeTest.toothDateSurvivesRestartAndCaregiverCannotEdit(CareUpgradeTest.kt:46)
+	... 53 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.input.InputManagerService.injectInputEventInternal(InputManagerService.java:641)
+	at com.android.server.input.InputManagerService.injectInputEvent(InputManagerService.java:615)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:392)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+
+FAILURES!!!
+Tests run: 10,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

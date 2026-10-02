@@ -1,0 +1,125 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.LinkedPumpIntegrityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.LinkedPumpIntegrityTest:
+INSTRUMENTATION_STATUS: test=storedPumpCannotMoveToAnotherChild
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.LinkedPumpIntegrityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Stored pump identity changed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest$checkChange$1.invokeSuspend(LinkedPumpIntegrityTest.kt:43)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.checkChange(LinkedPumpIntegrityTest.kt:20)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.storedPumpCannotMoveToAnotherChild(LinkedPumpIntegrityTest.kt:18)
+
+INSTRUMENTATION_STATUS: stream=
+Error in storedPumpCannotMoveToAnotherChild(com.nothatcher.sproutbook.LinkedPumpIntegrityTest):
+java.lang.AssertionError: Stored pump identity changed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest$checkChange$1.invokeSuspend(LinkedPumpIntegrityTest.kt:43)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.checkChange(LinkedPumpIntegrityTest.kt:20)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.storedPumpCannotMoveToAnotherChild(LinkedPumpIntegrityTest.kt:18)
+
+INSTRUMENTATION_STATUS: test=storedPumpCannotMoveToAnotherChild
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.LinkedPumpIntegrityTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=storedPumpCannotBecomeBottle
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.LinkedPumpIntegrityTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Stored pump identity changed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest$checkChange$1.invokeSuspend(LinkedPumpIntegrityTest.kt:43)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.checkChange(LinkedPumpIntegrityTest.kt:20)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.storedPumpCannotBecomeBottle(LinkedPumpIntegrityTest.kt:14)
+
+INSTRUMENTATION_STATUS: stream=
+Error in storedPumpCannotBecomeBottle(com.nothatcher.sproutbook.LinkedPumpIntegrityTest):
+java.lang.AssertionError: Stored pump identity changed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest$checkChange$1.invokeSuspend(LinkedPumpIntegrityTest.kt:43)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.checkChange(LinkedPumpIntegrityTest.kt:20)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.storedPumpCannotBecomeBottle(LinkedPumpIntegrityTest.kt:14)
+
+INSTRUMENTATION_STATUS: test=storedPumpCannotBecomeBottle
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.947
+There were 2 failures:
+1) storedPumpCannotMoveToAnotherChild(com.nothatcher.sproutbook.LinkedPumpIntegrityTest)
+java.lang.AssertionError: Stored pump identity changed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest$checkChange$1.invokeSuspend(LinkedPumpIntegrityTest.kt:43)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.checkChange(LinkedPumpIntegrityTest.kt:20)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.storedPumpCannotMoveToAnotherChild(LinkedPumpIntegrityTest.kt:18)
+2) storedPumpCannotBecomeBottle(com.nothatcher.sproutbook.LinkedPumpIntegrityTest)
+java.lang.AssertionError: Stored pump identity changed
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest$checkChange$1.invokeSuspend(LinkedPumpIntegrityTest.kt:43)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.checkChange(LinkedPumpIntegrityTest.kt:20)
+	at com.nothatcher.sproutbook.LinkedPumpIntegrityTest.storedPumpCannotBecomeBottle(LinkedPumpIntegrityTest.kt:14)
+
+FAILURES!!!
+Tests run: 2,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

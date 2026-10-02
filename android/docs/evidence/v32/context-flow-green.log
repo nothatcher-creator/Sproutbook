@@ -1,0 +1,38 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.EverydayFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.EverydayFlowTest:
+INSTRUMENTATION_STATUS: test=newToolsSwitchChildAndStayReadOnly
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.EverydayFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=newToolsSwitchChildAndStayReadOnly
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.EverydayHomeFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.EverydayHomeFlowTest:
+INSTRUMENTATION_STATUS: test=todayOpensLiveRoutineMilkAndToddlerJournal
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.EverydayHomeFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=todayOpensLiveRoutineMilkAndToddlerJournal
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 135.286
+
+OK (2 tests)
+
+
+INSTRUMENTATION_CODE: -1

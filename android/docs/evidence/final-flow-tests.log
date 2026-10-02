@@ -1,0 +1,74 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.NativeControlsTest:
+INSTRUMENTATION_STATUS: test=sleepAndSoundControlsReachNativeService
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NativeControlsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:52)
+	at com.nothatcher.sproutbook.NativeControlsTest.sleepAndSoundControlsReachNativeService(NativeControlsTest.kt:45)
+
+INSTRUMENTATION_STATUS: stream=
+Error in sleepAndSoundControlsReachNativeService(com.nothatcher.sproutbook.NativeControlsTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:52)
+	at com.nothatcher.sproutbook.NativeControlsTest.sleepAndSoundControlsReachNativeService(NativeControlsTest.kt:45)
+
+INSTRUMENTATION_STATUS: test=sleepAndSoundControlsReachNativeService
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NavigationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.NavigationTest:
+INSTRUMENTATION_STATUS: test=profileCreationEnablesSafeNavigation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.NavigationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=profileCreationEnablesSafeNavigation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.DensityTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.DensityTest:
+INSTRUMENTATION_STATUS: test=denseFamilyKeepsTreeInChapters
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.DensityTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=denseFamilyKeepsTreeInChapters
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 162.249
+There was 1 failure:
+1) sleepAndSoundControlsReachNativeService(com.nothatcher.sproutbook.NativeControlsTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:52)
+	at com.nothatcher.sproutbook.NativeControlsTest.sleepAndSoundControlsReachNativeService(NativeControlsTest.kt:45)
+
+FAILURES!!!
+Tests run: 3,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

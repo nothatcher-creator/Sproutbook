@@ -1,0 +1,8 @@
+SproutBook 3.0.0 (30000)
+Package: com.nothatcher.sproutbook
+Compile / target SDK: 37; minimum SDK: 26
+Built and verified 2026-09-30
+Debug signing certificate SHA-256: 9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3
+SproutBook-3.0.0-debug.apk (12103018 bytes) SHA-256: d00a24e77682698e09bd0e94523745d1dc55e702539a383c7c07d1dc5082cfd6
+SproutBook-3.0.0-release-unsigned.apk (2160510 bytes) SHA-256: e16d040fba7d6de62f4e6baa497ef58e81113cf799ed4a439271f6dfc48ac562
+SproutBook-3.0.0-release-unsigned.aab (4508571 bytes) SHA-256: 8dd5bd18c75d1cddf79c97fee69f1e160543d1161b3ed427e194965ce7c504e1

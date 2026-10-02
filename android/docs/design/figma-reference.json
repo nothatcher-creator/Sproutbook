@@ -1,0 +1,25 @@
+{
+  "fileKey": "SjQl6MaLL4e5YqK10grN2c",
+  "page": "0:1",
+  "componentFrame": "5:2",
+  "appFrames": {
+    "today": "9:18",
+    "schedule": "9:109",
+    "care": "9:243",
+    "more": "9:353"
+  },
+  "palette": {
+    "forest": "#10251E",
+    "surface": "#203C30",
+    "moss": "#B6D59C",
+    "cream": "#F5F2E7",
+    "muted": "#C2CEBF",
+    "gold": "#E5BF7B",
+    "stroke": "#49634F"
+  },
+  "radii": {
+    "card": 24,
+    "button": 18
+  },
+  "artwork": "Regenerated from the same woodland art direction after workspace snapshot rollback; Figma quota blocks further asset replacement."
+}

@@ -1,0 +1,30 @@
+--------- beginning of crash
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: FATAL EXCEPTION: main
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: Process: com.nothatcher.sproutbook, PID: 3777
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: java.lang.IllegalStateException: Can't have more than 32 custom actions for one widget
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat.populateAccessibilityNodeInfoProperties(AndroidComposeViewAccessibilityDelegateCompat.android.kt:988)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat.createNodeInfo(AndroidComposeViewAccessibilityDelegateCompat.android.kt:542)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat.access$createNodeInfo(AndroidComposeViewAccessibilityDelegateCompat.android.kt:210)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$ComposeAccessibilityNodeProvider.createAccessibilityNodeInfo(AndroidComposeViewAccessibilityDelegateCompat.android.kt:2841)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at androidx.core.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi19.createAccessibilityNodeInfo(AccessibilityNodeProviderCompat.java:51)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfVirtualNode(AccessibilityInteractionController.java:1318)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfVirtualNode(AccessibilityInteractionController.java:1328)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfVirtualNode(AccessibilityInteractionController.java:1328)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfVirtualNode(AccessibilityInteractionController.java:1328)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfRealNode(AccessibilityInteractionController.java:1231)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfRealNode(AccessibilityInteractionController.java:1227)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfRealNode(AccessibilityInteractionController.java:1227)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchDescendantsOfRealNode(AccessibilityInteractionController.java:1227)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$AccessibilityNodePrefetcher.prefetchAccessibilityNodeInfos(AccessibilityInteractionController.java:1029)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController.findAccessibilityNodeInfoByAccessibilityIdUiThread(AccessibilityInteractionController.java:341)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController.access$400(AccessibilityInteractionController.java:75)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.view.AccessibilityInteractionController$PrivateHandler.handleMessage(AccessibilityInteractionController.java:1393)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7356)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+09-30 17:58:22.592  3777  3777 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+09-30 17:58:23.136  2005  3705 I ActivityManager: Process com.nothatcher.sproutbook (pid 3777) has died: fore TOP 
+09-30 17:58:23.491  2005  3705 I ActivityManager: Killing 3139:com.android.contacts/u0a96 (adj 985): empty #17
+09-30 17:58:23.551  2005  2028 W ActivityManager: setHasOverlayUi called on unknown pid: 3777

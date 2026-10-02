@@ -1,0 +1,60 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 1536474 Realtime: 1536474
+
+** MEMINFO in pid 4489 [com.nothatcher.sproutbook] **
+                   Pss  Private  Private     Swap     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    24632    24524        0        0    28568    22521     6046
+  Dalvik Heap     4723     4656        0        0     9676     4838     4838
+ Dalvik Other     4829     4688        0        0                           
+        Stack      224      224        0        0                           
+       Ashmem        5        0        0        0                           
+    Other dev       16        0       16        0                           
+     .so mmap     2865      160       88        0                           
+    .jar mmap     1836        0       12        0                           
+    .apk mmap      898        0        0        0                           
+    .ttf mmap      224        0      104        0                           
+    .dex mmap    29074    29072        0        0                           
+    .oat mmap       90        0        0        0                           
+    .art mmap     5926     5620        0        0                           
+   Other mmap     1173      420      104       20                           
+      Unknown     1145     1112        0       24                           
+        TOTAL    77660    70476      324       44    38244    27359    10884
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:    10276
+         Native Heap:    24524
+                Code:    29436
+               Stack:      224
+            Graphics:        0
+       Private Other:     6340
+              System:     6860
+ 
+               TOTAL:    77660      TOTAL SWAP (KB):       44
+ 
+ Objects
+               Views:       11         ViewRootImpl:        1
+         AppContexts:        6           Activities:        1
+              Assets:        2        AssetManagers:        0
+       Local Binders:       15        Proxy Binders:       30
+       Parcel memory:        6         Parcel count:       26
+    Death Recipients:        0      OpenSSL Sockets:        0
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1437
+  PAGECACHE_OVERFLOW:      439          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4      104            104         5/41/6  /data/user/0/com.nothatcher.sproutbook/no_backup/androidx.work.workdb
+         4        8                         0/0/0    (attached) temp
+         4      104             58         5/25/6  /data/user/0/com.nothatcher.sproutbook/no_backup/androidx.work.workdb (1)
+         4      340             47        7/109/8  /data/user/0/com.nothatcher.sproutbook/databases/sproutbook-v3.db
+         4       16                         0/0/0    (attached) temp
+         4      340             48         0/22/2  /data/user/0/com.nothatcher.sproutbook/databases/sproutbook-v3.db (2)
+         4      340             95         4/22/5  /data/user/0/com.nothatcher.sproutbook/databases/sproutbook-v3.db (3)
+         4      340            109         9/27/8  /data/user/0/com.nothatcher.sproutbook/databases/sproutbook-v3.db (1)

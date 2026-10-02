@@ -1,0 +1,53 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.CareUpgradeTest:
+INSTRUMENTATION_STATUS: test=pendingSoundChoicesSurviveChangingTabs
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareUpgradeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Play ocean sound' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at com.nothatcher.sproutbook.CareUpgradeTest.pendingSoundChoicesSurviveChangingTabs(CareUpgradeTest.kt:60)
+
+INSTRUMENTATION_STATUS: stream=
+Error in pendingSoundChoicesSurviveChangingTabs(com.nothatcher.sproutbook.CareUpgradeTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Play ocean sound' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at com.nothatcher.sproutbook.CareUpgradeTest.pendingSoundChoicesSurviveChangingTabs(CareUpgradeTest.kt:60)
+
+INSTRUMENTATION_STATUS: test=pendingSoundChoicesSurviveChangingTabs
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 79.034
+There was 1 failure:
+1) pendingSoundChoicesSurviveChangingTabs(com.nothatcher.sproutbook.CareUpgradeTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Play ocean sound' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at com.nothatcher.sproutbook.CareUpgradeTest.pendingSoundChoicesSurviveChangingTabs(CareUpgradeTest.kt:60)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

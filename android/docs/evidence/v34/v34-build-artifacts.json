@@ -1,0 +1,18 @@
+{
+  "SproutBook-3.4.0-debug.apk": {
+    "bytes": 13072309,
+    "sha256": "437b820445883655986928c4b5fb2207ab618e5872d21de5e5c60255ee06fb23"
+  },
+  "SproutBook-3.4.0-mapping.txt": {
+    "bytes": 40694021,
+    "sha256": "1a0e28aabe620d7c2e915a9d061e1798405b0c6d6fbc4ee9d254c700806bd343"
+  },
+  "SproutBook-3.4.0-release-unsigned.aab": {
+    "bytes": 5552670,
+    "sha256": "6e364631a136eff9ba9abadd5e3424a386edcd73bad677b6933d181b8adaa9f1"
+  },
+  "SproutBook-3.4.0-release-unsigned.apk": {
+    "bytes": 3006150,
+    "sha256": "53ac054ab67625c499ef7e012ffdf777b04d481f0ab8998f9de600dafdc3ce3f"
+  }
+}

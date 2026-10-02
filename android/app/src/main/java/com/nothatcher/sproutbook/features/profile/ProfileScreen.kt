@@ -1,0 +1,148 @@
+package com.nothatcher.sproutbook.features.profile
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import com.nothatcher.sproutbook.*
+import com.nothatcher.sproutbook.data.*
+import com.nothatcher.sproutbook.ui.*
+import java.time.LocalDate
+
+@Composable
+fun ProfileScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit) {
+    var edit by remember { mutableStateOf<Child?>(null) }
+    var adding by remember { mutableStateOf(false) }
+    Page("Your family", "Profiles & settings, together") {
+        item {
+            EntryRow("Family cupboard", "Keep everyday supplies topped up") { go("inventory") }
+            EntryRow("Emergency card", "Contacts and important medical information") {
+                go("emergency")
+            }
+        }
+        item { Action("Add child", !state.prefs.grandparent) { adding = true } }
+        items(state.children, key = { it.id }) { child ->
+            EntryRow(
+                child.name,
+                "${Stage.valueOf(child.stage).label} · ${if(child.id==state.child?.id)"Selected" else "View profile"}",
+            ) {
+                edit = child
+            }
+        }
+        item {
+            Panel {
+                Section("Make yourself comfortable")
+                SettingSwitch("Dark woodland theme", state.prefs.dark) {
+                    vm.perform("") { vm.repo.settings.boolean("dark", it) }
+                }
+                SettingSwitch("24-hour time", state.prefs.time24) {
+                    vm.perform("") { vm.repo.settings.boolean("time24", it) }
+                }
+                SettingSwitch("Reduce motion", state.prefs.reduceMotion) {
+                    vm.perform("") { vm.repo.settings.boolean("reduceMotion", it) }
+                }
+                Muted("Turn Reduce motion off for woodland fireflies, gentle illustrations and animated tab icons. Motion rests during typing, battery saver and when the app is in the background.")
+                Text("Bottle units")
+                Choices(listOf("mL", "fl oz"), state.prefs.volumeUnit) {
+                    vm.perform("") { vm.repo.settings.string("volumeUnit", it) }
+                }
+                Text("Weight units")
+                Choices(listOf("kg", "lb"), state.prefs.weightUnit) {
+                    vm.perform("") { vm.repo.settings.string("weightUnit", it) }
+                }
+            }
+        }
+        item {
+            Panel {
+                Section("Grandparent mode")
+                Muted(
+                    "A clear read-only view for caregivers. Turn this off deliberately when you want to edit records."
+                )
+                SettingSwitch("Read-only caregiver view", state.prefs.grandparent) {
+                    vm.perform("") { vm.repo.settings.boolean("grandparent", it) }
+                }
+            }
+        }
+        item { com.nothatcher.sproutbook.features.backup.NotificationSettings(vm, state) }
+        item {
+            EntryRow("Backup & import", "Keep a portable copy of their story") { go("backup") }
+            EntryRow("Diagnostics", "App version and storage status") { go("diagnostics") }
+        }
+        item { Muted("SproutBook ${BuildConfig.VERSION_NAME} · Your records stay on this device.") }
+    }
+    if (adding || edit != null)
+        ChildEditor(edit, state.prefs.grandparent, vm) {
+            adding = false
+            edit = null
+        }
+}
+
+@Composable
+fun SettingSwitch(label: String, value: Boolean, change: (Boolean) -> Unit) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Text(label, Modifier.weight(1f))
+        Switch(value, change, Modifier.semantics { contentDescription = label })
+    }
+}
+
+@Composable
+fun ChildEditor(child: Child?, readOnly: Boolean, vm: FamilyViewModel, close: () -> Unit) {
+    var name by rememberSaveable(child?.id) { mutableStateOf(child?.name ?: "") }
+    var stage by rememberSaveable(child?.id) { mutableStateOf(child?.stage ?: "BABY") }
+    var notes by rememberSaveable(child?.id) { mutableStateOf(child?.notes ?: "") }
+    var birth by remember(child?.id) { mutableStateOf(child?.birthday?.let(LocalDate::ofEpochDay)) }
+    var due by remember(child?.id) { mutableStateOf(child?.dueDate?.let(LocalDate::ofEpochDay)) }
+    var deleting by remember { mutableStateOf(false) }
+    Editor(if (child == null) "Welcome, little one" else "${child.name}'s profile", close) {
+        if (readOnly) {
+            Section(name)
+            Text(Stage.valueOf(stage).label)
+            Text("Birthday · ${birth ?: "Not recorded"}")
+            Text("Due date · ${due ?: "Not recorded"}")
+            Text(notes)
+        } else {
+            Field("Child's name", name, { name = it })
+            Choices(Stage.entries.map { it.label }, Stage.valueOf(stage).label) { label ->
+                stage = Stage.entries.first { it.label == label }.name
+            }
+            DateButton("Birthday", birth) { birth = it }
+            if (birth != null) TextButton(onClick = { birth = null }) { Text("Clear birthday") }
+            DateButton("Due date (optional)", due) { due = it }
+            if (due != null) TextButton(onClick = { due = null }) { Text("Clear due date") }
+            Field("Important caregiver notes", notes, { notes = it }, lines = 3)
+            Action("Save profile", name.isNotBlank()) {
+                vm.perform {
+                    vm.repo.saveChild(
+                        (child ?: Child(name = name)).copy(
+                            name = name,
+                            stage = stage,
+                            birthday = birth?.toEpochDay(),
+                            dueDate = due?.toEpochDay(),
+                            notes = notes,
+                        )
+                    )
+                    close()
+                }
+            }
+            if (child != null)
+                TextButton(onClick = { deleting = true }) {
+                    Text(
+                        "Delete child and all their records",
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                }
+        }
+    }
+    if (deleting)
+        ConfirmDelete("${child?.name} and all their records", { deleting = false }) {
+            vm.perform("Child removed") {
+                vm.repo.deleteChild(child!!.id)
+                close()
+            }
+        }
+}

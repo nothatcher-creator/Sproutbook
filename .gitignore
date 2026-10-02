@@ -1,0 +1,8 @@
+# Local toolchains, credentials, test output, and private signing material.
+.env
+.env.*
+*.jks
+*.keystore
+*.p12
+**/node_modules/
+artifacts/

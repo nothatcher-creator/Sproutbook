@@ -1,0 +1,205 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStorePassword=changeit
+
+Welcome to Gradle 9.3.1!
+
+Here are the highlights of this release:
+ - Test reporting improvements
+ - Error and warning improvements
+ - Build authoring improvements
+
+For more details see https://docs.gradle.org/9.3.1/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+w: file:///workspace/scratch/3fca26fbf164/babyforge-native/app/build.gradle.kts:6:45: 'fun srcDir(srcDir: Any): Any' is deprecated. Use `directories` mutable set instead.
+Checking the license for package Android SDK Platform 37.0 in /tmp/sprout-toolchain/android-sdk/licenses
+License for package Android SDK Platform 37.0 accepted.
+Preparing "Install Android SDK Platform 37.0 (revision 2)".
+Warning: Package "Android SDK Platform 37.0" (platforms;android-37.0) should be installed in 
+"/tmp/sprout-toolchain/android-sdk/platforms/android-37.0" but 
+it already exists.
+Installing in "/tmp/sprout-toolchain/android-sdk/platforms/android-37.0-2" instead.
+"Install Android SDK Platform 37.0 (revision 2)" ready.
+Installing Android SDK Platform 37.0 in /tmp/sprout-toolchain/android-sdk/platforms/android-37.0-2
+"Install Android SDK Platform 37.0 (revision 2)" complete.
+"Install Android SDK Platform 37.0 (revision 2)" finished.
+Observed package id 'platforms;android-37.0' in inconsistent location '/tmp/sprout-toolchain/android-sdk/platforms/android-37.0-2' (Expected '/tmp/sprout-toolchain/android-sdk/platforms/android-37.0')
+
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin
+> Task :core:processResources NO-SOURCE
+> Task :core:processTestResources NO-SOURCE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:processDebugNavigationResources
+> Task :core:compileJava NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :core:compileTestKotlin
+> Task :app:kspDebugKotlin
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:testClasses UP-TO-DATE
+
+> Task :core:test
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStorePassword=changeit
+
+> Task :app:javaPreCompileDebug
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:compileDebugNavigationResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:checkDebugDuplicateClasses
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebug
+
+> Task :app:compileDebugJavaWithJavac
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStorePassword=changeit
+
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStorePassword=changeit
+
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStorePassword=changeit
+
+
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeLibDexDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so. Run with --info option to learn more.
+
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:mergeDebugJavaResource
+> Task :app:processDebugAndroidTestManifest
+> Task :app:generateDebugAndroidTestBuildConfig
+> Task :app:generateDebugAndroidTestResources
+> Task :app:packageDebugAndroidTestResources
+> Task :app:processDebugAndroidTestNavigationResources
+> Task :app:parseDebugAndroidTestLocalResources
+> Task :app:generateDebugAndroidTestRFile
+> Task :app:kspDebugAndroidTestKotlin UP-TO-DATE
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:compileDebugAndroidTestNavigationResources
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestResources
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:compileDebugAndroidTestKotlin
+> Task :app:mergeReleaseNativeLibs
+> Task :app:compileDebugAndroidTestJavaWithJavac
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:mergeProjectDexDebugAndroidTest
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so. Run with --info option to learn more.
+
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:generateReleaseBuildConfig
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:processReleaseNavigationResources
+> Task :app:parseReleaseLocalResources
+> Task :app:packageDebugAndroidTest
+> Task :app:generateReleaseRFile
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+> Task :app:javaPreCompileRelease
+> Task :app:mergeReleaseArtProfile
+> Task :app:checkReleaseAarMetadata
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:compileReleaseNavigationResources
+> Task :app:mergeReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :app:processReleaseResources
+> Task :app:extractProguardFiles
+> Task :app:mergeReleaseStartupProfile UP-TO-DATE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:optimizeReleaseResources
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:processApplicationManifestReleaseForBundle
+> Task :app:bundleReleaseResources
+> Task :app:configureReleaseDependencies
+> Task :app:parseReleaseIntegrityConfig UP-TO-DATE
+> Task :app:kspReleaseKotlin
+> Task :app:compileReleaseKotlin
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseJavaResource
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:minifyReleaseWithR8
+> Task :app:compileReleaseArtProfile
+> Task :app:buildReleasePreBundle
+> Task :app:lintVitalReportRelease
+> Task :app:lintVitalRelease
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+> Task :app:packageReleaseBundle
+> Task :app:signReleaseBundle
+> Task :app:produceReleaseBundleIdeListingFile
+> Task :app:createReleaseBundleListingFileRedirect
+> Task :app:bundleRelease
+
+BUILD SUCCESSFUL in 8m 15s
+133 actionable tasks: 129 executed, 4 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
