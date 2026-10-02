@@ -1,10 +1,10 @@
 # Install SproutBook
 
-[Download the 3.4.0 APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk) · [Direct download](https://raw.githubusercontent.com/nothatcher-creator/Sproutbook/main/SproutBook-3.4.0-debug.apk)
+[Download the 3.5.0 APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-debug.apk) · [Direct download](https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.0-debug.apk)
 
 Requires Android 8.0 or newer. This is a debug-signed evaluation build, not a Google Play production release.
 
-1. Download `SproutBook-3.4.0-debug.apk` on your Android device.
+1. Download `SproutBook-3.5.0-debug.apk` on your Android device.
 2. Open it through your browser's downloads or Files app.
 3. Android may ask you to allow installations from that app. Enable the permission for that app, return to the APK, and choose Install. You can disable that permission afterward.
 4. Open SproutBook and add a child profile. Core features work without Internet access.
@@ -17,16 +17,16 @@ If Android reports a signature conflict with an older version, keep that app ins
 
 ## Verify the file
 
-The release includes `SproutBook-3.4.0-debug.apk.sha256`. On Linux/macOS with `sha256sum`:
+The release includes `SHA256SUMS-3.5.0.txt`. On Linux/macOS with `sha256sum`:
 
 ```sh
-sha256sum -c SproutBook-3.4.0-debug.apk.sha256
+sha256sum -c SHA256SUMS-3.5.0.txt
 ```
 
 On Windows PowerShell:
 
 ```powershell
-Get-FileHash .\SproutBook-3.4.0-debug.apk -Algorithm SHA256
+Get-FileHash .\SproutBook-3.5.0-debug.apk -Algorithm SHA256
 ```
 
 Compare the result with the published checksum.

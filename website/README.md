@@ -1,9 +1,9 @@
-# SproutBook showcase website
+# SproutBook woodland showcase
 
-Static website for the native SproutBook Android application. `dist/` contains the complete public site. It can be served by any static hosting provider; it does not require a build, account secrets, or a server.
+Live website: https://sproutbook-woodland.nothatch.chatgpt.site
 
-The download targets the existing V1.0 GitHub Release containing app version 3.4.0. The feature-request form creates a URL for a pre-filled GitHub issue. Visitors must review and submit that issue while signed in to GitHub. The site does not submit issues on their behalf or store their requests privately.
+Static HTML/CSS/JavaScript, with supplied SVG motion timelines scrubbed by native scroll position. No autoplay loop or scroll interception. Reduced motion shows all three chapters in a normal, still reading layout; small-height mobile screens also use the stacked layout.
 
-Memory, feeding, tooth and stage examples are temporary website sample state. They do not connect to Android records and reset when the page reloads. Screenshots are authentic 3.3 emulator captures using synthetic data and are labelled as earlier UI. Original tab illustrations are from the 3.4 app.
+APK/source downloads and current 3.5 screenshots are hosted release assets, not duplicated here. Existing artwork lives under `assets/`. Interactive memory, feeding, tooth and stage demos use temporary sample state. The request form prepares a GitHub issue for visitors to review and submit.
 
-For future APKs, update the three download links and release metadata in `dist/index.html`. No analytics or database is used. Google Fonts is loaded externally with system-font fallbacks. The interactive script progressively enhances the page; downloads and GitHub links work without JavaScript.
+The hosted site is managed through its existing Sites project. This folder is the public website-source mirror, not an Android WebView implementation.

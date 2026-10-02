@@ -1,4 +1,4 @@
-name: Polish woodland release
+name: Publish woodland motion release
 
 on:
   push:
@@ -16,31 +16,36 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 10
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
       RELEASE_COMMIT: ${{ github.sha }}
+      DOWNLOAD_BASE: https://sproutbook-woodland.nothatch.chatgpt.site/downloads
     steps:
-      - name: Download and verify the existing APK
+      - name: Download and verify the completed 3.5 artifacts
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --location --retry 3 \
-            "https://raw.githubusercontent.com/$GH_REPO/$RELEASE_COMMIT/SproutBook-3.4.0-debug.apk" \
-            --output SproutBook-3.4.0-debug.apk
-          for name in SproutBook-3.4.0-debug.apk.sha256 docs/RELEASE-3.4.0.md; do
+          curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-3.5.0-debug.apk" --output SproutBook-3.5.0-debug.apk
+          # Static hosting limits individual files. Reassemble the original source ZIP without changing any bytes.
+          for part in 1 2; do
+            curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-3.5.0-source.zip.part$part" --output "source.part$part"
+          done
+          cat source.part1 source.part2 > SproutBook-3.5.0-source.zip
+          for name in SHA256SUMS-3.5.0.txt docs/RELEASE-3.5.0.md; do
             output="${name##*/}"
             gh api -H 'Accept: application/vnd.github.raw+json' "/repos/$GH_REPO/contents/$name?ref=$RELEASE_COMMIT" > "$output"
           done
-          sha256sum -c SproutBook-3.4.0-debug.apk.sha256
-      - name: Decorate the existing GitHub release
+          sha256sum -c SHA256SUMS-3.5.0.txt
+          unzip -tq SproutBook-3.5.0-source.zip
+      - name: Publish APK and complete source as a new prerelease
         shell: bash
         run: |
           set -euo pipefail
-          gh release view V1.0 >/dev/null
-          gh release edit V1.0 \
-            --title 'SproutBook 3.4.0 · Woodland preview' \
-            --notes-file RELEASE-3.4.0.md \
-            --prerelease
-          gh release upload V1.0 SproutBook-3.4.0-debug.apk.sha256 --clobber
+          if gh release view v3.5.0 >/dev/null 2>&1; then
+            gh release edit v3.5.0 --title 'SproutBook 3.5.0 · Woodland in motion' --notes-file RELEASE-3.5.0.md --prerelease
+          else
+            gh release create v3.5.0 --target "$RELEASE_COMMIT" --title 'SproutBook 3.5.0 · Woodland in motion' --notes-file RELEASE-3.5.0.md --prerelease
+          fi
+          gh release upload v3.5.0 SproutBook-3.5.0-debug.apk SproutBook-3.5.0-source.zip SHA256SUMS-3.5.0.txt --clobber

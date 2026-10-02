@@ -1,6 +1,6 @@
 # Data and privacy notes
 
-These notes describe the distributed SproutBook 3.4.0 Android preview. They are not a claim of an independent security audit.
+These notes describe the distributed SproutBook 3.5.0 Android preview. They are not a claim of an independent security audit.
 
 ## Local family records
 

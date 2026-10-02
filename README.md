@@ -1,16 +1,14 @@
 <p align="center">
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/V1.0/SproutBook-3.4.0-debug.apk">
-    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.4.0 for Android" />
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-debug.apk">
+    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.5.0 for Android" />
   </a>
 </p>
 <p align="center">
-  <strong>Android 8.0+ · Version 3.4.0 · 12.5 MiB · Preview build</strong><br />
-  <a href="https://raw.githubusercontent.com/nothatcher-creator/Sproutbook/main/SproutBook-3.4.0-debug.apk">Direct APK download</a> ·
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/V1.0">Release notes</a> ·
+  <strong>Android 8.0+ · Version 3.5.0 · 14.1 MiB · Preview build</strong><br />
+  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.0-debug.apk">Direct APK download</a> ·
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.5.0">Release notes</a> ·
   <a href="docs/INSTALL.md">Installation guide</a>
 </p>
-
-<p align="center"><a href="https://sproutbook-woodland.nothatch.chatgpt.site"><strong>Visit the SproutBook website · Try interactive demos · Suggest a feature</strong></a></p>
 
 ![SproutBook — a little calmer, a little more connected; a soft grassy woodland illustration](docs/assets/woodland-hero.jpg)
 
@@ -53,15 +51,15 @@ From pregnancy through the teen years, each child has their own profile and reco
 | **Parent support** — searchable Mom/Dad advice and three calm first steps in Help Right Now. | **Pregnancy** — kick sessions, contraction timing, preparation, and appointment questions. |
 | **Everyday routines** — diaper and potty logs, milk freezer containers, responsibilities, and shopping. | **Family essentials** — supplies, health journal, an offline emergency card, and read-only grandparent mode. |
 
-### A closer look at Care
+### A closer look at the native app
 
 <p align="center">
-  <img src="docs/assets/teeth-screen-v33.png" width="230" alt="Real SproutBook 3.3 screenshot of the visual baby tooth tracker" />
-  <img src="docs/assets/sound-screen-v33.png" width="230" alt="Real SproutBook 3.3 screenshot of the native sound machine" />
-  <img src="docs/assets/advice-mom-screen-v33.png" width="230" alt="Real SproutBook 3.3 screenshot of searchable Mom Advice" />
+  <img src="https://sproutbook-woodland.nothatch.chatgpt.site/assets/today-screen-v35.png" width="230" alt="Actual SproutBook 3.5 Today dashboard in the dark woodland theme" />
+  <img src="https://sproutbook-woodland.nothatch.chatgpt.site/assets/care-screen-v35.png" width="230" alt="Actual SproutBook 3.5 Care hub with sample family data" />
+  <img src="https://sproutbook-woodland.nothatch.chatgpt.site/assets/more-light-screen-v35.png" width="230" alt="Actual SproutBook 3.5 family settings in the light woodland theme" />
 </p>
 
-*Actual emulator screenshots from the 3.3 care update, using synthetic family data. These features remain in 3.4; the screenshots predate the new painted headers and icons.*
+*Actual 3.5 emulator screenshots, using sample family data.*
 
 ![A soft grassy woodland divider](docs/assets/meadow-divider.svg)
 
@@ -71,15 +69,23 @@ From pregnancy through the teen years, each child has their own profile and reco
 2. Open the APK on your Android phone. If prompted, allow installation from the browser or Files app you used.
 3. Install, open SproutBook, and add your child's profile.
 
-For updates, keep your existing app installed and use the same signing identity. Export a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksum](SproutBook-3.4.0-debug.apk.sha256) to verify the download.
+For updates, keep your existing app installed and use the same signing identity. Export a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](SHA256SUMS-3.5.0.txt) to verify the download.
 
-## The woodland update
+## The woodland motion update
 
-**3.4.0** adds five original painted scenes, 33 custom native icons, softer cards, and a coordinated forest-and-cream visual system. Dark and light themes retain native Android controls and readable labels. The artwork is bundled with the app and works offline.
+**3.5.0** brings your animated woodland asset pack into the native app: 46 motion assets in two themes, with static fallbacks, animated selected tabs, banner details, button responses, and save feedback. The painted scenes, custom icons, forest greens, and warm cream carry through dark and light themes.
 
-The background is still by default. Optional gentle fireflies are available by turning off **Reduce motion** in settings. This preview has a known edge case when Android's global animation setting changes while motion is active; leave Reduce motion enabled for a static background.
+Motion respects the app's **Reduce motion** preference, Android's animation setting, battery saver, lifecycle, and visibility. Reduce motion remains enabled by default for new installs. Artwork is bundled locally and works offline.
 
-This is an installable **debug-signed preview**, published as a GitHub pre-release. Final large-text verification, the animation-setting fix, real-device checks, and production signing remain before a general release. See [the full release notes](docs/RELEASE-3.4.0.md).
+The native update passed **79 unit tests and 12 focused Android checks**, including the tooth/calendar/memory gestures, sound service controls, multiple children, caregiver protections, motion settings, and light-theme feeding at 150% text size. This is a **debug-signed evaluation pre-release**. Physical-device performance checks and production signing remain. See [the release notes](docs/RELEASE-3.5.0.md) for exact evidence and limits.
+
+## Wander through the showcase
+
+[**Open the woodland website**](https://sproutbook-woodland.nothatch.chatgpt.site)
+
+Scroll through a new beginning, a tree of memories, and a quiet night. The supplied animations follow your scroll position in either direction. Turn motion off for a still experience. Try the sample memory, feeding, and tooth demos, then suggest a feature through the pre-filled GitHub request form.
+
+The APK download stays at the top of both the website and this README. Website demos use temporary sample data and never connect to your family's app records.
 
 ## Your family's records stay close
 
@@ -93,6 +99,6 @@ Parenting and health guidance is general education. For an emergency, contact em
 
 [Showcase website](https://sproutbook-woodland.nothatch.chatgpt.site) · [Releases](https://github.com/nothatcher-creator/Sproutbook/releases) · [Report a problem or suggest an idea](https://github.com/nothatcher-creator/Sproutbook/issues) · [Figma design reference](https://www.figma.com/design/SjQl6MaLL4e5YqK10grN2c)
 
-This repository is the APK release home; it does not currently contain the Kotlin source project. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
+The [3.5 release includes the complete Kotlin source project](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-source.zip), editable artwork, motion assets, QA evidence, and unsigned release outputs. This repository contains the release documentation and showcase website source. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
 
 <p align="center"><em>A small place to remember, plan, and grow together.</em></p>
