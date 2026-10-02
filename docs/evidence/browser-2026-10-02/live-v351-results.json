@@ -1,0 +1,547 @@
+{
+  "url": "https://sproutbook-woodland.nothatch.chatgpt.site",
+  "version": "3.5.1",
+  "date": "2026-10-02T22:00:57.107Z",
+  "cases": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "errors": [],
+      "checks": [
+        "APK visible at top",
+        "forward/reverse SVG frames, readable chapters, native wheel, paused idle",
+        "motion off persists; live reduced-motion preference stacks chapters",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "samples": [
+        {
+          "scroll": 1273,
+          "motion": "motion-enabled",
+          "progress": 0.0999,
+          "position": "sticky",
+          "times": [
+            0.39929500222206116,
+            0.49911901354789734,
+            0.24955900013446808,
+            0.5989440083503723,
+            0.49911901354789734
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 1,
+              "top": 1474.3464813232422,
+              "bottom": 1819.6433563232422
+            },
+            {
+              "opacity": 0,
+              "top": 1488.0264892578125,
+              "bottom": 1833.3233642578125
+            },
+            {
+              "opacity": 0,
+              "top": 1502.0664825439453,
+              "bottom": 1847.3633575439453
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 2085,
+          "motion": "motion-enabled",
+          "progress": 0.4801,
+          "position": "sticky",
+          "times": [
+            1.918373942375183,
+            2.397968053817749,
+            1.1989840269088745,
+            2.8775620460510254,
+            2.397968053817749
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 2272.661102294922,
+              "bottom": 2617.9580078125
+            },
+            {
+              "opacity": 1,
+              "top": 2286.341094970703,
+              "bottom": 2631.637939453125
+            },
+            {
+              "opacity": 0,
+              "top": 2300.381103515625,
+              "bottom": 2645.677978515625
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 2918,
+          "motion": "motion-enabled",
+          "progress": 0.8701,
+          "position": "sticky",
+          "times": [
+            3.476738929748535,
+            4.345923900604248,
+            2.172961950302124,
+            5.215108871459961,
+            4.345923900604248
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 3091.6217651367188,
+              "bottom": 3436.9186401367188
+            },
+            {
+              "opacity": 0,
+              "top": 3105.301773071289,
+              "bottom": 3450.598648071289
+            },
+            {
+              "opacity": 1,
+              "top": 3119.341766357422,
+              "bottom": 3464.638671875
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 2085,
+          "motion": "motion-enabled",
+          "progress": 0.4801,
+          "position": "sticky",
+          "times": [
+            1.918373942375183,
+            2.397968053817749,
+            1.1989840269088745,
+            2.8775620460510254,
+            2.397968053817749
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 2272.661102294922,
+              "bottom": 2617.9580078125
+            },
+            {
+              "opacity": 1,
+              "top": 2286.341094970703,
+              "bottom": 2631.637939453125
+            },
+            {
+              "opacity": 0,
+              "top": 2300.381103515625,
+              "bottom": 2645.677978515625
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1273,
+          "motion": "motion-enabled",
+          "progress": 0.0999,
+          "position": "sticky",
+          "times": [
+            0.39929500222206116,
+            0.49911901354789734,
+            0.24955900013446808,
+            0.5989440083503723,
+            0.49911901354789734
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 1,
+              "top": 1474.3464813232422,
+              "bottom": 1819.6433563232422
+            },
+            {
+              "opacity": 0,
+              "top": 1488.0264892578125,
+              "bottom": 1833.3233642578125
+            },
+            {
+              "opacity": 0,
+              "top": 1502.0664825439453,
+              "bottom": 1847.3633575439453
+            }
+          ],
+          "overflow": 0
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": [],
+      "checks": [
+        "APK visible at top",
+        "forward/reverse SVG frames, readable chapters, native wheel, paused idle",
+        "motion off persists; live reduced-motion preference stacks chapters",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "samples": [
+        {
+          "scroll": 1289,
+          "motion": "motion-enabled",
+          "progress": 0.0997,
+          "position": "sticky",
+          "times": [
+            0.3985230028629303,
+            0.49815401434898376,
+            0.24907700717449188,
+            0.5977839827537537,
+            0.49815401434898376
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 1,
+              "top": 1427.6190795898438,
+              "bottom": 1688.3847045898438
+            },
+            {
+              "opacity": 0,
+              "top": 1441.299072265625,
+              "bottom": 1702.064697265625
+            },
+            {
+              "opacity": 0,
+              "top": 1455.3390808105469,
+              "bottom": 1716.1047058105469
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1907,
+          "motion": "motion-enabled",
+          "progress": 0.4804,
+          "position": "sticky",
+          "times": [
+            1.9195480346679688,
+            2.3994359970092773,
+            1.1997179985046387,
+            2.8793230056762695,
+            2.3994359970092773
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 2031.9161376953125,
+              "bottom": 2292.6817626953125
+            },
+            {
+              "opacity": 1,
+              "top": 2045.5961303710938,
+              "bottom": 2306.3617553710938
+            },
+            {
+              "opacity": 0,
+              "top": 2059.6361389160156,
+              "bottom": 2320.4017639160156
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 2540,
+          "motion": "motion-enabled",
+          "progress": 0.8702,
+          "position": "sticky",
+          "times": [
+            3.4774930477142334,
+            4.346866130828857,
+            2.1734330654144287,
+            5.216238975524902,
+            4.346866130828857
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 2650.8806076049805,
+              "bottom": 2911.6462326049805
+            },
+            {
+              "opacity": 0,
+              "top": 2664.5606079101562,
+              "bottom": 2925.3262329101562
+            },
+            {
+              "opacity": 1,
+              "top": 2678.600616455078,
+              "bottom": 2939.366241455078
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1907,
+          "motion": "motion-enabled",
+          "progress": 0.4804,
+          "position": "sticky",
+          "times": [
+            1.9195480346679688,
+            2.3994359970092773,
+            1.1997179985046387,
+            2.8793230056762695,
+            2.3994359970092773
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 2031.9161376953125,
+              "bottom": 2292.6817626953125
+            },
+            {
+              "opacity": 1,
+              "top": 2045.5961303710938,
+              "bottom": 2306.3617553710938
+            },
+            {
+              "opacity": 0,
+              "top": 2059.6361389160156,
+              "bottom": 2320.4017639160156
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1289,
+          "motion": "motion-enabled",
+          "progress": 0.0997,
+          "position": "sticky",
+          "times": [
+            0.3985230028629303,
+            0.49815401434898376,
+            0.24907700717449188,
+            0.5977839827537537,
+            0.49815401434898376
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 1,
+              "top": 1427.6190795898438,
+              "bottom": 1688.3847045898438
+            },
+            {
+              "opacity": 0,
+              "top": 1441.299072265625,
+              "bottom": 1702.064697265625
+            },
+            {
+              "opacity": 0,
+              "top": 1455.3390808105469,
+              "bottom": 1716.1047058105469
+            }
+          ],
+          "overflow": 0
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "errors": [],
+      "checks": [
+        "APK visible at top",
+        "forward/reverse SVG frames, readable chapters, native wheel, paused idle",
+        "motion off persists; live reduced-motion preference stacks chapters",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "samples": [
+        {
+          "scroll": 1249,
+          "motion": "motion-enabled",
+          "progress": 0.1003,
+          "position": "sticky",
+          "times": [
+            0.4006569981575012,
+            0.5008220076560974,
+            0.2504110038280487,
+            0.6009860038757324,
+            0.5008220076560974
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 1,
+              "top": 1332.4748458862305,
+              "bottom": 1593.2404708862305
+            },
+            {
+              "opacity": 0,
+              "top": 1308.6704711914062,
+              "bottom": 1644.4048461914062
+            },
+            {
+              "opacity": 0,
+              "top": 1360.1948471069336,
+              "bottom": 1620.9604721069336
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1711,
+          "motion": "motion-enabled",
+          "progress": 0.4802,
+          "position": "sticky",
+          "times": [
+            1.9188740253448486,
+            2.398592948913574,
+            1.199295997619629,
+            2.878312110900879,
+            2.398592948913574
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 1780.7972106933594,
+              "bottom": 2041.5628356933594
+            },
+            {
+              "opacity": 1,
+              "top": 1756.9928398132324,
+              "bottom": 2092.7272148132324
+            },
+            {
+              "opacity": 0,
+              "top": 1808.5172119140625,
+              "bottom": 2069.2828369140625
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 2185,
+          "motion": "motion-enabled",
+          "progress": 0.87,
+          "position": "sticky",
+          "times": [
+            3.4765260219573975,
+            4.345656871795654,
+            2.172827959060669,
+            5.214788913726807,
+            4.345656871795654
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 2240.764320373535,
+              "bottom": 2501.529945373535
+            },
+            {
+              "opacity": 0,
+              "top": 2216.959945678711,
+              "bottom": 2552.694320678711
+            },
+            {
+              "opacity": 1,
+              "top": 2268.4843215942383,
+              "bottom": 2529.2499465942383
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1711,
+          "motion": "motion-enabled",
+          "progress": 0.4802,
+          "position": "sticky",
+          "times": [
+            1.9188740253448486,
+            2.398592948913574,
+            1.199295997619629,
+            2.878312110900879,
+            2.398592948913574
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 0,
+              "top": 1780.7972106933594,
+              "bottom": 2041.5628356933594
+            },
+            {
+              "opacity": 1,
+              "top": 1756.9928398132324,
+              "bottom": 2092.7272148132324
+            },
+            {
+              "opacity": 0,
+              "top": 1808.5172119140625,
+              "bottom": 2069.2828369140625
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "scroll": 1249,
+          "motion": "motion-enabled",
+          "progress": 0.1003,
+          "position": "sticky",
+          "times": [
+            0.4006569981575012,
+            0.5008220076560974,
+            0.2504110038280487,
+            0.6009860038757324,
+            0.5008220076560974
+          ],
+          "paused": true,
+          "steps": [
+            {
+              "opacity": 1,
+              "top": 1332.4748458862305,
+              "bottom": 1593.2404708862305
+            },
+            {
+              "opacity": 0,
+              "top": 1308.6704711914062,
+              "bottom": 1644.4048461914062
+            },
+            {
+              "opacity": 0,
+              "top": 1360.1948471069336,
+              "bottom": 1620.9604721069336
+            }
+          ],
+          "overflow": 0
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 667,
+        "height": 375
+      },
+      "errors": [],
+      "checks": [
+        "APK visible at top",
+        "short-height stacked story",
+        "motion off persists; live reduced-motion preference stacks chapters",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ]
+    }
+  ],
+  "browser": "153.0.8010.12",
+  "result": "PASS"
+}

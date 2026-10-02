@@ -37,6 +37,11 @@ emulation. No physical-phone browser, Safari/Firefox, screen reader speech,
 hardware frame-rate, or battery claim is made. Website demos use temporary sample
 data separate from family Android records. Native app QA has its own ledger.
 
-Publication of this fix is pending the existing Sites deployment; GitHub's
-`website/` directory alone does not publish it. Final deployment details will be
-recorded in `../docs/CONTINUATION.md`.
+The existing public Sites update succeeded as saved version 3 on 2026-10-02 at
+21:58:53 UTC. Source commit: `5ee5c4e2bfb31b1972abd554142b4dd9b8b652b5`.
+The same four viewport cases then passed against the actual live website:
+`live-v351-browser.log`, `live-v351-results.json` and `live-downloads-v351.png`.
+The published APK/source GitHub asset digests match the verified files; the release
+workflow completed successfully. Deployment IDs and exact release details are in
+`../docs/CONTINUATION.md`. GitHub's `website/` folder is a source mirror; publication
+used the existing Sites integration.

@@ -86,7 +86,10 @@ SVG frames, normal scrolling, still layouts, persisted motion off, live reduced
 motion, sample logging/reset, all 20 teeth, hold/movement cancellation, relocking,
 stage selection and feature-request draft feedback. No issue was submitted.
 See `../../website/QA.md` for exact browser/static/DOM scope and screenshots.
-Publication is pending the existing Sites deployment.
+The existing public Sites deployment succeeded (saved version 3), and all four
+viewport cases passed again on the actual live URL. The GitHub 3.5.1 evaluation
+release workflow succeeded; all published asset sizes/digests match verified files.
+Exact IDs and links are recorded in the continuation checkpoint.
 
 ## Remaining limits
 

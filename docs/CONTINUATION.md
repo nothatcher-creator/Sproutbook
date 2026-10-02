@@ -7,7 +7,7 @@ ledgers are historical evidence, not fresh validation.
 
 - Repository: https://github.com/nothatcher-creator/Sproutbook, clean `main` at
   `a56dd6c` before this session. No existing uncommitted work was present.
-- Latest published release is the evaluation pre-release `v3.5.0`. GitHub's
+- At recovery, the latest release was the evaluation pre-release `v3.5.0`. Current release is `v3.5.1`. GitHub's
   `/releases/latest` returns 404 because all releases are pre-releases; the release
   list and explicit tag endpoint were checked.
 - Native Kotlin project recovered into `android/` from
@@ -75,7 +75,7 @@ Use a dedicated emulator. Do not commit signing material or credentials.
   date/time/place, explicit empty/loading states, lazy pages of 50, and exact IDs.
   Cancel changes no draft link; clear removes only the link. Reused
   `RecordTime.edited` to preserve the original recorded instant. Room schema 11 and
-  backup format 3 remain unchanged. Candidate version is 3.5.1 / 30501.
+  backup format 3 remain unchanged. Released version is 3.5.1 / 30501.
 - Read-only independent review found no Critical/Important issue. Corrected its
   minor finding: candidate state resets for a new search, and stale linked-visit
   emissions cannot render the wrong summary. Pagination keeps existing rows while
@@ -126,36 +126,70 @@ Use a dedicated emulator. Do not commit signing material or credentials.
   then retried with fresh valid trees. Final crash buffer empty. Font scale restored
   to 1.0 after QA.
 - Existing public Sites project recovered:
-  `appgprj_6abeb834e1a88191a8c4907b567c3472`, saved version 2. Hosted source checkout
+  `appgprj_6abeb834e1a88191a8c4907b567c3472`, originally saved version 2, now published version 3. Hosted source checkout
   is `/workspace/sproutbook-showcase`, starting commit
   `1c9796e93dbcebea98ada4052f31e1137dd7d22e`; `.openai/hosting.json` specifies `dist`.
   The hosting skill's bundled workflow script was unavailable via skills or disk;
   equivalent Git operations use hidden stdin credentials and never write tokens to
-  files or shell arguments. Website fix is verified locally and not yet published.
+  files or shell arguments. Website update published successfully; four live rendered-browser cases also passed.
 
-## Next steps
+## Delivered release and website
 
-All four rendered-browser cases passed again against final local 3.5.1 website
-metadata, native screenshot and feature-request context. Evidence:
-`docs/evidence/browser-2026-10-02/v351-browser.log` and `results.json`. Packaging
-and existing public Sites deployment are now the remaining delivery steps.
+- Evaluation pre-release: https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.5.1
+- APK: https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.1/SproutBook-3.5.1-debug.apk
+- Complete source: https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.1/SproutBook-3.5.1-source.zip
+- Local frozen artifacts: `artifacts/3.5.1/`; APK 15,097,626 bytes, source ZIP
+  33,454,252 bytes. Source manifest checkpoint:
+  `42d2ef64ac98a90a65df32d87c0dd8553e370a34`.
+- APK SHA-256: `bdbef96bdf73dd92d353d043b3e616e49e199915aedf8d003f547c95530c8bca`.
+- Source SHA-256: `5404e40d93fd2fb70238b06bbe0f7f1813519488f856ff7ef16418d033c2bbda`.
+- ZIP CRC and every manifest file hash passed. No key or credential packaged.
+  Both hosted source halves reassemble exactly and meet the hosting file limit.
+  All three published GitHub asset sizes/digests, including the checksum file,
+  match verified local files. Do not regenerate this release's frozen artifacts.
+- GitHub main contains the full recovered native source and exact local commits.
+  HTTPS Git receive returned 401 on this host. The authenticated Git Data API
+  uploaded matching blobs/trees/commits and performed one non-force fast-forward;
+  no remote changes were overwritten. Helper/cached SHA list are in
+  `/workspace/scratch/sproutbook-api-push.py` and `sproutbook-api-upload-state.json`.
+  A large flat tree timed out; building direct child trees resolved it.
+- Direct source-asset upload returned `Bad Content-Length`; the draft was not
+  published. The existing release workflow then downloaded the verified Sites
+  artifacts, checked SHA-256/ZIP/native source/no-key conditions, and published all
+  three assets successfully. Run:
+  https://github.com/nothatcher-creator/Sproutbook/actions/runs/37070151376
+  The workflow is now explicit `workflow_dispatch`, versioned, and refuses to
+  overwrite existing releases. Publication log is archived with browser evidence.
+- Existing public Sites deployment **succeeded** on 2026-10-02 at 21:58:53 UTC:
+  https://sproutbook-woodland.nothatch.chatgpt.site
+  Saved version 3: `appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_656629d908b8819195c5862fde354c9f`.
+  Deployment: `appgdep_6ac029092a148191b1bf736d6c858bee`.
+  Pushed source: `5ee5c4e2bfb31b1972abd554142b4dd9b8b652b5`.
+  Public audience and older 3.5.0 downloads preserved. The archive was generated
+  from that exact committed `.openai/hosting.json` and `dist` source.
+- All four final local **and live** Chromium viewport cases passed with 3.5.1
+  metadata, native screenshot and feature-request context. Live evidence:
+  `docs/evidence/browser-2026-10-02/live-v351-browser.log`,
+  `live-v351-results.json`, and `live-downloads-v351.png`.
+  Static/checksum and simulated DOM checks are separate passing evidence.
+  Website demos are temporary sample state, separate from native family records.
 
-Verified local artifacts in `artifacts/3.5.1/`: APK 15,097,626 bytes, source ZIP
-33,454,252 bytes. Source manifest checkpoint is `42d2ef64ac98a90a65df32d87c0dd8553e370a34`.
-ZIP CRC and every manifest file hash passed; no signing/credential files are
-packaged. Source halves reassemble byte-for-byte and each meets the hosting file
-limit. APK SHA-256:
-`bdbef96bdf73dd92d353d043b3e616e49e199915aedf8d003f547c95530c8bca`;
-source SHA-256:
-`5404e40d93fd2fb70238b06bbe0f7f1813519488f856ff7ef16418d033c2bbda`.
-New release static/version/checksum checks and DOM-simulated regressions passed
-again (`static-v351.log`, `dom-v351.log`). Existing hosted 3.5.0 downloads remain.
-Publication is pending; do not regenerate these frozen artifacts while updating
-publication documentation.
+## Continuing from this checkpoint
 
-1. Package the verified 3.5.1 APK/source/checksums, update download metadata and
-   screenshots consistently, publish an evaluation pre-release and the existing
-   Sites project, then checkpoint terminal release/deployment details here.
+1. Start with `android/docs/QA-3.5.1.md`, not only the historical 3.5 ledger.
+   Clone main; the native project is now present. Use the preserved external
+   evaluation key if available, never an automatically generated replacement.
+2. On an actual Android 17/API 37 device, prioritize background notification/audio,
+   spoken TalkBack, motion eligibility, battery and smoothness. Also check the R8
+   runtime with the proper signing identity. None of these physical/runtime gates
+   passed here; the API 29 software emulator is functional evidence only.
+3. The finite press animation can replay when motion eligibility returns. Review
+   that cosmetic issue and audit another genuine feature gap before choosing the
+   next small update. Keep schema/migrations/backup and per-child records intact.
+4. Compile → test affected flows → fix → update this checkpoint and the QA ledger.
+   Bump semantic version before publishing new artifacts. Preserve both hosting
+   sources and use Sites for website publication; GitHub `website/` alone is a mirror.
 
-Hardware audio quality, battery use, spoken TalkBack, Android 17 background behavior,
-and production signing were already open gates at 3.5.0. Do not claim them passed.
+No current delivery blocker remains. Production signing, hardware audio quality,
+battery use, spoken TalkBack, Android 17 background behavior and minified runtime
+remain open gates. Do not describe them as passed.
