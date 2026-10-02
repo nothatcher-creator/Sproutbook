@@ -43,7 +43,7 @@ The existing evaluation certificate is preserved:
 No replacement key was generated. Missing-key signing deliberately fails.
 Export a backup and install over the existing evaluation app; avoid uninstalling.
 Production-signed installations require their original production key.
-[Installation instructions](INSTALL.md) · [Checksums](../SHA256SUMS-3.5.1.txt).
+[Installation instructions](https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/INSTALL.md) · [Checksums](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.1/SHA256SUMS-3.5.1.txt).
 
 ## Verification
 
@@ -70,8 +70,8 @@ Production-signed installations require their original production key.
 
 Initial reproduced bug failures and a corrected test-loading timing failure are
 retained in the evidence. Only completed final passing results are counted.
-[Native QA](../android/docs/QA-3.5.1.md) · [Website QA](../website/QA.md) ·
-[Persistent continuation checkpoint](CONTINUATION.md).
+[Native QA](https://github.com/nothatcher-creator/Sproutbook/blob/main/android/docs/QA-3.5.1.md) · [Website QA](https://github.com/nothatcher-creator/Sproutbook/blob/main/website/QA.md) ·
+[Persistent continuation checkpoint](https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/CONTINUATION.md).
 
 ## Remaining limitations
 
