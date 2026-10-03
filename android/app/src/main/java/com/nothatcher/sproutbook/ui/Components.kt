@@ -19,9 +19,9 @@ import java.time.*
 import java.time.format.DateTimeFormatter
 
 @Composable
-fun Page(title: String, subtitle: String = "", content: LazyListScope.() -> Unit) {
+fun Page(title: String, subtitle: String = "", modifier: Modifier = Modifier, content: LazyListScope.() -> Unit) {
     LazyColumn(
-        Modifier.fillMaxSize(),
+        modifier.fillMaxSize(),
         contentPadding = PaddingValues(20.dp, 12.dp, 20.dp, 28.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
@@ -63,9 +63,13 @@ fun Muted(text: String) {
 }
 
 @Composable
-fun EntryRow(title: String, detail: String, onClick: () -> Unit) {
+fun EntryRow(title: String, detail: String, onClick: () -> Unit) = EntryRow(title, detail, true, onClick)
+
+@Composable
+fun EntryRow(title: String, detail: String, enabled: Boolean, onClick: () -> Unit) {
     Surface(
         onClick = onClick,
+        enabled = enabled,
         shape = RoundedCornerShape(24.dp),
         color = MaterialTheme.colorScheme.surfaceContainer,
         border = BorderStroke(.7.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = .55f)),

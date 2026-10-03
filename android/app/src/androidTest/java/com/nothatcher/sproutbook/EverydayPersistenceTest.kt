@@ -50,7 +50,7 @@ class EverydayPersistenceTest {
             assertEquals(1L, db.routineCompletions().all().single().day)
             assertEquals("Kept", db.pottyLogs().get("p")!!.notes)
             assertEquals(90.125, db.milkContainers().get("m")!!.amountMl, 0.0)
-            assertEquals(12, db.openHelper.readableDatabase.version)
+            assertEquals(AppDatabase.VERSION, db.openHelper.readableDatabase.version)
         } finally {
             settings.boolean("grandparent", old)
             db.close()

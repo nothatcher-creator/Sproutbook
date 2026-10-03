@@ -1,0 +1,45 @@
+{
+  "core": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "com.nothatcher.sproutbook.core.EverydayBackupTest",
+      "com.nothatcher.sproutbook.core.CalendarTest",
+      "com.nothatcher.sproutbook.core.WishlistBackupTest",
+      "com.nothatcher.sproutbook.core.AdviceCatalogTest",
+      "com.nothatcher.sproutbook.core.TreeTest",
+      "com.nothatcher.sproutbook.core.SoundUpgradeTest",
+      "com.nothatcher.sproutbook.core.ProfileRulesTest",
+      "com.nothatcher.sproutbook.core.BirthPlanningCatalogTest",
+      "com.nothatcher.sproutbook.core.WoodlandMotionTest",
+      "com.nothatcher.sproutbook.core.DevelopmentRulesTest",
+      "com.nothatcher.sproutbook.core.SoundTimerTest",
+      "com.nothatcher.sproutbook.core.SolidsRulesTest",
+      "com.nothatcher.sproutbook.core.HouseholdRulesTest",
+      "com.nothatcher.sproutbook.core.AdviceUpgradeTest",
+      "com.nothatcher.sproutbook.core.RecordTimeTest",
+      "com.nothatcher.sproutbook.core.BackupFormatTest",
+      "com.nothatcher.sproutbook.core.GrowthMathTest",
+      "com.nothatcher.sproutbook.core.PregnancyRulesTest",
+      "com.nothatcher.sproutbook.core.HomeOrganizerBackupTest",
+      "com.nothatcher.sproutbook.core.BirthAdviceTest",
+      "com.nothatcher.sproutbook.core.RoutineRulesTest",
+      "com.nothatcher.sproutbook.core.SleepMathTest",
+      "com.nothatcher.sproutbook.core.FeedingMathTest",
+      "com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest",
+      "com.nothatcher.sproutbook.core.BoundedIoTest"
+    ]
+  },
+  "app": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "com.nothatcher.sproutbook.ChildPaletteTest",
+      "com.nothatcher.sproutbook.ToothLayoutTest"
+    ]
+  }
+}

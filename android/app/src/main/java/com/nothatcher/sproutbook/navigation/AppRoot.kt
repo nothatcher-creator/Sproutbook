@@ -1,6 +1,7 @@
 package com.nothatcher.sproutbook.navigation
 
 import androidx.compose.foundation.layout.*
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.CircleShape
@@ -15,6 +16,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
+import androidx.navigation.NavType
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import com.nothatcher.sproutbook.core.HomeCustomization
 import com.nothatcher.sproutbook.*
 import com.nothatcher.sproutbook.R
 import com.nothatcher.sproutbook.data.*
@@ -27,7 +31,7 @@ import com.nothatcher.sproutbook.features.emergency.EmergencyScreen
 import com.nothatcher.sproutbook.features.feeding.*
 import com.nothatcher.sproutbook.features.growth.GrowthScreen
 import com.nothatcher.sproutbook.features.health.HealthScreen
-import com.nothatcher.sproutbook.features.home.HomeScreen
+import com.nothatcher.sproutbook.features.home.*
 import com.nothatcher.sproutbook.features.inventory.InventoryScreen
 import com.nothatcher.sproutbook.features.memories.MemoryScreen
 import com.nothatcher.sproutbook.features.milestones.MilestoneScreen
@@ -69,10 +73,13 @@ fun AppRoot(
     val snackbar = remember { SnackbarHostState() }
     var switcher by remember { mutableStateOf(false) }
     var adding by remember { mutableStateOf(false) }
+    var organizerPreview by remember(state.child?.id) { mutableStateOf<HomeCustomization?>(null) }
+    LaunchedEffect(route) { if (route != "home-organizer") organizerPreview = null }
+    BackHandler(enabled = route == "home-organizer" && organizerPreview != null) { organizerPreview = null }
     LaunchedEffect(vm) { vm.messages.collect { snackbar.showSnackbar(it) } }
     WoodlandMotionProvider(state.prefs.reduceMotion, !switcher && !adding && !state.loading) {
     Box(Modifier.fillMaxSize()) {
-    WoodlandBackground(route in listOf("today", "schedule", "care", "more") && state.child != null)
+    WoodlandBackground(route in listOf("schedule", "care", "more") && state.child != null)
     Scaffold(
         containerColor = Color.Transparent,
         contentColor = MaterialTheme.colorScheme.onBackground,
@@ -95,7 +102,10 @@ fun AppRoot(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     if (route !in listOf("today", "schedule", "care", "more"))
-                        IconButton(onClick = { nav.popBackStack() }) {
+                        IconButton(onClick = {
+                            if (route == "home-organizer" && organizerPreview != null) organizerPreview = null
+                            else nav.popBackStack()
+                        }) {
                             WoodlandIcon(R.drawable.woodland_back, "Back")
                         }
                     Surface(
@@ -201,17 +211,23 @@ fun AppRoot(
                     composable("schedule") { key(state.child.id) { ScheduleScreen(vm, state) } }
                     composable("care") { CareScreen(state) { nav.navigate(it) } }
                     composable(
-                        "memories?memoryId={memoryId}",
+                        "memories?memoryId={memoryId}&new={new}",
                         arguments =
                             listOf(
                                 navArgument("memoryId") {
                                     nullable = true
                                     defaultValue = null
-                                }
+                                },
+                                navArgument("new") {
+                                    type = NavType.BoolType
+                                    defaultValue = false
+                                },
                             ),
                     ) { entry ->
                         key(state.child.id) {
-                            MemoryScreen(vm, state, entry.arguments?.getString("memoryId"))
+                            MemoryScreen(vm, state, entry.arguments?.getString("memoryId"),
+                                addNew = entry.arguments?.getBoolean("new") == true && entry.savedStateHandle.get<Boolean>("newHandled") != true,
+                                onAddHandled = { entry.savedStateHandle["newHandled"] = true })
                         }
                     }
                     composable("feeding") {
@@ -252,6 +268,31 @@ fun AppRoot(
                     composable("solids-guide") { SolidsGuide() }
                     composable("sleep") { key(state.child.id) { SleepScreen(vm, state) } }
                     composable("formula") { key(state.child.id) { FormulaScreen(state) } }
+                    composable("home-organizer") {
+                        key(state.child.id) {
+                            Box(Modifier.fillMaxSize()) {
+                                // Keep the draft composed, but remove its hit targets as well as semantics in preview.
+                                Box(if (organizerPreview != null) Modifier.size(0.dp).clearAndSetSemantics {} else Modifier.fillMaxSize()) {
+                                    HomeOrganizerScreen(vm, state.child, state.prefs.grandparent,
+                                        onClose = { nav.popBackStack() }, onPreview = { organizerPreview = it })
+                                }
+                                organizerPreview?.let { draft ->
+                                    Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
+                                        Surface(color = MaterialTheme.colorScheme.secondaryContainer) {
+                                            Column(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp)) {
+                                                Text("Preview · Nothing has been saved", style = MaterialTheme.typography.titleSmall)
+                                                Text("Actions are disabled while you preview your layout.", style = MaterialTheme.typography.bodySmall)
+                                                TextButton(onClick = { organizerPreview = null }, modifier = Modifier.heightIn(min = 48.dp).testTag("organizer-preview-back")) {
+                                                    Text("Back to organizer")
+                                                }
+                                            }
+                                        }
+                                        Box(Modifier.weight(1f)) { HomeScreen(vm, state, draft, preview = true) {} }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     composable("more") { ProfileScreen(vm, state) { nav.navigate(it) } }
                 }
         }

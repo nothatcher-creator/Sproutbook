@@ -35,6 +35,7 @@ fun MemoryTree(
     onOpen: (Memory) -> Unit = {},
     onMove: (String, Int) -> Unit = { _, _ -> },
     treeStyle: String = "Summer",
+    enabled: Boolean = true,
 ) {
     var selected by remember { mutableStateOf<String?>(null) }
     var drag by remember { mutableStateOf<Offset?>(null) }
@@ -52,6 +53,7 @@ fun MemoryTree(
         Modifier.fillMaxWidth()
             .height(315.dp)
             .semantics {
+                if (!enabled) disabled()
                 contentDescription =
                     "Memory tree, ${memories.size} leaves. A timeline is also available."
                 // Android has a small per-node custom-action limit. Keep every leaf and
@@ -81,7 +83,7 @@ fun MemoryTree(
                         }
                     }
                 }
-                customActions = pageActions + buildList {
+                customActions = if (!enabled) emptyList() else pageActions + buildList {
                     if (first > 0) add(CustomAccessibilityAction(
                         if (placing) "Previous branch positions" else "Previous leaves"
                     ) {
@@ -101,7 +103,8 @@ fun MemoryTree(
                     })
                 }
             }
-            .pointerInput(safe, arrange, selected) {
+            .pointerInput(safe, arrange, selected, enabled) {
+                if (!enabled) return@pointerInput
                 detectTapGestures { p ->
                     val hit =
                         safe
@@ -127,7 +130,7 @@ fun MemoryTree(
                 }
             }
             .then(
-                if (arrange)
+                if (arrange && enabled)
                     Modifier.pointerInput(safe) {
                         detectDragGesturesAfterLongPress(
                             onDragStart = { p ->

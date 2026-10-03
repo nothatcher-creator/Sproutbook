@@ -6,7 +6,7 @@ import java.util.Base64
 
 /** Versioned transport format only. Room remains the source of truth. */
 object BackupFormat {
-    const val VERSION = 4
+    const val VERSION = 5
     const val MAX_BYTES = 32 * 1024 * 1024
 
     private data class Rule(val type: String, val default: String? = null)
@@ -37,6 +37,11 @@ object BackupFormat {
                     "notes" to s(""),
                     "accent" to s("Forest"),
                     "treeStyle" to s("Summer"),
+                    "homeSections" to s(""),
+                    "homeHiddenSections" to s(""),
+                    "homeQuickActions" to s("memory,schedule"),
+                    "homeBackground" to s("woodland"),
+                    "homeBackgroundPhoto" to textRef(),
                 ),
             "appointments" to
                 owned(
@@ -238,6 +243,9 @@ object BackupFormat {
                     if (row.keySet().any { it !in rules }) fail()
                     if (version >= 4 && table == "children" &&
                         (!row.has("accent") || !row.has("treeStyle"))) fail()
+                    if (version >= 5 && table == "children" &&
+                        listOf("homeSections", "homeHiddenSections", "homeQuickActions", "homeBackground", "homeBackgroundPhoto")
+                            .any { !row.has(it) }) fail()
                     rules.forEach { (name, rule) ->
                         if (!row.has(name)) {
                             row.add(
@@ -373,7 +381,8 @@ object BackupFormat {
                 if (bytes.size > 15 * 1024 * 1024 || photoBytes > 20 * 1024 * 1024) fail()
             }
             (data.rows("memorys").mapNotNull { it.nullStr("photo") } +
-                    data.rows("children").mapNotNull { it.nullStr("avatar") })
+                    data.rows("children").mapNotNull { it.nullStr("avatar") } +
+                    data.rows("children").mapNotNull { it.nullStr("homeBackgroundPhoto") })
                 .forEach { if (!photos.has(it)) fail() }
             val settings = root["settings"]?.takeIf { it.isJsonObject }?.asJsonObject ?: fail()
             for (key in listOf("dark", "time24", "reduceMotion")) if (
@@ -441,6 +450,13 @@ object BackupFormat {
                 one("stage", "PREGNANCY", "BABY", "TODDLER", "CHILD", "TEEN")
                 one("accent", "Forest", "Moss", "Amber", "Sky")
                 one("treeStyle", "Summer", "Autumn", "Night")
+                HomeOrganizerCatalog.decode(
+                    r.str("homeSections"),
+                    r.str("homeHiddenSections"),
+                    r.str("homeQuickActions"),
+                    r.str("homeBackground"),
+                    r.nullStr("homeBackgroundPhoto"),
+                )
                 if ((r.nullNum("birthday") ?: Long.MIN_VALUE) > LocalDate.now().toEpochDay()) fail()
             }
             "appointments" -> {

@@ -24,6 +24,11 @@ data class Child(
     val updatedAt: Long = System.currentTimeMillis(),
     @ColumnInfo(defaultValue = "'Forest'") val accent: String = "Forest",
     @ColumnInfo(defaultValue = "'Summer'") val treeStyle: String = "Summer",
+    @ColumnInfo(defaultValue = "''") val homeSections: String = "",
+    @ColumnInfo(defaultValue = "''") val homeHiddenSections: String = "",
+    @ColumnInfo(defaultValue = "'memory,schedule'") val homeQuickActions: String = "memory,schedule",
+    @ColumnInfo(defaultValue = "'woodland'") val homeBackground: String = "woodland",
+    @ColumnInfo(defaultValue = "NULL") val homeBackgroundPhoto: String? = null,
 )
 
 @Dao
@@ -35,6 +40,21 @@ interface ChildDao {
     @Query("SELECT * FROM children WHERE id=:id") suspend fun get(id: String): Child?
 
     @Upsert suspend fun save(value: Child)
+
+    @Query(
+        "UPDATE children SET homeSections=:sections, homeHiddenSections=:hidden, " +
+            "homeQuickActions=:actions, homeBackground=:background, " +
+            "homeBackgroundPhoto=:photo, updatedAt=:updatedAt WHERE id=:id"
+    )
+    suspend fun updateHomeCustomization(
+        id: String,
+        sections: String,
+        hidden: String,
+        actions: String,
+        background: String,
+        photo: String?,
+        updatedAt: Long,
+    ): Int
 
     @Query("DELETE FROM children WHERE id=:id") suspend fun delete(id: String)
 }

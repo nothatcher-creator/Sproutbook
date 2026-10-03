@@ -1,8 +1,8 @@
-# SproutBook · native Android 3.6.0
+# SproutBook · native Android 3.7.0
 
 A fresh Kotlin / Jetpack Compose parenting application. Package: `com.nothatcher.sproutbook`. There is no WebView, website runtime, Godot dependency, account requirement or Internet permission.
 
-Version `3.6.0` / code `30600` supports Android 8.0+ (min SDK 26), with compile/target SDK 37. [Download the evaluation APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-debug.apk) · [Installation guide](../docs/INSTALL.md) · [Release notes](../docs/RELEASE-3.6.0.md).
+Version `3.7.0` / code `30700` supports Android 8.0+ (min SDK 26), with compile/target SDK 37. [Download the evaluation APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-debug.apk) · [Installation guide](../docs/INSTALL.md) · [Release notes](../docs/RELEASE-3.7.0.md).
 
 ## Build and install
 
@@ -28,7 +28,7 @@ The existing debug alias/password is the standard Android debug value. If the
 key is unavailable, debug signing fails instead of generating another identity.
 Certificate SHA-256 must match
 `9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3`
-to update the published 3.4/3.5/3.5.1 evaluation installation. A production-signed app
+to update the published 3.4/3.5/3.5.1/3.6 evaluation installation. A production-signed app
 requires its original private production identity; the evaluation key cannot
 update it. No signing key is committed or included in the new source archive.
 
@@ -36,7 +36,7 @@ On small ephemeral Linux hosts, set `SPROUT_TOOLCHAIN_ROOT` to a filesystem with
 at least 8 GiB free before running the optional bootstrap/emulator scripts.
 The emulator uses the current user's Android directory (or `ANDROID_AVD_HOME`).
 
-The delivered source archive also contains `release-artifacts/` with the R8-shrunk unsigned APK and Android App Bundle from the verified release build. Sign a release with your own upload key before distribution.
+The source archive contains the tracked native project, artwork and QA evidence. Generated build outputs and signing keys are excluded. The release build produces an unsigned R8 APK and Android App Bundle locally; sign a release with your own upload key before distribution.
 
 ## Structure
 
@@ -46,6 +46,7 @@ The delivered source archive also contains `release-artifacts/` with the R8-shru
 - `FamilyViewModel`: lifecycle-aware StateFlow family context, selected-child repair and readable operation feedback.
 - `services/`: native AudioTrack foreground sound service, optional WorkManager appointment reminders, bounded private photo storage and validated backup transport.
 - `ui/` and `navigation/`: shared nature palette, accessible controls and four persistent navigation destinations.
+- `HomeOrganizerCatalog`, `HomeOrganizerRepository` and `features/home/`: stable Today section/shortcut IDs, child-owned validated presentation settings, draft editor, preview and native backgrounds.
 
 Room is the source of truth. JSON is used only as a versioned, validated interchange format. UUID identities, per-record update timestamps and child ownership leave room for a future sync adapter; cloud sharing and conflict resolution are not implemented.
 
@@ -55,7 +56,21 @@ Daily routines/responsibilities with dated completion and undo; potty visits; in
 
 All personal records work offline. Guidance is general education, with primary-source links that require a browser only when opened. The app does not diagnose illness, labour, food allergies or developmental conditions, or calculate medication doses. See `docs/Guidance.md` and [the 3.6 birth-source review](docs/BIRTH-SOURCES-3.6.md) for content review notes.
 
-## Birth planning and family wishes · 3.6.0
+## A personal Today · 3.7.0
+
+More → Home screen organizer lets each child arrange all 21 optional Today content sections, select and order any of 23 quick shortcuts, and choose Woodland/Morning/Meadow/Evening/Plain or a personal picture. The app header and four navigation tabs remain fixed. Hidden sections retain their records; existing stage and content conditions still govern whether a card appears. Empty quick-action selections and fully hidden content are valid. Add memory opens the new-memory editor directly, with the request consumed once per navigation entry.
+
+Organizer changes remain a draft until Save layout. Cancel leaves saved settings unchanged; Restore defaults requires confirmation and changes the draft until saved. Preview renders the draft using the native Today page with feature actions disabled. The editor retains its draft but has zero layout size and cleared semantics during preview, preventing underlying controls from receiving taps. Grandparent mode can view/preview the saved layout but cannot edit or save. Move controls have 48dp targets and accessible names that include the section/action title and current position.
+
+Room schema 13 adds five child columns through explicit migration 12→13: `homeSections`, `homeHiddenSections`, `homeQuickActions`, `homeBackground` and nullable `homeBackgroundPhoto`. Defaults preserve the original section order, show the original cards, choose Add memory/Schedule shortcuts and use Woodland. Organizer writes update only these presentation columns plus the record timestamp; stale profile saves preserve the latest organizer settings. Stable catalogue IDs and strict validation reject unknown or duplicate choices. No organizer operation deletes family records.
+
+The native Android photo picker supplies one selected image. `PhotoStore` bounds the read, decodes/resizes and writes a fresh private JPEG on the IO dispatcher. A photo becomes the saved background only through Save layout. Previous and unused staged files currently remain in private storage so an export already referencing a file is not broken. If photo IO finishes after the editor is disposed, changes child, or becomes read-only, the result is not applied to that draft; the app reports that the picture should be chosen again instead of silently losing it. See [privacy notes](../docs/PRIVACY.md).
+
+Backup format 5 includes the five settings and any referenced background JPEG. Restore stages photos under fresh filenames and remaps avatar, memory-photo and background-photo references. Native formats 1–4 remain importable with default Today choices; **3.6.0 and earlier apps reject format 5**. Retain a pre-update backup; downgrade compatibility is not claimed.
+
+The final integrated build passed with 126 unit tests (124 core + 2 app), debug/test APKs, unsigned R8 APK/AAB and vital lint. Eleven native data/migration checks have passed. Final organizer-flow/photo-provider checks, normal/150% screenshots, install-as-update evidence, packaged sizes/checksums and publication are pending. [QA-3.7](docs/QA-3.7.md) and [release notes](../docs/RELEASE-3.7.0.md) track the final results.
+
+## Earlier birth planning and family wishes · 3.6.0
 
 Pregnancy preparation now includes separate attended-homebirth, freebirth, transfer and after-birth guides, backed by labelled NHS/NICE/CDC sources. Guidance and editable personal checklists are bundled offline. Each child's list keeps added items, notes and completion state; source links open externally. The same birth-planning articles are searchable in Mom/Dad advice. The content distinguishes qualified attendance from unassisted birth, supports access to care and changing plans, and gives no DIY clinical procedures.
 
@@ -109,15 +124,15 @@ Milk freezer inventory counts Frozen containers and orders them by recorded date
 
 ## Data and backups
 
-Room schema 12 retains exported schema history and explicit migrations; destructive migration fallback is not enabled. Android system/cloud backup is disabled; use the in-app export. Backups contain sensitive family information and photos as readable JSON/Base64, so store and share them carefully.
+Room schema 13 retains exported schema history and explicit migrations; destructive migration fallback is not enabled. Android system/cloud backup is disabled; use the in-app export. Backups contain sensitive family information and photos as readable JSON/Base64, so store and share them carefully.
 
-Exports use SproutBook backup format version 4. Import supports versions 1–4, upgrading older native backups with appropriate child-appearance and Wishlist defaults. Older apps cannot restore format-4 exports, so retain a pre-update backup before installing. Imports are limited to 32 MiB including at most 20 MiB of photos and 50,000 records. It validates all tables, ownership, identities, dates, amounts and photos before asking to replace the current family data. Restore is transactional and imports photos under fresh filenames. Notifications remain off after restore. Old HTML/WebView exports are not compatible with this format.
+Exports use SproutBook backup format version 5. Import supports versions 1–5, upgrading older native backups with appropriate appearance, Wishlist and Today defaults. Referenced background photos are included and remapped to fresh private filenames on restore. Older apps cannot restore format-5 exports, so retain a pre-update backup before installing. Imports are limited to 32 MiB including at most 20 MiB of photos and 50,000 records. It validates all tables, ownership, identities, dates, amounts and photos before asking to replace the current family data. Restore is transactional and imports photos under fresh filenames. Notifications remain off after restore. Old HTML/WebView exports are not compatible with this format.
 
 Grandparent mode prevents accidental changes; it is a convenience mode, not account authentication or a security boundary. Anyone using the unlocked app can turn it off in settings.
 
 ## Release checklist and evidence
 
-Read [QA-3.6](docs/QA-3.6.md) and [the 3.6 release notes](../docs/RELEASE-3.6.0.md) for this evaluation build; `docs/QA.md`, `docs/Review.md`, `docs/Progress.md` and `docs/Plan.md` retain earlier evidence and plans. The QA ledger distinguishes actual executed checks from remaining hardware/store gates. Before a production/store release, complete real-device audio and background tests, Android 17/API 37 notification/foreground-service checks, spoken accessibility review, clinical/editorial review, production signing, privacy policy and Play Console declarations. No claim of Play approval is made.
+Read [QA-3.7](docs/QA-3.7.md) and [the 3.7 release notes](../docs/RELEASE-3.7.0.md) for this evaluation build; `docs/QA.md`, `docs/Review.md`, `docs/Progress.md` and `docs/Plan.md` retain earlier evidence and plans. The QA ledger distinguishes actual executed checks from remaining hardware/store gates. Before a production/store release, complete real-device audio and background tests, Android 17/API 37 notification/foreground-service checks, spoken accessibility review, clinical/editorial review, production signing, privacy policy and Play Console declarations. No claim of Play approval is made.
 
 Branding is centralized in `res/values/strings.xml`, `res/drawable/ic_sprout.xml` and `ui/Theme.kt`. Future enhancements in the project plan are not presented as working UI buttons.
 

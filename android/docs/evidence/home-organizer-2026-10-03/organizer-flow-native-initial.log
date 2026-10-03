@@ -1,0 +1,70 @@
+
+com.nothatcher.sproutbook.HomeOrganizerFlowTest:.
+Error in childSwitchDiscardsDraftAndSavedLayoutsSurviveActivityRecreation(com.nothatcher.sproutbook.HomeOrganizerFlowTest):
+java.lang.AssertionError: expected:<4> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.childSwitchDiscardsDraftAndSavedLayoutsSurviveActivityRecreation(HomeOrganizerFlowTest.kt:216)
+.
+Error in previewAndCancelKeepTheSavedLayoutAndRecordsUntouched(com.nothatcher.sproutbook.HomeOrganizerFlowTest):
+java.lang.AssertionError: expected:<7> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.previewAndCancelKeepTheSavedLayoutAndRecordsUntouched(HomeOrganizerFlowTest.kt:134)
+
+Error in emptyHomeKeepsOrganizerReachableAndOrdinaryTreeScrollingDoesNotEdit(com.nothatcher.sproutbook.HomeOrganizerFlowTest):
+java.lang.AssertionError: expected:<11> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.emptyHomeKeepsOrganizerReachableAndOrdinaryTreeScrollingDoesNotEdit(HomeOrganizerFlowTest.kt:279)
+.
+Error in stageAwareCardsChangeWithoutResettingLayoutOrPastRecords(com.nothatcher.sproutbook.HomeOrganizerFlowTest):
+java.lang.AssertionError: expected:<13> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.stageAwareCardsChangeWithoutResettingLayoutOrPastRecords(HomeOrganizerFlowTest.kt:315)
+
+
+Time: 250.938
+There were 4 failures:
+1) childSwitchDiscardsDraftAndSavedLayoutsSurviveActivityRecreation(com.nothatcher.sproutbook.HomeOrganizerFlowTest)
+java.lang.AssertionError: expected:<4> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.childSwitchDiscardsDraftAndSavedLayoutsSurviveActivityRecreation(HomeOrganizerFlowTest.kt:216)
+2) previewAndCancelKeepTheSavedLayoutAndRecordsUntouched(com.nothatcher.sproutbook.HomeOrganizerFlowTest)
+java.lang.AssertionError: expected:<7> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.previewAndCancelKeepTheSavedLayoutAndRecordsUntouched(HomeOrganizerFlowTest.kt:134)
+3) emptyHomeKeepsOrganizerReachableAndOrdinaryTreeScrollingDoesNotEdit(com.nothatcher.sproutbook.HomeOrganizerFlowTest)
+java.lang.AssertionError: expected:<11> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.emptyHomeKeepsOrganizerReachableAndOrdinaryTreeScrollingDoesNotEdit(HomeOrganizerFlowTest.kt:279)
+4) stageAwareCardsChangeWithoutResettingLayoutOrPastRecords(com.nothatcher.sproutbook.HomeOrganizerFlowTest)
+java.lang.AssertionError: expected:<13> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.nothatcher.sproutbook.HomeOrganizerFlowTest.stageAwareCardsChangeWithoutResettingLayoutOrPastRecords(HomeOrganizerFlowTest.kt:315)
+
+FAILURES!!!
+Tests run: 7,  Failures: 4
+
+

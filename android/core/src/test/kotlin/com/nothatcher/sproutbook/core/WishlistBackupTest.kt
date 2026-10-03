@@ -5,7 +5,7 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class WishlistBackupTest {
-    private fun base(version: Int = 4): JsonObject =
+    private fun base(version: Int = BackupFormat.VERSION): JsonObject =
         JsonObject().apply {
             addProperty("format", "sproutbook")
             addProperty("version", version)
@@ -30,6 +30,13 @@ class WishlistBackupTest {
                     if (version >= 4) {
                         child.addProperty("accent", "Forest")
                         child.addProperty("treeStyle", "Summer")
+                    }
+                    if (version >= 5) {
+                        child.addProperty("homeSections", "")
+                        child.addProperty("homeHiddenSections", "")
+                        child.addProperty("homeQuickActions", "memory,schedule")
+                        child.addProperty("homeBackground", "woodland")
+                        child.add("homeBackgroundPhoto", JsonNull.INSTANCE)
                     }
                     getAsJsonArray("children").add(child)
                 },
@@ -88,7 +95,7 @@ class WishlistBackupTest {
 
     @Test
     fun version4PreservesWishlistAndCustomizationThroughRoundTrip() {
-        val root = base()
+        val root = base(4)
         root.child().apply {
             addProperty("accent", "Sky")
             addProperty("treeStyle", "Night")
@@ -123,7 +130,7 @@ class WishlistBackupTest {
         val first = BackupFormat.validate(root.toString())
         val restored = BackupFormat.validate(first.toString())
 
-        assertEquals(4, restored["version"].asInt)
+        assertEquals(BackupFormat.VERSION, restored["version"].asInt)
         assertEquals(first, restored)
         assertEquals("Sky", restored.child()["accent"].asString)
         assertEquals("Night", restored.child()["treeStyle"].asString)
@@ -136,7 +143,7 @@ class WishlistBackupTest {
 
     @Test
     fun version4RequiresWishlistTable() {
-        val root = base()
+        val root = base(4)
         BackupFormat.validate(root.toString())
         root.tables().remove("wishlistItems")
         rejected(root)
@@ -144,12 +151,18 @@ class WishlistBackupTest {
 
     @Test
     fun version4RequiresChildAccent() {
-        invalidChild { it.remove("accent") }
+        val root = base(4)
+        BackupFormat.validate(root.toString())
+        root.child().remove("accent")
+        rejected(root)
     }
 
     @Test
     fun version4RequiresChildTreeStyle() {
-        invalidChild { it.remove("treeStyle") }
+        val root = base(4)
+        BackupFormat.validate(root.toString())
+        root.child().remove("treeStyle")
+        rejected(root)
     }
 
     @Test

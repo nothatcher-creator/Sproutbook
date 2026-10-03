@@ -21,7 +21,8 @@ import com.nothatcher.sproutbook.ui.*
 import java.time.*
 
 @Composable
-fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null) {
+fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null,
+    addNew: Boolean = false, onAddHandled: () -> Unit = {}) {
     val child = state.child ?: return
     val rows by
         remember(child.id) { vm.repo.db.memorys().observe(child.id, 10000) }
@@ -40,6 +41,15 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                     chapter = it.chapter
                     opened = true
                 }
+    }
+    var addHandled by rememberSaveable(child.id, addNew) { mutableStateOf(false) }
+    LaunchedEffect(addNew, state.prefs.grandparent) {
+        if (addNew && !addHandled) {
+            addHandled = true
+            onAddHandled()
+            if (state.prefs.grandparent) vm.message("Grandparent mode is read only.")
+            else edit = Memory(childId = child.id, title = "", occurredOn = LocalDate.now().toEpochDay())
+        }
     }
     val last = rows.maxOfOrNull { it.chapter } ?: 0
     val visible = remember(rows, chapter) { rows.filter { it.chapter == chapter } }

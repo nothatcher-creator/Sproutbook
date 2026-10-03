@@ -46,7 +46,7 @@ import androidx.room.*
 )
 abstract class AppDatabase : RoomDatabase() {
     companion object {
-        const val VERSION = 12
+        const val VERSION = 13
     }
 
     abstract fun routines(): RoutineDao

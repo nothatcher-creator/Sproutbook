@@ -1,7 +1,44 @@
 # SproutBook continuation checkpoint
 
-Updated: 2026-10-03 UTC. Native 3.6.0 and Site version 5 are delivered. Older QA
+Updated: 2026-10-03 UTC. Native 3.6.0 and Site version 5 are delivered; organizer 3.7 is in progress. Older QA
 ledgers are historical evidence, not fresh validation.
+
+## Home screen organizer in progress — 3.7
+
+Request: More → Home screen organizer, reorder/show/hide Today sections, choose
+and order quick actions, and built-in or custom photo backgrounds. Each child's
+choices are independent. Native Kotlin/Compose implementation continues from
+clean delivered HEAD `3e15d6800fabc2faf4ac2ec168c30745b8d00fde`.
+
+- Fresh baseline 2026-10-03 18:57 UTC: `:core:test --rerun` and
+  `:app:testDebugUnitTest --rerun` passed, 109 core + 2 app = 111 tests,
+  zero failures/skips. Log: ignored `artifacts/organizer-baseline.log`.
+- Design: 21 stable section IDs retain stage/data conditions; optional ordered
+  shortcuts; original woodland plus morning/meadow/evening/plain/photo choices.
+  Organizer has accessible move buttons, Save/Cancel/Preview/Restore defaults.
+  Normal Today has no reorder gesture. Grandparent mode stays read only.
+- Implemented core validation/backup 5, additive Room 12→13, child-owned
+  configuration/photo import, editor and Today renderer. Final integrated build
+  passed 126 units (124 core + 2 app), debug/test APK, unsigned R8 APK/AAB and
+  vital lint in 5m49s. Retained evaluation certificate verified.
+- Native baseline 11 data/migration checks passed. Latest suite has already
+  passed all seven organizer repository checks (including mode switch during
+  blocked image IO) and five migration origins; eight UI checks are in progress.
+- Original seven-UI run passed three and failed four anchor fixture assertions;
+  corrected fixtures now use existing arrangeMemory to save their requested
+  branch, and the failure log remains in evidence. No app behavior change was
+  needed for those assertions. Screenshot, old-feature regression and actual
+  3.6→3.7 update preservation remain pending.
+- Independent data/UI review complete; three UI findings fixed: preview removes
+  hidden hit targets, detached photo results show feedback, Add-memory query is
+  consumed once per navigation entry. See committed review evidence.
+- No organizer APK or release published yet. Latest verified downloads are 3.6
+  below. Existing live woodland story remains Site version 5.
+- Next: integrate, compile/unit test, emulator UI/repository/migration/backup
+  checks, inspect normal and large-text screenshots, review/fix, document and
+  publish only verified evaluation APK/source/checksums with retained certificate.
+- Limitations carried forward: no physical-device/TalkBack/FPS/battery evidence,
+  production signing key unavailable. Test fixtures must only use synthetic data.
 
 ## Native 3.6 delivered
 

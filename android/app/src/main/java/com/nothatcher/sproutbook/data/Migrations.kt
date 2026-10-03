@@ -15,3 +15,15 @@ val MIGRATION_11_12 =
             db.execSQL("CREATE INDEX IF NOT EXISTS index_wishlistItems_childId ON wishlistItems (childId)")
         }
     }
+
+/** Adds child-owned Today organization without changing any family records. */
+val MIGRATION_12_13 =
+    object : Migration(12, 13) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE children ADD COLUMN homeSections TEXT NOT NULL DEFAULT ''")
+            db.execSQL("ALTER TABLE children ADD COLUMN homeHiddenSections TEXT NOT NULL DEFAULT ''")
+            db.execSQL("ALTER TABLE children ADD COLUMN homeQuickActions TEXT NOT NULL DEFAULT 'memory,schedule'")
+            db.execSQL("ALTER TABLE children ADD COLUMN homeBackground TEXT NOT NULL DEFAULT 'woodland'")
+            db.execSQL("ALTER TABLE children ADD COLUMN homeBackgroundPhoto TEXT DEFAULT NULL")
+        }
+    }

@@ -25,6 +25,9 @@ fun ProfileScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit)
     var adding by remember { mutableStateOf(false) }
     Page("Your family", "Profiles & settings, together") {
         item {
+            EntryRow("Home screen organizer", "Arrange Today, choose quick actions and set a background for this child") { go("home-organizer") }
+        }
+        item {
             EntryRow("Family cupboard", "Keep everyday supplies topped up") { go("inventory") }
             EntryRow("Wishlist", "Save ideas for this child's next chapter") { go("wishlist") }
             EntryRow("Emergency card", "Contacts and important medical information") {

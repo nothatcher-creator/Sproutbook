@@ -19,7 +19,7 @@ class BackupFormatTest {
                     getAsJsonArray("children")
                         .add(
                             JsonParser.parseString(
-                                """{"id":"a","name":"Rowan","stage":"BABY","updatedAt":1000,"accent":"Forest","treeStyle":"Summer"}"""
+                                """{"id":"a","name":"Rowan","stage":"BABY","updatedAt":1000,"accent":"Forest","treeStyle":"Summer","homeSections":"","homeHiddenSections":"","homeQuickActions":"memory,schedule","homeBackground":"woodland","homeBackgroundPhoto":null}"""
                             )
                         )
                 },
@@ -29,6 +29,8 @@ class BackupFormatTest {
     @Test
     fun legacyBackupUpgradesWithoutLosingRecords() {
         val old = base().apply { addProperty("version", 1) }
+        val child = old.getAsJsonObject("tables").getAsJsonArray("children")[0].asJsonObject
+        listOf("accent", "treeStyle", "homeSections", "homeHiddenSections", "homeQuickActions", "homeBackground", "homeBackgroundPhoto").forEach { child.remove(it) }
         listOf("diapers", "bottlePreps", "shoppingItems", "routines", "routineCompletions", "pottyLogs", "milkContainers").forEach {
             old.getAsJsonObject("tables").remove(it)
         }
@@ -79,6 +81,7 @@ class BackupFormatTest {
 
     private fun invalid(change: (JsonObject) -> Unit) {
         val b = base()
+        BackupFormat.validate(b.toString())
         change(b)
         try {
             BackupFormat.validate(b.toString())

@@ -1,13 +1,18 @@
 package com.nothatcher.sproutbook.features.home
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.testTag
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
 import com.nothatcher.sproutbook.core.RoutineRules
+import com.nothatcher.sproutbook.core.HomeCustomization
+import com.nothatcher.sproutbook.core.HomeOrganizerCatalog
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.features.feeding.volume
 import com.nothatcher.sproutbook.features.memories.MemoryTree
@@ -15,8 +20,15 @@ import com.nothatcher.sproutbook.ui.*
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun HomeScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit) {
+fun HomeScreen(
+    vm: FamilyViewModel,
+    state: FamilyState,
+    customization: HomeCustomization? = null,
+    preview: Boolean = false,
+    go: (String) -> Unit,
+) {
     val child = state.child ?: return
     val memories by
         remember(child.id) { vm.repo.db.memorys().observe(child.id, 10000) }
@@ -64,208 +76,138 @@ fun HomeScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit) {
     val doneIds = remember(completed) { completed.map { it.routineId }.toSet() }
     val remaining = due.filter { it.id !in doneIds }
     val chapter = memories.firstOrNull()?.chapter ?: 0
-    Page("Today", LocalDate.now().format(DateTimeFormatter.ofPattern("EEEE, MMMM d"))) {
-        item {
-            Panel {
-                Text("YOUR ${Stage.valueOf(child.stage).label.uppercase()} CHAPTER", color = MaterialTheme.colorScheme.secondary, style = MaterialTheme.typography.labelMedium)
-                Text(
-                    when (child.stage) {
-                        "PREGNANCY" -> "Getting ready, together."
-                        "BABY" -> "Small moments.\nA whole lot of love."
-                        "TODDLER" -> "A little more curious,\nevery day."
-                        "CHILD" -> "Room to explore.\nRoots to come home to."
-                        else -> "Growing into their\nown kind of wonderful."
-                    },
-                    style = MaterialTheme.typography.headlineSmall,
-                )
-                Muted("${child.name}'s day, all in one place.")
-            }
+    val config = customization ?: child.homeCustomization()
+    val nextAppointment = appointments.filter { it.startsAt >= System.currentTimeMillis() }.minByOrNull { it.startsAt }
+    val lowStock = stock.filter { it.quantity <= it.threshold }.take(3)
+    val latestMilestone = milestones.firstOrNull { it.completedOn != null }
+    val babyOrToddler = child.stage in listOf("BABY", "TODDLER")
+    val childOrTeen = child.stage in listOf("CHILD", "TEEN")
+    val visible = config.sectionOrder.filter { id ->
+        id !in config.hiddenSections && when (id) {
+            "up_next" -> nextAppointment != null
+            "low_stock" -> lowStock.isNotEmpty()
+            "shopping" -> shoppingCount > 0
+            "prepared_bottles" -> preparedCount > 0 && babyOrToddler
+            "routines" -> due.isNotEmpty() || childOrTeen
+            "milk_freezer" -> milkStock.count > 0 && babyOrToddler
+            "pregnancy" -> child.stage == "PREGNANCY"
+            "sleep", "feeding", "diapers" -> babyOrToddler
+            "milestones", "health" -> childOrTeen
+            "growth" -> child.stage != "PREGNANCY"
+            "quick_actions" -> config.quickActions.isNotEmpty()
+            "latest_milestone" -> latestMilestone != null
+            "potty", "meals" -> child.stage == "TODDLER"
+            "caregiver_notes" -> child.notes.isNotBlank()
+            else -> true
         }
-        appointments
-            .filter { it.startsAt >= System.currentTimeMillis() }
-            .minByOrNull { it.startsAt }
-            ?.let { a ->
-                item {
-                    EntryRow("Up next · ${a.title}", stamp(a.startsAt, state.prefs.time24)) {
-                        go("schedule")
-                    }
-                }
+    }
+    TodayBackdrop(child.id, config) { photoUnavailable ->
+        LazyColumn(
+            Modifier.fillMaxSize().testTag("today-list"),
+            contentPadding = PaddingValues(20.dp, 12.dp, 20.dp, 28.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            item(key = "today-header") {
+                WoodlandHeader("Today", today.format(DateTimeFormatter.ofPattern("EEEE, MMMM d")))
             }
-        stock
-            .filter { it.quantity <= it.threshold }
-            .take(3)
-            .forEach { i ->
-                item {
-                    EntryRow(
-                        "Low stock · ${i.name}",
-                        "${i.quantity.toString().removeSuffix(".0")} ${i.unit} left",
-                    ) {
-                        go("inventory")
-                    }
-                }
-            }
-        if (shoppingCount > 0)
-            item {
-                EntryRow("Shopping · $shoppingCount to buy", "Your next shop, ready to go") {
-                    go("shopping")
-                }
-            }
-        if (preparedCount > 0 && child.stage in listOf("BABY", "TODDLER"))
-            item {
-                EntryRow("$preparedCount prepared bottles", "View preparations and record use") {
-                    go("bottles")
-                }
-            }
-        item { EntryRow("Help right now", "Calm first steps, close at hand") { go("help") } }
-        if (due.isNotEmpty())
-            item {
-                EntryRow(
-                    "Today’s routines · ${remaining.size} remaining",
-                    remaining
-                        .take(2)
-                        .joinToString(" · ") { it.title }
-                        .ifEmpty { "All scheduled routines completed" },
-                ) {
-                    go("routines")
-                }
-            }
-        else if (child.stage in listOf("CHILD", "TEEN"))
-            item {
-                EntryRow(
-                    "Routines & responsibilities",
-                    "Shared tasks and your family’s daily rhythm",
-                ) {
-                    go("routines")
-                }
-            }
-        if (milkStock.count > 0 && child.stage in listOf("BABY", "TODDLER"))
-            item {
-                EntryRow(
-                    "Milk freezer · ${volume(milkStock.totalMl,state.prefs.volumeUnit)}",
-                    "${milkStock.count} frozen containers",
-                ) {
-                    go("milk")
-                }
-            }
-        item { Section("A little care, right here") }
-        if (child.stage == "PREGNANCY")
-            item {
-                EntryRow("Your pregnancy", "Movements, appointments and preparation") {
-                    go("pregnancy")
-                }
-            }
-        if (child.stage in listOf("BABY", "TODDLER"))
-            item {
-                EntryRow(
-                    "Log sleep",
-                    sleep.firstOrNull()?.let {
-                        "Last sleep · ${stamp(it.startsAt,state.prefs.time24)}"
-                    } ?: "Start a nap or settle in for the night",
-                ) {
-                    go("sleep")
-                }
-            }
-        if (child.stage in listOf("CHILD", "TEEN"))
-            item {
-                EntryRow("Milestones & achievements", "A growing story of their own") {
-                    go("milestones")
-                }
-            }
-        if (child.stage in listOf("BABY", "TODDLER"))
-            item {
-                EntryRow(
-                    "Log feeding",
-                    feeds
-                        .firstOrNull { it.kind != "Pump" }
-                        ?.let { "Last feed · ${stamp(it.startsAt,state.prefs.time24)}" }
-                        ?: "Bottle, breast or pump",
-                ) {
-                    go("feeding")
-                }
-            }
-        if (child.stage in listOf("BABY", "TODDLER"))
-            item {
-                EntryRow(
-                    "Log diaper",
-                    diaper.firstOrNull()?.let {
-                        "Last change · ${stamp(it.recordedAt,state.prefs.time24)}"
-                    } ?: "Wet, dirty or mixed, in a tap",
-                ) {
-                    go("diapers")
-                }
-            }
-        if (child.stage != "PREGNANCY")
-            item {
-                EntryRow("Growth journal", "Weight, height and their recorded trends") {
-                    go("growth")
-                }
-            }
-        item {
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                FilledTonalButton(
-                    onClick = { go("memories") },
-                    Modifier.weight(1f).heightIn(min = 52.dp),
-                ) {
-                    Text("Add memory")
-                }
-                OutlinedButton(
-                    onClick = { go("schedule") },
-                    Modifier.weight(1f).heightIn(min = 52.dp),
-                ) {
-                    Text("Schedule")
-                }
-            }
-        }
-        item {
-            Panel {
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Section("Growing memories")
-                    TextButton(onClick = { go("memories") }) { Text("Open tree") }
-                }
-                Muted("${child.treeStyle} woodland · ${child.name}'s growing story")
-                MemoryTree(
-                    memories.filter { it.chapter == chapter },
-                    onOpen = { go("memories?memoryId=${it.id}") },
-                    treeStyle = child.treeStyle,
-                )
-                Muted(
-                    memories.firstOrNull()?.let { "${it.title} · Your latest little moment" }
-                        ?: "Every story begins with a first leaf."
-                )
-            }
-        }
-        milestones
-            .firstOrNull { it.completedOn != null }
-            ?.let { m ->
-                item {
-                    EntryRow(
-                        "A growing moment · ${m.title}",
-                        "Celebrated ${LocalDate.ofEpochDay(m.completedOn!!)}",
-                    ) {
-                        go("milestones")
-                    }
-                }
-            }
-        if (child.stage in listOf("CHILD", "TEEN"))
-            item {
-                EntryRow("Health & important records", "Keep their care notes together") {
-                    go("health")
-                }
-            }
-        if (child.stage == "TODDLER")
-            item { EntryRow("Potty journal", "A little visit, remembered") { go("potty") } }
-        if (child.stage == "TODDLER")
-            item {
-                EntryRow("This week’s meals", "A little planning for the family table") {
-                    go("meals")
-                }
-            }
-        if (child.notes.isNotBlank())
-            item {
+            if (photoUnavailable) item(key = "background-unavailable") {
                 Panel {
-                    Section("For everyone who cares")
-                    Text(child.notes)
+                    Section("Background photo unavailable")
+                    Muted("Your woodland background is showing. Choose another photo in the Home screen organizer.")
+                    TextButton(onClick = { go("home-organizer") }, enabled = !preview) { Text("Home screen organizer") }
                 }
             }
+            if (visible.isEmpty()) item(key = "empty-layout") {
+                Panel {
+                    Section("Make Today yours")
+                    Muted("Your sections are hidden or waiting for this child's next chapter. Choose what belongs here in the organizer.")
+                    OutlinedButton(onClick = { go("home-organizer") }, enabled = !preview,
+                        modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp).testTag("today-organizer-empty")) {
+                        Text("Home screen organizer")
+                    }
+                }
+            }
+            items(visible, key = { it }) { id ->
+                Box(Modifier.fillMaxWidth().testTag("today-section-$id")) {
+                    when (id) {
+                        "chapter" -> Panel {
+                            Text("YOUR ${Stage.valueOf(child.stage).label.uppercase()} CHAPTER", color = MaterialTheme.colorScheme.secondary,
+                                style = MaterialTheme.typography.labelMedium)
+                            Text(when (child.stage) {
+                                "PREGNANCY" -> "Getting ready, together."
+                                "BABY" -> "Small moments.\nA whole lot of love."
+                                "TODDLER" -> "A little more curious,\nevery day."
+                                "CHILD" -> "Room to explore.\nRoots to come home to."
+                                else -> "Growing into their\nown kind of wonderful."
+                            }, style = MaterialTheme.typography.headlineSmall)
+                            Muted("${child.name}'s day, all in one place.")
+                        }
+                        "up_next" -> nextAppointment?.let { a ->
+                            EntryRow("Up next · ${a.title}", stamp(a.startsAt, state.prefs.time24), !preview) { go("schedule") }
+                        }
+                        "low_stock" -> Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                            lowStock.forEach { i ->
+                                EntryRow("Low stock · ${i.name}", "${i.quantity.toString().removeSuffix(".0")} ${i.unit} left", !preview) { go("inventory") }
+                            }
+                        }
+                        "shopping" -> EntryRow("Shopping · $shoppingCount to buy", "Your next shop, ready to go", !preview) { go("shopping") }
+                        "prepared_bottles" -> EntryRow("$preparedCount prepared bottles", "View preparations and record use", !preview) { go("bottles") }
+                        "help" -> EntryRow("Help right now", "Calm first steps, close at hand", !preview) { go("help") }
+                        "routines" -> if (due.isNotEmpty()) {
+                            EntryRow("Today’s routines · ${remaining.size} remaining", remaining.take(2).joinToString(" · ") { it.title }
+                                .ifEmpty { "All scheduled routines completed" }, !preview) { go("routines") }
+                        } else EntryRow("Routines & responsibilities", "Shared tasks and your family’s daily rhythm", !preview) { go("routines") }
+                        "milk_freezer" -> EntryRow("Milk freezer · ${volume(milkStock.totalMl, state.prefs.volumeUnit)}", "${milkStock.count} frozen containers", !preview) { go("milk") }
+                        "pregnancy" -> EntryRow("Your pregnancy", "Movements, appointments and preparation", !preview) { go("pregnancy") }
+                        "sleep" -> EntryRow("Log sleep", sleep.firstOrNull()?.let { "Last sleep · ${stamp(it.startsAt, state.prefs.time24)}" }
+                            ?: "Start a nap or settle in for the night", !preview) { go("sleep") }
+                        "milestones" -> EntryRow("Milestones & achievements", "A growing story of their own", !preview) { go("milestones") }
+                        "feeding" -> EntryRow("Log feeding", feeds.firstOrNull { it.kind != "Pump" }?.let { "Last feed · ${stamp(it.startsAt, state.prefs.time24)}" }
+                            ?: "Bottle, breast or pump", !preview) { go("feeding") }
+                        "diapers" -> EntryRow("Log diaper", diaper.firstOrNull()?.let { "Last change · ${stamp(it.recordedAt, state.prefs.time24)}" }
+                            ?: "Wet, dirty or mixed, in a tap", !preview) { go("diapers") }
+                        "growth" -> EntryRow("Growth journal", "Weight, height and their recorded trends", !preview) { go("growth") }
+                        "quick_actions" -> Panel {
+                            Section("Quick actions")
+                            BoxWithConstraints {
+                                val buttonWidth = (maxWidth - 10.dp) / 2
+                                FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp),
+                                    maxItemsInEachRow = 2) {
+                                    config.quickActions.forEach { actionId ->
+                                        val action = HomeOrganizerCatalog.quickActions.first { it.id == actionId }
+                                        FilledTonalButton(onClick = { go(action.route) },
+                                            enabled = !preview && !(state.prefs.grandparent && actionId == "memory"),
+                                            modifier = Modifier.width(buttonWidth).heightIn(min = 52.dp).testTag("today-quick-$actionId")) {
+                                            Text(action.title)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        "memory_tree" -> Panel {
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                Section("Growing memories")
+                                TextButton(onClick = { go("memories") }, enabled = !preview) { Text("Open tree") }
+                            }
+                            Muted("${child.treeStyle} woodland · ${child.name}'s growing story")
+                            MemoryTree(memories.filter { it.chapter == chapter }, onOpen = { go("memories?memoryId=${it.id}") },
+                                treeStyle = child.treeStyle, enabled = !preview)
+                            Muted(memories.firstOrNull()?.let { "${it.title} · Your latest little moment" }
+                                ?: "Every story begins with a first leaf.")
+                        }
+                        "latest_milestone" -> latestMilestone?.let { m ->
+                            EntryRow("A growing moment · ${m.title}", "Celebrated ${LocalDate.ofEpochDay(m.completedOn!!)}", !preview) { go("milestones") }
+                        }
+                        "health" -> EntryRow("Health & important records", "Keep their care notes together", !preview) { go("health") }
+                        "potty" -> EntryRow("Potty journal", "A little visit, remembered", !preview) { go("potty") }
+                        "meals" -> EntryRow("This week’s meals", "A little planning for the family table", !preview) { go("meals") }
+                        "caregiver_notes" -> Panel {
+                            Section("For everyone who cares")
+                            Text(child.notes)
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ class BabyForgeApp : Application() {
     val settings by lazy { Settings(this) }
     val db by lazy {
         Room.databaseBuilder(this, AppDatabase::class.java, "sproutbook-v3.db")
-            .addMigrations(MIGRATION_11_12)
+            .addMigrations(MIGRATION_11_12, MIGRATION_12_13)
             .build()
     }
     val reminders by lazy {

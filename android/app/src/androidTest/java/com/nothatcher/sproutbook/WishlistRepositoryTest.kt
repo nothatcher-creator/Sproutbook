@@ -137,6 +137,8 @@ class WishlistRepositoryTest {
                 getAsJsonObject("tables").getAsJsonArray("children").forEach {
                     it.asJsonObject.remove("accent")
                     it.asJsonObject.remove("treeStyle")
+                    listOf("homeSections", "homeHiddenSections", "homeQuickActions", "homeBackground", "homeBackgroundPhoto")
+                        .forEach { key -> it.asJsonObject.remove(key) }
                 }
             }
             assertTrue(backup.restore(old))

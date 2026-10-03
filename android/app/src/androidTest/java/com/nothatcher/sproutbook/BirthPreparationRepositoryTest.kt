@@ -156,7 +156,7 @@ class BirthPreparationRepositoryTest {
             db = Room.databaseBuilder(context, AppDatabase::class.java, name).build()
             repo = FamilyRepository(db, settings)
             assertEquals(expected, db.prepItems().forChild("a").associateBy { it.id })
-            assertEquals(12, db.openHelper.readableDatabase.version)
+            assertEquals(AppDatabase.VERSION, db.openHelper.readableDatabase.version)
 
             repo.saveChild(db.children().all().first { it.id == "a" }.copy(stage = "BABY"))
             settings.select("b")

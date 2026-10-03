@@ -61,6 +61,9 @@ class BackupManager(private val context: Context, private val repo: FamilyReposi
                     } +
                         data.getAsJsonArray("children").mapNotNull {
                             it.asJsonObject["avatar"].takeUnless { it.isJsonNull }?.asString
+                        } +
+                        data.getAsJsonArray("children").mapNotNull {
+                            it.asJsonObject["homeBackgroundPhoto"].takeUnless { it.isJsonNull }?.asString
                         })
                     .distinct()
             var bytesTotal = 0
@@ -146,7 +149,12 @@ class BackupManager(private val context: Context, private val repo: FamilyReposi
                             file.writeBytes(Base64.getDecoder().decode(value.asString))
                             name to fresh
                         }
-                    for ((table, key) in listOf("memorys" to "photo", "children" to "avatar")) data
+                    for ((table, key) in
+                        listOf(
+                            "memorys" to "photo",
+                            "children" to "avatar",
+                            "children" to "homeBackgroundPhoto",
+                        )) data
                         .getAsJsonArray(table)
                         .forEach {
                             val row = it.asJsonObject

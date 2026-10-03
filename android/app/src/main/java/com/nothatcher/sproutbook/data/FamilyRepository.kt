@@ -1,6 +1,7 @@
 package com.nothatcher.sproutbook.data
 
 import com.nothatcher.sproutbook.core.ProfileRules
+import com.nothatcher.sproutbook.core.HomeOrganizerCatalog
 import java.time.LocalDate
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.sync.Mutex
@@ -33,8 +34,21 @@ class FamilyRepository(
         ) {
             "Birthday must be today or earlier."
         }
-        db.children()
-            .save(child.copy(name = child.name.trim(), updatedAt = System.currentTimeMillis()))
+        // A profile editor can hold an older Child while Today is customized elsewhere.
+        val current = db.children().get(child.id)
+        val saved = if (current == null) {
+            HomeOrganizerCatalog.validate(child.homeCustomization())
+            child
+        } else {
+            child.copy(
+                homeSections = current.homeSections,
+                homeHiddenSections = current.homeHiddenSections,
+                homeQuickActions = current.homeQuickActions,
+                homeBackground = current.homeBackground,
+                homeBackgroundPhoto = current.homeBackgroundPhoto,
+            )
+        }
+        db.children().save(saved.copy(name = child.name.trim(), updatedAt = System.currentTimeMillis()))
         settings.select(child.id)
     }
 
