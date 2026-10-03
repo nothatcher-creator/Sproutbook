@@ -1,9 +1,9 @@
 # SproutBook continuation checkpoint
 
-Updated: 2026-10-03 UTC. This document describes this session's work; older QA
+Updated: 2026-10-03 UTC. Native 3.6.0 and Site version 5 are delivered. Older QA
 ledgers are historical evidence, not fresh validation.
 
-## Native 3.6 follow-up in progress
+## Native 3.6 delivered
 
 User requests: homebirth/freebirth advice and lists, a homebirth plan, Labour
 mode, a per-child wishlist, more child customization and a nicer Memory Tree.
@@ -18,39 +18,62 @@ published woodland journey are preserved.
   preferences together. It opens a dialer for review and does not call directly.
 - Implemented child-owned Wishlist, four woodland accents and three tree styles.
   Static native Canvas polish retains exact anchors, gestures and accessibility.
-  Room12 uses explicit additive migration11→12; backup4 exports include new data,
-  while native formats1–3 remain importable. Older apps reject format4.
+  Room 12 uses explicit additive migration 11→12; backup 4 exports include new data,
+  while native formats 1–3 remain importable. Older apps reject format 4.
 - Source digest: `android/docs/BIRTH-SOURCES-3.6.md`. Independent review findings
   (two-digit emergency numbers and incomplete source lists) fixed and verified.
   No DIY clinical procedures or equivalence claim for unassisted birth.
 - Integrated Gradle: 109 core + 2 app unit tests passed; debug/test APK,
   unsigned R8 APK/AAB and vital lint passed. Final full-width Labour button polish
-  passed the same full build (5m49s). Evaluation certificate remains unchanged.
-- Dedicated offline API29 emulator: real3.5.1→3.6.0 update preserved every old
+  passed the same full build (5m 49s). Evaluation certificate remains unchanged.
+- Dedicated offline API 29 emulator: real 3.5.1→3.6.0 update preserved every old
   fixture row/value and byte-identical DataStore. 17 repository/migration/backup
-  plus15 unique UI/gesture/framework-accessibility checks passed before final
+  plus 15 unique UI/gesture/framework-accessibility checks passed before final
   visual polish. Corrected two harness timing failures; original logs retained.
 - Final affected rerun: seven birth/tree gesture/accessibility checks passed.
   Screenshot fixture initially failed inside Compose test-frame layout, then
   passed unchanged in isolation. Pixel inspection found stale screenshot frames;
   capture harness now waits for native Android window/accessibility idle.
 - Final full-width Labour persistence/recreation check and normal fixture passed;
-  clean normal/150% fixtures passed with16 inspected screenshots. Three distinct
+  clean normal/150% fixtures passed with 16 inspected screenshots. Three distinct
   tree scenes retain saved anchors. Final crash buffer empty. Manual startup
   rendered; external dialer/idle profiling blocked by missing UiAutomator roots.
 - Frozen source checkpoint `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`;
-  ZIP39,871,429 bytes/1135 entries, CRC passed, no keys/build outputs.
-  APK15,376,653 bytes, retained certificate and SHA verified. Both digests are
+  ZIP 39,871,429 bytes/1135 entries, CRC passed, no keys/build outputs.
+  APK 15,376,653 bytes, retained certificate and SHA verified. Both digests are
   in `SHA256SUMS-3.6.0.txt`; artifacts are never regenerated for doc updates.
-- Pending: GitHub prerelease and existing Sites publication. Local Chromium/WebKit five viewports each, four no-JavaScript
-  cases and two200% text cases passed for the download/gallery update.
-- Physical-phone FPS/battery/audio, spoken TalkBack, Android17 behavior, minified
+- Published GitHub evaluation prerelease v3.6.0 at 2026-10-03 16:46:11 UTC.
+  Release workflow 37138059905 succeeded from metadata commit 473aebe. Actual
+  downloaded assets matched checksum file/GitHub digests; ZIP CRC and APK
+  certificate verified again. Native artifact publication evidence is committed.
+- Published existing public Sites version 5 at 2026-10-03 16:44:38 UTC, source
+  `1f393520be147bcff40f718c459331a29e302115`, version
+  `appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_a9c1cf7803cc8191a32d984aff5a43dd`,
+  deployment `appgdep_6ac130de87848191bbb45d97523f9273`, status succeeded.
+  A fresh short-lived credential fixed an expired-token source push.
+  Local Chromium/WebKit five viewports each, four no-JavaScript cases and
+  two 200% text cases passed. Actual live Chromium five viewports and both
+  no-JavaScript cases passed after publication. Website CSS/motion controller
+  unchanged. Site checkout clean at published source; source QA snapshot
+  predates publication; GitHub final ledger is authoritative.
+- Physical-phone FPS/battery/audio, spoken TalkBack, Android 17 behavior, minified
   runtime and original private production signing remain unverified/unavailable.
 
 Evidence: `android/docs/evidence/birth-planning-2026-10-03/`.
 Build logs and staged artifacts: ignored `artifacts/3.6.0/`.
-Next: finish native QA, freeze source checkpoint, publish verified downloads using
-existing Sites and GitHub release workflow, then record exact publication IDs.
+Downloads: [APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-debug.apk),
+[complete source](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-source.zip),
+[release/checksums](https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.6.0).
+Website: https://sproutbook-woodland.nothatch.chatgpt.site
+
+Next: physical Android regression with font scaling/TalkBack, real external
+phone/browser actions, Android 17 notification/background/native sound behavior
+and measured hardware performance. Do not repeat recovery or rebuild frozen
+artifacts. A possible future complete improvement is offline birth-plan PDF
+export for sharing with the maternity team; it is not implemented in 3.6.
+Continue from schema 12/backup 4, QA-3.6 and the actual code, preserving all child
+records and original evaluation signing identity. Instrumentation fixtures
+replace synthetic records and must never run on a family installation.
 
 ## Woodland journey follow-up
 
@@ -98,7 +121,7 @@ headless callback timing.
 
 - Repository: https://github.com/nothatcher-creator/Sproutbook, clean `main` at
   `a56dd6c` before this session. No existing uncommitted work was present.
-- At recovery, the latest release was the evaluation pre-release `v3.5.0`. Current release is `v3.5.1`. GitHub's
+- At recovery, the latest release was the evaluation pre-release `v3.5.0`. Current release is `v3.6.0`. GitHub's
   `/releases/latest` returns 404 because all releases are pre-releases; the release
   list and explicit tag endpoint were checked.
 - Native Kotlin project recovered into `android/` from
@@ -124,14 +147,14 @@ especially `android/docs/QA-3.5.md` before further work. `:core` contains pure
 Kotlin rules, geometry, backup validation, content, and tests; `:app` contains
 Compose feature packages, ViewModels, Room/DataStore repositories, native audio,
 WorkManager reminders, and SAF backup/import. Package is
-`com.nothatcher.sproutbook`; current Room schema12, backup format4, min SDK26, target37.
+`com.nothatcher.sproutbook`; current Room schema 12, backup format 4, min SDK26, target37.
 Keep Today / Schedule / Care / More, offline records, explicit migrations,
 child ownership, caregiver guards, original graphics, and motion gating.
 
 Never run instrumentation fixtures on a family installation: they clear data.
 Use a dedicated emulator. Do not commit signing material or credentials.
 
-## Current verification
+## Historical baseline and 3.5.1 verification
 
 - Release download checksums: PASS (source and APK), 2026-10-02.
 - Native baseline: `:core:test :app:testDebugUnitTest :app:assembleDebug

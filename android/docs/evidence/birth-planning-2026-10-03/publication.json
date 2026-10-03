@@ -1,0 +1,31 @@
+{
+  "url": "https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.6.0",
+  "tag": "v3.6.0",
+  "prerelease": true,
+  "published_at": "2026-10-03T16:46:11Z",
+  "workflow": "https://github.com/nothatcher-creator/Sproutbook/actions/runs/37138059905",
+  "release_commit": "473aebe058bff4295828469d1b01eba2e6bdb476",
+  "assets": [
+    {
+      "name": "SHA256SUMS-3.6.0.txt",
+      "size": 187,
+      "digest": "sha256:c0be8c5d7aafa946ddba21c3246551f2ffda92cd0db1feb4e961faf323ba409e",
+      "browser_download_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SHA256SUMS-3.6.0.txt"
+    },
+    {
+      "name": "SproutBook-3.6.0-debug.apk",
+      "size": 15376653,
+      "digest": "sha256:5f0a8eea9dc45fe484297bca33b6b223e3c7f477870057307e80cef4285a89ee",
+      "browser_download_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-debug.apk"
+    },
+    {
+      "name": "SproutBook-3.6.0-source.zip",
+      "size": 39871429,
+      "digest": "sha256:973fe9c808b645ec8e4e500a6c3fef792cfc434a742adcdaf2124b1654b3aa78",
+      "browser_download_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-source.zip"
+    }
+  ],
+  "actual_download_sha256": "PASS",
+  "source_crc": "PASS",
+  "retained_apk_signature": "PASS"
+}

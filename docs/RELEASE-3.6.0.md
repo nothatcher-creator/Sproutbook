@@ -25,7 +25,7 @@ All family records, guidance and artwork remain native Kotlin/Compose and availa
 
 Emulator captures use sample family data.
 
-Frozen source checkpoint: `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`. Archive CRC and both artifact SHA256s passed; the source snapshot predates publication metadata.
+Frozen source checkpoint: `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`. Archive CRC and both artifact SHA-256s passed; the source snapshot predates publication metadata.
 
 ## Downloads, identity and data
 
@@ -37,7 +37,7 @@ Frozen source checkpoint: `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`. Archive CR
 | Source ZIP | Complete native project, artwork and QA evidence; 39,871,429 bytes; build outputs and signing keys excluded |
 | Database | Room schema 12; explicit additive migration from 11 |
 | Backup | Exports format 4; imports native formats 1–4 |
-| Artifact verification | APK signature verified; APK/source SHA256s recorded in the release checksum file |
+| Artifact verification | APK signature verified; APK/source SHA-256s recorded in the release checksum file |
 
 The existing evaluation certificate is retained:
 `9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3`.
@@ -96,3 +96,16 @@ need individual professional advice. Source guidance includes UK-specific care
 arrangements; the app does not select a universal emergency number or guarantee
 that unassisted birth is safe. Cloud sharing, partner accounts, widgets and iOS
 remain future work.
+
+## Website publication
+
+The existing [woodland showcase](https://sproutbook-woodland.nothatch.chatgpt.site)
+was updated with the 3.6.0 APK and four real native screens. Sites version 5
+published 2026-10-03 16:44UTC. The connected reversible woodland journey and
+sample demos remain intact. Real local Chromium/WebKit passed five screen sizes
+each, four no-JavaScript cases and two 200% text cases; real live Chromium passed
+five sizes and both no-JavaScript cases after publication. Physical mobile
+browser performance is unmeasured. [Website QA](https://github.com/nothatcher-creator/Sproutbook/blob/main/website/QA-3.6.md).
+
+GitHub publication workflow 37138059905 passed. Actual downloaded APK/source
+assets match the release checksum file and GitHub's asset digests.
