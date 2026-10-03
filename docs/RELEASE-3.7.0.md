@@ -31,11 +31,11 @@ Sixteen native captures (eight each at normal and 150% text) were inspected, inc
 | Version / package | 3.7.0 / 30700 · `com.nothatcher.sproutbook` |
 | Android | 8.0+ (min SDK 26); compile/target SDK 37 |
 | APK | Debug-signed evaluation pre-release; 15,365,584 bytes (14.7 MiB) |
-| Source ZIP | Tracked native project, artwork and QA evidence; generated builds and signing keys excluded; final size **TBD before publication** |
-| Source checkpoint | **TBD before publication** |
+| Source ZIP | Tracked native project, artwork and QA evidence; generated builds and signing keys excluded; 43,753,394 bytes (41.7 MiB) |
+| Source checkpoint | `354c805ad83bbf51790a7169c6bd25b52c35f25b` |
 | Database | Room schema 13; explicit additive migration from 12 |
 | Backup | Exports format 5; imports native formats 1–5 |
-| Artifact hashes | APK SHA-256 `b21820ca110a62fe588672dee4654cf08089b495414a5541c946ee8f518ee484`; complete manifest is frozen with the source ZIP |
+| Artifact hashes | `SHA256SUMS-3.7.0.txt` beside the APK and complete source ZIP |
 | Publication | Website downloads and GitHub prerelease **pending** |
 
 The existing evaluation certificate is retained:
@@ -90,3 +90,8 @@ remain unchanged until Save.
 Parenting and health guidance remains general education and does not replace a
 care team or emergency services. Cloud sharing, partner accounts, widgets and iOS
 remain future work.
+
+The source ZIP is an immutable snapshot of the verified source checkpoint; its
+QA documentation records the state before publication. This online ledger
+records the final publication checks. The ZIP is not regenerated for delivery
+metadata edits.

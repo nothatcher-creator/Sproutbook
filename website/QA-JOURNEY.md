@@ -1,3 +1,4 @@
+<!-- Current organizer/gallery regression: see docs/evidence/home-organizer-2026-10-03/BROWSER-VERIFICATION.md. Older journey evidence below remains historical. -->
 # Woodland journey QA — 2026-10-02
 
 Website-only update. Native source, package, release version, signing identity,

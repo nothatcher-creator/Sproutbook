@@ -28,8 +28,7 @@ The installable debug APK retains the existing evaluation certificate SHA-256:
 
 No replacement key was generated. The private production signing identity is
 unavailable; this evaluation identity does not establish production-update
-compatibility. Final APK/source byte sizes and file checksums will be recorded
-after the verified artifacts are frozen.
+compatibility. Verified artifacts are frozen from source checkpoint `354c805ad83bbf51790a7169c6bd25b52c35f25b`: APK 15,365,584 bytes; source ZIP 43,753,394 bytes. ZIP CRC, native project inclusion, signing-key/build-output exclusion and retained APK certificate passed. SHA-256 is recorded in the root `SHA256SUMS-3.7.0.txt` and evidence artifact-metadata.json. Later documentation changes do not regenerate this ZIP.
 
 Evidence: [baseline log](evidence/home-organizer-2026-10-03/organizer-baseline.log),
 [final build log](evidence/home-organizer-2026-10-03/organizer-final-build.log),
@@ -150,7 +149,7 @@ and [initial UI attempt](evidence/home-organizer-2026-10-03/organizer-flow-nativ
   it is not performance evidence.
 - Unreferenced staged/previous background files remain private; only referenced
   photos are exported. Cleanup requires a future backup-safe policy.
-- Local real Chromium 153 and WebKit 26.6 passed five viewports and two no-JavaScript cases each. Chromium 200% text passed two viewports; all 11 gallery images decoded and desktop wrapping/mobile horizontal navigation passed. Forward/reverse woodland scrolling, parallax, offscreen animation stopping, motion preferences, sample demos and the GitHub request draft passed. Static checksum/DOM and live publication checks are next.
+- Local real Chromium 153 and WebKit 26.6 passed five viewports and two no-JavaScript cases each. Chromium 200% text passed two viewports; all 11 gallery images decoded and desktop wrapping/mobile horizontal navigation passed. Forward/reverse woodland scrolling, parallax, offscreen animation stopping, motion preferences, sample demos and the GitHub request draft passed. Static IDs/assets/file limits and APK/source SHA-256 checks passed, as did the separate sample-data DOM simulation. Live publication checks are next.
 - Freeze the final source checkpoint and verified debug APK; validate ZIP CRC,
   native source inclusion, key exclusion, certificate and SHA-256 manifest.
   Publish through the existing Sites deployment and GitHub prerelease workflow,

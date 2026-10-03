@@ -59,8 +59,11 @@ clean delivered HEAD `3e15d6800fabc2faf4ac2ec168c30745b8d00fde`.
   Journey CSS and motion JS are byte-identical to the delivered Site.
 - No organizer APK or release published yet. Latest verified downloads are 3.6
   below. Existing live woodland story remains Site version 5.
-- Current code checkpoint: `27ecbf9` (organizer implementation). Final QA/assets
-  and delivery metadata are being prepared; freeze their source checkpoint next.
+- Current code checkpoint: `27ecbf9` (organizer implementation). Final source/QA snapshot is `354c805ad83bbf51790a7169c6bd25b52c35f25b`.
+  Frozen source ZIP is 43,753,394 bytes, SHA-256
+  `a160c25c2c4c0a96221fa2d54b4a9d6388cd4ac776d3c996917f80ee34f3a263`.
+  ZIP CRC/native project/no-private-key checks passed. Static hosted APK/source
+  checksums and separate DOM simulation passed.
   Final APK currently has 15,365,584 bytes, SHA-256
   `b21820ca110a62fe588672dee4654cf08089b495414a5541c946ee8f518ee484`.
   Validate again when copying into immutable `artifacts/3.7.0/`; do not regenerate
