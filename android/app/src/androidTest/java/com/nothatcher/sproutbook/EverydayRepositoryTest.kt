@@ -93,7 +93,7 @@ class EverydayRepositoryTest {
         )
         val manager = BackupManager(ApplicationProvider.getApplicationContext(), repo)
         val snapshot = manager.snapshot()
-        assertEquals(3, snapshot["version"].asInt)
+        assertEquals(com.nothatcher.sproutbook.core.BackupFormat.VERSION, snapshot["version"].asInt)
         assertTrue(manager.restore(snapshot))
         assertEquals("Asked to try", repo.db.pottyLogs().get("p")!!.notes)
         assertEquals(1, repo.db.routineCompletions().all().size)

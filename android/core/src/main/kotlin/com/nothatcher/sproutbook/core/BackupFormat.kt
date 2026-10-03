@@ -6,7 +6,7 @@ import java.util.Base64
 
 /** Versioned transport format only. Room remains the source of truth. */
 object BackupFormat {
-    const val VERSION = 3
+    const val VERSION = 4
     const val MAX_BYTES = 32 * 1024 * 1024
 
     private data class Rule(val type: String, val default: String? = null)
@@ -35,6 +35,8 @@ object BackupFormat {
                     "dueDate" to n(),
                     "avatar" to textRef(),
                     "notes" to s(""),
+                    "accent" to s("Forest"),
+                    "treeStyle" to s("Summer"),
                 ),
             "appointments" to
                 owned(
@@ -147,6 +149,13 @@ object BackupFormat {
                     "inventoryId" to textRef(),
                     "notes" to s(""),
                 ),
+            "wishlistItems" to
+                owned(
+                    "title" to s(),
+                    "notes" to s(""),
+                    "link" to s(""),
+                    "obtained" to Rule("b", "false"),
+                ),
             "routines" to
                 owned(
                     "title" to s(),
@@ -211,8 +220,11 @@ object BackupFormat {
                     2 -> new3
                     else -> emptySet()
                 }
-            if (data.keySet() != schema.keys - added) fail()
+            // Prior exports had no Wishlist. Format 4 requires it, even when the list is empty.
+            val optional = if (version < 4) setOf("wishlistItems") else emptySet()
+            if (data.keySet() - optional != schema.keys - added - optional) fail()
             added.forEach { data.add(it, JsonArray()) }
+            optional.filterNot { data.has(it) }.forEach { data.add(it, JsonArray()) }
             root.addProperty("version", VERSION)
             if (data.keySet() != schema.keys) fail()
             var count = 0
@@ -224,6 +236,8 @@ object BackupFormat {
                 array.forEach { entry ->
                     val row = entry.takeIf { it.isJsonObject }?.asJsonObject ?: fail()
                     if (row.keySet().any { it !in rules }) fail()
+                    if (version >= 4 && table == "children" &&
+                        (!row.has("accent") || !row.has("treeStyle"))) fail()
                     rules.forEach { (name, rule) ->
                         if (!row.has(name)) {
                             row.add(
@@ -425,6 +439,8 @@ object BackupFormat {
         when (table) {
             "children" -> {
                 one("stage", "PREGNANCY", "BABY", "TODDLER", "CHILD", "TEEN")
+                one("accent", "Forest", "Moss", "Amber", "Sky")
+                one("treeStyle", "Summer", "Autumn", "Night")
                 if ((r.nullNum("birthday") ?: Long.MIN_VALUE) > LocalDate.now().toEpochDay()) fail()
             }
             "appointments" -> {
@@ -563,6 +579,7 @@ object BackupFormat {
                         r.str("unit").isBlank()
                 )
                     fail()
+            "wishlistItems" -> if (!WishlistRules.validLink(r.str("link"))) fail()
             "emergencyCards" -> if (r.str("id") != r.str("childId")) fail()
             "healthRecords" -> {
                 one(

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.ToothLayoutTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-03T11:11:54.998Z" hostname="5e01801f05f6" time="0.019">
+  <properties/>
+  <testcase name="fortyEightDpTargetsDoNotOverlapEvenOnNarrowPortrait" classname="com.nothatcher.sproutbook.ToothLayoutTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

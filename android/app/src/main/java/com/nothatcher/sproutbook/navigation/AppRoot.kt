@@ -38,6 +38,7 @@ import com.nothatcher.sproutbook.features.profile.*
 import com.nothatcher.sproutbook.features.routines.RoutineScreen
 import com.nothatcher.sproutbook.features.schedule.ScheduleScreen
 import com.nothatcher.sproutbook.features.shopping.ShoppingScreen
+import com.nothatcher.sproutbook.features.wishlist.WishlistScreen
 import com.nothatcher.sproutbook.features.sleep.SleepScreen
 import com.nothatcher.sproutbook.features.solids.*
 import com.nothatcher.sproutbook.features.teeth.TeethScreen
@@ -236,6 +237,7 @@ fun AppRoot(
                     composable("shopping") {
                         key(state.child.id) { ShoppingScreen(vm, state) { nav.navigate(it) } }
                     }
+                    composable("wishlist") { key(state.child.id) { WishlistScreen(vm, state) } }
                     composable("help") { HelpScreen() }
                     composable("advice") { AdviceScreen() }
                     composable("pregnancy") {

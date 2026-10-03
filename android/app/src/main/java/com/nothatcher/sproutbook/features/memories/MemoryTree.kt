@@ -3,10 +3,10 @@ package com.nothatcher.sproutbook.features.memories
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.drawscope.*
 import androidx.compose.ui.input.pointer.pointerInput
@@ -34,11 +34,14 @@ fun MemoryTree(
     arrange: Boolean = false,
     onOpen: (Memory) -> Unit = {},
     onMove: (String, Int) -> Unit = { _, _ -> },
+    treeStyle: String = "Summer",
 ) {
     var selected by remember { mutableStateOf<String?>(null) }
     var drag by remember { mutableStateOf<Offset?>(null) }
     var accessibilityPage by remember { mutableIntStateOf(0) }
     val points = remember { TreeLayout.anchors }
+    val dark = MaterialTheme.colorScheme.surface.luminance() < .35f
+    val palette = remember(treeStyle, dark) { memoryTreePalette(treeStyle, dark) }
     val safe = memories.filter { it.anchor in points.indices }
     LaunchedEffect(arrange, memories.map { it.id }) {
         selected = null
@@ -169,91 +172,25 @@ fun MemoryTree(
     ) {
         val w = size.width
         val h = size.height
-        val bark = Color(0xFFA18C64)
-        drawOval(
-            Color(0xFF65815B).copy(alpha = .10f),
-            Offset(w * .05f, h * .08f),
-            Size(w * .9f, h * .72f),
-        )
-        drawOval(
-            Color(0xFF739366).copy(alpha = .16f),
-            Offset(w * .2f, h * .89f),
-            Size(w * .6f, h * .09f),
-        )
-        val trunk =
-            Path().apply {
-                moveTo(w * .5f, h * .94f)
-                cubicTo(w * .44f, h * .7f, w * .55f, h * .53f, w * .49f, h * .19f)
-            }
-        drawPath(trunk, bark, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
-        // Six structural limbs give each leaf a real twig, without an animated background.
-        val limbs =
-            listOf(
-                Triple(Offset(.5f, .76f), Offset(.32f, .65f), listOf(17, 18, 23, 24)),
-                Triple(Offset(.5f, .74f), Offset(.68f, .63f), listOf(21, 22, 25, 26, 31)),
-                Triple(Offset(.5f, .60f), Offset(.28f, .44f), listOf(5, 6, 11, 12, 30)),
-                Triple(Offset(.51f, .59f), Offset(.74f, .42f), listOf(9, 10, 15, 16, 29)),
-                Triple(Offset(.5f, .46f), Offset(.35f, .25f), listOf(0, 1, 7, 27)),
-                Triple(Offset(.5f, .43f), Offset(.64f, .25f), listOf(3, 4, 8, 28)),
-            )
-        limbs.forEach { (base, tip, slots) ->
-            val limb =
-                Path().apply {
-                    moveTo(w * base.x, h * base.y)
-                    cubicTo(
-                        w * base.x,
-                        h * (base.y - .10f),
-                        w * tip.x,
-                        h * (tip.y + .10f),
-                        w * tip.x,
-                        h * tip.y,
-                    )
-                }
-            drawPath(limb, bark, style = Stroke(4.5.dp.toPx(), cap = StrokeCap.Round))
-            slots.forEach { i ->
-                val a = points[i]
-                val twig =
-                    Path().apply {
-                        moveTo(w * tip.x, h * tip.y)
-                        quadraticTo(w * a.x, h * tip.y, w * a.x, h * a.y)
-                    }
-                drawPath(
-                    twig,
-                    bark.copy(alpha = .85f),
-                    style = Stroke(1.7.dp.toPx(), cap = StrokeCap.Round),
-                )
-            }
-        }
-        listOf(2, 13, 14, 19, 20).forEach { i ->
-            val a = points[i]
-            val twig =
-                Path().apply {
-                    moveTo(w * .5f, h * (a.y + .09f))
-                    quadraticTo(w * .5f, h * a.y, w * a.x, h * a.y)
-                }
-            drawPath(twig, bark, style = Stroke(2.dp.toPx(), cap = StrokeCap.Round))
-        }
+        drawMemoryTreeScenery(points, palette)
         if (arrange)
             points.forEach { a ->
+                val center = Offset(w * a.x, h * a.y)
                 drawCircle(
-                    Gold.copy(alpha = if (selected == null) .4f else .8f),
+                    Gold.copy(alpha = if (selected == null) .45f else .9f),
                     7.dp.toPx(),
-                    Offset(w * a.x, h * a.y),
+                    center,
+                    style = Stroke(1.5.dp.toPx()),
                 )
+                drawCircle(Gold.copy(alpha = .7f), 2.dp.toPx(), center)
             }
-        listOf(-1, 1).forEach { d ->
-            drawLine(
-                bark,
-                Offset(w * .5f, h * .92f),
-                Offset(w * (.5f + d * .15f), h * .95f),
-                4.dp.toPx(),
-                StrokeCap.Round,
-            )
-        }
         safe.forEach { m ->
             val a = points[m.anchor]
             val pos = if (m.id == selected && drag != null) drag!! else Offset(w * a.x, h * a.y)
-            if (selected == m.id) drawCircle(Gold.copy(alpha = .3f), 23.dp.toPx(), pos)
+            if (selected == m.id) {
+                drawCircle(Gold.copy(alpha = .25f), 23.dp.toPx(), pos)
+                drawCircle(Gold.copy(alpha = .85f), 23.dp.toPx(), pos, style = Stroke(1.5.dp.toPx()))
+            }
             rotate(if (a.x < .5f) -38f else 38f, pivot = pos) {
                 val leaf =
                     Path().apply {
@@ -274,14 +211,28 @@ fun MemoryTree(
                             pos.x - 14.dp.toPx(),
                             pos.y,
                         )
+                        close()
                     }
-                drawPath(leaf, leafColor(m.category))
-                drawLine(
-                    Color(0xFF476642).copy(alpha = .4f),
-                    Offset(pos.x - 10.dp.toPx(), pos.y),
-                    Offset(pos.x + 10.dp.toPx(), pos.y),
-                    1.dp.toPx(),
-                )
+                translate(1.dp.toPx(), 2.dp.toPx()) {
+                    drawPath(leaf, Color(0xFF10251E).copy(alpha = .18f))
+                }
+                val color = leafColor(m.category)
+                drawPath(leaf, Brush.linearGradient(
+                    listOf(lerp(color, Color.White, .18f), color, lerp(color, palette.leafOutline, .10f)),
+                    start = pos - Offset(8.dp.toPx(), 12.dp.toPx()),
+                    end = pos + Offset(8.dp.toPx(), 12.dp.toPx()),
+                ))
+                drawPath(leaf, palette.leafOutline, style = Stroke(1.dp.toPx()))
+                val vein = Path().apply {
+                    moveTo(pos.x - 11.dp.toPx(), pos.y)
+                    quadraticTo(pos.x, pos.y - 2.dp.toPx(), pos.x + 12.dp.toPx(), pos.y)
+                    moveTo(pos.x - 3.dp.toPx(), pos.y - .8.dp.toPx())
+                    quadraticTo(pos.x - 3.dp.toPx(), pos.y - 4.dp.toPx(), pos.x - 1.dp.toPx(), pos.y - 7.dp.toPx())
+                    moveTo(pos.x + 4.dp.toPx(), pos.y - .5.dp.toPx())
+                    quadraticTo(pos.x + 3.dp.toPx(), pos.y + 3.dp.toPx(), pos.x + 2.dp.toPx(), pos.y + 6.dp.toPx())
+                }
+                drawPath(vein, palette.leafOutline.copy(alpha = .4f),
+                    style = Stroke(.8.dp.toPx(), cap = StrokeCap.Round))
             }
         }
     }

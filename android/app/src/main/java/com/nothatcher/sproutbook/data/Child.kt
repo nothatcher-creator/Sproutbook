@@ -22,6 +22,8 @@ data class Child(
     val avatar: String? = null,
     val notes: String = "",
     val updatedAt: Long = System.currentTimeMillis(),
+    @ColumnInfo(defaultValue = "'Forest'") val accent: String = "Forest",
+    @ColumnInfo(defaultValue = "'Summer'") val treeStyle: String = "Summer",
 )
 
 @Dao
@@ -29,6 +31,8 @@ interface ChildDao {
     @Query("SELECT * FROM children ORDER BY name COLLATE NOCASE") fun observe(): Flow<List<Child>>
 
     @Query("SELECT * FROM children ORDER BY name COLLATE NOCASE") suspend fun all(): List<Child>
+
+    @Query("SELECT * FROM children WHERE id=:id") suspend fun get(id: String): Child?
 
     @Upsert suspend fun save(value: Child)
 

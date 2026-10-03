@@ -19,7 +19,7 @@ class BackupFormatTest {
                     getAsJsonArray("children")
                         .add(
                             JsonParser.parseString(
-                                """{"id":"a","name":"Rowan","stage":"BABY","updatedAt":1000}"""
+                                """{"id":"a","name":"Rowan","stage":"BABY","updatedAt":1000,"accent":"Forest","treeStyle":"Summer"}"""
                             )
                         )
                 },
@@ -33,7 +33,7 @@ class BackupFormatTest {
             old.getAsJsonObject("tables").remove(it)
         }
         val upgraded = BackupFormat.validate(old.toString())
-        assertEquals(3, upgraded["version"].asInt)
+        assertEquals(BackupFormat.VERSION, upgraded["version"].asInt)
         assertEquals(
             "Rowan",
             upgraded

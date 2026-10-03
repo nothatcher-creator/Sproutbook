@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.BirthPlanningCatalogTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-03T11:10:18.674Z" hostname="5e01801f05f6" time="0.088">
+  <properties/>
+  <testcase name="listAndPlanIdsRemainStableBoundedAndChildScoped" classname="com.nothatcher.sproutbook.core.BirthPlanningCatalogTest" time="0.042"/>
+  <testcase name="customRowsStayDeletableAndUnknownBagItemsStayVisible" classname="com.nothatcher.sproutbook.core.BirthPlanningCatalogTest" time="0.046"/>
+  <testcase name="phoneEntriesAllowLocalFormatsAndRejectNotesOrDialCommands" classname="com.nothatcher.sproutbook.core.BirthPlanningCatalogTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

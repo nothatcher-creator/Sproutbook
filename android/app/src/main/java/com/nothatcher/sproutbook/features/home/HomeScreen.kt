@@ -225,6 +225,7 @@ fun HomeScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit) {
                 MemoryTree(
                     memories.filter { it.chapter == chapter },
                     onOpen = { go("memories?memoryId=${it.id}") },
+                    treeStyle = child.treeStyle,
                 )
                 Muted(
                     memories.firstOrNull()?.let { "${it.title} · Your latest little moment" }

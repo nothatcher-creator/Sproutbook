@@ -1,0 +1,159 @@
+UTC: 2026-10-03T11:07:46.906608+00:00
+Isolated pre-format-4 BackupFormat snapshot. No Gradle or shared build output.
+Snapshot: /tmp/wishlist-backup-red-v4-os8plnvz
+Compile command: /workspace/scratch/sprout-toolchain/amazon-corretto-17.0.20.12.1-linux-x64/bin/java -cp '/workspace/scratch/sprout-toolchain/gradle-9.3.1/lib/*' org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -no-stdlib -no-reflect -jvm-target 17 -classpath /workspace/scratch/sprout-toolchain/gradle-9.3.1/lib/kotlin-stdlib-2.2.21.jar:/workspace/scratch/sprout-toolchain/gradle-9.3.1/lib/annotations-24.0.1.jar:/workspace/scratch/sproutbook-gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.12.1/4e773a317740b83b43cfc3d652962856041697cb/gson-2.12.1.jar:/workspace/scratch/sproutbook-gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar:/workspace/scratch/sproutbook-gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar -d /tmp/wishlist-backup-red-v4-os8plnvz/classes /tmp/wishlist-backup-red-v4-os8plnvz/BackupFormat.kt /tmp/wishlist-backup-red-v4-os8plnvz/DevelopmentRules.kt /tmp/wishlist-backup-red-v4-os8plnvz/SolidsRules.kt /tmp/wishlist-backup-red-v4-os8plnvz/HouseholdRules.kt /tmp/wishlist-backup-red-v4-os8plnvz/WishlistRules.kt /tmp/wishlist-backup-red-v4-os8plnvz/WishlistBackupTest.kt
+Compile exit: 0
+
+JUnit command: /workspace/scratch/sprout-toolchain/amazon-corretto-17.0.20.12.1-linux-x64/bin/java -cp /tmp/wishlist-backup-red-v4-os8plnvz/classes:/workspace/scratch/sprout-toolchain/gradle-9.3.1/lib/kotlin-stdlib-2.2.21.jar:/workspace/scratch/sprout-toolchain/gradle-9.3.1/lib/annotations-24.0.1.jar:/workspace/scratch/sproutbook-gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.12.1/4e773a317740b83b43cfc3d652962856041697cb/gson-2.12.1.jar:/workspace/scratch/sproutbook-gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar:/workspace/scratch/sproutbook-gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar org.junit.runner.JUnitCore com.nothatcher.sproutbook.core.WishlistBackupTest
+JUnit exit: 1
+JUnit version 4.13.2
+.E.E.E.E..E.E.E.E.E.E..E.E.E.E.E.E.E.E.E.E.E.E.E.E
+Time: 0.107
+There were 24 failures:
+1) version4RequiresChildAccent(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidChild(WishlistBackupTest.kt:68)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.version4RequiresChildAccent(WishlistBackupTest.kt:147)
+2) wishlistNotesAccept10000Characters(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.wishlistNotesAccept10000Characters(WishlistBackupTest.kt:255)
+3) rejectsGotAliasForObtained(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsGotAliasForObtained(WishlistBackupTest.kt:351)
+4) version4RequiresWishlistTable(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.version4RequiresWishlistTable(WishlistBackupTest.kt:140)
+5) rejectsWishlistLinkOver2048Characters(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistLinkOver2048Characters(WishlistBackupTest.kt:339)
+6) wishlistAcceptsEmptyHttpAndHttpsLinks(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.wishlistAcceptsEmptyHttpAndHttpsLinks(WishlistBackupTest.kt:285)
+7) rejectsWishlistLinksWithoutHttpOrHttpsAndValidHost(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistLinksWithoutHttpOrHttpsAndValidHost(WishlistBackupTest.kt:303)
+8) wishlistTitleLimitUsesTrimmedLength(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.wishlistTitleLimitUsesTrimmedLength(WishlistBackupTest.kt:238)
+9) rejectsWishlistLinksWithInvalidPorts(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistLinksWithInvalidPorts(WishlistBackupTest.kt:322)
+10) rejectsWishlistLinksWithCredentials(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistLinksWithCredentials(WishlistBackupTest.kt:315)
+11) wishlistLinkAccepts2048Characters(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.wishlistLinkAccepts2048Characters(WishlistBackupTest.kt:332)
+12) rejectsDuplicateWishlistIdentities(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsDuplicateWishlistIdentities(WishlistBackupTest.kt:228)
+13) rejectsWishlistOwnedByMissingChild(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistOwnedByMissingChild(WishlistBackupTest.kt:217)
+14) missingWishlistOptionalFieldsUseDefaults(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.missingWishlistOptionalFieldsUseDefaults(WishlistBackupTest.kt:206)
+15) version4RequiresChildTreeStyle(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidChild(WishlistBackupTest.kt:68)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.version4RequiresChildTreeStyle(WishlistBackupTest.kt:152)
+16) rejectsInvalidChildAccent(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidChild(WishlistBackupTest.kt:68)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsInvalidChildAccent(WishlistBackupTest.kt:189)
+17) wishlistNotesAndLinkMustBeStrings(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.wishlistNotesAndLinkMustBeStrings(WishlistBackupTest.kt:267)
+18) rejectsWishlistWithoutChildIdentity(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistWithoutChildIdentity(WishlistBackupTest.kt:222)
+19) version4PreservesWishlistAndCustomizationThroughRoundTrip(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.version4PreservesWishlistAndCustomizationThroughRoundTrip(WishlistBackupTest.kt:123)
+20) rejectsInvalidChildTreeStyle(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidChild(WishlistBackupTest.kt:68)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsInvalidChildTreeStyle(WishlistBackupTest.kt:198)
+21) rejectsMissingBlankOrOversizedWishlistTitle(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsMissingBlankOrOversizedWishlistTitle(WishlistBackupTest.kt:245)
+22) wishlistObtainedMustBeBoolean(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.wishlistObtainedMustBeBoolean(WishlistBackupTest.kt:344)
+23) rejectsWishlistNotesOver10000Characters(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.invalidItem(WishlistBackupTest.kt:61)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.rejectsWishlistNotesOver10000Characters(WishlistBackupTest.kt:261)
+24) allSupportedChildCustomizationValuesArePreserved(com.nothatcher.sproutbook.core.WishlistBackupTest)
+java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:195)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:213)
+	at com.nothatcher.sproutbook.core.WishlistBackupTest.allSupportedChildCustomizationValuesArePreserved(WishlistBackupTest.kt:164)
+
+FAILURES!!!
+Tests run: 26,  Failures: 24
+
+
+Source SHA256:
+4cf1c7d89ee38c2dbd1a5f31bae4bd43e2e99f877882fb0d9ac32363db7a39e5 android/core/src/main/kotlin/com/nothatcher/sproutbook/core/BackupFormat.kt
+34c2fc7da93d55ea864ee23cbdc6949c48d53dc44ceb8013dde3e789627ed194 android/core/src/main/kotlin/com/nothatcher/sproutbook/core/DevelopmentRules.kt
+79b698133d87cafb6e0abe2974d292d4986596fda64895cade7296ae87e3ce2c android/core/src/main/kotlin/com/nothatcher/sproutbook/core/SolidsRules.kt
+57c40ba6aa6189110c2e03a001311b93be86a2d9b20d909cf31cebcdf4ca80da android/core/src/main/kotlin/com/nothatcher/sproutbook/core/HouseholdRules.kt
+f96aaa3846cf4db56d4fff621eb86361ebb76c181ce1ad933bb305a0aebaf118 android/core/src/main/kotlin/com/nothatcher/sproutbook/core/WishlistRules.kt
+88994108a4a84b869ac8f0d9f44919e62c820f4791d74ce58e4c0d8ae243371f android/core/src/test/kotlin/com/nothatcher/sproutbook/core/WishlistBackupTest.kt

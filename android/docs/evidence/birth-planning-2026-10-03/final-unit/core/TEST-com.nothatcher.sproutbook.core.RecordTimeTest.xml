@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.RecordTimeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-03T11:10:18.817Z" hostname="5e01801f05f6" time="0.005">
+  <properties/>
+  <testcase name="changedDateUsesEditedDateAndRetainsFractionalTime" classname="com.nothatcher.sproutbook.core.RecordTimeTest" time="0.004"/>
+  <testcase name="unchangedEarlierRepeatedHourKeepsOriginalInstant" classname="com.nothatcher.sproutbook.core.RecordTimeTest" time="0.0"/>
+  <testcase name="changedClockUsesEditedLocalTime" classname="com.nothatcher.sproutbook.core.RecordTimeTest" time="0.001"/>
+  <testcase name="unchangedLaterRepeatedHourKeepsOriginalInstant" classname="com.nothatcher.sproutbook.core.RecordTimeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

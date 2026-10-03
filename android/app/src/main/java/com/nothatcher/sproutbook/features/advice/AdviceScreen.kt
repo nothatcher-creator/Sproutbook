@@ -53,7 +53,8 @@ fun AdviceScreen() {
                     }
                     if (open) {
                         a.body.split("\n\n").forEach { Text(it, style = MaterialTheme.typography.bodyLarge) }
-                        if (a.source.isNotBlank()) SourceLink("Read the source", a.source)
+                        if (a.sourceLinks.isNotEmpty()) a.sourceLinks.forEach { SourceLink(it.label, it.url) }
+                        else if (a.source.isNotBlank()) SourceLink("Read the source", a.source)
                         Text("Tap the card to close", style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant)
                     } else {

@@ -57,7 +57,7 @@ class MainActivity : ComponentActivity() {
                             ),
                 )
             }
-            BabyTheme(state.prefs.dark) {
+            BabyTheme(state.prefs.dark, state.child?.accent ?: "Forest") {
                 AppRoot(vm, state, pending) {
                     pending = null
                     intent.removeExtra("childId")

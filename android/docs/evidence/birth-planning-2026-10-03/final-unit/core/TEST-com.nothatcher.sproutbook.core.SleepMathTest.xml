@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.SleepMathTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-03T11:10:18.868Z" hostname="5e01801f05f6" time="0.052">
+  <properties/>
+  <testcase name="midnightClippingAndUnion" classname="com.nothatcher.sproutbook.core.SleepMathTest" time="0.003"/>
+  <testcase name="touchingIsNotOverlap" classname="com.nothatcher.sproutbook.core.SleepMathTest" time="0.0"/>
+  <testcase name="eachSoundHasEnergyAndBoundedLevel" classname="com.nothatcher.sproutbook.core.SleepMathTest" time="0.047"/>
+  <testcase name="outsideDay" classname="com.nothatcher.sproutbook.core.SleepMathTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

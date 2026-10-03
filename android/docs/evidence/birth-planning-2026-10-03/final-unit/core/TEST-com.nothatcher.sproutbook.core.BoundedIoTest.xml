@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.BoundedIoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-03T11:10:18.769Z" hostname="5e01801f05f6" time="0.002">
+  <properties/>
+  <testcase name="exactLimitAccepted" classname="com.nothatcher.sproutbook.core.BoundedIoTest" time="0.001"/>
+  <testcase name="oversizedReadRejected" classname="com.nothatcher.sproutbook.core.BoundedIoTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

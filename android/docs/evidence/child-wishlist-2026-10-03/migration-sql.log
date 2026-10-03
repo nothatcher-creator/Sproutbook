@@ -1,0 +1,1 @@
+Schema 11 -> 12 actual migration SQL: PASS; all 21 existing tables/rows preserved, Forest/Summer defaults, foreign keys valid, orphan rejected, Wishlist child cascade confirmed.

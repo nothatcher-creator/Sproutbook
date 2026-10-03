@@ -38,6 +38,7 @@ class BackupManager(private val context: Context, private val repo: FamilyReposi
                         add("diapers", gson.toJsonTree(repo.db.diapers().all()))
                         add("bottlePreps", gson.toJsonTree(repo.db.bottlePreps().all()))
                         add("shoppingItems", gson.toJsonTree(repo.db.shoppingItems().all()))
+                        add("wishlistItems", gson.toJsonTree(repo.db.wishlistItems().all()))
                         add("inventorys", gson.toJsonTree(repo.db.inventorys().all()))
                         add("emergencyCards", gson.toJsonTree(repo.db.emergencyCards().all()))
                         add("healthRecords", gson.toJsonTree(repo.db.healthRecords().all()))
@@ -224,6 +225,9 @@ class BackupManager(private val context: Context, private val repo: FamilyReposi
                             repo.db
                                 .shoppingItems()
                                 .save(gson.fromJson(it, ShoppingItem::class.java))
+                        }
+                        data.getAsJsonArray("wishlistItems").forEach {
+                            repo.db.wishlistItems().save(gson.fromJson(it, WishlistItem::class.java))
                         }
                         data.getAsJsonArray("healthRecords").forEach {
                             repo.db

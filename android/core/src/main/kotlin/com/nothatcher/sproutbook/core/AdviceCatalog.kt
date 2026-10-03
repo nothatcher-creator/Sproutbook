@@ -7,12 +7,15 @@ data class HelpTopic(
     val emergency: Boolean = false,
 )
 
+data class AdviceSource(val label: String, val url: String)
+
 data class AdviceArticle(
     val audience: String,
     val category: String,
     val title: String,
     val body: String,
     val source: String = "",
+    val sourceLinks: List<AdviceSource> = emptyList(),
 )
 
 object AdviceCatalog {
@@ -274,7 +277,7 @@ object AdviceCatalog {
                 "Lower noise and light, use a gentle voice and try a slow cuddle. Notice whether baby needs a break from stimulation. Settling may take several tries; switch caregivers before frustration builds.",
                 "https://caringforkids.cps.ca/handouts/pregnancy-and-babies/colic_and_crying",
             ),
-        ) + MoreAdvice.articles
+        ) + MoreAdvice.articles + BirthPlanningCatalog.articles
 
     fun search(audience: String, category: String, query: String) = articles.filter {
         it.audience == audience &&

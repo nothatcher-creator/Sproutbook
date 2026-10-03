@@ -2,7 +2,7 @@ plugins { id("com.android.application"); id("org.jetbrains.kotlin.plugin.compose
 android {
  namespace = "com.nothatcher.sproutbook"
  compileSdk { version = release(37) { minorApiLevel = 0 } }
- defaultConfig { applicationId = "com.nothatcher.sproutbook"; minSdk = 26; targetSdk = 37; versionCode = 30501; versionName = "3.5.1"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+ defaultConfig { applicationId = "com.nothatcher.sproutbook"; minSdk = 26; targetSdk = 37; versionCode = 30600; versionName = "3.6.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
  sourceSets.getByName("androidTest").assets.srcDir("$projectDir/schemas")
  buildFeatures { compose = true; buildConfig = true }
  compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }

@@ -54,11 +54,26 @@ private val Light =
         onBackground = Color(0xFF18352A),
     )
 
+internal fun woodlandColorScheme(dark: Boolean, accent: String): ColorScheme {
+    val base = if (dark) Dark else Light
+    val colors = when (accent) {
+        "Moss" -> if (dark) listOf(0xFFC5DCA8, 0xFF223C1C, 0xFF344D29, 0xFFE5F1D6)
+            else listOf(0xFF4B6137, 0xFFFFFFFF, 0xFFE3EDCC, 0xFF263D1B)
+        "Amber" -> if (dark) listOf(0xFFE5BF7B, 0xFF2A2112, 0xFF4C3B22, 0xFFFFF0D0)
+            else listOf(0xFF795B2D, 0xFFFFFFFF, 0xFFF1E2BE, 0xFF4C341A)
+        "Sky" -> if (dark) listOf(0xFFAFCBD5, 0xFF153B44, 0xFF284952, 0xFFDEEEF3)
+            else listOf(0xFF345F69, 0xFFFFFFFF, 0xFFD9EBEF, 0xFF153F48)
+        else -> return base
+    }.map { Color(it) }
+    return base.copy(primary = colors[0], onPrimary = colors[1], primaryContainer = colors[2],
+        onPrimaryContainer = colors[3], secondaryContainer = colors[2], onSecondaryContainer = colors[3])
+}
+
 @Composable
-fun BabyTheme(dark: Boolean, content: @Composable () -> Unit) {
+fun BabyTheme(dark: Boolean, accent: String = "Forest", content: @Composable () -> Unit) {
     val base = Typography()
     MaterialTheme(
-        colorScheme = if (dark) Dark else Light,
+        colorScheme = woodlandColorScheme(dark, accent),
         typography =
             base.copy(
                 headlineLarge =

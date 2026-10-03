@@ -79,6 +79,7 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                         onMove = { id, slot ->
                             vm.perform("Leaf placed") { vm.repo.arrangeMemory(child.id, id, slot) }
                         },
+                        treeStyle = child.treeStyle,
                     )
                     Muted(
                         if (arrange)

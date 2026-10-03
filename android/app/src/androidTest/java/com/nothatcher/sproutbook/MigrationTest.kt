@@ -7,6 +7,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.google.gson.JsonParser
 import com.nothatcher.sproutbook.data.AppDatabase
+import com.nothatcher.sproutbook.data.MIGRATION_11_12
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Test
@@ -19,6 +20,8 @@ class MigrationTest {
     @Test fun v3InstallationMigratesWithoutLosingChild(): Unit = migrate(9)
 
     @Test fun v31InstallationMigratesWithoutLosingCareRecords(): Unit = migrate(10)
+
+    @Test fun v35InstallationMigratesWithoutLosingFamilyAndCareRecords(): Unit = migrate(11)
 
     private fun migrate(version: Int): Unit = runBlocking {
         val context = ApplicationProvider.getApplicationContext<android.content.Context>()
@@ -65,21 +68,35 @@ class MigrationTest {
                 db.execSQL(
                     "INSERT INTO healthRecords (id,childId,kind,recordedAt,title,value,unit,notes,updatedAt) VALUES ('legacy-weight','original','Weight',1000,'Weight','3.215','kg','Precise',1)"
                 )
-            if(version==10) db.execSQL("INSERT INTO diapers (id,childId,recordedAt,kind,notes,updatedAt) VALUES ('legacy-diaper','original',1000,'Mixed','Kept',1)")
+            if(version>=10) db.execSQL("INSERT INTO diapers (id,childId,recordedAt,kind,notes,updatedAt) VALUES ('legacy-diaper','original',1000,'Mixed','Kept',1)")
+            if (version >= 11) {
+                db.execSQL("INSERT INTO routines (id,childId,title,weekdays,timeMinutes,owner,notes,active,updatedAt) VALUES ('legacy-routine','original','Bedtime',127,-1,'Caregiver','Kept',1,1)")
+                db.execSQL("INSERT INTO routineCompletions (id,childId,routineId,day,updatedAt) VALUES ('legacy-completion','original','legacy-routine',1,1)")
+                db.execSQL("INSERT INTO shoppingItems (id,childId,name,quantity,unit,checked,notes,updatedAt) VALUES ('legacy-shopping','original','Wipes',2,'packs',0,'Kept',1)")
+            }
             db.version = version
         }
-        val db = Room.databaseBuilder(context, AppDatabase::class.java, name).build()
+        val db = Room.databaseBuilder(context, AppDatabase::class.java, name).addMigrations(MIGRATION_11_12).build()
         assertEquals("Preserved", db.children().all().single().notes)
         assertTrue(db.memorys().forChild("original").isEmpty())
-        if(version==10) assertEquals("Kept",db.diapers().get("legacy-diaper")!!.notes)
+        assertEquals("Forest", db.children().all().single().accent)
+        assertEquals("Summer", db.children().all().single().treeStyle)
+        assertTrue(db.wishlistItems().forChild("original").isEmpty())
+        if(version>=10) assertEquals("Kept",db.diapers().get("legacy-diaper")!!.notes)
         else assertTrue(db.diapers().forChild("original").isEmpty())
-        assertTrue(db.routines().forChild("original").isEmpty())
+        if (version >= 11) {
+            assertEquals("Kept", db.routines().get("legacy-routine")!!.notes)
+            assertEquals("legacy-routine", db.routineCompletions().all().single().routineId)
+            assertEquals("Kept", db.shoppingItems().get("legacy-shopping")!!.notes)
+        } else {
+            assertTrue(db.routines().forChild("original").isEmpty())
+            assertTrue(db.shoppingItems().forChild("original").isEmpty())
+        }
         assertTrue(db.pottyLogs().forChild("original").isEmpty())
         assertTrue(db.milkContainers().forChild("original").isEmpty())
         assertTrue(db.bottlePreps().forChild("original").isEmpty())
-        assertTrue(db.shoppingItems().forChild("original").isEmpty())
         if (version >= 9) assertEquals("3.215", db.healthRecords().get("legacy-weight")!!.value)
-        assertEquals(11, db.openHelper.readableDatabase.version)
+        assertEquals(12, db.openHelper.readableDatabase.version)
         db.close()
         context.deleteDatabase(name)
     }

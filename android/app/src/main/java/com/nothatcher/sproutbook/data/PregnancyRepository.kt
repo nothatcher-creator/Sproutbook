@@ -42,14 +42,22 @@ suspend fun FamilyRepository.startContraction(child: String) = write {
 }
 
 suspend fun FamilyRepository.savePrep(p: PrepItem) = write {
-    validateText("Notes" to p.notes)
-    require(p.kind in listOf("Bag", "Note") && p.title.trim().length in 1..160) { "Enter a title." }
-    db.prepItems().save(p.copy(title = p.title.trim(), updatedAt = System.currentTimeMillis()))
+    val existing = db.prepItems().get(p.id)
+    require(existing == null || existing.childId == p.childId) { "This item belongs to another child." }
+    db.prepItems().save(validPreparation(p))
 }
 
 suspend fun FamilyRepository.togglePrep(p: PrepItem) = write {
     val fresh = db.prepItems().get(p.id) ?: p
-    require(fresh.childId == p.childId)
+    require(fresh.childId == p.childId) { "This item belongs to another child." }
     db.prepItems()
-        .save(fresh.copy(completed = !fresh.completed, updatedAt = System.currentTimeMillis()))
+        .save(validPreparation(fresh.copy(completed = !fresh.completed)))
+}
+
+private fun validPreparation(p: PrepItem): PrepItem {
+    require(p.id.isNotBlank() && p.id.length <= 160) { "This preparation item has an invalid ID." }
+    validateText("Notes" to p.notes)
+    require(p.kind in listOf("Bag", "Note")) { "Choose a supported preparation item." }
+    require(p.title.trim().length in 1..160) { "Enter a title between 1 and 160 characters." }
+    return p.copy(title = p.title.trim(), updatedAt = System.currentTimeMillis())
 }

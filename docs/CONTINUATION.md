@@ -1,7 +1,43 @@
 # SproutBook continuation checkpoint
 
-Updated: 2026-10-02 UTC. This document describes this session's work; older QA
+Updated: 2026-10-03 UTC. This document describes this session's work; older QA
 ledgers are historical evidence, not fresh validation.
+
+## Native 3.6 follow-up in progress
+
+User requests: homebirth/freebirth advice and lists, a homebirth plan, Labour
+mode, a per-child wishlist, more child customization and a nicer Memory Tree.
+The checkout was clean at `b4d2c8b` before this update. The existing native
+project, signing identity and published woodland website are preserved.
+
+- Fresh baseline: `:core:test --rerun :app:testDebugUnitTest --rerun` passed
+  on 2026-10-02 at 23:54 UTC: 78 core + 1 app unit tests, zero failures.
+- Existing pregnancy preparation uses per-child Room `PrepItem` rows.
+  New lists retain the supported `Bag` kind and use
+  stable, bounded IDs, preserving import compatibility and current bag IDs.
+- Implemented offline sourced homebirth, freebirth/unassisted birth, transfer
+  and aftercare guidance with personal checklists, plus a structured personal
+  plan stored in existing `Note` records. Labour mode prioritizes urgent help,
+  saved contacts, native contraction controls and saved preferences. Emergency
+  numbers are supplied by the family; dial actions require phone-app review.
+- Implemented separate per-child Wishlist, Forest/Moss/Amber/Sky accents and
+  Summer/Autumn/Night tree scenes. Static native tree artwork preserves anchor,
+  gesture and accessibility code. Room migration 11→12 adds defaults and the
+  child-owned Wishlist table without replacing existing data. New backup
+  format 4 is being finalized; older formats 1–3 remain importable.
+- Verified authoritative NHS/NICE/CDC sources and excerpts are recorded in
+  `android/docs/BIRTH-SOURCES-3.6.md`. Attended homebirth evidence is explicitly
+  separated from freebirth; qualified care and emergency access are prominent.
+- RED: 2 advice tests + missing native entry failed before implementation.
+  Repository RED: 6 tests, exactly 3 expected ownership/validation failures.
+  The guards are now implemented. Integrated debug APK + test APK compiled;
+  106 core + 2 app unit tests passed before the final backup-version change.
+- Independent native review is underway. Pending: final native
+  regression/persistence/backup checks,
+  accessibility screenshots, build/signature verification and release delivery.
+  No new APK or source archive has been published for this follow-up yet.
+
+Evidence for this update: `android/docs/evidence/birth-planning-2026-10-03/`.
 
 ## Woodland journey follow-up
 

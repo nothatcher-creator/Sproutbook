@@ -1,14 +1,19 @@
 package com.nothatcher.sproutbook.features.profile
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.unit.dp
 import com.nothatcher.sproutbook.*
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.ui.*
@@ -21,6 +26,7 @@ fun ProfileScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit)
     Page("Your family", "Profiles & settings, together") {
         item {
             EntryRow("Family cupboard", "Keep everyday supplies topped up") { go("inventory") }
+            EntryRow("Wishlist", "Save ideas for this child's next chapter") { go("wishlist") }
             EntryRow("Emergency card", "Contacts and important medical information") {
                 go("emergency")
             }
@@ -29,7 +35,7 @@ fun ProfileScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit)
         items(state.children, key = { it.id }) { child ->
             EntryRow(
                 child.name,
-                "${Stage.valueOf(child.stage).label} · ${if(child.id==state.child?.id)"Selected" else "View profile"}",
+                "${Stage.valueOf(child.stage).label} · ${if(child.id==state.child?.id)"Selected" else "View profile"}\n${child.accent} accent · ${child.treeStyle} tree",
             ) {
                 edit = child
             }
@@ -95,6 +101,8 @@ fun ChildEditor(child: Child?, readOnly: Boolean, vm: FamilyViewModel, close: ()
     var name by rememberSaveable(child?.id) { mutableStateOf(child?.name ?: "") }
     var stage by rememberSaveable(child?.id) { mutableStateOf(child?.stage ?: "BABY") }
     var notes by rememberSaveable(child?.id) { mutableStateOf(child?.notes ?: "") }
+    var accent by rememberSaveable(child?.id) { mutableStateOf(child?.accent ?: "Forest") }
+    var treeStyle by rememberSaveable(child?.id) { mutableStateOf(child?.treeStyle ?: "Summer") }
     var birth by remember(child?.id) { mutableStateOf(child?.birthday?.let(LocalDate::ofEpochDay)) }
     var due by remember(child?.id) { mutableStateOf(child?.dueDate?.let(LocalDate::ofEpochDay)) }
     var deleting by remember { mutableStateOf(false) }
@@ -104,6 +112,8 @@ fun ChildEditor(child: Child?, readOnly: Boolean, vm: FamilyViewModel, close: ()
             Text(Stage.valueOf(stage).label)
             Text("Birthday · ${birth ?: "Not recorded"}")
             Text("Due date · ${due ?: "Not recorded"}")
+            Text("Woodland accent · $accent")
+            Text("Memory tree · $treeStyle")
             Text(notes)
         } else {
             Field("Child's name", name, { name = it })
@@ -115,6 +125,18 @@ fun ChildEditor(child: Child?, readOnly: Boolean, vm: FamilyViewModel, close: ()
             DateButton("Due date (optional)", due) { due = it }
             if (due != null) TextButton(onClick = { due = null }) { Text("Clear due date") }
             Field("Important caregiver notes", notes, { notes = it }, lines = 3)
+            Panel {
+                Section("Their woodland")
+                Muted("Give each child an accent colour and a memory tree of their own.")
+                Text("Accent colour")
+                ChildAppearanceChoices(listOf("Forest", "Moss", "Amber", "Sky"), accent, true) {
+                    accent = it
+                }
+                Text("Memory tree style")
+                ChildAppearanceChoices(listOf("Summer", "Autumn", "Night"), treeStyle) {
+                    treeStyle = it
+                }
+            }
             Action("Save profile", name.isNotBlank()) {
                 vm.perform {
                     vm.repo.saveChild(
@@ -124,6 +146,8 @@ fun ChildEditor(child: Child?, readOnly: Boolean, vm: FamilyViewModel, close: ()
                             birthday = birth?.toEpochDay(),
                             dueDate = due?.toEpochDay(),
                             notes = notes,
+                            accent = accent,
+                            treeStyle = treeStyle,
                         )
                     )
                     close()
@@ -138,11 +162,47 @@ fun ChildEditor(child: Child?, readOnly: Boolean, vm: FamilyViewModel, close: ()
                 }
         }
     }
-    if (deleting)
+    if (deleting && !readOnly)
         ConfirmDelete("${child?.name} and all their records", { deleting = false }) {
             vm.perform("Child removed") {
                 vm.repo.deleteChild(child!!.id)
                 close()
             }
         }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun ChildAppearanceChoices(
+    options: List<String>,
+    selected: String,
+    swatches: Boolean = false,
+    choose: (String) -> Unit,
+) {
+    FlowRow(
+        Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        options.forEach { option ->
+            FilterChip(
+                selected = selected == option,
+                onClick = { choose(option) },
+                label = { Text(option) },
+                leadingIcon =
+                    if (swatches) {
+                        {
+                            val colour =
+                                when (option) {
+                                    "Moss" -> Color(0xFF768F56)
+                                    "Amber" -> Color(0xFFAA722B)
+                                    "Sky" -> Color(0xFF4F8194)
+                                    else -> Color(0xFF365B35)
+                                }
+                            Box(Modifier.size(16.dp).clip(CircleShape).background(colour))
+                        }
+                    } else null,
+                modifier = Modifier.heightIn(min = 48.dp),
+            )
+        }
+    }
 }

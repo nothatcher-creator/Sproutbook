@@ -1,0 +1,224 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.BirthPreparationRepositoryTest:
+INSTRUMENTATION_STATUS: test=togglingAnOldTemplatePreservesSavedEditsAndUsesCurrentCompletion
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=togglingAnOldTemplatePreservesSavedEditsAndUsesCurrentCompletion
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=saveRejectsIdsThatCannotBeRestoredFromBackup
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Preparation IDs must fit the backup transport limits
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$saveRejectsIdsThatCannotBeRestoredFromBackup$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:81)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.saveRejectsIdsThatCannotBeRestoredFromBackup(BirthPreparationRepositoryTest.kt:78)
+
+INSTRUMENTATION_STATUS: stream=
+Error in saveRejectsIdsThatCannotBeRestoredFromBackup(com.nothatcher.sproutbook.BirthPreparationRepositoryTest):
+java.lang.AssertionError: Preparation IDs must fit the backup transport limits
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$saveRejectsIdsThatCannotBeRestoredFromBackup$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:81)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.saveRejectsIdsThatCannotBeRestoredFromBackup(BirthPreparationRepositoryTest.kt:78)
+
+INSTRUMENTATION_STATUS: test=saveRejectsIdsThatCannotBeRestoredFromBackup
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=toggleRejectsMalformedUnsavedTemplates
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Invalid fallback template 0 must not be persisted
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$toggleRejectsMalformedUnsavedTemplates$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:70)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.toggleRejectsMalformedUnsavedTemplates(BirthPreparationRepositoryTest.kt:58)
+
+INSTRUMENTATION_STATUS: stream=
+Error in toggleRejectsMalformedUnsavedTemplates(com.nothatcher.sproutbook.BirthPreparationRepositoryTest):
+java.lang.AssertionError: Invalid fallback template 0 must not be persisted
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$toggleRejectsMalformedUnsavedTemplates$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:70)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.toggleRejectsMalformedUnsavedTemplates(BirthPreparationRepositoryTest.kt:58)
+
+INSTRUMENTATION_STATUS: test=toggleRejectsMalformedUnsavedTemplates
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=saveRejectsAnExistingItemOwnedByAnotherChild
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: A preparation item cannot move to another child by overwriting its ID
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$saveRejectsAnExistingItemOwnedByAnotherChild$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:51)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.saveRejectsAnExistingItemOwnedByAnotherChild(BirthPreparationRepositoryTest.kt:41)
+
+INSTRUMENTATION_STATUS: stream=
+Error in saveRejectsAnExistingItemOwnedByAnotherChild(com.nothatcher.sproutbook.BirthPreparationRepositoryTest):
+java.lang.AssertionError: A preparation item cannot move to another child by overwriting its ID
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$saveRejectsAnExistingItemOwnedByAnotherChild$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:51)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.saveRejectsAnExistingItemOwnedByAnotherChild(BirthPreparationRepositoryTest.kt:41)
+
+INSTRUMENTATION_STATUS: test=saveRejectsAnExistingItemOwnedByAnotherChild
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=caregiverModeBlocksSavingAndTogglingPreparation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=caregiverModeBlocksSavingAndTogglingPreparation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=editedChecklistsSurviveReopenChildAndStageChangesAndBackup
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.BirthPreparationRepositoryTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=editedChecklistsSurviveReopenChildAndStageChangesAndBackup
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 6.833
+There were 3 failures:
+1) saveRejectsIdsThatCannotBeRestoredFromBackup(com.nothatcher.sproutbook.BirthPreparationRepositoryTest)
+java.lang.AssertionError: Preparation IDs must fit the backup transport limits
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$saveRejectsIdsThatCannotBeRestoredFromBackup$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:81)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.saveRejectsIdsThatCannotBeRestoredFromBackup(BirthPreparationRepositoryTest.kt:78)
+2) toggleRejectsMalformedUnsavedTemplates(com.nothatcher.sproutbook.BirthPreparationRepositoryTest)
+java.lang.AssertionError: Invalid fallback template 0 must not be persisted
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$toggleRejectsMalformedUnsavedTemplates$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:70)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.toggleRejectsMalformedUnsavedTemplates(BirthPreparationRepositoryTest.kt:58)
+3) saveRejectsAnExistingItemOwnedByAnotherChild(com.nothatcher.sproutbook.BirthPreparationRepositoryTest)
+java.lang.AssertionError: A preparation item cannot move to another child by overwriting its ID
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest$saveRejectsAnExistingItemOwnedByAnotherChild$1$1.invokeSuspend(BirthPreparationRepositoryTest.kt:51)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.nothatcher.sproutbook.BirthPreparationRepositoryTest.saveRejectsAnExistingItemOwnedByAnotherChild(BirthPreparationRepositoryTest.kt:41)
+
+FAILURES!!!
+Tests run: 6,  Failures: 3
+
+
+INSTRUMENTATION_CODE: -1

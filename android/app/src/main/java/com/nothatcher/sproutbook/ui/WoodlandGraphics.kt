@@ -60,7 +60,7 @@ fun woodlandIconFor(label: String): Int {
         "pregnan" in text || "kick" in text || "birth" in text -> R.drawable.woodland_pregnancy
         "growth" in text -> R.drawable.woodland_growth
         "routine" in text -> R.drawable.woodland_routine
-        "shopping" in text -> R.drawable.woodland_shopping
+        "shopping" in text || "wishlist" in text -> R.drawable.woodland_shopping
         "photo" in text -> R.drawable.woodland_photo
         "sound" in text -> R.drawable.woodland_sound
         "schedule" in text || "appointment" in text || "up next" in text -> R.drawable.woodland_schedule

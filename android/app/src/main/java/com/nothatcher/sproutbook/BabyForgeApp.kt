@@ -7,7 +7,9 @@ import com.nothatcher.sproutbook.data.*
 class BabyForgeApp : Application() {
     val settings by lazy { Settings(this) }
     val db by lazy {
-        Room.databaseBuilder(this, AppDatabase::class.java, "sproutbook-v3.db").build()
+        Room.databaseBuilder(this, AppDatabase::class.java, "sproutbook-v3.db")
+            .addMigrations(MIGRATION_11_12)
+            .build()
     }
     val reminders by lazy {
         com.nothatcher.sproutbook.services.AppointmentReminders(this, db, settings)

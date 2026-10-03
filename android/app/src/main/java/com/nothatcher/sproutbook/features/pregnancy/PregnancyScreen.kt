@@ -9,6 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
 import com.nothatcher.sproutbook.core.PregnancyRules
+import com.nothatcher.sproutbook.core.BirthPlanningCatalog
+import com.nothatcher.sproutbook.core.BirthPlanCatalog
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.ui.*
 import java.time.LocalDate
@@ -18,6 +20,7 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
     val child = state.child ?: return
     var limit by rememberSaveable { mutableIntStateOf(100) }
     var tab by rememberSaveable { mutableStateOf("Overview") }
+    var preparation by rememberSaveable { mutableStateOf("Hospital bag") }
     val historyKind = if (tab == "Kicks") "Kicks" else "Contraction"
     val rows by
         remember(child.id, historyKind, limit) {
@@ -32,12 +35,20 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
             .collectAsStateWithLifecycle(emptyList())
     var edit by remember { mutableStateOf<PrepItem?>(null) }
     var record by remember { mutableStateOf<PregnancyEvent?>(null) }
+    val plan = remember(child.id, prep) { planItems(child.id, prep) }
+    val guide = BirthPlanningCatalog.guides.firstOrNull { it.label == preparation }
+    val guideRows = remember(child.id, guide, prep) { guide?.let { guideItems(child.id, it, prep) }.orEmpty() }
+    LaunchedEffect(state.prefs.grandparent) {
+        if (state.prefs.grandparent) { edit = null; record = null }
+    }
     val kicks = active.firstOrNull { it.kind == "Kicks" && it.endsAt == null }
     val contraction = active.firstOrNull { it.kind == "Contraction" && it.endsAt == null }
-    val now = rememberNow(contraction != null)
-    Page("Waiting for you", "Pregnancy, one day at a time") {
+    val now = rememberNow(contraction != null && tab in listOf("Labour", "Contractions"))
+    Page(if (tab == "Labour") "Labour focus" else "Waiting for you",
+        if (tab == "Labour") "${child.name}'s plan, contacts and next step" else "Pregnancy, one day at a time") {
         item {
-            Choices(listOf("Overview", "Kicks", "Contractions", "Preparation"), tab) {
+            if (tab == "Labour") TextButton(onClick = { tab = "Overview" }) { Text("Leave labour focus") }
+            else Choices(listOf("Overview", "Labour", "Kicks", "Contractions", "Preparation"), tab) {
                 tab = it
                 limit = 100
             }
@@ -76,13 +87,63 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
                 EntryRow("Prenatal appointments", "Visits, questions and notes") { go("schedule") }
             }
             item {
+                EntryRow("Labour mode", "Care contacts, your plan and contraction controls") { tab = "Labour" }
+            }
+            item {
+                EntryRow("Homebirth plan", "Save contacts, preferences, transfer and aftercare") {
+                    preparation = "Birth plan"; tab = "Preparation"
+                }
+            }
+            item {
+                EntryRow("Homebirth & freebirth", "Sourced guidance and your own planning lists") {
+                    preparation = "Homebirth"; tab = "Preparation"
+                }
+            }
+            item {
                 EntryRow(
                     "Birth preferences & preparation",
                     "Hospital bag and questions to bring along",
                 ) {
+                    preparation = "Hospital bag"
                     tab = "Preparation"
                 }
             }
+        }
+        if (tab == "Labour") {
+            item {
+                val phone = plan.first { it.id == BirthPlanCatalog.prefix(child.id) + "emergency-phone" }.notes
+                BirthUrgentPanel(compact = true, emergencyNumber = phone.takeIf { BirthPlanCatalog.validPhone(it) }.orEmpty())
+            }
+            item {
+                Panel {
+                    Section("Your care contacts")
+                    listOf("maternity-phone").forEach { key ->
+                        val field = BirthPlanCatalog.fields.first { it.key == key }
+                        val value = plan.first { it.id == BirthPlanCatalog.prefix(child.id) + key }.notes
+                        if (value.isNotBlank() && BirthPlanCatalog.validPhone(value)) {
+                            Text("${field.title} · $value")
+                            DialButton(if (key == "maternity-phone") "Call maternity team" else "Dial saved emergency number", value)
+                        } else Muted("${field.title} · Not set")
+                    }
+                    TextButton(onClick = { preparation = "Birth plan"; tab = "Preparation" }) { Text("View or update homebirth plan") }
+                    Muted("Dial buttons open your phone app for review; they never call automatically.")
+                }
+            }
+            item { ContractionControl(vm, state, contraction, now) }
+            item {
+                Panel {
+                    Section("Recent contractions")
+                    val recent = rows.filter { it.kind == "Contraction" && it.endsAt != null }.take(3)
+                    if (recent.isEmpty()) Muted("No completed contractions yet.")
+                    recent.forEach { Text("${stamp(it.startsAt, state.prefs.time24)} · ${durationText(it.endsAt!! - it.startsAt)}") }
+                    TextButton(onClick = { tab = "Contractions" }) { Text("View contraction history") }
+                }
+            }
+            items(plan.filter { it.notes.isNotBlank() && BirthPlanCatalog.fieldForItem(child.id, it.id)?.key !in listOf("maternity-phone", "emergency-phone") }
+                .sortedBy { if (BirthPlanCatalog.fieldForItem(child.id, it.id)?.key == "priorities") 0 else 1 }, key = { it.id }) { p ->
+                Panel { Section(p.title); Text(p.notes) }
+            }
+            item { SourceLink(BirthPlanningCatalog.labour.label, BirthPlanningCatalog.labour.url) }
         }
         if (tab == "Kicks") {
             item {
@@ -185,9 +246,41 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
             item { Action("Load older pregnancy records") { limit += 100 } }
         if (tab == "Preparation") {
             item {
-                Section("Hospital bag")
-                Muted("Adapt this list to your birth setting and care team's advice.")
+                Section("Your birth preparation")
+                PreparationChoices(preparation) { preparation = it }
             }
+            if (preparation != "Hospital bag") item { BirthUrgentPanel() }
+            if (preparation == "Birth plan") {
+                item {
+                    Section("Your homebirth plan")
+                    Muted("A personal plan to discuss with qualified attendants. Record your preferences, review changing risks and keep a transfer plan. These notes are not clinical clearance. Saved separately for ${child.name} and included in backups.")
+                    Action("Open labour mode") { tab = "Labour" }
+                }
+                items(plan, key = { it.id }) { p ->
+                    EntryRow(p.title, p.notes.ifBlank { "Not set · Tap to add" }) { edit = p }
+                }
+                item { SourceLink(BirthPlanningCatalog.birthOptions.label, BirthPlanningCatalog.birthOptions.url) }
+            }
+            if (guide != null) {
+                item {
+                    Panel {
+                        Section(guide.title)
+                        guide.paragraphs.forEach { Text(it) }
+                        guide.sources.forEach { SourceLink(it.label, it.url) }
+                        Muted("Sources checked October 2026 · Guidance remains readable offline.")
+                    }
+                }
+                item { Section("Your ${guide.label.lowercase()} list"); Muted(BirthPlanningCatalog.listNote) }
+                items(guideRows, key = { it.id }) { p -> ChecklistRow(p, vm, state.prefs.grandparent) { edit = it } }
+                item {
+                    Action("Add to ${guide.label.lowercase()} list", !state.prefs.grandparent) {
+                        edit = PrepItem(id = BirthPlanningCatalog.prefix(child.id, guide.id) + "custom-" + java.util.UUID.randomUUID(),
+                            childId = child.id, kind = "Bag", title = "")
+                    }
+                }
+            }
+            if (preparation == "Hospital bag") {
+            item { Section("Hospital bag"); Muted("Adapt this list to your birth setting and care team's advice.") }
             val defaults =
                 listOf(
                         "Care records and identification",
@@ -207,29 +300,19 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
                             )
                     }
             items(
-                defaults + prep.filter { it.kind == "Bag" && it.id !in defaults.map { d -> d.id } },
+                defaults + prep.filter { it.kind == "Bag" && BirthPlanningCatalog.guideForItem(child.id, it.id) == null && it.id !in defaults.map { d -> d.id } },
                 key = { it.id },
             ) { p ->
-                Panel {
-                    Row {
-                        Checkbox(
-                            p.completed,
-                            { vm.perform("") { vm.repo.togglePrep(p) } },
-                            enabled = !state.prefs.grandparent,
-                        )
-                        TextButton(onClick = { edit = p }, modifier = Modifier.weight(1f)) {
-                            Text(p.title)
-                        }
-                    }
-                }
+                ChecklistRow(p, vm, state.prefs.grandparent) { edit = it }
             }
             item {
                 Action("Add checklist item", !state.prefs.grandparent) {
                     edit = PrepItem(childId = child.id, kind = "Bag", title = "")
                 }
-                Section("Birth preferences & questions")
             }
-            items(prep.filter { it.kind == "Note" }, key = { it.id }) { p ->
+            }
+            item { Section("Birth preferences & questions") }
+            items(prep.filter { it.kind == "Note" && BirthPlanCatalog.fieldForItem(child.id, it.id) == null }, key = { it.id }) { p ->
                 EntryRow(p.title, p.notes.take(90)) { edit = p }
             }
             item {
@@ -240,23 +323,30 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
         }
     }
     edit?.let { p ->
+        val planField = BirthPlanCatalog.fieldForItem(child.id, p.id)
         var title by remember(p.id) { mutableStateOf(p.title) }
         var notes by remember(p.id) { mutableStateOf(p.notes) }
         var deleting by remember { mutableStateOf(false) }
-        Editor("Preparation", { edit = null }) {
+        Editor(if (planField == null) "Preparation" else "Homebirth plan", { edit = null }) {
             if (state.prefs.grandparent) {
                 Section(title)
                 Text(notes)
             } else {
-                Field("Title", title, { title = it })
-                Field("Notes", notes, { notes = it }, lines = 4)
-                Action("Save preparation") {
-                    vm.perform {
+                if (planField == null) {
+                    Field("Title", title, { title = it })
+                    Field("Notes", notes, { notes = it }, lines = 4)
+                } else {
+                    Muted(planField.prompt)
+                    Field(planField.title, notes, { notes = it }, lines = if (planField.phone) 1 else 4)
+                }
+                Action(if (planField == null) "Save preparation" else "Save birth plan") {
+                    vm.perform(if (planField == null) "Preparation saved" else "Birth plan saved") {
+                        require(planField?.phone != true || BirthPlanCatalog.validPhone(notes)) { "Enter a phone number using digits, spaces, +, brackets or hyphens, or leave it blank." }
                         vm.repo.savePrep(p.copy(title = title, notes = notes))
                         edit = null
                     }
                 }
-                if (prep.any { it.id == p.id } && !p.id.startsWith("${child.id}-bag-"))
+                if (prep.any { it.id == p.id } && !p.id.startsWith("${child.id}-bag-") && !BirthPlanningCatalog.isBuiltIn(child.id, p.id) && planField == null)
                     TextButton(onClick = { deleting = true }) { Text("Delete item") }
             }
         }

@@ -12,6 +12,7 @@ import androidx.room.*
             Diaper::class,
             BottlePrep::class,
             ShoppingItem::class,
+            WishlistItem::class,
             HealthRecord::class,
             EmergencyCard::class,
             Inventory::class,
@@ -45,7 +46,7 @@ import androidx.room.*
 )
 abstract class AppDatabase : RoomDatabase() {
     companion object {
-        const val VERSION = 11
+        const val VERSION = 12
     }
 
     abstract fun routines(): RoutineDao
@@ -61,6 +62,8 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun bottlePreps(): BottlePrepDao
 
     abstract fun shoppingItems(): ShoppingItemDao
+
+    abstract fun wishlistItems(): WishlistItemDao
 
     abstract fun healthRecords(): HealthRecordDao
 

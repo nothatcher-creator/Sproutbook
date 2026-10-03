@@ -36,7 +36,7 @@ class EverydayBackupTest {
                 )
             )
         val restored = BackupFormat.validate(root.toString())
-        assertEquals(3, restored["version"].asInt)
+        assertEquals(BackupFormat.VERSION, restored["version"].asInt)
         assertEquals(
             "Mixed",
             restored
@@ -78,7 +78,7 @@ class EverydayBackupTest {
                     """{"id":"m","childId":"a","label":"Bag one","storedAt":1000,"amountMl":90}"""
                 )
             )
-        assertEquals(3, BackupFormat.validate(root.toString())["version"].asInt)
+        assertEquals(BackupFormat.VERSION, BackupFormat.validate(root.toString())["version"].asInt)
     }
 
     @Test

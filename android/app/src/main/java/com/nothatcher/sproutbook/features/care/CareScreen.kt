@@ -34,6 +34,7 @@ fun CareScreen(state: FamilyState, go: (String) -> Unit) {
         item {
             EntryRow("Shopping list", "Bring low supplies into your next shop") { go("shopping") }
         }
+        item { EntryRow("Wishlist", "Ideas, gifts and little wishes for this child") { go("wishlist") } }
         item { EntryRow("Family cupboard", "Supplies and low-stock reminders") { go("inventory") } }
         item { EntryRow("Mom & Dad advice", "Practical, searchable support") { go("advice") } }
         item {
