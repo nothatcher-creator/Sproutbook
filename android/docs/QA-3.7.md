@@ -158,3 +158,17 @@ and [initial UI attempt](evidence/home-organizer-2026-10-03/organizer-flow-nativ
 Source checkpoint, artifact sizes/checksums, new Site version/deployment and
 GitHub release run are pending. Do not describe the staged 3.7 links as published
 until those actions and their final checks complete.
+
+## Website publication checkpoint
+
+Existing public Sites version 6 deployed successfully on 2026-10-03 at
+21:48:36 UTC from exact commit `78352f41cb7b2af2207258b634bdc1ae30c08657`.
+Live Chromium 153 passed all five viewport sizes and both no-JavaScript cases;
+scroll reversal, motion settings, sample demos, download links and asset/error
+checks passed. Hosted APK and checksum manifest downloaded and matched. Both
+source parts downloaded and reassembled byte-identically to the frozen ZIP.
+GitHub source fast-forward and prerelease workflow are the remaining delivery
+steps. No physical-browser FPS claim is made.
+
+[Live browser evidence](../../website/docs/evidence/home-organizer-2026-10-03/live-chromium-results.json) ·
+[Sites deployment](../../website/docs/evidence/home-organizer-2026-10-03/site-publication.json).

@@ -1,0 +1,11 @@
+{
+  "project_id": "appgprj_6abeb834e1a88191a8c4907b567c3472",
+  "version_number": 6,
+  "version_id": "appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_618fcf94ddb48191bc58fa18e4510312",
+  "commit_sha": "78352f41cb7b2af2207258b634bdc1ae30c08657",
+  "deployment_id": "appgdep_6ac17810d8dc8191a74b1ede52ab188c",
+  "status": "succeeded",
+  "url": "https://sproutbook-woodland.nothatch.chatgpt.site",
+  "access_mode": "public",
+  "artifact_download_checks": "APK, checksum manifest and both source parts downloaded; reassembled source byte-identical to frozen ZIP; SHA-256 matched"
+}

@@ -32,4 +32,14 @@ NODE_PATH=/workspace/scratch/sproutbook-browser/node_modules node tools/verify-l
 PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 NODE_PATH=/workspace/scratch/sproutbook-browser/node_modules node /workspace/scratch/sproutbook-gallery37.cjs
 ```
 
-Limits: Linux headless Chromium/WebKit are not physical Android or iPhone browsers. Frame callback timings in the reports describe this local headless run and do not establish mobile 60 FPS, battery usage or device performance. This local run precedes publication; live deployment verification is a separate check. APK link paths were checked, but release binaries were not downloaded by these browser tests.
+Limits: Linux headless Chromium/WebKit are not physical Android or iPhone browsers. Frame callback timings in the reports describe this local headless run and do not establish mobile 60 FPS, battery usage or device performance. APK link paths were checked, but release binaries were not downloaded by these browser tests.
+
+## Published showcase verification
+
+After existing Sites version 6 deployed source commit `78352f41cb7b2af2207258b634bdc1ae30c08657`, Chromium 153.0.8010.12 checked the actual public showcase at [sproutbook-woodland.nothatch.chatgpt.site](https://sproutbook-woodland.nothatch.chatgpt.site/). All five viewports (1440×900, 390×844, 360×640, 320×700 and 667×375) passed the same rendered journey, scroll reversal, depth, readability, wheel, idle/offscreen animation, persisted Motion off, reduced-motion and sample-interaction checks. Header and final download links target the 3.7.0 APK. Both JavaScript-disabled preference cases passed at 390×844. There were no browser script errors, same-origin HTTP failures or horizontal page overflow in this run.
+
+[Live Chromium results](live-chromium-results.json) record the exact URL, browser, timestamp and passed cases. WebKit and 200% text were verified locally before deployment; they were not repeated against the public URL. This live check still uses a Linux headless browser and makes no physical-device performance claim.
+
+```sh
+NODE_PATH=/workspace/scratch/sproutbook-browser/node_modules node tools/verify-journey.cjs https://sproutbook-woodland.nothatch.chatgpt.site/ /workspace/Sproutbook/artifacts/browser-3.7.0/live-chromium 3.7.0 chromium
+```

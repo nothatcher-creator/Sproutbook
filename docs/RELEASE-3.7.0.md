@@ -36,7 +36,7 @@ Sixteen native captures (eight each at normal and 150% text) were inspected, inc
 | Database | Room schema 13; explicit additive migration from 12 |
 | Backup | Exports format 5; imports native formats 1–5 |
 | Artifact hashes | `SHA256SUMS-3.7.0.txt` beside the APK and complete source ZIP |
-| Publication | Website downloads and GitHub prerelease **pending** |
+| Publication | Sites version 6 is live and verified; GitHub prerelease publication follows |
 
 The existing evaluation certificate is retained:
 `9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3`.
@@ -70,7 +70,7 @@ compatibility is not claimed. Backups are readable and not encrypted by SproutBo
 - **Actual 3.6.0→3.7.0 installation with the retained certificate passed.** Every old fixture row/column/count survived, both children retained their records, Room advanced 12→13 with original Today defaults, and DataStore stayed byte-identical. The updated app rendered the selected teen and Grandparent mode offline. Software-emulator startup command timing exceeded its wait budget; no physical-device latency claim is made.
 - Sixteen inspected native screenshots cover normal/150% text and both themes. Debug APK signing/package, source ZIP CRC and artifact SHA-256 are checked before publication.
 
-Local real Chromium 153 and WebKit 26.6 passed five viewport sizes and two no-JavaScript cases each. Chromium 200% text passed two viewports. Forward/reverse scrolling, reduced motion, sample demos, request drafts and the 11-screen gallery passed. Live publication verification follows deployment. [Native QA](https://github.com/nothatcher-creator/Sproutbook/blob/main/android/docs/QA-3.7.md) · [Continuation checkpoint](https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/CONTINUATION.md).
+Local real Chromium 153 and WebKit 26.6 passed five viewport sizes and two no-JavaScript cases each. Chromium 200% text passed two viewports. Forward/reverse scrolling, reduced motion, sample demos, request drafts and the 11-screen gallery passed. Live Chromium passed the same five viewports and both no-JavaScript cases after Sites version 6 deployed. Hosted APK, checksums and both source parts were downloaded: SHA-256 matched, and the reassembled ZIP was byte-identical to the frozen source. [Native QA](https://github.com/nothatcher-creator/Sproutbook/blob/main/android/docs/QA-3.7.md) · [Continuation checkpoint](https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/CONTINUATION.md).
 
 ## Remaining limitations
 

@@ -57,8 +57,10 @@ clean delivered HEAD `3e15d6800fabc2faf4ac2ec168c30745b8d00fde`.
   plus two no-JavaScript cases each; Chromium 200% text, two viewports. The
   11-screen gallery passed desktop wrapping/mobile horizontal navigation.
   Journey CSS and motion JS are byte-identical to the delivered Site.
-- No organizer APK or release published yet. Latest verified downloads are 3.6
-  below. Existing live woodland story remains Site version 5.
+- Existing public Site version 6 is published from exact source commit
+  `78352f41cb7b2af2207258b634bdc1ae30c08657`. Live Chromium passed five viewports
+  and two no-JavaScript cases. Hosted APK/checksum/source parts were downloaded
+  and matched the immutable artifacts. GitHub prerelease is still pending.
 - Current code checkpoint: `27ecbf9` (organizer implementation). Final source/QA snapshot is `354c805ad83bbf51790a7169c6bd25b52c35f25b`.
   Frozen source ZIP is 43,753,394 bytes, SHA-256
   `a160c25c2c4c0a96221fa2d54b4a9d6388cd4ac776d3c996917f80ee34f3a263`.
