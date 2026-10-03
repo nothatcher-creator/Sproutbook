@@ -1,0 +1,13 @@
+{
+  "version": "3.6.0",
+  "source_checkpoint": "3a027bb29fe4265c793e1a7f48e20f1ba4fc426a",
+  "zip_crc": "PASS",
+  "source_entries": 1135,
+  "signing_keys_and_build_outputs": "excluded",
+  "apk_bytes": 15376653,
+  "source_bytes": 39871429,
+  "checksums": [
+    "5f0a8eea9dc45fe484297bca33b6b223e3c7f477870057307e80cef4285a89ee  SproutBook-3.6.0-debug.apk",
+    "973fe9c808b645ec8e4e500a6c3fef792cfc434a742adcdaf2124b1654b3aa78  SproutBook-3.6.0-source.zip"
+  ]
+}

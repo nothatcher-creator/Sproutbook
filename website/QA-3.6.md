@@ -36,6 +36,9 @@ assistive-technology speech, hardware frame rate and battery use remain unmeasur
 
 ## Packaging and publication
 
-Final source archive/checksum validation and Sites publication are pending.
+Static asset/version/download validation and sample DOM simulation passed
+separately after packaging. APK and reassembled two-part source ZIP match
+`SHA256SUMS-3.6.0.txt`; every static file is below25MiB. ZIP bytes are unchanged
+by splitting. Sites publication is pending.
 Update this section with the exact source/version/deployment IDs after publishing;
 changing GitHub `website/` alone does not publish the existing live Site.

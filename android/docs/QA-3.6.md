@@ -96,7 +96,13 @@ Build: `:core:test :app:testDebugUnitTest :app:assembleDebug
 BUILD SUCCESSFUL in5m49s,139 tasks (21 executed,118 up-to-date), exit0.
 Final APK15,376,653 bytes; signature verified. APK SHA256:
 `5f0a8eea9dc45fe484297bca33b6b223e3c7f477870057307e80cef4285a89ee`.
-Source ZIP/checksums, Sites and GitHub publication are pending.
+Source ZIP39,871,429 bytes,1135 entries; CRC check passed. Complete native
+project included, signing keys/credentials/build outputs excluded. Frozen source
+checkpoint: `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`. Source SHA256:
+`973fe9c808b645ec8e4e500a6c3fef792cfc434a742adcdaf2124b1654b3aa78`.
+`SHA256SUMS-3.6.0.txt` records both immutable artifact digests. Source archives
+record the verified checkpoint before publication metadata; they are not rebuilt
+for later documentation changes. Sites and GitHub publication are pending.
 
 ## Limits
 

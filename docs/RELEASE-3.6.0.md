@@ -25,6 +25,8 @@ All family records, guidance and artwork remain native Kotlin/Compose and availa
 
 Emulator captures use sample family data.
 
+Frozen source checkpoint: `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`. Archive CRC and both artifact SHA256s passed; the source snapshot predates publication metadata.
+
 ## Downloads, identity and data
 
 | Item | Detail |
@@ -32,7 +34,7 @@ Emulator captures use sample family data.
 | Version / package | 3.6.0 / 30600 · `com.nothatcher.sproutbook` |
 | Android | 8.0+ (min SDK 26); compile/target SDK 37 |
 | APK | Debug-signed evaluation pre-release; 15,376,653 bytes (14.7 MiB) |
-| Source ZIP | Complete native project, artwork and QA evidence; build outputs and signing keys excluded |
+| Source ZIP | Complete native project, artwork and QA evidence; 39,871,429 bytes; build outputs and signing keys excluded |
 | Database | Room schema 12; explicit additive migration from 11 |
 | Backup | Exports format 4; imports native formats 1–4 |
 | Artifact verification | APK signature verified; APK/source SHA256s recorded in the release checksum file |

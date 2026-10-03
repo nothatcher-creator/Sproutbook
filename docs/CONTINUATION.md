@@ -38,8 +38,11 @@ published woodland journey are preserved.
   clean normal/150% fixtures passed with16 inspected screenshots. Three distinct
   tree scenes retain saved anchors. Final crash buffer empty. Manual startup
   rendered; external dialer/idle profiling blocked by missing UiAutomator roots.
-- Pending: immutable source/checksums, GitHub prerelease and existing Sites
-  publication. Local Chromium/WebKit five viewports each, four no-JavaScript
+- Frozen source checkpoint `3a027bb29fe4265c793e1a7f48e20f1ba4fc426a`;
+  ZIP39,871,429 bytes/1135 entries, CRC passed, no keys/build outputs.
+  APK15,376,653 bytes, retained certificate and SHA verified. Both digests are
+  in `SHA256SUMS-3.6.0.txt`; artifacts are never regenerated for doc updates.
+- Pending: GitHub prerelease and existing Sites publication. Local Chromium/WebKit five viewports each, four no-JavaScript
   cases and two200% text cases passed for the download/gallery update.
 - Physical-phone FPS/battery/audio, spoken TalkBack, Android17 behavior, minified
   runtime and original private production signing remain unverified/unavailable.
