@@ -46,9 +46,8 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
     val now = rememberNow(contraction != null && tab in listOf("Labour", "Contractions"))
     Page(if (tab == "Labour") "Labour focus" else "Waiting for you",
         if (tab == "Labour") "${child.name}'s plan, contacts and next step" else "Pregnancy, one day at a time") {
-        item {
-            if (tab == "Labour") TextButton(onClick = { tab = "Overview" }) { Text("Leave labour focus") }
-            else Choices(listOf("Overview", "Labour", "Kicks", "Contractions", "Preparation"), tab) {
+        if (tab != "Labour") item {
+            Choices(listOf("Overview", "Labour", "Kicks", "Contractions", "Preparation"), tab) {
                 tab = it
                 limit = 100
             }
@@ -114,6 +113,7 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
                 val phone = plan.first { it.id == BirthPlanCatalog.prefix(child.id) + "emergency-phone" }.notes
                 BirthUrgentPanel(compact = true, emergencyNumber = phone.takeIf { BirthPlanCatalog.validPhone(it) }.orEmpty())
             }
+            item { ContractionControl(vm, state, contraction, now, compact = true) }
             item {
                 Panel {
                     Section("Your care contacts")
@@ -129,7 +129,6 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
                     Muted("Dial buttons open your phone app for review; they never call automatically.")
                 }
             }
-            item { ContractionControl(vm, state, contraction, now) }
             item {
                 Panel {
                     Section("Recent contractions")
@@ -144,6 +143,7 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
                 Panel { Section(p.title); Text(p.notes) }
             }
             item { SourceLink(BirthPlanningCatalog.labour.label, BirthPlanningCatalog.labour.url) }
+            item { TextButton(onClick = { tab = "Overview" }) { Text("Leave labour focus") } }
         }
         if (tab == "Kicks") {
             item {

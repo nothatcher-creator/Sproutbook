@@ -1,0 +1,37 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-03T16:25:53.074Z",
+  "fontScale": "200%",
+  "cases": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "checks": [
+        ".hero",
+        "#memory-chapter",
+        "#calendar-chapter",
+        "#explore",
+        "#requests",
+        "#download"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "checks": [
+        ".hero",
+        "#memory-chapter",
+        "#calendar-chapter",
+        "#explore",
+        "#requests",
+        "#download"
+      ]
+    }
+  ],
+  "result": "PASS"
+}

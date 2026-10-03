@@ -62,6 +62,7 @@ class BirthPlanningFlowTest : FlowFixture() {
         awaitDb { app.db.pregnancyEvents().forChild("qa-child").any { it.kind == "Contraction" && it.endsAt == null } }
         val running = runBlocking { app.db.pregnancyEvents().forChild("qa-child").single() }
         compose.activityRule.scenario.recreate()
+        compose.onNode(hasScrollToIndexAction()).performScrollToIndex(0)
         waitText("Labour focus")
         pageClick("Stop contraction")
         awaitDb { app.db.pregnancyEvents().get(running.id)?.endsAt != null }

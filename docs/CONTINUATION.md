@@ -7,37 +7,47 @@ ledgers are historical evidence, not fresh validation.
 
 User requests: homebirth/freebirth advice and lists, a homebirth plan, Labour
 mode, a per-child wishlist, more child customization and a nicer Memory Tree.
-The checkout was clean at `b4d2c8b` before this update. The existing native
-project, signing identity and published woodland website are preserved.
+The checkout was clean at `b4d2c8b` before this update. Checkpoint `297ba4b`
+contains the integrated native implementation. Existing signing identity and the
+published woodland journey are preserved.
 
-- Fresh baseline: `:core:test --rerun :app:testDebugUnitTest --rerun` passed
-  on 2026-10-02 at 23:54 UTC: 78 core + 1 app unit tests, zero failures.
-- Existing pregnancy preparation uses per-child Room `PrepItem` rows.
-  New lists retain the supported `Bag` kind and use
-  stable, bounded IDs, preserving import compatibility and current bag IDs.
-- Implemented offline sourced homebirth, freebirth/unassisted birth, transfer
-  and aftercare guidance with personal checklists, plus a structured personal
-  plan stored in existing `Note` records. Labour mode prioritizes urgent help,
-  saved contacts, native contraction controls and saved preferences. Emergency
-  numbers are supplied by the family; dial actions require phone-app review.
-- Implemented separate per-child Wishlist, Forest/Moss/Amber/Sky accents and
-  Summer/Autumn/Night tree scenes. Static native tree artwork preserves anchor,
-  gesture and accessibility code. Room migration 11→12 adds defaults and the
-  child-owned Wishlist table without replacing existing data. New backup
-  format 4 is being finalized; older formats 1–3 remain importable.
-- Verified authoritative NHS/NICE/CDC sources and excerpts are recorded in
-  `android/docs/BIRTH-SOURCES-3.6.md`. Attended homebirth evidence is explicitly
-  separated from freebirth; qualified care and emergency access are prominent.
-- RED: 2 advice tests + missing native entry failed before implementation.
-  Repository RED: 6 tests, exactly 3 expected ownership/validation failures.
-  The guards are now implemented. Integrated debug APK + test APK compiled;
-  106 core + 2 app unit tests passed before the final backup-version change.
-- Independent native review is underway. Pending: final native
-  regression/persistence/backup checks,
-  accessibility screenshots, build/signature verification and release delivery.
-  No new APK or source archive has been published for this follow-up yet.
+- Fresh baseline: 78 core + 1 app unit tests passed, 2026-10-02 23:54 UTC.
+- Implemented offline sourced homebirth/freebirth/transfer/aftercare guidance,
+  editable personal lists and a 12-field per-child homebirth plan. Labour focus
+  brings urgent help, saved contacts, native contraction timing/history and plan
+  preferences together. It opens a dialer for review and does not call directly.
+- Implemented child-owned Wishlist, four woodland accents and three tree styles.
+  Static native Canvas polish retains exact anchors, gestures and accessibility.
+  Room12 uses explicit additive migration11→12; backup4 exports include new data,
+  while native formats1–3 remain importable. Older apps reject format4.
+- Source digest: `android/docs/BIRTH-SOURCES-3.6.md`. Independent review findings
+  (two-digit emergency numbers and incomplete source lists) fixed and verified.
+  No DIY clinical procedures or equivalence claim for unassisted birth.
+- Integrated Gradle: 109 core + 2 app unit tests passed; debug/test APK,
+  unsigned R8 APK/AAB and vital lint passed. Final full-width Labour button polish
+  passed the same full build (5m49s). Evaluation certificate remains unchanged.
+- Dedicated offline API29 emulator: real3.5.1→3.6.0 update preserved every old
+  fixture row/value and byte-identical DataStore. 17 repository/migration/backup
+  plus15 unique UI/gesture/framework-accessibility checks passed before final
+  visual polish. Corrected two harness timing failures; original logs retained.
+- Final affected rerun: seven birth/tree gesture/accessibility checks passed.
+  Screenshot fixture initially failed inside Compose test-frame layout, then
+  passed unchanged in isolation. Pixel inspection found stale screenshot frames;
+  capture harness now waits for native Android window/accessibility idle.
+- Final full-width Labour persistence/recreation check and normal fixture passed;
+  clean normal/150% fixtures passed with16 inspected screenshots. Three distinct
+  tree scenes retain saved anchors. Final crash buffer empty. Manual startup
+  rendered; external dialer/idle profiling blocked by missing UiAutomator roots.
+- Pending: immutable source/checksums, GitHub prerelease and existing Sites
+  publication. Local Chromium/WebKit five viewports each, four no-JavaScript
+  cases and two200% text cases passed for the download/gallery update.
+- Physical-phone FPS/battery/audio, spoken TalkBack, Android17 behavior, minified
+  runtime and original private production signing remain unverified/unavailable.
 
-Evidence for this update: `android/docs/evidence/birth-planning-2026-10-03/`.
+Evidence: `android/docs/evidence/birth-planning-2026-10-03/`.
+Build logs and staged artifacts: ignored `artifacts/3.6.0/`.
+Next: finish native QA, freeze source checkpoint, publish verified downloads using
+existing Sites and GitHub release workflow, then record exact publication IDs.
 
 ## Woodland journey follow-up
 
@@ -111,7 +121,7 @@ especially `android/docs/QA-3.5.md` before further work. `:core` contains pure
 Kotlin rules, geometry, backup validation, content, and tests; `:app` contains
 Compose feature packages, ViewModels, Room/DataStore repositories, native audio,
 WorkManager reminders, and SAF backup/import. Package is
-`com.nothatcher.sproutbook`; Room schema 11, backup format 3, min SDK 26, target 37.
+`com.nothatcher.sproutbook`; current Room schema12, backup format4, min SDK26, target37.
 Keep Today / Schedule / Care / More, offline records, explicit migrations,
 child ownership, caregiver guards, original graphics, and motion gating.
 

@@ -1,0 +1,23 @@
+{
+  "command": "bash /workspace/scratch/sproutbook-gradle.sh :core:test :app:testDebugUnitTest :app:assembleDebug :app:assembleDebugAndroidTest :app:assembleRelease :app:bundleRelease",
+  "exit_code": 0,
+  "gradle_result": "BUILD SUCCESSFUL in 5m 49s;139 actionable tasks:21 executed,118 up-to-date",
+  "unit": {
+    "core": {
+      "tests": 109,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "debug_apk_bytes": 15376653,
+  "distribution": "retained evaluation debug identity; R8 APK/AAB unsigned, runtime not tested",
+  "apk_sha256": "5f0a8eea9dc45fe484297bca33b6b223e3c7f477870057307e80cef4285a89ee",
+  "build_log": "final-build.log"
+}

@@ -119,6 +119,7 @@ class WishlistFlowTest : FlowFixture() {
             .performScrollToNode(hasText("A wanted experience"))
         compose.onNodeWithText("A wanted experience").assertIsDisplayed()
         pageClick("Obtained")
+        waitText("Obtained idea 0")
         pageClick("Load more wishlist items")
         compose.onNode(hasScrollToIndexAction())
             .performScrollToNode(hasText("Oldest obtained idea"))

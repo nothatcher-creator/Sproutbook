@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.ChildPaletteTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-03T16:11:34.371Z" hostname="5e01801f05f6" time="0.039">
+  <properties/>
+  <testcase name="eachChildAccentKeepsReadableTextInBothThemes" classname="com.nothatcher.sproutbook.ChildPaletteTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

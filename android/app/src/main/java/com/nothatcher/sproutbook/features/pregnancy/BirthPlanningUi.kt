@@ -46,9 +46,9 @@ internal fun BirthUrgentPanel(compact: Boolean = false, emergencyNumber: String 
     Surface(color = MaterialTheme.colorScheme.errorContainer, shape = MaterialTheme.shapes.large) {
         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Section(BirthPlanningCatalog.emergencyTitle)
-            Text(if (compact) "Heavy bleeding, trouble breathing, chest pain, collapse, a seizure, or a newborn not breathing normally or unresponsive: call emergency services now. An imminent birth without qualified help also needs an emergency call. Follow the dispatcher."
+            Text(if (compact) "Heavy bleeding, breathing trouble, collapse or a baby not breathing normally/unresponsive: emergency help now. Birth imminent without qualified help: call now. Follow the dispatcher."
                 else BirthPlanningCatalog.emergency, color = MaterialTheme.colorScheme.onErrorContainer)
-            DialButton(if (emergencyNumber.isBlank()) "Open phone for emergency help" else "Dial local emergency number", emergencyNumber)
+            DialButton(if (compact) "Emergency phone" else if (emergencyNumber.isBlank()) "Open phone for emergency help" else "Dial local emergency number", emergencyNumber)
             TextButton(onClick = { expanded = !expanded }) {
                 Text(if (expanded) "Hide other warning signs" else "Other urgent warning signs")
             }
@@ -87,17 +87,34 @@ internal fun ChecklistRow(p: PrepItem, vm: FamilyViewModel, readOnly: Boolean, e
 }
 
 @Composable
-internal fun ContractionControl(vm: FamilyViewModel, state: FamilyState, contraction: PregnancyEvent?, now: Long) {
+internal fun ContractionControl(vm: FamilyViewModel, state: FamilyState, contraction: PregnancyEvent?, now: Long, compact: Boolean = false) {
     Panel {
+        if (compact) {
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Column(Modifier.weight(1f)) {
+                    Section(if (contraction == null) "Contraction timer" else "In progress")
+                }
+                Text(contraction?.let { durationText(now - it.startsAt) } ?: "Ready",
+                    style = MaterialTheme.typography.headlineSmall)
+            }
+            ContractionAction(vm, state, contraction)
+            Muted("Timing cannot tell you to delay care.")
+        } else {
         Section(if (contraction == null) "Contraction timer" else "Contraction in progress")
         Text(contraction?.let { durationText(now - it.startsAt) } ?: "Ready when you are",
             style = MaterialTheme.typography.headlineLarge)
-        Action(if (contraction == null) "Start contraction" else "Stop contraction", !state.prefs.grandparent) {
-            vm.perform(if (contraction == null) "Contraction started" else "Contraction saved") {
-                if (contraction == null) vm.repo.startContraction(state.child!!.id)
-                else vm.repo.finishPregnancySession(contraction.id, contraction.childId)
-            }
-        }
+        ContractionAction(vm, state, contraction)
         Muted("The timer records time; it cannot diagnose labour or tell you to delay care. Follow your maternity team's advice and call if you are worried.")
+        }
+    }
+}
+
+@Composable
+private fun ContractionAction(vm: FamilyViewModel, state: FamilyState, contraction: PregnancyEvent?) {
+    Action(if (contraction == null) "Start contraction" else "Stop contraction", !state.prefs.grandparent) {
+        vm.perform(if (contraction == null) "Contraction started" else "Contraction saved") {
+            if (contraction == null) vm.repo.startContraction(state.child!!.id)
+            else vm.repo.finishPregnancySession(contraction.id, contraction.childId)
+        }
     }
 }

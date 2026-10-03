@@ -222,6 +222,7 @@ fun HomeScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit) {
                     Section("Growing memories")
                     TextButton(onClick = { go("memories") }) { Text("Open tree") }
                 }
+                Muted("${child.treeStyle} woodland · ${child.name}'s growing story")
                 MemoryTree(
                     memories.filter { it.chapter == chapter },
                     onOpen = { go("memories?memoryId=${it.id}") },

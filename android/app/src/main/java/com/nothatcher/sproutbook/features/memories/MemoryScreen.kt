@@ -72,6 +72,7 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                             Text(if (arrange) "Done arranging" else "Arrange")
                         }
                     }
+                    Muted("${child.treeStyle} woodland · ${child.name}'s growing story")
                     MemoryTree(
                         visible,
                         arrange,

@@ -1,0 +1,2 @@
+    mResumedActivity: ActivityRecord{4603223 u0 com.nothatcher.sproutbook/.MainActivity t106}
+    mLastPausedActivity: ActivityRecord{fd8ed58 u0 com.android.launcher3/.Launcher t10}

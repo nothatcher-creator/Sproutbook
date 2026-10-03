@@ -7,3 +7,5 @@
 The three `*-screen-v33.png` files are unmodified emulator captures of the 3.3 care update, using synthetic data. They are labelled as earlier screenshots in the README and are not presented as current 3.4 graphical captures.
 
 No stock-photo attribution or third-party artwork licence is implied by this directory. An application/source-code licence has not been selected in this release repository.
+
+The four `*-screen-v36.png` files are unmodified native 3.6.0 API29 emulator captures with synthetic family data. They show Labour focus, the personal homebirth-plan overview, Autumn Memory Tree and Wishlist editor. The QA evidence also includes Summer/Night scenes and enlarged text; none is a website demo or photograph.

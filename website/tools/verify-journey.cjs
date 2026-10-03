@@ -5,7 +5,7 @@
 const {chromium,webkit}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const url=process.argv[2] || 'http://127.0.0.1:8765/', out=process.argv[3] || path.resolve('journey-evidence');
-const version=process.argv[4] || '3.5.1', engine=process.argv[5] || 'chromium';
+const version=process.argv[4] || '3.6.0', engine=process.argv[5] || 'chromium';
 fs.mkdirSync(out,{recursive:true});
 const report={url,version,engine,date:new Date().toISOString(),cases:[]};
 const settle=page=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
