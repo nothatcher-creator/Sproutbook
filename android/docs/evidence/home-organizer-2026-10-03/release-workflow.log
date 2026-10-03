@@ -1,0 +1,96 @@
+release	Set up job	﻿2026-10-03T21:56:14.3463682Z Current runner version: '2.337.0'
+release	Set up job	2026-10-03T21:56:14.3490565Z ##[group]Runner Image Provisioner
+release	Set up job	2026-10-03T21:56:14.3491597Z Hosted Compute Agent
+release	Set up job	2026-10-03T21:56:14.3492306Z Version: 20260901.588
+release	Set up job	2026-10-03T21:56:14.3492995Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+release	Set up job	2026-10-03T21:56:14.3493722Z Build Date: 2026-09-01T19:56:44Z
+release	Set up job	2026-10-03T21:56:14.3494488Z Worker ID: {13c0d062-2ea9-47d2-8391-07789fdda002}
+release	Set up job	2026-10-03T21:56:14.3495216Z Azure Region: westus
+release	Set up job	2026-10-03T21:56:14.3495844Z ##[endgroup]
+release	Set up job	2026-10-03T21:56:14.3497811Z ##[group]Operating System
+release	Set up job	2026-10-03T21:56:14.3498475Z Ubuntu
+release	Set up job	2026-10-03T21:56:14.3499110Z 24.04.5
+release	Set up job	2026-10-03T21:56:14.3499627Z LTS
+release	Set up job	2026-10-03T21:56:14.3500161Z ##[endgroup]
+release	Set up job	2026-10-03T21:56:14.3500784Z ##[group]Runner Image
+release	Set up job	2026-10-03T21:56:14.3501418Z Image: ubuntu-24.04
+release	Set up job	2026-10-03T21:56:14.3502028Z Version: 20260927.320.1
+release	Set up job	2026-10-03T21:56:14.3503164Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+release	Set up job	2026-10-03T21:56:14.3505024Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+release	Set up job	2026-10-03T21:56:14.3506005Z ##[endgroup]
+release	Set up job	2026-10-03T21:56:14.3507441Z ##[group]GITHUB_TOKEN Permissions
+release	Set up job	2026-10-03T21:56:14.3509621Z Contents: write
+release	Set up job	2026-10-03T21:56:14.3510337Z Metadata: read
+release	Set up job	2026-10-03T21:56:14.3510900Z ##[endgroup]
+release	Set up job	2026-10-03T21:56:14.3512990Z Secret source: Actions
+release	Set up job	2026-10-03T21:56:14.3514098Z Cache mode: write
+release	Set up job	2026-10-03T21:56:14.3514815Z Prepare workflow directory
+release	Set up job	2026-10-03T21:56:14.4059967Z Prepare all required actions
+release	Set up job	2026-10-03T21:56:14.4131062Z Complete job name: release
+release	Download and verify the completed artifacts	﻿2026-10-03T21:56:14.4935572Z ##[group]Run set -euo pipefail
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4936489Z [36;1mset -euo pipefail[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4937614Z [36;1m[[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]][0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4939162Z [36;1mcurl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-$RELEASE_VERSION-debug.apk" --output "SproutBook-$RELEASE_VERSION-debug.apk"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4941013Z [36;1m# Static hosting limits individual files. Reassemble the original source ZIP without changing any bytes.[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4942214Z [36;1mfor part in 1 2; do[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4943415Z [36;1m  curl --fail --location --retry 3 "$DOWNLOAD_BASE/SproutBook-$RELEASE_VERSION-source.zip.part$part" --output "source.part$part"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4944739Z [36;1mdone[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4945684Z [36;1mcat source.part1 source.part2 > "SproutBook-$RELEASE_VERSION-source.zip"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4947143Z [36;1mfor name in "SHA256SUMS-$RELEASE_VERSION.txt" "docs/RELEASE-$RELEASE_VERSION.md"; do[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4948378Z [36;1m  output="${name##*/}"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4949541Z [36;1m  gh api -H 'Accept: application/vnd.github.raw+json' "/repos/$GH_REPO/contents/$name?ref=$RELEASE_COMMIT" > "$output"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4950694Z [36;1mdone[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4951463Z [36;1msha256sum -c "SHA256SUMS-$RELEASE_VERSION.txt"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4952430Z [36;1munzip -tq "SproutBook-$RELEASE_VERSION-source.zip"[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4953242Z [36;1mpython3 - <<'PY'[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4953884Z [36;1mimport os, zipfile[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4954844Z [36;1mwith zipfile.ZipFile(f"SproutBook-{os.environ['RELEASE_VERSION']}-source.zip") as source:[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4955878Z [36;1m    names = source.namelist()[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4957178Z [36;1m    assert any('/android/app/src/main/' in name and name.endswith('.kt') for name in names)[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4958485Z [36;1m    assert not any(name.lower().endswith(('.keystore', '.jks', '.p12')) for name in names)[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.4959498Z [36;1mPY[0m
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5859923Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5861242Z env:
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5865505Z   GH_TOKEN: ***
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5866242Z   GH_REPO: nothatcher-creator/Sproutbook
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5867469Z   RELEASE_COMMIT: ca593130ceecb2f0a0e90518b7d3e5d9a08c3f15
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5868656Z   RELEASE_VERSION: 3.7.0
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5869504Z   DOWNLOAD_BASE: https://sproutbook-woodland.nothatch.chatgpt.site/downloads
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.5870387Z ##[endgroup]
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.6312034Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.6315126Z                                  Dload  Upload   Total   Spent    Left  Speed
+release	Download and verify the completed artifacts	2026-10-03T21:56:14.6316097Z 
+release	Download and verify the completed artifacts	2026-10-03T21:56:15.7711109Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+release	Download and verify the completed artifacts	2026-10-03T21:56:15.8380967Z   0 14.6M    0 68464    0     0  59324      0  0:04:19  0:00:01  0:04:18 59379
+release	Download and verify the completed artifacts	2026-10-03T21:56:15.8383200Z 100 14.6M  100 14.6M    0     0  12.0M      0  0:00:01  0:00:01 --:--:-- 12.0M
+release	Download and verify the completed artifacts	2026-10-03T21:56:15.8457786Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+release	Download and verify the completed artifacts	2026-10-03T21:56:15.8460053Z                                  Dload  Upload   Total   Spent    Left  Speed
+release	Download and verify the completed artifacts	2026-10-03T21:56:15.8461440Z 
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.0480125Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.3567596Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.3569677Z 100 20.8M  100 20.8M    0     0  40.8M      0 --:--:-- --:--:-- --:--:-- 40.8M
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.3643712Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.3646367Z                                  Dload  Upload   Total   Spent    Left  Speed
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.3648751Z 
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.7475860Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+release	Download and verify the completed artifacts	2026-10-03T21:56:16.7479091Z 100 20.8M  100 20.8M    0     0  54.4M      0 --:--:-- --:--:-- --:--:-- 54.4M
+release	Download and verify the completed artifacts	2026-10-03T21:56:17.4952312Z SproutBook-3.7.0-debug.apk: OK
+release	Download and verify the completed artifacts	2026-10-03T21:56:17.5274897Z SproutBook-3.7.0-source.zip: OK
+release	Download and verify the completed artifacts	2026-10-03T21:56:17.8298674Z No errors detected in compressed data of SproutBook-3.7.0-source.zip.
+release	Publish APK and complete source as a new prerelease	﻿2026-10-03T21:56:17.8792042Z ##[group]Run set -euo pipefail
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8792515Z [36;1mset -euo pipefail[0m
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8792920Z [36;1mif gh release view "v$RELEASE_VERSION" >/dev/null 2>&1; then[0m
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8793544Z [36;1m  echo "Release v$RELEASE_VERSION already exists; refusing to replace published artifacts."[0m
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8794089Z [36;1m  exit 1[0m
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8794357Z [36;1mfi[0m
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8795539Z [36;1mgh release create "v$RELEASE_VERSION" --target "$RELEASE_COMMIT" --title "SproutBook $RELEASE_VERSION · A personal Today" --notes-file "RELEASE-$RELEASE_VERSION.md" --prerelease "SproutBook-$RELEASE_VERSION-debug.apk" "SproutBook-$RELEASE_VERSION-source.zip" "SHA256SUMS-$RELEASE_VERSION.txt"[0m
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8863038Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8863494Z env:
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8867504Z   GH_TOKEN: ***
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8867849Z   GH_REPO: nothatcher-creator/Sproutbook
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8868298Z   RELEASE_COMMIT: ca593130ceecb2f0a0e90518b7d3e5d9a08c3f15
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8868837Z   RELEASE_VERSION: 3.7.0
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8869362Z   DOWNLOAD_BASE: https://sproutbook-woodland.nothatch.chatgpt.site/downloads
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:17.8869893Z ##[endgroup]
+release	Publish APK and complete source as a new prerelease	2026-10-03T21:56:22.7621516Z https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.7.0
+release	Complete job	﻿2026-10-03T21:56:22.7728274Z Cleaning up orphan processes

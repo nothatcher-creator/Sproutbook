@@ -1,11 +1,10 @@
 # SproutBook continuation checkpoint
 
-Updated: 2026-10-03 UTC. Native organizer 3.7 implementation and affected checks
-have passed; packaging and publication remain pending. Native 3.6.0 and Site
-version 5 are the latest delivered versions. Older QA ledgers are historical
-evidence, not fresh validation.
+Updated: 2026-10-03 UTC. Native 3.7.0, GitHub evaluation prerelease and public
+Sites version 6 are delivered and verified. Older QA ledgers are historical
+verification, not fresh testing. Do not regenerate immutable release artifacts.
 
-## Home screen organizer verified; publication pending — 3.7
+## Home screen organizer delivered — 3.7.0
 
 Request: More → Home screen organizer, reorder/show/hide Today sections, choose
 and order quick actions, and built-in or custom photo backgrounds. Each child's
@@ -60,25 +59,34 @@ clean delivered HEAD `3e15d6800fabc2faf4ac2ec168c30745b8d00fde`.
 - Existing public Site version 6 is published from exact source commit
   `78352f41cb7b2af2207258b634bdc1ae30c08657`. Live Chromium passed five viewports
   and two no-JavaScript cases. Hosted APK/checksum/source parts were downloaded
-  and matched the immutable artifacts. GitHub prerelease is still pending.
+  and matched the immutable artifacts. GitHub v3.7.0 evaluation prerelease is
+  published; workflow `37156726604` succeeded. All three GitHub assets downloaded
+  and matched exact frozen bytes, GitHub digests, source CRC and retained signer.
+  Release: https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.7.0
+  Site version ID: `appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_618fcf94ddb48191bc58fa18e4510312`.
+  Deployment ID: `appgdep_6ac17810d8dc8191a74b1ede52ab188c`.
+  Release target: `ca593130ceecb2f0a0e90518b7d3e5d9a08c3f15`.
 - Current code checkpoint: `27ecbf9` (organizer implementation). Final source/QA snapshot is `354c805ad83bbf51790a7169c6bd25b52c35f25b`.
   Frozen source ZIP is 43,753,394 bytes, SHA-256
   `a160c25c2c4c0a96221fa2d54b4a9d6388cd4ac776d3c996917f80ee34f3a263`.
   ZIP CRC/native project/no-private-key checks passed. Static hosted APK/source
   checksums and separate DOM simulation passed.
-  Final APK currently has 15,365,584 bytes, SHA-256
+  Frozen APK has 15,365,584 bytes, SHA-256
   `b21820ca110a62fe588672dee4654cf08089b495414a5541c946ee8f518ee484`.
-  Validate again when copying into immutable `artifacts/3.7.0/`; do not regenerate
-  frozen artifacts for later documentation changes.
-- Next publication steps: commit final source/QA checkpoint; freeze native source
-  ZIP and APK; check ZIP CRC/native project/key exclusion and retained signer;
-  record sizes/checksums consistently. Copy APK and split source parts into the
-  existing Site, run static/DOM and actual local Chromium/WebKit/large-text checks,
-  commit/push source with a fresh short-lived Sites credential, save/deploy that
-  exact commit, and verify the actual live website. Push GitHub metadata through
-  the existing safe Git-data helper, dispatch the prerelease workflow, download
-  all published assets and verify SHA/CRC/certificate. Record actual checkpoint,
-  Site version/deployment, workflow run and download links here and in QA-3.7.
+  Immutable artifacts remain in `artifacts/3.7.0/`; do not regenerate them
+  for later documentation changes.
+- Delivery used exact Git-data objects because this host's Git receive credential
+  was rejected. A slow CLI blob transport was completed with the GitHub connector,
+  matching blob SHA values; main advanced once without force. The source helper
+  preserved every exact local commit. Short-lived Sites credentials stayed in
+  memory/hidden stdin. No private key or credential was committed.
+- Next: physical Android organizer/photo-picker/rotation/restart/backup checks;
+  spoken TalkBack and large-text regression; API 37 service/notification testing;
+  installed R8 runtime with original production identity when available; measure
+  real-device startup/FPS/battery/audio. Keep stage changes and child switches
+  non-destructive. Add backup-safe cleanup for unused private backgrounds only
+  after protecting concurrent exports. Use [QA-3.7](../android/docs/QA-3.7.md) and
+  evidence before choosing another small feature; organizer implementation is done.
 - Limitations: external photo picker UI and cancellation/rotation during active
   image IO; physical devices, spoken TalkBack, API 37 service/notification and
   installed R8 runtime; hardware FPS/startup/battery/native-audio evidence remain

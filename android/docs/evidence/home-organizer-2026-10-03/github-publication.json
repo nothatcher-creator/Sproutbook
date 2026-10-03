@@ -1,0 +1,39 @@
+{
+  "assets": [
+    {
+      "browser_download_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SHA256SUMS-3.7.0.txt",
+      "digest": "sha256:d3af429cae12fb9c33296e6fdbbe5b50de4b4ff310800775ef3be518b25ec48a",
+      "id": 608600515,
+      "name": "SHA256SUMS-3.7.0.txt",
+      "size": 187
+    },
+    {
+      "browser_download_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-debug.apk",
+      "digest": "sha256:b21820ca110a62fe588672dee4654cf08089b495414a5541c946ee8f518ee484",
+      "id": 608600516,
+      "name": "SproutBook-3.7.0-debug.apk",
+      "size": 15365584
+    },
+    {
+      "browser_download_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-source.zip",
+      "digest": "sha256:a160c25c2c4c0a96221fa2d54b4a9d6388cd4ac776d3c996917f80ee34f3a263",
+      "id": 608600513,
+      "name": "SproutBook-3.7.0-source.zip",
+      "size": 43753394
+    }
+  ],
+  "html_url": "https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.7.0",
+  "id": 402706558,
+  "prerelease": true,
+  "tag_name": "v3.7.0",
+  "target_commitish": "ca593130ceecb2f0a0e90518b7d3e5d9a08c3f15",
+  "verification": {
+    "actual_downloads": "all three assets match frozen bytes and GitHub digests",
+    "source_zip_crc": "passed",
+    "native_project": "present",
+    "private_signing_keys": "excluded",
+    "apk_signer_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3",
+    "workflow_run_id": 37156726604,
+    "workflow_conclusion": "success"
+  }
+}

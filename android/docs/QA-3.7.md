@@ -1,8 +1,6 @@
 # SproutBook 3.7 organizer verification
 
-Updated: 2026-10-03 UTC. Native implementation and affected emulator checks have
-passed. Artifact freezing, new website verification/publication and GitHub release
-publication are still pending; the latest delivered release remains 3.6.0.
+Updated: 2026-10-03 UTC. Native 3.7.0, GitHub evaluation prerelease and public Sites version 6 are delivered. Unit/native/local-browser/live-browser and actual published-artifact checks below passed; hardware and production gates remain explicit.
 
 ## Build and unit tests
 
@@ -138,7 +136,7 @@ those assertions. The original failing log is retained.
 Evidence: [independent review](evidence/home-organizer-2026-10-03/review-findings.md)
 and [initial UI attempt](evidence/home-organizer-2026-10-03/organizer-flow-native-initial.log).
 
-## Remaining verification and delivery
+## Remaining verification
 
 - Actual external photo-picker UI, cancellation/rotation during active image IO,
   physical Android/iPhone devices and spoken TalkBack remain unverified.
@@ -149,15 +147,16 @@ and [initial UI attempt](evidence/home-organizer-2026-10-03/organizer-flow-nativ
   it is not performance evidence.
 - Unreferenced staged/previous background files remain private; only referenced
   photos are exported. Cleanup requires a future backup-safe policy.
-- Local real Chromium 153 and WebKit 26.6 passed five viewports and two no-JavaScript cases each. Chromium 200% text passed two viewports; all 11 gallery images decoded and desktop wrapping/mobile horizontal navigation passed. Forward/reverse woodland scrolling, parallax, offscreen animation stopping, motion preferences, sample demos and the GitHub request draft passed. Static IDs/assets/file limits and APK/source SHA-256 checks passed, as did the separate sample-data DOM simulation. Live publication checks are next.
-- Freeze the final source checkpoint and verified debug APK; validate ZIP CRC,
-  native source inclusion, key exclusion, certificate and SHA-256 manifest.
-  Publish through the existing Sites deployment and GitHub prerelease workflow,
-  then download and verify the published assets and update this delivery ledger.
+## Website verification
 
-Source checkpoint, artifact sizes/checksums, new Site version/deployment and
-GitHub release run are pending. Do not describe the staged 3.7 links as published
-until those actions and their final checks complete.
+Local Chromium 153 and WebKit 26.6 passed five viewports and two no-JavaScript
+cases each. Chromium 200% text passed two viewports. All eleven gallery images
+decoded; desktop wrapping and mobile horizontal navigation passed. Forward/reverse
+woodland scrolling, parallax, offscreen animation stopping, motion preferences,
+sample demos and GitHub request drafts passed. Static ID/asset/file-limit and
+APK/source SHA checks passed. Separate sample-data DOM simulation passed; it is
+not rendered-browser evidence. These checks used headless Linux browsers, not
+physical Android or iPhone devices.
 
 ## Website publication checkpoint
 
@@ -167,8 +166,24 @@ Live Chromium 153 passed all five viewport sizes and both no-JavaScript cases;
 scroll reversal, motion settings, sample demos, download links and asset/error
 checks passed. Hosted APK and checksum manifest downloaded and matched. Both
 source parts downloaded and reassembled byte-identically to the frozen ZIP.
-GitHub source fast-forward and prerelease workflow are the remaining delivery
-steps. No physical-browser FPS claim is made.
+No physical-browser FPS claim is made.
 
 [Live browser evidence](../../website/docs/evidence/home-organizer-2026-10-03/live-chromium-results.json) ·
 [Sites deployment](../../website/docs/evidence/home-organizer-2026-10-03/site-publication.json).
+
+## GitHub publication and immutable artifacts
+
+[GitHub v3.7.0](https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.7.0)
+is an evaluation prerelease. Workflow [37156726604](https://github.com/nothatcher-creator/Sproutbook/actions/runs/37156726604)
+succeeded; release target is `ca593130ceecb2f0a0e90518b7d3e5d9a08c3f15`.
+All three published assets were downloaded and checked against the frozen files
+and GitHub-reported SHA-256 digests. APK: 15,365,584 bytes; complete source ZIP:
+43,753,394 bytes. Manifest matched byte-for-byte. The downloaded APK retained the
+certificate above. Downloaded source passed ZIP CRC/native Kotlin inclusion and
+private-key exclusion. No artifact was regenerated for later delivery metadata.
+
+Source snapshot: `354c805ad83bbf51790a7169c6bd25b52c35f25b`.
+SHA-256 APK: `b21820ca110a62fe588672dee4654cf08089b495414a5541c946ee8f518ee484`.
+SHA-256 source: `a160c25c2c4c0a96221fa2d54b4a9d6388cd4ac776d3c996917f80ee34f3a263`.
+The source snapshot records verification before publication; this online ledger
+records final delivery. [Publication evidence](evidence/home-organizer-2026-10-03/github-publication.json).
