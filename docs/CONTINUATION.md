@@ -1,9 +1,11 @@
 # SproutBook continuation checkpoint
 
-Updated: 2026-10-03 UTC. Native 3.6.0 and Site version 5 are delivered; organizer 3.7 is in progress. Older QA
-ledgers are historical evidence, not fresh validation.
+Updated: 2026-10-03 UTC. Native organizer 3.7 implementation and affected checks
+have passed; packaging and publication remain pending. Native 3.6.0 and Site
+version 5 are the latest delivered versions. Older QA ledgers are historical
+evidence, not fresh validation.
 
-## Home screen organizer in progress — 3.7
+## Home screen organizer verified; publication pending — 3.7
 
 Request: More → Home screen organizer, reorder/show/hide Today sections, choose
 and order quick actions, and built-in or custom photo backgrounds. Each child's
@@ -21,24 +23,69 @@ clean delivered HEAD `3e15d6800fabc2faf4ac2ec168c30745b8d00fde`.
   configuration/photo import, editor and Today renderer. Final integrated build
   passed 126 units (124 core + 2 app), debug/test APK, unsigned R8 APK/AAB and
   vital lint in 5m49s. Retained evaluation certificate verified.
-- Native baseline 11 data/migration checks passed. Latest suite has already
-  passed all seven organizer repository checks (including mode switch during
-  blocked image IO) and five migration origins; eight UI checks are in progress.
+- Final organizer native suite: 20 checks passed in 307.225 seconds: seven
+  repository/photo/backup/reopen checks (including caregiver mode switched during
+  blocked image IO), five migration origins (1, 9, 10, 11, 12) and eight native
+  Compose flows. The photo-picker result is intercepted with a real JPEG; the
+  app callback/private copy/Save/Cancel/recreation/child scope were verified,
+  while Android's external picker interface was not exercised.
+- Affected native regression: 16 checks passed in 189.796 seconds, including
+  Wishlist, everyday persistence, backup, calendar/tooth/tree gestures, tree
+  framework accessibility, child-switch/caregiver and the visual fixture.
+  Total: 36 unique native tests, 35 behavioral + one visual. Repeated captures
+  are not additional unique tests.
+- Normal and 150% visual fixtures passed (63.173 / 62.405 seconds); 16 screenshots
+  captured eight views each, including deeper section/shortcut/photo controls
+  and custom-photo Today in both themes. A final test-only frame-harness rerun
+  passed one test in 67.831 seconds at actual font scale 1.0; it did not replace
+  the 16 evidence screenshots. The dark banner contains its Today/date labels.
+- Actual published 3.6.0 APK → new 3.7.0 APK update retained every old fixture
+  row, column value and table count, schema 13 integrity `ok`, compatible new
+  home defaults and byte-identical DataStore. Actual offline native rendering
+  retained the selected Ash/Teen profile, appearance and Grandparent mode.
+  Cold `am start -W` timed out on the software emulator; the updated UI later
+  rendered. This is not hardware startup or FPS evidence.
 - Original seven-UI run passed three and failed four anchor fixture assertions;
   corrected fixtures now use existing arrangeMemory to save their requested
   branch, and the failure log remains in evidence. No app behavior change was
-  needed for those assertions. Screenshot, old-feature regression and actual
-  3.6→3.7 update preservation remain pending.
+  needed for those assertions. The latest corrected flows and affected existing
+  regressions passed; original failures remain available for future sessions.
 - Independent data/UI review complete; three UI findings fixed: preview removes
   hidden hit targets, detached photo results show feedback, Add-memory query is
   consumed once per navigation entry. See committed review evidence.
+- Local browser verification passed: Chromium 153 and WebKit 26.6, five viewports
+  plus two no-JavaScript cases each; Chromium 200% text, two viewports. The
+  11-screen gallery passed desktop wrapping/mobile horizontal navigation.
+  Journey CSS and motion JS are byte-identical to the delivered Site.
 - No organizer APK or release published yet. Latest verified downloads are 3.6
   below. Existing live woodland story remains Site version 5.
-- Next: integrate, compile/unit test, emulator UI/repository/migration/backup
-  checks, inspect normal and large-text screenshots, review/fix, document and
-  publish only verified evaluation APK/source/checksums with retained certificate.
-- Limitations carried forward: no physical-device/TalkBack/FPS/battery evidence,
-  production signing key unavailable. Test fixtures must only use synthetic data.
+- Current code checkpoint: `27ecbf9` (organizer implementation). Final QA/assets
+  and delivery metadata are being prepared; freeze their source checkpoint next.
+  Final APK currently has 15,365,584 bytes, SHA-256
+  `b21820ca110a62fe588672dee4654cf08089b495414a5541c946ee8f518ee484`.
+  Validate again when copying into immutable `artifacts/3.7.0/`; do not regenerate
+  frozen artifacts for later documentation changes.
+- Next publication steps: commit final source/QA checkpoint; freeze native source
+  ZIP and APK; check ZIP CRC/native project/key exclusion and retained signer;
+  record sizes/checksums consistently. Copy APK and split source parts into the
+  existing Site, run static/DOM and actual local Chromium/WebKit/large-text checks,
+  commit/push source with a fresh short-lived Sites credential, save/deploy that
+  exact commit, and verify the actual live website. Push GitHub metadata through
+  the existing safe Git-data helper, dispatch the prerelease workflow, download
+  all published assets and verify SHA/CRC/certificate. Record actual checkpoint,
+  Site version/deployment, workflow run and download links here and in QA-3.7.
+- Limitations: external photo picker UI and cancellation/rotation during active
+  image IO; physical devices, spoken TalkBack, API 37 service/notification and
+  installed R8 runtime; hardware FPS/startup/battery/native-audio evidence remain
+  open. Production signing key unavailable. Previous and unused staged background
+  images remain private to avoid racing exports; backup exports referenced files.
+  Test fixtures must only use synthetic data on a dedicated emulator.
+
+Evidence: `android/docs/QA-3.7.md` and
+`android/docs/evidence/home-organizer-2026-10-03/`. Do not restart recovery or
+repeat completed native suites without a relevant change or unresolved concern.
+Continue from schema 13 / backup 5; preserve every child's data and the evaluation
+signing identity. Publication is the remaining task for this update.
 
 ## Native 3.6 delivered
 

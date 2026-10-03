@@ -1,0 +1,116 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "version": "3.7.0",
+  "engine": "chromium",
+  "date": "2026-10-03T21:41:25.464Z",
+  "cases": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "errors": [],
+      "failed": [],
+      "checks": [
+        "APK visible; keyboard skip link; no horizontal overflow",
+        "forward/reverse scene, SVG, plant, phone and animal poses; four depth layers",
+        "all chapters readable; native wheel; idle JS stops; offscreen ambient motion stops",
+        "motion off persists; live reduced motion preserves every chapter",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "frameCallbacks": {
+        "count": 135,
+        "medianMs": 0,
+        "p95Ms": 8.099999994039536,
+        "maxMs": 31.700000002980232
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": [],
+      "failed": [],
+      "checks": [
+        "APK visible; keyboard skip link; no horizontal overflow",
+        "forward/reverse scene, SVG, plant, phone and animal poses; four depth layers",
+        "all chapters readable; native wheel; idle JS stops; offscreen ambient motion stops",
+        "motion off persists; live reduced motion preserves every chapter",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "frameCallbacks": {
+        "count": 135,
+        "medianMs": 0,
+        "p95Ms": 3.2000000029802322,
+        "maxMs": 5.9000000059604645
+      }
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "errors": [],
+      "failed": [],
+      "checks": [
+        "APK visible; keyboard skip link; no horizontal overflow",
+        "forward/reverse scene, SVG, plant, phone and animal poses; four depth layers",
+        "all chapters readable; native wheel; idle JS stops; offscreen ambient motion stops",
+        "motion off persists; live reduced motion preserves every chapter",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "frameCallbacks": {
+        "count": 135,
+        "medianMs": 0,
+        "p95Ms": 3.7999999970197678,
+        "maxMs": 14.799999997019768
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "errors": [],
+      "failed": [],
+      "checks": [
+        "APK visible; keyboard skip link; no horizontal overflow",
+        "forward/reverse scene, SVG, plant, phone and animal poses; four depth layers",
+        "all chapters readable; native wheel; idle JS stops; offscreen ambient motion stops",
+        "motion off persists; live reduced motion preserves every chapter",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "frameCallbacks": {
+        "count": 135,
+        "medianMs": 0,
+        "p95Ms": 4.5,
+        "maxMs": 10.599999994039536
+      }
+    },
+    {
+      "viewport": {
+        "width": 667,
+        "height": 375
+      },
+      "errors": [],
+      "failed": [],
+      "checks": [
+        "APK visible; keyboard skip link; no horizontal overflow",
+        "forward/reverse scene, SVG, plant, phone and animal poses; four depth layers",
+        "all chapters readable; native wheel; idle JS stops; offscreen ambient motion stops",
+        "motion off persists; live reduced motion preserves every chapter",
+        "memory/feeding/tooth/stage samples and GitHub draft feedback"
+      ],
+      "frameCallbacks": {
+        "count": 135,
+        "medianMs": 0,
+        "p95Ms": 3.3999999910593033,
+        "maxMs": 6.5
+      }
+    }
+  ],
+  "browser": "153.0.8010.12",
+  "noJavaScript": "PASS: disabled motion control, all five chapters, normal and reduced preference",
+  "result": "PASS"
+}

@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-debug.apk">
-    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.6.0 for Android" />
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-debug.apk">
+    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.7.0 for Android" />
   </a>
 </p>
 <p align="center">
-  <strong>Android 8.0+ · Version 3.6.0 · About 14.7 MiB · Evaluation pre-release</strong><br />
-  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.6.0-debug.apk">Direct APK download</a> ·
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.6.0">Release notes</a> ·
+  <strong>Android 8.0+ · Version 3.7.0 · Evaluation pre-release</strong><br />
+  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.7.0-debug.apk">Direct APK download</a> ·
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.7.0">Release notes</a> ·
   <a href="docs/INSTALL.md">Installation guide</a>
 </p>
 
@@ -24,18 +24,20 @@ SproutBook brings the little details of parenting together: the last feed, the n
 
 From pregnancy through the teen years, each child has their own profile and records. Four main tabs keep everyday care close: **Today, Schedule, Care, and More**.
 
+Make Today fit your family: choose the sections, put shortcuts in your preferred order, and pick a woodland scene or your own background photo for each child.
+
 ![A soft grassy woodland divider](docs/assets/meadow-divider.svg)
 
 ## Four familiar places
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/assets/today-art.jpg" alt="Today artwork: a quiet woodland meadow" /><br /><strong>Today · Your day at a glance</strong><br />Stage-aware shortcuts, recent care, upcoming appointments, low supplies, and your child's memory tree.</td>
+    <td width="50%"><img src="docs/assets/today-art.jpg" alt="Today artwork: a quiet woodland meadow" /><br /><strong>Today · Your day at a glance</strong><br />Your chosen sections and shortcuts, stage-aware care, upcoming appointments, low supplies, and your child's memory tree.</td>
     <td width="50%"><img src="docs/assets/schedule-art.jpg" alt="Schedule artwork: a gentle woodland path" /><br /><strong>Schedule · Room for what matters</strong><br />One connected calendar for appointments, birthdays, due dates, and family plans. Hold a day to start an appointment.</td>
   </tr>
   <tr>
     <td><img src="docs/assets/care-art.jpg" alt="Care artwork: a sheltered woodland clearing" /><br /><strong>Care · The everyday essentials</strong><br />Feeding, sleep, sounds, solids, teeth, development, pregnancy tools, and practical parent guidance.</td>
-    <td><img src="docs/assets/more-art.jpg" alt="More artwork: warm woodland shelter" /><br /><strong>More · Your family, connected</strong><br />Profiles, supplies, emergency information, caregiver mode, settings, backups, and diagnostics.</td>
+    <td><img src="docs/assets/more-art.jpg" alt="More artwork: warm woodland shelter" /><br /><strong>More · Your family, connected</strong><br />Profiles, the Home screen organizer, supplies, emergency information, caregiver mode, settings, backups, and diagnostics.</td>
   </tr>
 </table>
 
@@ -52,6 +54,14 @@ From pregnancy through the teen years, each child has their own profile and reco
 | **Everyday routines** — diaper and potty logs, milk freezer containers, responsibilities, and shopping. | **Family essentials** — a wishlist and woodland appearance for each child, supplies, health journal, an offline emergency card, and read-only grandparent mode. |
 
 ### A closer look at the native app
+
+<p align="center">
+  <img src="docs/assets/home-organizer-screen-v37.png" width="230" alt="SproutBook 3.7 Home screen organizer with section visibility and move controls" />
+  <img src="docs/assets/home-quick-actions-screen-v37.png" width="230" alt="SproutBook 3.7 chosen quick actions in a personal order" />
+  <img src="docs/assets/custom-background-screen-v37.png" width="230" alt="SproutBook 3.7 Today page with a custom background photo and readable care cards" />
+</p>
+
+*Native 3.7 organizer screens use sample family data. The 3.6 screens below show the retained birth-planning and family tools.*
 
 <p align="center">
   <img src="docs/assets/labour-focus-screen-v36.png" width="230" alt="SproutBook 3.6 Labour focus with urgent-help guidance and native contraction controls" />
@@ -82,9 +92,19 @@ From pregnancy through the teen years, each child has their own profile and reco
 2. Open the APK on your Android phone. If prompted, allow installation from the browser or Files app you used.
 3. Install, open SproutBook, and add your child's profile.
 
-For updates, keep your existing app installed and use the same signing identity. Export a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SHA256SUMS-3.6.0.txt) to verify the download.
+For updates, keep your existing app installed and use the same signing identity. Export and keep a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SHA256SUMS-3.7.0.txt) to verify the download.
 
-## Birth planning and a woodland of their own
+## A personal Today · 3.7.0
+
+Open **More → Home screen organizer** to arrange your child's Today page. Move any of its **21 content sections** up or down and show or hide each one. Care cards still appear when they fit the child's stage or have something to show. The app header and four navigation tabs stay in their familiar places.
+
+Choose from **23 quick shortcuts**, put them in your preferred order, or leave the shortcut list empty. **Add memory** opens a new memory editor directly. Choose **Woodland, Morning, Meadow, Evening, or Plain**, or select a picture through Android's photo picker. SproutBook copies that picture into private app storage so the saved background works offline.
+
+**Preview** lets you inspect the layout with feature actions disabled. **Save layout** applies your choices; **Cancel** keeps the saved layout. **Restore defaults** asks for confirmation and prepares a draft that still waits for Save. Each child keeps their own choices, and Grandparent mode stays read-only. Hiding a Today section leaves its records available through the other app pages.
+
+3.7.0 uses an additive Room 12→13 migration and backup format 5 for layouts and background photos. It imports older native formats 1–4; 3.6.0 and earlier cannot restore format-5 exports. It retains the existing evaluation signing identity. Verification passed 126 unit tests and 36 unique native emulator checks, with normal/150% screenshots and an actual update preserving old fixture records and settings. Physical-device, spoken TalkBack and hardware performance checks remain open. Artifact freezing and website/GitHub publication are pending in the [release notes](docs/RELEASE-3.7.0.md) and [native QA](android/docs/QA-3.7.md).
+
+## Birth planning and a woodland of their own · 3.6.0
 
 **3.6.0** adds readable offline guidance for attended homebirth, freebirth, transfer planning, and after-birth care, with labelled NHS, NICE, and CDC sources. Editable lists let you keep your own notes, add items, and mark preparations complete. The [source review](android/docs/BIRTH-SOURCES-3.6.md) explains the evidence and local-care limits.
 
@@ -92,7 +112,7 @@ Your child's **homebirth plan** keeps care contacts, birth address, support peop
 
 Each child now has a **wishlist** for gifts, books, experiences, or other ideas, with notes, optional web links, and Wanted/Obtained filters. Choose a **Forest, Moss, Amber, or Sky accent** and a **Summer, Autumn, or Night tree** in their profile. The Memory Tree has richer native woodland scenery and shaded leaves, while keeping leaf placement, chapters, and the timeline.
 
-This is a **debug-signed evaluation pre-release**, retaining the existing evaluation signing identity. Room's additive migration from schema 11 to 12 preserves older records. Backup format 4 includes the new data and imports native formats 1–3; older apps cannot restore format-4 exports. [Release notes](docs/RELEASE-3.6.0.md) and [native QA](android/docs/QA-3.6.md) record 111 passing unit tests, 32 unique passing native checks, and normal/150% screen verification. Physical-device performance, spoken TalkBack, Android 17 behavior, minified runtime, and production signing remain open.
+The 3.6.0 evaluation release used an additive Room 11→12 migration and backup format 4. Its [release notes](docs/RELEASE-3.6.0.md) and [native QA](android/docs/QA-3.6.md) record 111 passing unit tests, 32 unique passing native checks, and normal/150% screen verification. These are historical 3.6 results. Physical-device performance, spoken TalkBack, Android 17 behavior, minified runtime, and production signing remain open.
 
 ## Care notes, connected to the right visit · 3.5.1
 
@@ -112,7 +132,7 @@ The APK download stays at the top of both the website and this README. Website d
 
 ## Your family's records stay close
 
-Core records are stored locally using Room and DataStore. The app has no account requirement, cloud sync, or Internet permission. Optional reminders use Android notifications; sound uses native Android audio. Backups are exported through the file picker and should be kept private.
+Core records and each child's Today choices are stored locally using Room and DataStore. Chosen background photos are copied to private app storage. The app has no account requirement, cloud sync, or Internet permission. Optional reminders use Android notifications; sound uses native Android audio. Backups can include photos and are exported through the file picker, so keep them private.
 
 [Read the data and privacy notes](docs/PRIVACY.md). Grandparent mode helps prevent accidental edits; it is not a password-protected account or security boundary.
 
@@ -122,6 +142,6 @@ Parenting and health guidance is general education. For an emergency, contact em
 
 [Showcase website](https://sproutbook-woodland.nothatch.chatgpt.site) · [Releases](https://github.com/nothatcher-creator/Sproutbook/releases) · [Report a problem or suggest an idea](https://github.com/nothatcher-creator/Sproutbook/issues) · [Figma design reference](https://www.figma.com/design/SjQl6MaLL4e5YqK10grN2c)
 
-The [3.6.0 release includes the complete Kotlin source project](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.6.0/SproutBook-3.6.0-source.zip), editable artwork, motion assets, QA evidence, and unsigned release outputs. The recovered native project is now in [`android/`](android/); showcase source stays in [`website/`](website/). Build instructions and the persistent [continuation checkpoint](docs/CONTINUATION.md) let another session continue from verified work. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
+The [3.7.0 source download](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-source.zip) contains the complete Kotlin source project, editable artwork, motion assets, and QA evidence. The recovered native project is now in [`android/`](android/); showcase source stays in [`website/`](website/). Build instructions and the persistent [continuation checkpoint](docs/CONTINUATION.md) let another session continue from verified work. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
 
 <p align="center"><em>A small place to remember, plan, and grow together.</em></p>

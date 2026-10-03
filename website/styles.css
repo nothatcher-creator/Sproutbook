@@ -10,3 +10,6 @@
 
 /* Only individual teeth receive gestures; overlapping arch containers do not. */
 .arch{pointer-events:none}.arch .tooth{pointer-events:auto}
+
+/* Keep new and historical native screens readable as the gallery grows. */
+@media(min-width:721px){.screenshots{flex-wrap:wrap}.screenshots figure{flex:0 0 220px}}

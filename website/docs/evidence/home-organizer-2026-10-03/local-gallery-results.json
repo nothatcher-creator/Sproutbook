@@ -1,0 +1,423 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "date": "2026-10-03T21:42:21.506Z",
+  "cases": [
+    {
+      "engine": "chromium",
+      "browser": "153.0.8010.12",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "result": "PASS",
+      "viewportOverflow": 0,
+      "clientWidth": 1126,
+      "scrollWidth": 1126,
+      "figures": [
+        {
+          "width": 220,
+          "top": -250.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Home screen organizer with section visibility and move buttons",
+          "caption": "Their day, in your order."
+        },
+        {
+          "width": 220,
+          "top": -250.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 personal quick action choices and order",
+          "caption": "Your everyday shortcuts."
+        },
+        {
+          "width": 220,
+          "top": -250.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Today with a private custom background image",
+          "caption": "A little woodland of their own."
+        },
+        {
+          "width": 220,
+          "top": -250.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 Labour focus with urgent-help guidance and native contraction controls",
+          "caption": "What matters, close at hand."
+        },
+        {
+          "width": 220,
+          "top": 337.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 saved personal homebirth plan with maternity and emergency contacts",
+          "caption": "Your preferences, thoughtfully prepared."
+        },
+        {
+          "width": 220,
+          "top": 337.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 autumn Memory Tree with saved sample leaves",
+          "caption": "Their memories, their woodland."
+        },
+        {
+          "width": 220,
+          "top": 337.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 native wishlist editor with a sample woodland storybook idea",
+          "caption": "Little wishes, kept for each child."
+        },
+        {
+          "width": 220,
+          "top": 337.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Today dashboard in the dark woodland theme",
+          "caption": "Your day, gently gathered."
+        },
+        {
+          "width": 220,
+          "top": 924.40625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Care hub with feeding, sleep and parent support",
+          "caption": "A little care, close by."
+        },
+        {
+          "width": 220,
+          "top": 924.40625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 family settings in the light woodland theme",
+          "caption": "A softer view, day or night."
+        },
+        {
+          "width": 220,
+          "top": 924.40625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5.1 native appointment picker with two check-ups distinguished by time and clinic",
+          "caption": "The right notes. The right visit."
+        }
+      ],
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "browser": "153.0.8010.12",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": "PASS",
+      "viewportOverflow": 0,
+      "clientWidth": 346,
+      "scrollWidth": 2388,
+      "figures": [
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Home screen organizer with section visibility and move buttons",
+          "caption": "Their day, in your order."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 personal quick action choices and order",
+          "caption": "Your everyday shortcuts."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Today with a private custom background image",
+          "caption": "A little woodland of their own."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 Labour focus with urgent-help guidance and native contraction controls",
+          "caption": "What matters, close at hand."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 saved personal homebirth plan with maternity and emergency contacts",
+          "caption": "Your preferences, thoughtfully prepared."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 autumn Memory Tree with saved sample leaves",
+          "caption": "Their memories, their woodland."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 native wishlist editor with a sample woodland storybook idea",
+          "caption": "Little wishes, kept for each child."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Today dashboard in the dark woodland theme",
+          "caption": "Your day, gently gathered."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Care hub with feeding, sleep and parent support",
+          "caption": "A little care, close by."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 family settings in the light woodland theme",
+          "caption": "A softer view, day or night."
+        },
+        {
+          "width": 200,
+          "top": 368.625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5.1 native appointment picker with two check-ups distinguished by time and clinic",
+          "caption": "The right notes. The right visit."
+        }
+      ],
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.6",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "result": "PASS",
+      "viewportOverflow": 0,
+      "clientWidth": 1126,
+      "scrollWidth": 1126,
+      "figures": [
+        {
+          "width": 220,
+          "top": -270.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Home screen organizer with section visibility and move buttons",
+          "caption": "Their day, in your order."
+        },
+        {
+          "width": 220,
+          "top": -270.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 personal quick action choices and order",
+          "caption": "Your everyday shortcuts."
+        },
+        {
+          "width": 220,
+          "top": -270.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Today with a private custom background image",
+          "caption": "A little woodland of their own."
+        },
+        {
+          "width": 220,
+          "top": -270.1875,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 Labour focus with urgent-help guidance and native contraction controls",
+          "caption": "What matters, close at hand."
+        },
+        {
+          "width": 220,
+          "top": 317.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 saved personal homebirth plan with maternity and emergency contacts",
+          "caption": "Your preferences, thoughtfully prepared."
+        },
+        {
+          "width": 220,
+          "top": 317.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 autumn Memory Tree with saved sample leaves",
+          "caption": "Their memories, their woodland."
+        },
+        {
+          "width": 220,
+          "top": 317.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 native wishlist editor with a sample woodland storybook idea",
+          "caption": "Little wishes, kept for each child."
+        },
+        {
+          "width": 220,
+          "top": 317.03125,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Today dashboard in the dark woodland theme",
+          "caption": "Your day, gently gathered."
+        },
+        {
+          "width": 220,
+          "top": 904.25,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Care hub with feeding, sleep and parent support",
+          "caption": "A little care, close by."
+        },
+        {
+          "width": 220,
+          "top": 904.25,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 family settings in the light woodland theme",
+          "caption": "A softer view, day or night."
+        },
+        {
+          "width": 220,
+          "top": 904.25,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5.1 native appointment picker with two check-ups distinguished by time and clinic",
+          "caption": "The right notes. The right visit."
+        }
+      ],
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.6",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": "PASS",
+      "viewportOverflow": 0,
+      "clientWidth": 346,
+      "scrollWidth": 2388,
+      "figures": [
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Home screen organizer with section visibility and move buttons",
+          "caption": "Their day, in your order."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 personal quick action choices and order",
+          "caption": "Your everyday shortcuts."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.7 Today with a private custom background image",
+          "caption": "A little woodland of their own."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 Labour focus with urgent-help guidance and native contraction controls",
+          "caption": "What matters, close at hand."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 saved personal homebirth plan with maternity and emergency contacts",
+          "caption": "Your preferences, thoughtfully prepared."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 autumn Memory Tree with saved sample leaves",
+          "caption": "Their memories, their woodland."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.6 native wishlist editor with a sample woodland storybook idea",
+          "caption": "Little wishes, kept for each child."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Today dashboard in the dark woodland theme",
+          "caption": "Your day, gently gathered."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 Care hub with feeding, sleep and parent support",
+          "caption": "A little care, close by."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5 family settings in the light woodland theme",
+          "caption": "A softer view, day or night."
+        },
+        {
+          "width": 200,
+          "top": 348.5625,
+          "imageWidth": 360,
+          "imageHeight": 800,
+          "alt": "Actual SproutBook 3.5.1 native appointment picker with two check-ups distinguished by time and clinic",
+          "caption": "The right notes. The right visit."
+        }
+      ],
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "result": "PASS"
+}

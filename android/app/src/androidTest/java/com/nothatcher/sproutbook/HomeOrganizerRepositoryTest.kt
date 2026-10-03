@@ -333,4 +333,3 @@ class HomeOrganizerRepositoryTest {
         } catch (expected: IllegalStateException) {}
     }
 }
-
