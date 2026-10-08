@@ -1,0 +1,60 @@
+{
+  "checked_at_utc": "2026-10-08T08:45:54.475824+00:00",
+  "release": {
+    "draft": false,
+    "html_url": "https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.8.0",
+    "id": 406613926,
+    "name": "SproutBook 3.8.0 \u00b7 Leaves worth keeping",
+    "prerelease": true,
+    "published_at": "2026-10-08T08:44:58Z",
+    "tag_name": "v3.8.0",
+    "target_commitish": "c260f6437c943216699d6db35ca28c3d16d8bc4f"
+  },
+  "requested_ref": "main",
+  "requested_version": "3.8.0",
+  "run_id": 37751876161,
+  "workflow": "publish-release.yml",
+  "workflow_run": {
+    "conclusion": "success",
+    "headSha": "c260f6437c943216699d6db35ca28c3d16d8bc4f",
+    "jobs": [
+      {
+        "completedAt": "2026-10-08T08:45:00Z",
+        "conclusion": "success",
+        "databaseId": 113226834413,
+        "name": "release",
+        "startedAt": "2026-10-08T08:44:49Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Download and verify the completed artifacts",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Publish APK and complete source as a new prerelease",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 4,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/nothatcher-creator/Sproutbook/actions/runs/37751876161/job/113226834413"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/nothatcher-creator/Sproutbook/actions/runs/37751876161"
+  }
+}

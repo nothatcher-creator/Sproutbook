@@ -1,0 +1,14 @@
+{
+  "bytes": 14764687,
+  "checked_at_utc": "2026-10-08T08:44:39.221592+00:00",
+  "content_type": "application/octet-stream",
+  "deployment_id": "appgdep_6ac757ac6bd8819196cbfe1641ed519e",
+  "expected_size_and_hash_match": true,
+  "final_url": "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.0-debug.apk",
+  "http_status": 200,
+  "sha256": "104cb6e01565f601314326931f08e8a4096a1f8f6b54a0df896fa36a27c47713",
+  "site_source_commit": "0a1f7cb98231327baf7972145fc5892acc130432",
+  "site_url": "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.0-debug.apk",
+  "site_version_id": "appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_06fa11f6b3c88191bf9320456bc46042",
+  "status": "verified"
+}

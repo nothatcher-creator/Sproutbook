@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-10-08T08:39:09.151050+00:00",
+  "default_urllib": {
+    "body": "error code: 1010\n",
+    "http_status": 403
+  },
+  "expected_redirect_location": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-debug.apk",
+  "expected_redirect_status": 302,
+  "release_dispatched": false,
+  "site_url": "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.5.0-debug.apk",
+  "status": "failed",
+  "verifier_user_agent_and_curl": {
+    "content_type": "text/html",
+    "html_title": "SproutBook \u00b7 A little calmer, a little more connected",
+    "http_status": 200,
+    "location": null,
+    "response_bytes": 48931
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "site": {
+    "project_id": "appgprj_6abeb834e1a88191a8c4907b567c3472",
+    "source_commit": "0a1f7cb98231327baf7972145fc5892acc130432",
+    "version_id": "appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_06fa11f6b3c88191bf9320456bc46042",
+    "version_number": 9,
+    "deployment_id": "appgdep_6ac757ac6bd8819196cbfe1641ed519e",
+    "status": "succeeded",
+    "url": "https://sproutbook-woodland.nothatch.chatgpt.site",
+    "updated_at": "2026-10-08T08:43:56.754381+00:00"
+  },
+  "archive": {
+    "compressed_bytes": 239642764,
+    "storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000bd9481f4bfdc36b621aa0b1d",
+      "content_hash": "sha256:196b157ed4a7cf2f096790b1da7a11c096062efccbe68a7a7a89c4eb74e836a1",
+      "size_bytes": 246353920,
+      "file_count": 77
+    }
+  },
+  "hosting_adjustment": {
+    "reason": "Preserve every directly served APK while meeting the 256 MiB input limit.",
+    "retained_source_parts": [
+      "archived-downloads/SproutBook-3.5.0-source.zip.part1",
+      "archived-downloads/SproutBook-3.5.0-source.zip.part2"
+    ],
+    "complete_legacy_source_url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.5.0/SproutBook-3.5.0-source.zip",
+    "complete_legacy_source_sha256": "fca20d9542c2019aad613541faea662ea4ca308ef8cd0346d69d1c114a38d9d2",
+    "complete_legacy_source_bytes": 30418373,
+    "bytes_unchanged": true,
+    "all_apks_directly_served": true
+  },
+  "prior_attempts": [
+    {
+      "deployment_id": "appgdep_6ac7541c7c148191902c5784e1d42523",
+      "status": "failed",
+      "reason": "Input archive exceeded 256 MiB."
+    },
+    {
+      "deployment_id": "appgdep_6ac755caccc4819194b0917807f8baee",
+      "status": "superseded",
+      "reason": "The hosting platform ignored _redirects; legacy APK restored in final version."
+    }
+  ]
+}

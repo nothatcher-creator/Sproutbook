@@ -1,7 +1,7 @@
 # SproutBook continuation checkpoint
 
 Updated: 2026-10-08 UTC. Native 3.8.0 memory keepsakes and seven tree themes
-are implemented and verified; publication is in progress. Older QA
+are implemented, verified and published. Older QA
 ledgers are historical verification, not fresh testing. Do not regenerate
 immutable release artifacts.
 
@@ -43,7 +43,7 @@ and the existing public Sites source at
   the QA ledger. No product changes were made for those test corrections.
   The completed selection covers 16 unique successful methods and six separate
   viewport repeats: ten fresh affected executions, eleven reused unaffected
-  normal checks and one reused profile repeat. It is not a fresh full16 batch.
+  normal checks and one reused profile repeat. It is not a fresh full 16-method batch.
   The gallery case already verified ten unchanged memory records/placements
   across all four new themes in light and dark mode, with eight captures.
 - Rendered Chromium151 verified all seven website themes, view/edit/save/cancel,
@@ -63,10 +63,33 @@ Static website checks verified the APK, reassembled source and file-size limits.
 
 Evidence: [native QA](../android/docs/QA-3.8.md),
 [website QA](../website/QA-3.8.md), and their memory-leaf evidence directories.
-Next: publish the existing public Site and GitHub evaluation release,
-then record exact commits, deployment IDs and artifact verification here.
-Production signing, installed minified runtime, spoken TalkBack, physical-phone
-performance and Android17 background behavior remain outside emulator evidence.
+Publication is complete. The existing public Site is live at
+https://sproutbook-woodland.nothatch.chatgpt.site from exact source
+`0a1f7cb98231327baf7972145fc5892acc130432`, saved version 9:
+`appgprj_6abeb834e1a88191a8c4907b567c3472~appgver_06fa11f6b3c88191bf9320456bc46042`.
+Deployment `appgdep_6ac757ac6bd8819196cbfe1641ed519e` succeeded. The 256 MiB
+hosting input limit required archiving the oldest unlinked source parts outside
+the served directory; their complete immutable source ZIP remains on GitHub.
+Every APK remains directly hosted, and the old 3.5 APK download was reverified
+against its original bytes. All current HTML/JS/CSS and gallery images retain
+the locally verified versions.
+
+GitHub v3.8.0 evaluation prerelease is published:
+https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.8.0 .
+Workflow `37751876161` succeeded at release target
+`c260f6437c943216699d6db35ca28c3d16d8bc4f`. The live Site APK, ordered source
+parts, and all three GitHub assets were downloaded and matched the frozen byte
+hashes, sizes and GitHub API digests. The source ZIP passed CRC with 1,353 entries,
+the exact frozen source checkpoint and no signing-key filenames. See
+[delivery verification](evidence/memory-leaf-delivery-2026-10-08/verification.json),
+[workflow evidence](evidence/memory-leaf-delivery-2026-10-08/workflow-run.json) and
+[Site publication](evidence/memory-leaf-delivery-2026-10-08/site-publication.json).
+Normal Git pushes succeeded for this delivery; no Git-data fallback was needed.
+
+Next: physical-phone and spoken TalkBack checks, installed minified runtime,
+actual 3.7-to-3.8 record preservation, and Android 17 background behavior.
+Production signing remains unavailable. Do not repeat completed emulator suites
+without a relevant source change, or regenerate immutable artifacts for docs.
 
 
 ## Home screen organizer delivered — 3.7.0

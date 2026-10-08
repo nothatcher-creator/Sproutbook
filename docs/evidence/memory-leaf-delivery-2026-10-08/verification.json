@@ -1,0 +1,92 @@
+{
+  "all_checks_passed": true,
+  "checked_at_utc": "2026-10-08T08:46:09.237124+00:00",
+  "frozen_files": {
+    "SHA256SUMS-3.8.0.txt": {
+      "bytes": 187,
+      "sha256": "d0c3d683b0d5dcee45bb38a30297b650a24a049d242e8ce4b08bb54bfa6458d4"
+    },
+    "SproutBook-3.8.0-debug.apk": {
+      "bytes": 15220916,
+      "sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    "SproutBook-3.8.0-source.zip": {
+      "bytes": 48778099,
+      "sha256": "83c4de6c98dd8b97dc4a3ccbbce0b6d4718988b7c030da41580381e26bc206c0"
+    }
+  },
+  "frozen_source_archive": {
+    "crc": "passed",
+    "entries": 1353,
+    "signing_key_filenames": "absent",
+    "source_commit": "429a8307ca3ec5b722d0adfb0b6fc68c3ea47020",
+    "version": "3.8.0"
+  },
+  "github_assets": [
+    {
+      "api_digest": "sha256:d0c3d683b0d5dcee45bb38a30297b650a24a049d242e8ce4b08bb54bfa6458d4",
+      "bytes": 187,
+      "name": "SHA256SUMS-3.8.0.txt",
+      "sha256": "d0c3d683b0d5dcee45bb38a30297b650a24a049d242e8ce4b08bb54bfa6458d4",
+      "url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SHA256SUMS-3.8.0.txt"
+    },
+    {
+      "api_digest": "sha256:c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f",
+      "bytes": 15220916,
+      "name": "SproutBook-3.8.0-debug.apk",
+      "sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f",
+      "url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SproutBook-3.8.0-debug.apk"
+    },
+    {
+      "api_digest": "sha256:83c4de6c98dd8b97dc4a3ccbbce0b6d4718988b7c030da41580381e26bc206c0",
+      "bytes": 48778099,
+      "name": "SproutBook-3.8.0-source.zip",
+      "sha256": "83c4de6c98dd8b97dc4a3ccbbce0b6d4718988b7c030da41580381e26bc206c0",
+      "url": "https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SproutBook-3.8.0-source.zip"
+    }
+  ],
+  "release_id": 406613926,
+  "release_target": {
+    "annotated_tags_resolved": 0,
+    "commit": "c260f6437c943216699d6db35ca28c3d16d8bc4f"
+  },
+  "repo": "nothatcher-creator/Sproutbook",
+  "site_apk": {
+    "bytes": 15220916,
+    "sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f",
+    "url": "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.8.0-debug.apk"
+  },
+  "site_checksums": {
+    "bytes": 187,
+    "sha256": "d0c3d683b0d5dcee45bb38a30297b650a24a049d242e8ce4b08bb54bfa6458d4",
+    "url": "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SHA256SUMS-3.8.0.txt"
+  },
+  "site_source": {
+    "archive": {
+      "crc": "passed",
+      "entries": 1353,
+      "signing_key_filenames": "absent",
+      "source_commit": "429a8307ca3ec5b722d0adfb0b6fc68c3ea47020",
+      "version": "3.8.0"
+    },
+    "bytes": 48778099,
+    "part_urls": [
+      "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.8.0-source.zip.part1",
+      "https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.8.0-source.zip.part2"
+    ],
+    "parts": [
+      {
+        "bytes": 24389050,
+        "sha256": "1b8a75f9bbb1ce37119ebc9e9fca036b597deabc001ba1d751fd010611e0fd28"
+      },
+      {
+        "bytes": 24389049,
+        "sha256": "a475c4fa4690682798ed5e59e4bad8b4ccaa5945b1027e40ec1ace813f1cd81e"
+      }
+    ],
+    "sha256": "83c4de6c98dd8b97dc4a3ccbbce0b6d4718988b7c030da41580381e26bc206c0"
+  },
+  "source_commit": "429a8307ca3ec5b722d0adfb0b6fc68c3ea47020",
+  "status": "verified",
+  "version": "3.8.0"
+}
