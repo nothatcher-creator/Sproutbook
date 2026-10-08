@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-04T11:43:58.888Z" hostname="a100580314a4" time="0.043">
+  <properties/>
+  <testcase name="everySectionCanBeHiddenAndQuickActionsCanBeEmpty" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.0"/>
+  <testcase name="presetBackgroundsAndAppPrivatePhotoNamesAreValidated" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.03"/>
+  <testcase name="accessibleMovesAreBoundedAndReversibleWithoutChangingMembership" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.001"/>
+  <testcase name="rejectsUnknownDuplicateAndMalformedCsvWithoutSilentlyDroppingChoices" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.004"/>
+  <testcase name="configurationMustContainEverySectionOnceAndOnlyKnownChoices" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.002"/>
+  <testcase name="partialStoredOrderKeepsChosenOrderAndAppendsNewSections" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.0"/>
+  <testcase name="catalogIdentitiesAreUniqueAndRoutesAreRealNativeFeatureDestinations" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.0"/>
+  <testcase name="unchangedChildDefaultsRetainTheWholeTodayAndOriginalShortcuts" classname="com.nothatcher.sproutbook.core.HomeOrganizerCatalogTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

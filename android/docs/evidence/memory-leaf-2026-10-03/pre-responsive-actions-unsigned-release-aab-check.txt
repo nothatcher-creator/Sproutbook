@@ -1,0 +1,5 @@
+exit_code=0
+
+no manifest.
+
+jar is unsigned.

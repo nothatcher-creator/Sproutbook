@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-04T20:45:53.318580+00:00",
+  "reason": "Test-only compact fixture rebuild: expose the seeded Today chapter by lazy-list scroll before text readiness. Final production artifacts remain byte-identical to the integrated responsive-actions build.",
+  "build_log": "compact-ready-test-build.log",
+  "path": "/workspace/sprout-build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+  "bytes": 1712101,
+  "sha256": "4bc657e6dd846de70c17a5ec19470161d6b85f1586f5351b881e3fbd2642e0f2",
+  "certificate_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3",
+  "unchanged_full_build_artifacts": [
+    "debug_apk",
+    "unsigned_release_apk",
+    "unsigned_release_aab",
+    "r8_mapping"
+  ],
+  "duration_seconds": 76,
+  "actionable_tasks": 57,
+  "executed_tasks": 6,
+  "up_to_date_tasks": 51
+}

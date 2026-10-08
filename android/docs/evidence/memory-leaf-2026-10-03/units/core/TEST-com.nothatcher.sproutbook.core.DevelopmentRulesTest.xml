@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.DevelopmentRulesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-04T11:43:58.822Z" hostname="a100580314a4" time="0.001">
+  <properties/>
+  <testcase name="milestoneMemoryKeepsIdentity" classname="com.nothatcher.sproutbook.core.DevelopmentRulesTest" time="0.001"/>
+  <testcase name="twentyTeethAndSafeDates" classname="com.nothatcher.sproutbook.core.DevelopmentRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

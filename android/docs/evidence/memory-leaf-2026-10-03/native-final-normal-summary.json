@@ -1,0 +1,40 @@
+{
+  "log": "native-final-normal.log",
+  "elapsed_seconds": 337.898,
+  "test_count": 5,
+  "passed": 4,
+  "failed": 1,
+  "incomplete_logs": [],
+  "results": [
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "grandparentCanReadPhotoAndLongStoryAndUseAccessibleOpenWithoutMutation",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "enablingGrandparentModeRevokesArrangementAndOpenEditorControls",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "todayLeafDeepLinkSurvivesRecreationAndDismissalStaysDismissed",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "inventorySaveAdjustAndDelete",
+      "status_code": 0,
+      "passed": true
+    }
+  ]
+}

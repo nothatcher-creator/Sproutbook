@@ -207,7 +207,7 @@ class WishlistBackupTest {
 
     @Test
     fun rejectsInvalidChildTreeStyle() {
-        for (treeStyle in listOf("", "Winter", "summer")) {
+        for (treeStyle in listOf("", "Space", "summer")) {
             invalidChild { it.addProperty("treeStyle", treeStyle) }
         }
         invalidChild { it.add("treeStyle", JsonNull.INSTANCE) }

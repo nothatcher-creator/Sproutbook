@@ -1,0 +1,2 @@
+  mCurrentFocus=Window{ac9a819 u0 com.nothatcher.sproutbook/com.nothatcher.sproutbook.MainActivity}
+  mGlobalConfiguration={1.5 ?mcc?mnc [en_US] ldltr sw360dp w752dp h336dp 160dpi nrml long land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 800, 360) mAppBounds=Rect(0, 0 - 752, 360) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} s.103}

@@ -1,0 +1,31 @@
+10-03 23:01:07.371  3143  3143 E AndroidRuntime: FATAL EXCEPTION: main
+10-03 23:01:07.371  3143  3143 E AndroidRuntime: PID: 3143
+10-03 23:01:07.371  3143  3143 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-03 23:01:07.801  2829  2950 E AndroidRuntime: FATAL EXCEPTION: launcher-loader
+10-03 23:01:07.801  2829  2950 E AndroidRuntime: Process: com.android.launcher3, PID: 2829
+10-03 23:01:07.801  2829  2950 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-03 23:01:08.129  2879  2935 E AndroidRuntime: FATAL EXCEPTION: AsyncTask #2
+10-03 23:01:08.129  2879  2935 E AndroidRuntime: Process: com.android.documentsui, PID: 2879
+10-03 23:01:08.129  2879  2935 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: FATAL EXCEPTION: main
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: PID: 3310
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke interface method 'boolean com.android.internal.telephony.ITelephony.disableDataConnectivity()' on a null object reference
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: 	at com.android.commands.svc.DataCommand.run(DataCommand.java:58)
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: 	at com.android.commands.svc.Svc.main(Svc.java:41)
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+10-03 23:02:07.796  3310  3310 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:338)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: Error reporting crash
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: java.lang.RuntimeException: Bad file descriptor
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.os.BinderProxy.transactNative(Native Method)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.os.BinderProxy.transact(BinderProxy.java:510)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.os.ServiceManagerProxy.getService(ServiceManagerNative.java:128)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.os.ServiceManager.rawGetService(ServiceManager.java:263)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.os.ServiceManager.getService(ServiceManager.java:129)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.app.ActivityManager$1.create(ActivityManager.java:4054)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.app.ActivityManager$1.create(ActivityManager.java:4051)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.util.Singleton.get(Singleton.java:38)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at android.app.ActivityManager.getService(ActivityManager.java:4042)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$KillApplicationHandler.uncaughtException(RuntimeInit.java:145)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1073)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1068)
+10-03 23:02:07.871  3310  3310 E AndroidRuntime: 	at java.lang.Thread.dispatchUncaughtException(Thread.java:2187)

@@ -1,0 +1,2 @@
+  mCurrentFocus=Window{c8bd687 u0 com.android.launcher3/com.android.launcher3.Launcher}
+  mGlobalConfiguration={1.5 ?mcc?mnc [en_US] ldltr sw360dp w720dp h288dp 160dpi nrml long land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 720, 360) mAppBounds=Rect(0, 0 - 720, 312) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.45}

@@ -42,6 +42,11 @@ class TreeAccessibilityTest : FlowFixture() {
             }
         }
         care("Memory tree")
+        // Room insertion and navigation can finish before the screen receives all 32 rows.
+        compose.waitUntil(60000) {
+            compose.onAllNodesWithContentDescription(treeLabel).fetchSemanticsNodes().isNotEmpty()
+        }
+        compose.onNodeWithContentDescription(treeLabel).performScrollTo()
         inspectNativeTree()
         invoke("More leaves")
         assertTrue(actions().any { it.label == "Open Moment 32" })

@@ -1,0 +1,331 @@
+{
+  "recorded_at": "2026-10-04T21:02:41.760937+00:00",
+  "version": "3.8.0",
+  "version_code": 30800,
+  "counts_are": "Unique successful native methods; viewport repeat checks are counted separately. Earlier failed attempts remain in historical_attempts.",
+  "test_count": 16,
+  "passed": 16,
+  "failed": 0,
+  "incomplete_logs": [],
+  "unique_methods": 16,
+  "repeat_checks": 6,
+  "repeat_passed": 6,
+  "repeat_failed": 0,
+  "selected_execution_count": 22,
+  "fresh_selected_execution_count": 10,
+  "reused_selected_execution_count": 12,
+  "final_production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f",
+  "reused_production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227",
+  "final_build_metadata": "final-build-metadata.json",
+  "latest_test_apk_metadata": "compact-card-test-apk-metadata.json",
+  "reuse_reason": "The localized production edit changed card action layout. Four affected card methods were rerun on the final artifact. Eleven earlier normal successes and the earlier 150% profile-preview success retain coverage of unchanged flows; this is not a fresh full 16-method batch.",
+  "fresh_normal_selection": "Three card passes and inventory from native-final-normal plus corrected writable flow from native-final-normal-ready.",
+  "repeat_selection": "Four final 150% portrait card methods, one reused 150% profile method, and one final 800x360/150% Timeline writable method.",
+  "results": [
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "pregnancySessionsPersist",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "foodAndMealSave",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "memoryAddTimelineEditDelete",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "toothTapOnlyViewsLongPressChanges",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "arrangeLeafSnapsAndScrollDoesNotOpenIt",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "longPressDragSnapsToBranch",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "scrollingAcrossToothNeverChangesOrOpensIt",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "calendarLongPressKeepsDate",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeAccessibilityTest",
+      "test": "nativeAccessibilityCanInspectFullCanopyAndArrange",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeThemeFlowTest",
+      "test": "profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeThemeFlowTest",
+      "test": "newThemeGalleryKeepsMemoryRecordsAndPlacementInLightAndDarkMode",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-normal-summary.json",
+      "source_log": "native-normal.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "grandparentCanReadPhotoAndLongStoryAndUseAccessibleOpenWithoutMutation",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-normal-summary.json",
+      "source_log": "native-final-normal.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "enablingGrandparentModeRevokesArrangementAndOpenEditorControls",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-normal-summary.json",
+      "source_log": "native-final-normal.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "todayLeafDeepLinkSurvivesRecreationAndDismissalStaysDismissed",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-normal-summary.json",
+      "source_log": "native-final-normal.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "inventorySaveAdjustAndDelete",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-normal-summary.json",
+      "source_log": "native-final-normal.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-normal-ready-summary.json",
+      "source_log": "native-final-normal-ready.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    }
+  ],
+  "repeat_results": [
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "grandparentCanReadPhotoAndLongStoryAndUseAccessibleOpenWithoutMutation",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-large-summary.json",
+      "source_log": "native-final-large.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-large-summary.json",
+      "source_log": "native-final-large.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "enablingGrandparentModeRevokesArrangementAndOpenEditorControls",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-large-summary.json",
+      "source_log": "native-final-large.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "todayLeafDeepLinkSurvivesRecreationAndDismissalStaysDismissed",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-large-summary.json",
+      "source_log": "native-final-large.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeThemeFlowTest",
+      "test": "profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-large-summary.json",
+      "source_log": "native-large.log",
+      "reused": true,
+      "production_apk_sha256": "7151d282a0da021d35287443a84c804378a4d30919fc44dd70c8b03f29e0c227"
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory",
+      "status_code": 0,
+      "passed": true,
+      "source_summary": "native-final-landscape-card-repeat-summary.json",
+      "source_log": "native-final-landscape-card-repeat.log",
+      "reused": false,
+      "production_apk_sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    }
+  ],
+  "historical_attempts": [
+    {
+      "summary": "native-first-normal-summary.json",
+      "log": "native-first-normal.log",
+      "test_count": 16,
+      "passed": 9,
+      "failed": 7,
+      "incomplete_logs": null
+    },
+    {
+      "summary": "native-normal-summary.json",
+      "log": "native-normal.log",
+      "test_count": 16,
+      "passed": 15,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-inventory-diagnostic-summary.json",
+      "log": "native-inventory-diagnostic.log",
+      "test_count": 1,
+      "passed": 0,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-large-summary.json",
+      "log": "native-large.log",
+      "test_count": 5,
+      "passed": 4,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-landscape-summary.json",
+      "log": "native-landscape.log",
+      "test_count": 1,
+      "passed": 0,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-final-normal-summary.json",
+      "log": "native-final-normal.log",
+      "test_count": 5,
+      "passed": 4,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-final-landscape-setup-summary.json",
+      "log": "native-final-landscape.log",
+      "test_count": 1,
+      "passed": 0,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-final-landscape-ready-summary.json",
+      "log": "native-final-landscape-ready.log",
+      "test_count": 1,
+      "passed": 0,
+      "failed": 1,
+      "incomplete_logs": []
+    },
+    {
+      "summary": "native-final-landscape-card-summary.json",
+      "log": "native-final-landscape-card.log",
+      "test_count": 1,
+      "passed": 0,
+      "failed": 1,
+      "incomplete_logs": []
+    }
+  ],
+  "separate_setup_failure_log": "tooling/native-inventory-diagnostic-boot.log",
+  "compact_capture": "screenshots/final-landscape-card-repeat-keepsake-top.png",
+  "restored_display_settings": "tooling/restored-display-settings.txt",
+  "limits": [
+    "No fresh physical-device run or spoken TalkBack check.",
+    "No installed minified APK or AAB runtime check.",
+    "No actual 3.7.0 to 3.8.0 installed userdata upgrade.",
+    "No external photo-picker flow."
+  ]
+}

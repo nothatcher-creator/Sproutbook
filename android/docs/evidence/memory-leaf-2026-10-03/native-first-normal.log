@@ -1,0 +1,498 @@
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.MemoryLeafFlowTest:
+INSTRUMENTATION_STATUS: test=grandparentCanReadPhotoAndLongStoryAndUseAccessibleOpenWithoutMutation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=grandparentCanReadPhotoAndLongStoryAndUseAccessibleOpenWithoutMutation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed: assertDoesNotExist.
+Reason: Did not expect any node but found '1' node that satisfies: (TestTag = 'memory-leaf-card')
+Node found:
+Node #847 at (l=12.0, t=12.0, r=348.0, b=716.0)px, Tag: 'memory-leaf-card'
+PaneTitle = 'Memory keepsake'
+Has 3 children
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertDoesNotExist(SemanticsNodeInteraction.kt:101)
+	at com.nothatcher.sproutbook.MemoryLeafFlowTest.treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(MemoryLeafFlowTest.kt:61)
+
+INSTRUMENTATION_STATUS: stream=
+Error in treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(com.nothatcher.sproutbook.MemoryLeafFlowTest):
+java.lang.AssertionError: Failed: assertDoesNotExist.
+Reason: Did not expect any node but found '1' node that satisfies: (TestTag = 'memory-leaf-card')
+Node found:
+Node #847 at (l=12.0, t=12.0, r=348.0, b=716.0)px, Tag: 'memory-leaf-card'
+PaneTitle = 'Memory keepsake'
+Has 3 children
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertDoesNotExist(SemanticsNodeInteraction.kt:101)
+	at com.nothatcher.sproutbook.MemoryLeafFlowTest.treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(MemoryLeafFlowTest.kt:61)
+
+INSTRUMENTATION_STATUS: test=treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=enablingGrandparentModeRevokesArrangementAndOpenEditorControls
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=enablingGrandparentModeRevokesArrangementAndOpenEditorControls
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=todayLeafDeepLinkSurvivesRecreationAndDismissalStaysDismissed
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.MemoryLeafFlowTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=todayLeafDeepLinkSurvivesRecreationAndDismissalStaysDismissed
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.CareFlowTest:
+INSTRUMENTATION_STATUS: test=pregnancySessionsPersist
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=pregnancySessionsPersist
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=foodAndMealSave
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=foodAndMealSave
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=memoryAddTimelineEditDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Close' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:389)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.nothatcher.sproutbook.CareFlowTest.memoryAddTimelineEditDelete(CareFlowTest.kt:54)
+
+INSTRUMENTATION_STATUS: stream=
+Error in memoryAddTimelineEditDelete(com.nothatcher.sproutbook.CareFlowTest):
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Close' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:389)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.nothatcher.sproutbook.CareFlowTest.memoryAddTimelineEditDelete(CareFlowTest.kt:54)
+
+INSTRUMENTATION_STATUS: test=memoryAddTimelineEditDelete
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=inventorySaveAdjustAndDelete
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.CareFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:62)
+	at com.nothatcher.sproutbook.CareFlowTest.inventorySaveAdjustAndDelete(CareFlowTest.kt:17)
+
+INSTRUMENTATION_STATUS: stream=
+Error in inventorySaveAdjustAndDelete(com.nothatcher.sproutbook.CareFlowTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:62)
+	at com.nothatcher.sproutbook.CareFlowTest.inventorySaveAdjustAndDelete(CareFlowTest.kt:17)
+
+INSTRUMENTATION_STATUS: test=inventorySaveAdjustAndDelete
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.GestureTest:
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=toothTapOnlyViewsLongPressChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=arrangeLeafSnapsAndScrollDoesNotOpenIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.GestureTest.arrangeLeafSnapsAndScrollDoesNotOpenIt(GestureTest.kt:60)
+
+INSTRUMENTATION_STATUS: stream=
+Error in arrangeLeafSnapsAndScrollDoesNotOpenIt(com.nothatcher.sproutbook.GestureTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.GestureTest.arrangeLeafSnapsAndScrollDoesNotOpenIt(GestureTest.kt:60)
+
+INSTRUMENTATION_STATUS: test=arrangeLeafSnapsAndScrollDoesNotOpenIt
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=longPressDragSnapsToBranch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.GestureTest.longPressDragSnapsToBranch(GestureTest.kt:76)
+
+INSTRUMENTATION_STATUS: stream=
+Error in longPressDragSnapsToBranch(com.nothatcher.sproutbook.GestureTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.GestureTest.longPressDragSnapsToBranch(GestureTest.kt:76)
+
+INSTRUMENTATION_STATUS: test=longPressDragSnapsToBranch
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=scrollingAcrossToothNeverChangesOrOpensIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=scrollingAcrossToothNeverChangesOrOpensIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=calendarLongPressKeepsDate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.GestureTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=calendarLongPressKeepsDate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeAccessibilityTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.TreeAccessibilityTest:
+INSTRUMENTATION_STATUS: test=nativeAccessibilityCanInspectFullCanopyAndArrange
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeAccessibilityTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 32 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.actions(TreeAccessibilityTest.kt:15)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+
+INSTRUMENTATION_STATUS: stream=
+Error in nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 32 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.actions(TreeAccessibilityTest.kt:15)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+
+INSTRUMENTATION_STATUS: test=nativeAccessibilityCanInspectFullCanopyAndArrange
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeThemeFlowTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+com.nothatcher.sproutbook.TreeThemeFlowTest:
+INSTRUMENTATION_STATUS: test=profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeThemeFlowTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Willow' (ignoreCase: false))
+Nodes found:
+1) Node #6164 at (l=20.0, t=266.0, r=340.0, b=362.0)px
+Focused = 'false'
+Text = '[Willow, Baby · Selected
+Forest accent · Summer tree]'
+Woodland playback = 'Still'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 4 siblings
+2) Node #6002 at (l=61.0, t=30.0, r=344.0, b=86.0)px
+ContentDescription = '[Switch child]'
+Focused = 'false'
+Role = 'Button'
+Text = '[Willow, Baby · Your growing family]'
+Woodland playback = 'Still'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 3 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:38)
+	at com.nothatcher.sproutbook.TreeThemeFlowTest.profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(TreeThemeFlowTest.kt:26)
+
+INSTRUMENTATION_STATUS: stream=
+Error in profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(com.nothatcher.sproutbook.TreeThemeFlowTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Willow' (ignoreCase: false))
+Nodes found:
+1) Node #6164 at (l=20.0, t=266.0, r=340.0, b=362.0)px
+Focused = 'false'
+Text = '[Willow, Baby · Selected
+Forest accent · Summer tree]'
+Woodland playback = 'Still'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 4 siblings
+2) Node #6002 at (l=61.0, t=30.0, r=344.0, b=86.0)px
+ContentDescription = '[Switch child]'
+Focused = 'false'
+Role = 'Button'
+Text = '[Willow, Baby · Your growing family]'
+Woodland playback = 'Still'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 3 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:38)
+	at com.nothatcher.sproutbook.TreeThemeFlowTest.profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(TreeThemeFlowTest.kt:26)
+
+INSTRUMENTATION_STATUS: test=profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeThemeFlowTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=newThemeGalleryKeepsMemoryRecordsAndPlacementInLightAndDarkMode
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.nothatcher.sproutbook.TreeThemeFlowTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=16
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=newThemeGalleryKeepsMemoryRecordsAndPlacementInLightAndDarkMode
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 511.116
+There were 7 failures:
+1) treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(com.nothatcher.sproutbook.MemoryLeafFlowTest)
+java.lang.AssertionError: Failed: assertDoesNotExist.
+Reason: Did not expect any node but found '1' node that satisfies: (TestTag = 'memory-leaf-card')
+Node found:
+Node #847 at (l=12.0, t=12.0, r=348.0, b=716.0)px, Tag: 'memory-leaf-card'
+PaneTitle = 'Memory keepsake'
+Has 3 children
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertDoesNotExist(SemanticsNodeInteraction.kt:101)
+	at com.nothatcher.sproutbook.MemoryLeafFlowTest.treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(MemoryLeafFlowTest.kt:61)
+2) memoryAddTimelineEditDelete(com.nothatcher.sproutbook.CareFlowTest)
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Close' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:389)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.nothatcher.sproutbook.CareFlowTest.memoryAddTimelineEditDelete(CareFlowTest.kt:54)
+3) inventorySaveAdjustAndDelete(com.nothatcher.sproutbook.CareFlowTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 60000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.nothatcher.sproutbook.FlowFixture.awaitDb(FeatureFlowTest.kt:62)
+	at com.nothatcher.sproutbook.CareFlowTest.inventorySaveAdjustAndDelete(CareFlowTest.kt:17)
+4) arrangeLeafSnapsAndScrollDoesNotOpenIt(com.nothatcher.sproutbook.GestureTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.GestureTest.arrangeLeafSnapsAndScrollDoesNotOpenIt(GestureTest.kt:60)
+5) longPressDragSnapsToBranch(com.nothatcher.sproutbook.GestureTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.GestureTest.longPressDragSnapsToBranch(GestureTest.kt:76)
+6) nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 32 leaves. A timeline is also available.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.actions(TreeAccessibilityTest.kt:15)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+7) profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(com.nothatcher.sproutbook.TreeThemeFlowTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Willow' (ignoreCase: false))
+Nodes found:
+1) Node #6164 at (l=20.0, t=266.0, r=340.0, b=362.0)px
+Focused = 'false'
+Text = '[Willow, Baby · Selected
+Forest accent · Summer tree]'
+Woodland playback = 'Still'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 4 siblings
+2) Node #6002 at (l=61.0, t=30.0, r=344.0, b=86.0)px
+ContentDescription = '[Switch child]'
+Focused = 'false'
+Role = 'Button'
+Text = '[Willow, Baby · Your growing family]'
+Woodland playback = 'Still'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 3 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:38)
+	at com.nothatcher.sproutbook.TreeThemeFlowTest.profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(TreeThemeFlowTest.kt:26)
+
+FAILURES!!!
+Tests run: 16,  Failures: 7
+
+
+INSTRUMENTATION_CODE: -1

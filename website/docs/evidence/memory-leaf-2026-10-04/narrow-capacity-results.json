@@ -1,0 +1,12 @@
+[
+  {
+    "width": 320,
+    "count": 12,
+    "targets": "44 px, no overlaps, last leaf opens correctly"
+  },
+  {
+    "width": 390,
+    "count": 12,
+    "targets": "44 px, no overlaps, last leaf opens correctly"
+  }
+]

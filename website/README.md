@@ -19,4 +19,4 @@ The hosted site is managed through its existing Sites project. This folder is
 the public website-source mirror; editing it alone does not publish the live
 website. Runtime art, CSS and controllers are mirrored, while APK/source archives
 are hosted downloads rather than committed copies. See `QA-JOURNEY.md` for the
-woodland implementation and `QA-3.6.md` for the current download/gallery update.
+woodland implementation and `QA-3.8.md` for the current memory-card, themes and download update.

@@ -1,0 +1,49 @@
+{
+  "themes": {
+    "Summer": {
+      "sky": "#e7efd5",
+      "canopy": "#719250",
+      "caption": "Summer \u00b7 Sunlight, clover, and little discoveries."
+    },
+    "Autumn": {
+      "sky": "#f4dfbd",
+      "canopy": "#b98142",
+      "caption": "Autumn \u00b7 Golden leaves and a tiny woodland mushroom."
+    },
+    "Night": {
+      "sky": "#1c3045",
+      "canopy": "#426576",
+      "caption": "Night \u00b7 Moonlight and a handful of quiet stars."
+    },
+    "Spring": {
+      "sky": "#e0efdf",
+      "canopy": "#68945d",
+      "caption": "Spring \u00b7 Fresh green shoots and little meadow flowers."
+    },
+    "Blossom": {
+      "sky": "#f3e1e4",
+      "canopy": "#bd8f9f",
+      "caption": "Blossom \u00b7 A canopy of petals for the sweetest moments."
+    },
+    "Winter": {
+      "sky": "#dfecf0",
+      "canopy": "#a9bec4",
+      "caption": "Winter \u00b7 Snowflakes, frosted branches, and a quiet sky."
+    },
+    "Rainbow": {
+      "sky": "#e8e3f2",
+      "canopy": "#94a785",
+      "caption": "Rainbow \u00b7 Every color has a place in their story."
+    }
+  },
+  "checks": [
+    "All seven themes select exactly one accessible option and expose distinct palettes/scenes.",
+    "Keyboard Enter/Space opens leaf; focus stays in modal, Close/Escape restore opener; Cancel/Escape discard drafts; Save updates title/note; Add/Reset still work.",
+    "Existing feeding amount/unit controls and tooth edit/reset remain functional.",
+    "At full 12-leaf capacity, targets are at least 44 px and do not overlap.",
+    "mobile 390x844: reduced motion remains off; leaf view/edit and long content work without dialog horizontal overflow, including 200% text.",
+    "narrow 320x740: reduced motion remains off; leaf view/edit and long content work without dialog horizontal overflow, including 200% text.",
+    "landscape 844x390: reduced motion remains off; leaf view/edit and long content work without dialog horizontal overflow, including 200% text."
+  ],
+  "pageErrors": []
+}

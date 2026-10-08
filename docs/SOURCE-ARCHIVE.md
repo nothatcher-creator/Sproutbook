@@ -1,4 +1,4 @@
-# SproutBook 3.5.1 source
+# SproutBook 3.8.0 source
 
 The actual native Android Gradle project is in `android/`. Open that directory
 in Android Studio, or run its wrapper with JDK 17 and Android SDK 37 installed.
@@ -20,10 +20,10 @@ existing installation. Keep private keys and credentials outside Git.
 
 `android/release-artifacts/` contains this update's verified R8 unsigned APK,
 AAB, and mapping file. `SOURCE-MANIFEST.json` records the exact source checkpoint
-and file hashes. The release's separate `SHA256SUMS-3.5.1.txt` verifies the entire
+and file hashes. The release's separate `SHA256SUMS-3.8.0.txt` verifies the entire
 source ZIP and the installable evaluation APK.
 
-Read `android/docs/QA-3.5.1.md` for fresh checks and limits, and
+Read `android/docs/QA-3.8.md` for fresh checks and limits, and
 `docs/CONTINUATION.md` for the recovery history and next steps. The authoritative
 continuation checkpoint is maintained in the GitHub repository after publication:
 https://github.com/nothatcher-creator/Sproutbook/blob/main/docs/CONTINUATION.md

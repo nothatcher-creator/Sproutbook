@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.FeedingMathTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-04T11:43:58.830Z" hostname="a100580314a4" time="0.001">
+  <properties/>
+  <testcase name="poundsConvertToKilograms" classname="com.nothatcher.sproutbook.core.FeedingMathTest" time="0.0"/>
+  <testcase name="unitRoundTripPreservesAmount" classname="com.nothatcher.sproutbook.core.FeedingMathTest" time="0.0"/>
+  <testcase name="ounceConversionIsExact" classname="com.nothatcher.sproutbook.core.FeedingMathTest" time="0.001"/>
+  <testcase name="nonFiniteWeightRejected" classname="com.nothatcher.sproutbook.core.FeedingMathTest" time="0.0"/>
+  <testcase name="planningRangeIs150To200MlPerKg" classname="com.nothatcher.sproutbook.core.FeedingMathTest" time="0.0"/>
+  <testcase name="zeroFeedsRejected" classname="com.nothatcher.sproutbook.core.FeedingMathTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

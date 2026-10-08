@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.MemoryTreePaletteTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-04T11:46:12.553Z" hostname="a100580314a4" time="0.018">
+  <properties/>
+  <testcase name="everyTreeStyleHasItsOwnAppearanceInLightAndDarkMode" classname="com.nothatcher.sproutbook.MemoryTreePaletteTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

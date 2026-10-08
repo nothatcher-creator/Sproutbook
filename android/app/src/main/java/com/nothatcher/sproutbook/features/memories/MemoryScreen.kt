@@ -24,20 +24,22 @@ import java.time.*
 fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null,
     addNew: Boolean = false, onAddHandled: () -> Unit = {}) {
     val child = state.child ?: return
-    val rows by
+    val observedRows by
         remember(child.id) { vm.repo.db.memorys().observe(child.id, 10000) }
             .collectAsStateWithLifecycle(emptyList())
-    var mode by rememberSaveable { mutableStateOf("Tree") }
-    var arrange by rememberSaveable { mutableStateOf(false) }
-    var chapter by rememberSaveable { mutableIntStateOf(0) }
-    var edit by remember { mutableStateOf<Memory?>(null) }
-    var opened by remember(openId) { mutableStateOf(false) }
+    val rows = remember(observedRows, child.id) { observedRows.filter { it.childId == child.id } }
+    var mode by rememberSaveable(child.id) { mutableStateOf("Tree") }
+    var arrange by rememberSaveable(child.id) { mutableStateOf(false) }
+    var chapter by rememberSaveable(child.id) { mutableIntStateOf(0) }
+    var viewingId by rememberSaveable(child.id) { mutableStateOf<String?>(null) }
+    var edit by remember(child.id) { mutableStateOf<Memory?>(null) }
+    var opened by rememberSaveable(child.id, openId) { mutableStateOf(false) }
     LaunchedEffect(openId, rows) {
         if (!opened && openId != null)
             rows
                 .find { it.id == openId }
                 ?.let {
-                    edit = it
+                    viewingId = it.id
                     chapter = it.chapter
                     opened = true
                 }
@@ -51,6 +53,10 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
             else edit = Memory(childId = child.id, title = "", occurredOn = LocalDate.now().toEpochDay())
         }
     }
+    LaunchedEffect(state.prefs.grandparent) {
+        if (state.prefs.grandparent) arrange = false
+    }
+    val canArrange = arrange && !state.prefs.grandparent
     val last = rows.maxOfOrNull { it.chapter } ?: 0
     val visible = remember(rows, chapter) { rows.filter { it.chapter == chapter } }
     Page("Growing memories", "${rows.size} moments in ${child.name}'s story") {
@@ -85,15 +91,15 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                     Muted("${child.treeStyle} woodland · ${child.name}'s growing story")
                     MemoryTree(
                         visible,
-                        arrange,
-                        onOpen = { edit = it },
+                        canArrange,
+                        onOpen = { viewingId = it.id },
                         onMove = { id, slot ->
                             vm.perform("Leaf placed") { vm.repo.arrangeMemory(child.id, id, slot) }
                         },
                         treeStyle = child.treeStyle,
                     )
                     Muted(
-                        if (arrange)
+                        if (canArrange)
                             "Long press and drag a leaf to a glowing branch. Or tap a leaf, then a branch."
                         else "Tap a leaf to revisit its story. New moments bring this tree to life."
                     )
@@ -128,8 +134,21 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                     m.title,
                     "${LocalDate.ofEpochDay(m.occurredOn)} · ${m.category}${if(m.photo!=null)" · Photo" else ""}",
                 ) {
-                    edit = m
+                    viewingId = m.id
                 }
+            }
+        }
+    }
+    if (edit == null) {
+        rows.find { it.id == viewingId }?.let { memory ->
+            key(memory.id) {
+                MemoryLeafCard(
+                    memory = memory,
+                    child = child,
+                    readOnly = state.prefs.grandparent,
+                    onDismiss = { viewingId = null },
+                    onEdit = { if (!state.prefs.grandparent) edit = memory },
+                )
             }
         }
     }

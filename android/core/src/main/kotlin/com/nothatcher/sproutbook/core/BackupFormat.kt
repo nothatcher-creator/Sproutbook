@@ -36,7 +36,7 @@ object BackupFormat {
                     "avatar" to textRef(),
                     "notes" to s(""),
                     "accent" to s("Forest"),
-                    "treeStyle" to s("Summer"),
+                    "treeStyle" to s(TreeThemes.default.style),
                     "homeSections" to s(""),
                     "homeHiddenSections" to s(""),
                     "homeQuickActions" to s("memory,schedule"),
@@ -449,7 +449,9 @@ object BackupFormat {
             "children" -> {
                 one("stage", "PREGNANCY", "BABY", "TODDLER", "CHILD", "TEEN")
                 one("accent", "Forest", "Moss", "Amber", "Sky")
-                one("treeStyle", "Summer", "Autumn", "Night")
+                // The transport shape remains v5. Apps before the theme expansion cannot
+                // import newly named styles, even though they support that transport version.
+                if (TreeThemes.find(r.str("treeStyle")) == null) fail()
                 HomeOrganizerCatalog.decode(
                     r.str("homeSections"),
                     r.str("homeHiddenSections"),

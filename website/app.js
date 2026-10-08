@@ -2,10 +2,20 @@
 (() => {
   const $ = id => document.getElementById(id);
   const all = selector => [...document.querySelectorAll(selector)];
-  const positions = [[34,27],[60,22],[22,47],[76,39],[15,57],[85,52],[44,13],[37,61],[63,58],[53,41],[25,31],[74,24]];
+  const positions = [[32,33],[68,33],[20,54],[80,54],[12,75],[88,75],[50,12],[35,75],[65,75],[50,54],[14,12],[86,12]];
   const initialMemories = [{title:'That first little smile',category:'FIRST',note:'A sleepy smile after breakfast. One to keep.'},{title:'A walk in the woods',category:'FAMILY',note:'Fresh air, little footsteps, and nowhere to rush.'},{title:'A wonderfully messy lunch',category:'FUNNY MOMENT',note:'More avocado on the cheeks than on the spoon.'},{title:'A new sound',category:'MILESTONE',note:'A little babble that stopped us both in our tracks.'}];
   const initialFeeds = [{type:'Bottle',amountMl:120,duration:0,time:'9:15 am'},{type:'Pump',amountMl:90,duration:0,time:'7:40 am'}];
   let memories = structuredClone(initialMemories), selectedMemory = 0;
+  let memoryTheme = 'Summer', memoryOpener = null;
+  const memoryThemes = {
+    Summer:'Sunlight, clover, and little discoveries.',
+    Autumn:'Golden leaves and a tiny woodland mushroom.',
+    Night:'Moonlight and a handful of quiet stars.',
+    Spring:'Fresh green shoots and little meadow flowers.',
+    Blossom:'A canopy of petals for the sweetest moments.',
+    Winter:'Snowflakes, frosted branches, and a quiet sky.',
+    Rainbow:'Every color has a place in their story.'
+  };
   let feeds = structuredClone(initialFeeds), feedType = 'Bottle', feedUnit = 'mL';
   let teeth = Array(20).fill('Not seen'); teeth[4]='Erupted'; teeth[5]='Observed';
   let selectedTooth=4, toothUnlocked=false, activeDemo='memory', stage='Pregnancy';
@@ -27,8 +37,37 @@
   function renderMemories() {
     $('memory-count').textContent=`${memories.length} moments, growing together`;
     $('tree-leaves').replaceChildren();
-    memories.forEach((m,i)=>{const button=document.createElement('button');button.type='button';button.className='tree-leaf'+(i===selectedMemory?' selected':'');button.style.left=positions[i][0]+'%';button.style.top=positions[i][1]+'%';button.textContent=String(i+1);button.setAttribute('aria-label','Open memory: '+m.title);button.setAttribute('aria-pressed',String(i===selectedMemory));button.addEventListener('click',()=>{selectedMemory=i;renderMemories();});$('tree-leaves').append(button);});
+    memories.forEach((m,i)=>{const button=document.createElement('button');button.type='button';button.className='tree-leaf'+(i===selectedMemory?' selected':'');button.dataset.memoryIndex=String(i);button.style.left=positions[i][0]+'%';button.style.top=positions[i][1]+'%';const label=document.createElement('span');label.textContent=String(i+1);button.append(label);button.setAttribute('aria-label','Open sample memory: '+m.title);button.setAttribute('aria-pressed',String(i===selectedMemory));button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls','memory-leaf-dialog');button.addEventListener('click',()=>openMemory(i,button));$('tree-leaves').append(button);});
+    renderSelectedMemory();
+  }
+  function renderSelectedMemory() {
     const m=memories[selectedMemory];$('memory-category').textContent=m.category;$('memory-detail-title').textContent=m.title;$('memory-note').textContent=m.note;
+    $('memory-leaf-category').textContent=m.category;$('memory-leaf-title').textContent=m.title;$('memory-leaf-note').textContent=m.note;
+    all('.tree-leaf').forEach(b=>{const selected=Number(b.dataset.memoryIndex)===selectedMemory;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected));});
+  }
+  function selectMemoryTheme(name) {
+    if(!Object.hasOwn(memoryThemes,name))throw new Error('Choose one of the seven sample tree themes.');
+    memoryTheme=name;$('panel-memory').dataset.treeTheme=name;$('memory-leaf-dialog').dataset.treeTheme=name;
+    all('.tree-theme-option').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.treeTheme===name)));
+    $('tree-theme-description').textContent=`${name} · ${memoryThemes[name]}`;
+    return {memoryTheme};
+  }
+  function setMemoryEditing(editing) {
+    $('memory-edit-form').hidden=!editing;$('memory-view-actions').hidden=editing;$('memory-edit-feedback').textContent='';
+    if(editing){const m=memories[selectedMemory];$('edit-memory-title').value=m.title;$('edit-memory-note').value=m.note;$('edit-memory-title').focus();}
+  }
+  function openMemory(index,opener=$('open-memory')) {
+    if(!Number.isInteger(index)||index<0||index>=memories.length)throw new Error('Choose a sample leaf on the tree.');
+    selectedMemory=index;memoryOpener=opener;renderSelectedMemory();setMemoryEditing(false);
+    if(!$('memory-leaf-dialog').open)$('memory-leaf-dialog').showModal();
+  }
+  function saveMemory(title,note) {
+    if(typeof title!=='string'||!title.trim()||title.trim().length>65)throw new Error('Use a memory title from 1 to 65 characters.');
+    if(typeof note!=='string'||note.length>400)throw new Error('Keep this sample note within 400 characters.');
+    memories[selectedMemory]={...memories[selectedMemory],title:title.trim(),note:note.trim()};
+    renderSelectedMemory();
+    const leaf=all('.tree-leaf')[selectedMemory];if(leaf)leaf.setAttribute('aria-label','Open sample memory: '+memories[selectedMemory].title);
+    setMemoryEditing(false);$('edit-memory').focus();message('Sample leaf updated for this visit.');
   }
   function addMemory(title) {
     if(typeof title!=='string'||!title.trim()||title.trim().length>65) throw new Error('Use a memory title from 1 to 65 characters.');
@@ -67,10 +106,24 @@
     const erupted=teeth.filter(x=>x==='Erupted').length,observed=teeth.filter(x=>x==='Observed').length;$('teeth-summary').textContent=`${erupted} erupted · ${observed} observed · ${20-erupted-observed} not seen`;showTooth(selectedTooth,toothUnlocked);
   }
   function selectStage(name){if(!Object.hasOwn(stageData,name))throw new Error('Choose a supported life stage.');stage=name;all('[data-stage]').forEach(b=>{const yes=b.dataset.stage===name;b.classList.toggle('selected',yes);b.setAttribute('aria-pressed',String(yes));});const data=stageData[name];$('stage-number').textContent='CHAPTER '+data[0];$('stage-title').textContent=data[1];$('stage-copy').textContent=data[2];$('stage-tags').replaceChildren(...data[3].map(text=>{const span=document.createElement('span');span.textContent=text;return span;}));return {stage};}
-  function buildRequest(title,area,details){if(typeof title!=='string'||title.trim().length<5||title.length>100||typeof details!=='string'||details.trim().length<10||details.length>1500)throw new Error('Add a short title and explain how this would help.');const body=`## Feature idea\n${details.trim()}\n\n## Area\n${area}\n\n## Context\nRequested through the SproutBook showcase website.\nApp preview: 3.7.0\n\nPlease use sample data and keep family information private.`;const url=new URL('https://github.com/nothatcher-creator/Sproutbook/issues/new');url.searchParams.set('title','[Feature] '+title.trim());url.searchParams.set('body',body);return url.href;}
+  function buildRequest(title,area,details){if(typeof title!=='string'||title.trim().length<5||title.length>100||typeof details!=='string'||details.trim().length<10||details.length>1500)throw new Error('Add a short title and explain how this would help.');const body=`## Feature idea\n${details.trim()}\n\n## Area\n${area}\n\n## Context\nRequested through the SproutBook showcase website.\nApp preview: 3.8.0\n\nPlease use sample data and keep family information private.`;const url=new URL('https://github.com/nothatcher-creator/Sproutbook/issues/new');url.searchParams.set('title','[Feature] '+title.trim());url.searchParams.set('body',body);return url.href;}
   all('[data-demo]').forEach((b,index)=>{b.addEventListener('click',()=>selectDemo(b.dataset.demo));b.addEventListener('keydown',e=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key))return;e.preventDefault();const tabs=all('[data-demo]');const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(index+(e.key==='ArrowDown'?1:-1)+tabs.length)%tabs.length;selectDemo(tabs[next].dataset.demo);tabs[next].focus();});});
   $('memory-form').addEventListener('submit',e=>{e.preventDefault();try{addMemory($('memory-title').value);$('memory-title').value='';}catch(error){message(error.message);}});
   $('reset-memory').addEventListener('click',()=>{memories=structuredClone(initialMemories);selectedMemory=0;renderMemories();message('Sample memories reset.');});
+  all('.tree-theme-option').forEach(b=>b.addEventListener('click',()=>selectMemoryTheme(b.dataset.treeTheme)));
+  $('open-memory').addEventListener('click',()=>openMemory(selectedMemory));
+  $('close-memory').addEventListener('click',()=>$('memory-leaf-dialog').close());
+  $('memory-leaf-dialog').addEventListener('keydown',e=>{
+    if(e.key!=='Tab')return;
+    const controls=[...$('memory-leaf-dialog').querySelectorAll('button, input, textarea, [tabindex]')].filter(b=>!b.disabled&&b.getClientRects().length);
+    const first=controls[0],last=controls.at(-1);
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  $('memory-leaf-dialog').addEventListener('close',()=>{setMemoryEditing(false);if(memoryOpener?.isConnected)memoryOpener.focus();memoryOpener=null;});
+  $('edit-memory').addEventListener('click',()=>setMemoryEditing(true));
+  $('cancel-memory-edit').addEventListener('click',()=>{setMemoryEditing(false);$('edit-memory').focus();});
+  $('memory-edit-form').addEventListener('submit',e=>{e.preventDefault();try{saveMemory($('edit-memory-title').value,$('edit-memory-note').value);}catch(error){$('memory-edit-feedback').textContent=error.message;}});
   all('[data-feed]').forEach(b=>b.addEventListener('click',()=>configureFeed(b.dataset.feed)));
   $('unit-toggle').addEventListener('click',()=>{const old=Number($('feed-amount').value);feedUnit=feedUnit==='mL'?'fl oz':'mL';configureFeed(feedType);$('feed-amount').value=feedUnit==='fl oz'?(old/29.5735295625).toFixed(1):String(Math.round(old*29.5735295625));$('unit-toggle').textContent=feedUnit==='mL'?'Use fl oz':'Use mL';renderFeeds();});
   $('feeding-form').addEventListener('submit',e=>{e.preventDefault();try{logFeed(feedType,Number($('feed-amount').value),feedUnit);}catch(error){message(error.message);}});
@@ -81,8 +134,8 @@
   all('[data-stage]').forEach(b=>b.addEventListener('click',()=>selectStage(b.dataset.stage)));
   $('request-form').addEventListener('submit',e=>{e.preventDefault();try{const url=buildRequest($('request-title').value,$('request-area').value,$('request-details').value);const opened=window.open(url,'_blank','noopener,noreferrer');$('request-feedback').replaceChildren();const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open your feature request on GitHub';$('request-feedback').append('Your draft is ready. Review and submit it on GitHub. ',link);}catch(error){$('request-feedback').textContent=error.message;}});
   renderMemories();renderFeeds();renderTeeth();selectStage(stage);
-  const state=()=>({activeDemo,stage,memoryCount:memories.length,feedCount:feeds.length,totalMl:Math.round(feeds.reduce((n,f)=>n+f.amountMl,0)),eruptedTeeth:teeth.filter(t=>t==='Erupted').length});
-  window.SproutBookShowcase=Object.freeze({state,selectDemo,addMemory,logFeed,selectStage,buildRequest});
+  const state=()=>({activeDemo,stage,memoryCount:memories.length,memoryTheme,feedCount:feeds.length,totalMl:Math.round(feeds.reduce((n,f)=>n+f.amountMl,0)),eruptedTeeth:teeth.filter(t=>t==='Erupted').length});
+  window.SproutBookShowcase=Object.freeze({state,selectDemo,addMemory,selectMemoryTheme,logFeed,selectStage,buildRequest});
   if(document.modelContext?.registerTool){const life=new AbortController();const tools=[
     {name:'get_sproutbook_demo_state',description:'Read the temporary sample state of the SproutBook website demos. This contains no family app records.',inputSchema:{type:'object',properties:{},additionalProperties:false},annotations:{readOnlyHint:true},execute:()=>state()},
     {name:'select_sproutbook_demo',description:'Show one website sample demo: memory, feeding, or teeth.',inputSchema:{type:'object',properties:{demo:{type:'string',enum:['memory','feeding','teeth']}},required:['demo'],additionalProperties:false},annotations:{readOnlyHint:false},execute:input=>selectDemo(input.demo)},

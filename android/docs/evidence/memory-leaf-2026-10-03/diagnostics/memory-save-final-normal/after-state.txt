@@ -1,0 +1,3 @@
+stage=after; targetPx=Rect.fromLTRB(0.0, 0.0, 0.0, 0.0); targetCenterPx=Offset(0.0, 0.0); unclippedDp=DpRect(left=20.0.dp, top=532.0.dp, right=340.0.dp, bottom=584.0.dp); activityFocus=false
+memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145084917)
+grandparent=false

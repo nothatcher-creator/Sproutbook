@@ -21,6 +21,11 @@ open class FlowFixture {
             app.db.children().all().forEach { app.db.children().delete(it.id) }
             app.repository.saveChild(Child(id = "qa-child", name = "Willow"))
         }
+        compose.waitUntil(60000) {
+            compose.onAllNodesWithTag("today-list").fetchSemanticsNodes().isNotEmpty()
+        }
+        // A compact viewport can compose only the Today header; expose the seeded chapter first.
+        compose.onNodeWithTag("today-list").performScrollToNode(hasTestTag("today-section-chapter"))
         waitText("YOUR BABY CHAPTER")
         // Native system overlays must fail QA rather than allow clicks behind them.
         compose.waitUntil(60000) { compose.activity.hasWindowFocus() }

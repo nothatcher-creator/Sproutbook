@@ -1,0 +1,53 @@
+{
+  "recorded_at": "2026-10-04T20:08:06.044642+00:00",
+  "units": {
+    "core": {
+      "tests": 126,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "artifacts": {
+    "debug_apk": {
+      "path": "/workspace/sprout-build/app/outputs/apk/debug/app-debug.apk",
+      "bytes": 15220916,
+      "sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f",
+      "certificate_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3"
+    },
+    "test_apk": {
+      "path": "/workspace/sprout-build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+      "bytes": 1710453,
+      "sha256": "251408efa249a06a9eb97513f93a3a49fca2a1badd7b5e2d14dcc4ef653f76fe",
+      "certificate_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3"
+    },
+    "unsigned_release_apk": {
+      "path": "/workspace/sprout-build/app/outputs/apk/release/app-release-unsigned.apk",
+      "bytes": 4167966,
+      "sha256": "59e1bd21bdb8e08247478c34e1b21317bf5817b0622b64afd774cac9dfeef1ea"
+    },
+    "unsigned_release_aab": {
+      "path": "/workspace/sprout-build/app/outputs/bundle/release/app-release.aab",
+      "bytes": 7088031,
+      "sha256": "ec8e092c3743cd81a067229a6a16c88bfc2cc412261ba29e95f3f5755a999c71"
+    },
+    "r8_mapping": {
+      "path": "/workspace/sprout-build/app/outputs/mapping/release/mapping.txt",
+      "bytes": 46698140,
+      "sha256": "35de4ed566bb7db0ec2486caaf8a1b9936ec0ff9cbcda78e015fb2a8d6b0816c"
+    }
+  },
+  "build_log": "final-build.log",
+  "duration_seconds": 442,
+  "actionable_tasks": 141,
+  "executed_tasks": 33,
+  "up_to_date_tasks": 108,
+  "version_name": "3.8.0",
+  "version_code": 30800
+}

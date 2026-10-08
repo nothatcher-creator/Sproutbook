@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.WishlistBackupTest" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-10-04T11:43:59.202Z" hostname="a100580314a4" time="0.176">
+  <properties/>
+  <testcase name="version4RequiresChildAccent" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.015"/>
+  <testcase name="wishlistNotesAccept10000Characters" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.003"/>
+  <testcase name="rejectsGotAliasForObtained" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.002"/>
+  <testcase name="version4RequiresWishlistTable" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.001"/>
+  <testcase name="legacyMissingOneCustomizationFieldPreservesTheOther" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.003"/>
+  <testcase name="rejectsWishlistLinkOver2048Characters" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.002"/>
+  <testcase name="wishlistAcceptsEmptyHttpAndHttpsLinks" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.002"/>
+  <testcase name="rejectsWishlistLinksWithoutHttpOrHttpsAndValidHost" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.007"/>
+  <testcase name="wishlistTitleLimitUsesTrimmedLength" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.001"/>
+  <testcase name="rejectsWishlistLinksWithInvalidPorts" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.011"/>
+  <testcase name="rejectsWishlistLinksWithCredentials" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.009"/>
+  <testcase name="versions1Through3RepairMissingWishlistAndChildCustomization" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.01"/>
+  <testcase name="wishlistLinkAccepts2048Characters" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.004"/>
+  <testcase name="rejectsDuplicateWishlistIdentities" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.002"/>
+  <testcase name="rejectsWishlistOwnedByMissingChild" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.001"/>
+  <testcase name="missingWishlistOptionalFieldsUseDefaults" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.003"/>
+  <testcase name="version4RequiresChildTreeStyle" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.034"/>
+  <testcase name="rejectsInvalidChildAccent" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.014"/>
+  <testcase name="wishlistNotesAndLinkMustBeStrings" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.014"/>
+  <testcase name="rejectsWishlistWithoutChildIdentity" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.002"/>
+  <testcase name="version4PreservesWishlistAndCustomizationThroughRoundTrip" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.003"/>
+  <testcase name="rejectsInvalidChildTreeStyle" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.006"/>
+  <testcase name="rejectsMissingBlankOrOversizedWishlistTitle" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.007"/>
+  <testcase name="wishlistObtainedMustBeBoolean" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.005"/>
+  <testcase name="rejectsWishlistNotesOver10000Characters" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.003"/>
+  <testcase name="allSupportedChildCustomizationValuesArePreserved" classname="com.nothatcher.sproutbook.core.WishlistBackupTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

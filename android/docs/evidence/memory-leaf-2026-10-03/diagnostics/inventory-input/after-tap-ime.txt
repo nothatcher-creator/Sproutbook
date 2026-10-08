@@ -1,0 +1,276 @@
+Current Input Method Manager state:
+  Input Methods: mMethodMapUpdateCount=3
+  InputMethod #0:
+    mId=com.android.inputmethod.latin/.LatinIME mSettingsActivityName=com.android.inputmethod.latin.settings.SettingsActivity mIsVrOnly=false mSupportsSwitchingToNextInputMethod=true
+    mIsDefaultResId=0x7f040012
+    Service:
+      priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+      ServiceInfo:
+        name=com.android.inputmethod.latin.LatinIME
+        packageName=com.android.inputmethod.latin
+        labelRes=0x7f0e004b nonLocalizedLabel=null icon=0x0 banner=0x0
+        enabled=true exported=true directBootAware=true
+        permission=android.permission.BIND_INPUT_METHOD
+        flags=0x0
+        ApplicationInfo:
+          packageName=com.android.inputmethod.latin
+          labelRes=0x7f0e004b nonLocalizedLabel=null icon=0x7f070098 banner=0x0
+          processName=com.android.inputmethod.latin
+          taskAffinity=com.android.inputmethod.latin
+          uid=10115 flags=0x30c8be45 privateFlags=0x24081060 theme=0x0
+          requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+          sourceDir=/system/product/app/LatinIME/LatinIME.apk
+          seinfo=default:targetSdkVersion=28
+          seinfoUser=:complete
+          dataDir=/data/user_de/0/com.android.inputmethod.latin
+          deviceProtectedDataDir=/data/user_de/0/com.android.inputmethod.latin
+          credentialProtectedDataDir=/data/user/0/com.android.inputmethod.latin
+          enabled=true minSdkVersion=21 targetSdkVersion=28 versionCode=28 targetSandboxVersion=1
+          supportsRtl=true
+          fullBackupContent=true
+          HiddenApiEnforcementPolicy=2
+          usesNonSdkApi=false
+          allowsPlaybackCapture=false
+  Clients:
+  Client ClientState{526b023 uid=10115 pid=2344 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@935d920
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@2d562d9
+    sessionRequested=false
+    curSession=null
+  Client ClientState{5cf649e uid=10102 pid=3676 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@a2a2b7f
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@6f674c
+    sessionRequested=false
+    curSession=null
+  Client ClientState{171018c uid=10100 pid=2284 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@1b05395
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@bc92caa
+    sessionRequested=false
+    curSession=SessionState{uid 10100 pid 2284 method 5c0009b session 5d1ac38 channel ClientState{171018c uid=10100 pid=2284 displayId=0} (server)}
+  Client ClientState{2ccc60 uid=10116 pid=3852 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@80f9411
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@3e56976
+    sessionRequested=false
+    curSession=SessionState{uid 10116 pid 3852 method 5c0009b session 6140b77 channel ClientState{2ccc60 uid=10116 pid=3852 displayId=0} (server)}
+  Client ClientState{71153e4 uid=10051 pid=2658 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@48604d
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@4b6a702
+    sessionRequested=false
+    curSession=null
+  Client ClientState{633e813 uid=1000 pid=1924 displayId=0}:
+    client=android.view.inputmethod.InputMethodManager$1@8e19913
+    inputContext=ControlledInputConnectionWrapper{connection=android.view.inputmethod.BaseInputConnection@681ca50 finished=false mParentInputMethodManager.mActive=false}
+    sessionRequested=false
+    curSession=null
+  Client ClientState{ac7b449 uid=10117 pid=3284 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@96c314e
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@a6af26f
+    sessionRequested=false
+    curSession=null
+  Client ClientState{ee25649 uid=1000 pid=2256 displayId=0}:
+    client=com.android.internal.view.IInputMethodClient$Stub$Proxy@6413b7c
+    inputContext=com.android.internal.view.IInputContext$Stub$Proxy@7ce4c05
+    sessionRequested=false
+    curSession=SessionState{uid 1000 pid 2256 method 5c0009b session ede145a channel ClientState{ee25649 uid=1000 pid=2256 displayId=0} (server)}
+  mCurMethodId=com.android.inputmethod.latin/.LatinIME
+  mCurClient=ClientState{2ccc60 uid=10116 pid=3852 displayId=0} mCurSeq=12
+  mCurFocusedWindow=android.os.BinderProxy@59e3d65 softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE client=ClientState{2ccc60 uid=10116 pid=3852 displayId=0}
+  mCurId=com.android.inputmethod.latin/.LatinIME mHaveConnection=true mBoundToMethod=true mVisibleBound=false
+  mCurToken=android.os.Binder@8f839b8
+  mCurTokenDisplayId=0
+  mCurIntent=Intent { act=android.view.InputMethod cmp=com.android.inputmethod.latin/.LatinIME (has extras) }
+  mCurMethod=com.android.internal.view.IInputMethod$Stub$Proxy@5c0009b
+  mEnabledSession=SessionState{uid 10116 pid 3852 method 5c0009b session 6140b77 channel ClientState{2ccc60 uid=10116 pid=3852 displayId=0} (server)}
+  mShowRequested=false mShowExplicitlyRequested=false mShowForced=false mInputShown=false
+  mInFullscreenMode=false
+  mSystemReady=true mInteractive=true
+  mSettingsObserver=SettingsObserver{mUserId=0 mRegistered=true mLastEnabled=}
+  mSwitchingController:
+    mSwitchingAwareRotationList:
+      rank=0 item=ImeSubtypeListItem{mImeName=Android Keyboard (AOSP) mSubtypeName=English (US) mSubtypeId=0 mIsSystemLocale=true mIsSystemLanguage=true}
+    mSwitchingUnawareRotationList:
+  mSettings:
+    mCurrentUserId=0
+    mCurrentProfileIds=[0]
+    mCopyOnWrite=false
+    mEnabledInputMethodsStrCache=com.android.inputmethod.latin/.LatinIME
+  mStartInputHistory:
+   StartInput #0:
+    time=2026-10-04 11:08:28.807 (timestamp=108378) reason=SESSION_CREATED_BY_IME restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@3e8a036 [com.android.settings] targetUserId=0 targetDisplayId=0 clientBindSeq=1
+    softInputMode=STATE_UNSPECIFIED|ADJUST_PAN|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #1:
+    time=2026-10-04 11:09:42.062 (timestamp=181634) reason=SESSION_CREATED_BY_IME restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@3b482ff [com.android.launcher3] targetUserId=0 targetDisplayId=0 clientBindSeq=2
+    softInputMode=STATE_UNSPECIFIED|ADJUST_PAN|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #2:
+    time=2026-10-04 11:20:39.118 (timestamp=838689) reason=SESSION_CREATED_BY_IME restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@4d10277 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=3
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #3:
+    time=2026-10-04 11:21:26.912 (timestamp=886484) reason=WINDOW_FOCUS_GAIN restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@3b482ff [com.android.launcher3] targetUserId=0 targetDisplayId=0 clientBindSeq=4
+    softInputMode=STATE_UNSPECIFIED|ADJUST_PAN|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #4:
+    time=2026-10-04 11:21:40.006 (timestamp=899577) reason=SESSION_CREATED_BY_IME restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@8ea1858 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=5
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #5:
+    time=2026-10-04 11:21:55.390 (timestamp=914962) reason=WINDOW_FOCUS_GAIN restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@3b482ff [com.android.launcher3] targetUserId=0 targetDisplayId=0 clientBindSeq=6
+    softInputMode=STATE_UNSPECIFIED|ADJUST_PAN|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #6:
+    time=2026-10-04 11:22:26.872 (timestamp=946443) reason=SESSION_CREATED_BY_IME restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@59e3d65 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=7
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #7:
+    time=2026-10-04 11:23:01.169 (timestamp=980741) reason=WINDOW_FOCUS_GAIN restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@62c4fb7 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=8
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #8:
+    time=2026-10-04 11:23:03.850 (timestamp=983421) reason=CHECK_FOCUS restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@62c4fb7 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=9
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    inputType=0x8001 imeOptions=0x2000006 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #9:
+    time=2026-10-04 11:23:03.862 (timestamp=983434) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@62c4fb7 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=10
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    inputType=0x8001 imeOptions=0x2000006 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #10:
+    time=2026-10-04 11:23:10.964 (timestamp=990536) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@62c4fb7 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=11
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    inputType=0x2002 imeOptions=0x2000006 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+   StartInput #11:
+    time=2026-10-04 11:23:25.512 (timestamp=1005083) reason=WINDOW_FOCUS_GAIN restarting=false
+    imeToken=android.os.Binder@8f839b8 [com.android.inputmethod.latin/.LatinIME] imeUserId=0 imeDisplayId=0
+    targetWin=android.os.BinderProxy@59e3d65 [com.nothatcher.sproutbook] targetUserId=0 targetDisplayId=0 clientBindSeq=12
+    softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    inputType=0x0 imeOptions=0x0 fieldId=0xffffffff fieldName=null actionId=0 actionLabel=null
+ 
+Input method client state for android.view.inputmethod.InputMethodManager@cb92b5c:
+  mService=com.android.internal.view.IInputMethodManager$Stub$Proxy@b35ae65
+  mMainLooper=Looper (main, tid 2) {81c373a}
+  mIInputContext=ControlledInputConnectionWrapper{connection=android.view.inputmethod.BaseInputConnection@db35feb finished=false mParentInputMethodManager.mActive=true}
+  mActive=true mRestartOnNextWindowFocus=false mBindSequence=12 mCurId=com.android.inputmethod.latin/.LatinIME
+  mFullscreenMode=false
+  mCurMethod=com.android.internal.view.IInputMethodSession$Stub$Proxy@75ba148
+  mCurRootView=DecorView@2d7cbe1[MainActivity]
+  mServedView=DecorView@2d7cbe1[MainActivity]
+  mNextServedView=DecorView@2d7cbe1[MainActivity]
+  mServedConnecting=false
+  mCurrentTextBoxAttribute:
+    inputType=0x0 imeOptions=0x0 privateImeOptions=null
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.nothatcher.sproutbook fieldId=-1 fieldName=null
+    extras=null
+    hintLocales=null
+    contentMimeTypes=null
+  mServedInputConnectionWrapper=null
+  mCompletions=null
+  mCursorRect=Rect(0, 0 - 0, 0)
+  mCursorSelStart=1 mCursorSelEnd=1 mCursorCandStart=-1 mCursorCandEnd=-1
+ 
+Input method service state for com.android.inputmethod.latin.LatinIME@431381e:
+  mViewsCreated=true
+  mDecorViewVisible=false mDecorViewWasVisible=false mWindowVisible=false mInShowWindow=false
+  Configuration={1.0 ?mcc?mnc [en_US] ldltr sw360dp w360dp h728dp 160dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 360, 800) mAppBounds=Rect(0, 0 - 360, 752) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.6}
+  mToken=android.os.BinderProxy@a0b661b
+  mInputBinding=InputBinding{android.os.BinderProxy@56fc72 / uid 10116 / pid 3852}
+  mInputConnection=InputConnectionWrapper{idHash=#82068c3 mMissingMethods=}
+  mStartedInputConnection=null
+  mInputStarted=true mInputViewStarted=false mCandidatesViewStarted=false
+  mInputEditorInfo:
+    inputType=0x0 imeOptions=0x0 privateImeOptions=null
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.nothatcher.sproutbook fieldId=-1 fieldName=null
+    extras=null
+    hintLocales=null
+    contentMimeTypes=null
+  mShowInputRequested=false mLastShowInputRequested=false mCanPreRender=false mIsPreRendered=false mShowInputFlags=0x0
+  mCandidatesVisibility=4 mFullscreenApplied=true mIsFullscreen=false mExtractViewHidden=false
+  mExtractedText: null
+  mExtractedToken=0
+  mIsInputViewShown=true mStatusIcon=0
+Last computed insets:
+  contentTopInsets=465 visibleTopInsets=465 touchableInsets=2 touchableRegion=SkRegion()
+ mSettingsObserver=SettingsObserver{mShowImeWithHardKeyboard=2}
+LatinIME state :
+  VersionCode = 28
+  VersionName = 10
+  Keyboard mode = 5
+Current settings :
+   mSpacingAndPunctuations = mSortedSymbolsPrecededBySpace = [38, 40, 91, 123]
+   mSortedSymbolsFollowedBySpace = [33, 38, 41, 44, 46, 58, 59, 63, 93, 125]
+   mSortedWordConnectors = [39, 45]
+   mSortedWordSeparators = [9, 10, 32, 33, 34, 38, 40, 41, 42, 43, 44, 46, 47, 58, 59, 60, 61, 62, 63, 91, 93, 95, 123, 124, 125, 160]
+   mSuggestPuncList = PunctuationSuggestions:  words=[!, ?, \,, :, ;, ", (, ), ', -, /, @, _]
+   mSentenceSeparator = 46
+   mSentenceSeparatorAndSpace = . 
+   mCurrentLanguageHasSpaces = true
+   mUsesAmericanTypography = true
+   mUsesGermanRules = false
+   mDelayInMillisecondsToUpdateOldSuggestions = 300
+   mAutoCap = true
+   mVibrateOn = false
+   mSoundOn = false
+   mKeyPreviewPopupOn = true
+   mShowsVoiceInputKey = false
+   mIncludesOtherImesInLanguageSwitchList = true
+   mShowsLanguageSwitchKey = true
+   mUseContactsDict = true
+   mUsePersonalizedDicts = true
+   mUseDoubleSpacePeriod = false
+   mBlockPotentiallyOffensive = true
+   mBigramPredictionEnabled = true
+   mGestureInputEnabled = false
+   mGestureTrailEnabled = true
+   mGestureFloatingPreviewTextEnabled = true
+   mSlidingKeyInputPreviewEnabled = true
+   mKeyLongpressTimeout = 300
+   mLocale = en_US
+   mInputAttributes = InputAttributes: inputType=0x00002002 targetApp=com.nothatcher.sproutbook
+
+   mKeypressVibrationDuration = -1
+   mKeypressSoundVolume = -1.0
+   mKeyPreviewPopupDismissDelay = 70
+   mAutoCorrectEnabled = true
+   mAutoCorrectionThreshold = 0.185
+   mAutoCorrectionEnabledPerUserSettings = true
+   mSuggestionsEnabledPerUserSettings = true
+   mDisplayOrientation = 1
+   mAppWorkarounds = Target application : com.nothatcher.sproutbook.BabyForgeApp
+Package : com.nothatcher.sproutbook
+Target app sdk version : 37
+   mIsInternal = false
+   mKeyPreviewShowUpDuration = 17
+   mKeyPreviewDismissDuration = 53
+   mKeyPreviewShowUpStartScaleX = 0.98
+   mKeyPreviewShowUpStartScaleY = 0.98
+   mKeyPreviewDismissEndScaleX = 0.94000006
+   mKeyPreviewDismissEndScaleY = 0.94000006
+

@@ -11,6 +11,10 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.unit.dp
 import com.nothatcher.sproutbook.core.BranchPoint
+import com.nothatcher.sproutbook.core.TreeTheme
+import com.nothatcher.sproutbook.core.TreeThemes
+import kotlin.math.cos
+import kotlin.math.sin
 
 /** Static, original woodland artwork. Memory centers always come from TreeLayout. */
 internal data class MemoryTreePalette(
@@ -22,12 +26,15 @@ internal data class MemoryTreePalette(
     val barkLight: Color,
     val ground: Color,
     val leafOutline: Color,
-    val night: Boolean = false,
-)
+    val ornament: Color,
+    val theme: TreeTheme,
+) {
+    val night: Boolean get() = theme == TreeTheme.NIGHT
+}
 
 internal fun memoryTreePalette(style: String, dark: Boolean): MemoryTreePalette =
-    when (style) {
-        "Autumn" -> MemoryTreePalette(
+    when (TreeThemes.find(style) ?: TreeThemes.default) {
+        TreeTheme.AUTUMN -> MemoryTreePalette(
             canopy = Color(if (dark) 0xFF956F42 else 0xFFC6A36A),
             foliage = Color(if (dark) 0xFFB88C52 else 0xFFD5B17B),
             light = Color(0xFFF2D8A1),
@@ -36,8 +43,10 @@ internal fun memoryTreePalette(style: String, dark: Boolean): MemoryTreePalette 
             barkLight = Color(if (dark) 0xFFE3C399 else 0xFFC5A479),
             ground = Color(if (dark) 0xFF93825A else 0xFFAB996D),
             leafOutline = Color(0xFF624D35),
+            ornament = Color(if (dark) 0xFFE9B578 else 0xFFAF693C),
+            theme = TreeTheme.AUTUMN,
         )
-        "Night" -> MemoryTreePalette(
+        TreeTheme.NIGHT -> MemoryTreePalette(
             canopy = Color(if (dark) 0xFF3D6664 else 0xFF719794),
             foliage = Color(if (dark) 0xFF638A7C else 0xFF9AB6A5),
             light = Color(0xFFD6E8CE),
@@ -46,9 +55,58 @@ internal fun memoryTreePalette(style: String, dark: Boolean): MemoryTreePalette 
             barkLight = Color(if (dark) 0xFFD6DFCA else 0xFFA8BCA4),
             ground = Color(if (dark) 0xFF617F70 else 0xFF91A993),
             leafOutline = Color(0xFF355547),
-            night = true,
+            ornament = Color(0xFFD6E8CE),
+            theme = TreeTheme.NIGHT,
         )
-        else -> MemoryTreePalette(
+        TreeTheme.SPRING -> MemoryTreePalette(
+            canopy = Color(if (dark) 0xFF497B68 else 0xFF72AC89),
+            foliage = Color(if (dark) 0xFF83B789 else 0xFFA0D3A0),
+            light = Color(0xFFE8F2BB),
+            bark = Color(if (dark) 0xFFB7A588 else 0xFF947B60),
+            barkShade = Color(if (dark) 0xFF756653 else 0xFF67533E),
+            barkLight = Color(if (dark) 0xFFE3D1AE else 0xFFC7B795),
+            ground = Color(if (dark) 0xFF73A078 else 0xFF8CBB84),
+            leafOutline = Color(0xFF355B45),
+            ornament = Color(if (dark) 0xFFF2CCA4 else 0xFFEBC09A),
+            theme = TreeTheme.SPRING,
+        )
+        TreeTheme.BLOSSOM -> MemoryTreePalette(
+            canopy = Color(if (dark) 0xFF96677D else 0xFFD4A0B5),
+            foliage = Color(if (dark) 0xFFD39AAC else 0xFFE7B5C5),
+            light = Color(0xFFFFE4DF),
+            bark = Color(if (dark) 0xFFB59B96 else 0xFF94756F),
+            barkShade = Color(if (dark) 0xFF776260 else 0xFF69534F),
+            barkLight = Color(if (dark) 0xFFE3C8BB else 0xFFCCAA97),
+            ground = Color(if (dark) 0xFF7F9674 else 0xFFA4B891),
+            leafOutline = Color(0xFF674553),
+            ornament = Color(if (dark) 0xFFF1C3CF else 0xFFF6CDDA),
+            theme = TreeTheme.BLOSSOM,
+        )
+        TreeTheme.WINTER -> MemoryTreePalette(
+            canopy = Color(if (dark) 0xFF4A7887 else 0xFF81A9B6),
+            foliage = Color(if (dark) 0xFF8EB6BD else 0xFFB9D4D8),
+            light = Color(0xFFEAF4F4),
+            bark = Color(if (dark) 0xFFACBAB8 else 0xFF829A9A),
+            barkShade = Color(if (dark) 0xFF667D80 else 0xFF567477),
+            barkLight = Color(if (dark) 0xFFE0E9E4 else 0xFFBCCFC9),
+            ground = Color(if (dark) 0xFFB3CCD1 else 0xFFD5E6E8),
+            leafOutline = Color(0xFF375965),
+            ornament = Color(if (dark) 0xFFEAF4F4 else 0xFFF8FCFD),
+            theme = TreeTheme.WINTER,
+        )
+        TreeTheme.RAINBOW -> MemoryTreePalette(
+            canopy = Color(if (dark) 0xFF777394 else 0xFFADA4C8),
+            foliage = Color(if (dark) 0xFFADA1C7 else 0xFFCEC0E1),
+            light = Color(0xFFF5E8CB),
+            bark = Color(if (dark) 0xFFB4A0A9 else 0xFF98848C),
+            barkShade = Color(if (dark) 0xFF776573 else 0xFF675566),
+            barkLight = Color(if (dark) 0xFFE2CBCD else 0xFFC9ACB2),
+            ground = Color(if (dark) 0xFF7F9A90 else 0xFFA5BDB0),
+            leafOutline = Color(0xFF514665),
+            ornament = Color(if (dark) 0xFFE9BBC9 else 0xFFDBA2BC),
+            theme = TreeTheme.RAINBOW,
+        )
+        TreeTheme.SUMMER -> MemoryTreePalette(
             canopy = Color(if (dark) 0xFF527344 else 0xFF87A06B),
             foliage = Color(if (dark) 0xFF769354 else 0xFFA5BB80),
             light = Color(0xFFD5E3AF),
@@ -57,6 +115,8 @@ internal fun memoryTreePalette(style: String, dark: Boolean): MemoryTreePalette 
             barkLight = Color(if (dark) 0xFFDDCBA4 else 0xFFC1AE82),
             ground = Color(if (dark) 0xFF6D8756 else 0xFF96AB78),
             leafOutline = Color(0xFF3C5735),
+            ornament = Color(0xFFF4E1AF),
+            theme = TreeTheme.SUMMER,
         )
     }
 
@@ -85,6 +145,7 @@ private val limbs = listOf(
 internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette: MemoryTreePalette) {
     val w = size.width
     val h = size.height
+    drawTreeSky(palette)
     // Large irregular washes give the crown depth without suggesting extra tappable leaves.
     crownWashes.forEachIndexed { i, wash ->
         val center = Offset(w * wash.x, h * wash.y)
@@ -132,10 +193,10 @@ internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette:
     if (palette.night) {
         val moon = Offset(w * .88f, h * .10f)
         drawCircle(Brush.radialGradient(listOf(palette.light.copy(alpha = .16f), Color.Transparent),
-            center = moon, radius = 23.dp.toPx()), 23.dp.toPx(), moon)
-        drawCircle(palette.light.copy(alpha = .85f), 7.dp.toPx(), moon)
+            center = moon, radius = artworkPx(23f)), artworkPx(23f), moon)
+        drawCircle(palette.light.copy(alpha = .85f), artworkPx(7f), moon)
         listOf(Offset(.11f, .13f), Offset(.77f, .06f), Offset(.92f, .25f)).forEach {
-            drawCircle(palette.light.copy(alpha = .6f), 1.dp.toPx(), Offset(w * it.x, h * it.y))
+            drawCircle(palette.light.copy(alpha = .6f), artworkPx(1f), Offset(w * it.x, h * it.y))
         }
     }
 
@@ -177,16 +238,19 @@ internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette:
             cubicTo(w * base.x, h * (base.y - .10f), w * tip.x, h * (tip.y + .10f),
                 w * tip.x, h * tip.y)
         }
-        drawPath(limb, palette.barkShade.copy(alpha = .75f), style = Stroke(5.5.dp.toPx(), cap = StrokeCap.Round))
-        drawPath(limb, palette.bark, style = Stroke(3.8.dp.toPx(), cap = StrokeCap.Round))
-        drawPath(limb, palette.barkLight.copy(alpha = .45f), style = Stroke(1.dp.toPx(), cap = StrokeCap.Round))
+        drawPath(limb, palette.barkShade.copy(alpha = .75f), style = Stroke(artworkPx(5.5f), cap = StrokeCap.Round))
+        drawPath(limb, palette.bark, style = Stroke(artworkPx(3.8f), cap = StrokeCap.Round))
+        drawPath(limb, palette.barkLight.copy(alpha = .45f), style = Stroke(artworkPx(1f), cap = StrokeCap.Round))
+        if (palette.theme == TreeTheme.WINTER) {
+            drawPath(limb, palette.ornament.copy(alpha = .65f), style = Stroke(artworkPx(1.2f), cap = StrokeCap.Round))
+        }
         slots.forEach { i ->
             val a = points[i]
             val twig = Path().apply {
                 moveTo(w * tip.x, h * tip.y)
                 quadraticTo(w * a.x, h * tip.y, w * a.x, h * a.y)
             }
-            drawPath(twig, palette.bark.copy(alpha = .85f), style = Stroke(1.7.dp.toPx(), cap = StrokeCap.Round))
+            drawPath(twig, palette.bark.copy(alpha = .85f), style = Stroke(artworkPx(1.7f), cap = StrokeCap.Round))
         }
     }
     listOf(2, 13, 14, 19, 20).forEach { i ->
@@ -195,7 +259,7 @@ internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette:
             moveTo(w * .5f, h * (a.y + .09f))
             quadraticTo(w * .5f, h * a.y, w * a.x, h * a.y)
         }
-        drawPath(twig, palette.bark, style = Stroke(2.dp.toPx(), cap = StrokeCap.Round))
+        drawPath(twig, palette.bark, style = Stroke(artworkPx(2f), cap = StrokeCap.Round))
     }
 
     val barkGrain = Path().apply {
@@ -204,22 +268,125 @@ internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette:
         moveTo(w * .50f, h * .51f)
         quadraticTo(w * .508f, h * .59f, w * .495f, h * .64f)
     }
-    drawPath(barkGrain, palette.barkShade.copy(alpha = .6f), style = Stroke(.8.dp.toPx(), cap = StrokeCap.Round))
+    drawPath(barkGrain, palette.barkShade.copy(alpha = .6f), style = Stroke(artworkPx(.8f), cap = StrokeCap.Round))
     val knot = Offset(w * .495f, h * .81f)
-    drawOval(palette.barkShade.copy(alpha = .4f), knot - Offset(1.4.dp.toPx(), 3.dp.toPx()),
-        Size(2.8.dp.toPx(), 6.dp.toPx()), style = Stroke(.7.dp.toPx()))
+    drawOval(palette.barkShade.copy(alpha = .4f), knot - Offset(artworkPx(1.4f), artworkPx(3f)),
+        Size(artworkPx(2.8f), artworkPx(6f)), style = Stroke(artworkPx(.7f)))
 
     // A few quiet tufts ground the tree, kept well below every interactive branch.
     listOf(.28f, .34f, .65f, .72f).forEachIndexed { i, x ->
         val base = Offset(w * x, h * (.955f + if (i % 2 == 0) .007f else 0f))
         val grass = Path().apply {
-            moveTo(base.x - 4.dp.toPx(), base.y)
-            quadraticTo(base.x - 4.dp.toPx(), base.y - 4.dp.toPx(), base.x - 7.dp.toPx(), base.y - 7.dp.toPx())
+            moveTo(base.x - artworkPx(4f), base.y)
+            quadraticTo(base.x - artworkPx(4f), base.y - artworkPx(4f), base.x - artworkPx(7f), base.y - artworkPx(7f))
             moveTo(base.x, base.y)
-            quadraticTo(base.x - 1.dp.toPx(), base.y - 5.dp.toPx(), base.x + 2.dp.toPx(), base.y - 9.dp.toPx())
-            moveTo(base.x + 3.dp.toPx(), base.y)
-            quadraticTo(base.x + 4.dp.toPx(), base.y - 4.dp.toPx(), base.x + 7.dp.toPx(), base.y - 5.dp.toPx())
+            quadraticTo(base.x - artworkPx(1f), base.y - artworkPx(5f), base.x + artworkPx(2f), base.y - artworkPx(9f))
+            moveTo(base.x + artworkPx(3f), base.y)
+            quadraticTo(base.x + artworkPx(4f), base.y - artworkPx(4f), base.x + artworkPx(7f), base.y - artworkPx(5f))
         }
-        drawPath(grass, palette.ground.copy(alpha = .7f), style = Stroke(1.1.dp.toPx(), cap = StrokeCap.Round))
+        drawPath(grass, palette.ground.copy(alpha = .7f), style = Stroke(artworkPx(1.1f), cap = StrokeCap.Round))
+    }
+    drawTreeOrnaments(palette)
+}
+
+/** Decorations are static and stay at the edge of the crown or below its memory anchors. */
+private fun DrawScope.drawTreeSky(palette: MemoryTreePalette) {
+    if (palette.theme == TreeTheme.RAINBOW) {
+        val bands = listOf(0xFFE4A2B0, 0xFFE8B78C, 0xFFE9D79D, 0xFFA6CDAA, 0xFF91B7CF, 0xFFB7A4D0)
+        bands.forEachIndexed { i, color ->
+            val inset = artworkPx(3.2f) * i
+            drawArc(Color(color).copy(alpha = .62f), 180f, 180f, false,
+                Offset(size.width * .12f + inset, size.height * .015f + inset),
+                Size(size.width * .76f - 2 * inset, size.height * .35f - 2 * inset),
+                style = Stroke(artworkPx(2.8f), cap = StrokeCap.Round))
+        }
+    } else if (palette.theme in listOf(TreeTheme.SUMMER, TreeTheme.SPRING)) {
+        val sun = Offset(size.width * .88f, size.height * .10f)
+        drawCircle(Brush.radialGradient(listOf(palette.light.copy(alpha = .20f), Color.Transparent),
+            center = sun, radius = artworkPx(18f)), artworkPx(18f), sun)
+        drawCircle(palette.light.copy(alpha = .8f), artworkPx(6f), sun)
     }
 }
+
+private fun DrawScope.drawTreeOrnaments(palette: MemoryTreePalette) {
+    fun at(x: Float, y: Float) = Offset(size.width * x, size.height * y)
+    when (palette.theme) {
+        TreeTheme.SUMMER, TreeTheme.SPRING, TreeTheme.RAINBOW -> {
+            val flowers = if (palette.theme == TreeTheme.SPRING) listOf(.24f, .31f, .69f, .77f)
+                else listOf(.27f, .73f)
+            flowers.forEachIndexed { i, x ->
+                val base = at(x, .955f)
+                val bloom = base - Offset(artworkPx(if (i % 2 == 0) 2f else -2f), artworkPx(9f + i % 2 * 3))
+                drawLine(palette.ground.copy(alpha = .9f), base, bloom, artworkPx(1f), cap = StrokeCap.Round)
+                val petals = if (palette.theme == TreeTheme.RAINBOW && i % 2 == 1) palette.light else palette.ornament
+                drawWoodlandFlower(bloom, petals, palette.barkLight, artworkPx(3.2f))
+                drawOval(palette.foliage.copy(alpha = .85f), base - Offset(artworkPx(5f), artworkPx(5f)),
+                    Size(artworkPx(5f), artworkPx(2.4f)))
+            }
+        }
+        TreeTheme.BLOSSOM -> {
+            listOf(.13f to .14f, .83f to .15f, .06f to .43f, .94f to .34f, .17f to .77f, .78f to .77f)
+                .forEach { (x, y) -> drawWoodlandFlower(at(x, y), palette.ornament, palette.light, artworkPx(3.8f)) }
+            listOf(.29f to .83f, .76f to .87f, .34f to .94f).forEachIndexed { i, (x, y) ->
+                val center = at(x, y)
+                rotate(if (i % 2 == 0) -28f else 30f, center) {
+                    drawOval(palette.ornament.copy(alpha = .85f), center - Offset(artworkPx(2f), artworkPx(1.2f)),
+                        Size(artworkPx(4f), artworkPx(2.4f)))
+                }
+            }
+        }
+        TreeTheme.WINTER -> {
+            listOf(.09f to .18f, .93f to .16f, .96f to .63f, .08f to .76f, .84f to .83f)
+                .forEach { (x, y) ->
+                    val center = at(x, y)
+                    repeat(3) { i ->
+                        rotate(i * 60f, center) {
+                            drawLine(palette.ornament.copy(alpha = .9f), center - Offset(artworkPx(3.3f), 0f),
+                                center + Offset(artworkPx(3.3f), 0f), artworkPx(.9f), cap = StrokeCap.Round)
+                        }
+                    }
+                }
+            drawOval(palette.ornament.copy(alpha = .72f), at(.23f, .94f), Size(size.width * .17f, artworkPx(6f)))
+            drawOval(palette.ornament.copy(alpha = .65f), at(.64f, .945f), Size(size.width * .16f, artworkPx(5f)))
+        }
+        TreeTheme.AUTUMN -> {
+            listOf(.25f, .73f).forEachIndexed { i, x ->
+                val stem = at(x, .958f)
+                val capCenter = stem - Offset(0f, artworkPx(if (i == 0) 7f else 10f))
+                val radius = artworkPx(if (i == 0) 5f else 6f)
+                drawLine(palette.barkLight, stem, capCenter, artworkPx(2.5f), cap = StrokeCap.Round)
+                val cap = Path().apply {
+                    moveTo(capCenter.x - radius, capCenter.y)
+                    cubicTo(capCenter.x - radius, capCenter.y - radius * 1.2f,
+                        capCenter.x + radius, capCenter.y - radius * 1.2f, capCenter.x + radius, capCenter.y)
+                    quadraticTo(capCenter.x, capCenter.y + radius * .3f, capCenter.x - radius, capCenter.y)
+                    close()
+                }
+                drawPath(cap, palette.ornament)
+                drawCircle(palette.light.copy(alpha = .85f), artworkPx(.8f), capCenter - Offset(radius * .25f, radius * .4f))
+                drawCircle(palette.light.copy(alpha = .8f), artworkPx(.7f), capCenter + Offset(radius * .3f, -radius * .25f))
+            }
+        }
+        TreeTheme.NIGHT -> {
+            listOf(.14f to .78f, .84f to .79f, .74f to .89f).forEach { (x, y) ->
+                val center = at(x, y)
+                drawCircle(Brush.radialGradient(listOf(palette.light.copy(alpha = .2f), Color.Transparent),
+                    center = center, radius = artworkPx(7f)), artworkPx(7f), center)
+                drawCircle(palette.light.copy(alpha = .85f), artworkPx(1.2f), center)
+            }
+        }
+    }
+}
+
+private fun DrawScope.drawWoodlandFlower(center: Offset, petals: Color, heart: Color, radius: Float) {
+    repeat(5) { i ->
+        val angle = i * (2 * Math.PI / 5) - Math.PI / 2
+        val petal = center + Offset(cos(angle).toFloat() * radius * .8f, sin(angle).toFloat() * radius * .8f)
+        drawCircle(petals, radius * .6f, petal)
+    }
+    drawCircle(heart, radius * .35f, center)
+}
+
+// Match the full tree's detail sizes while keeping the profile preview delicately drawn.
+private fun DrawScope.artworkPx(dp: Float): Float =
+    dp.dp.toPx() * (size.height / 315.dp.toPx()).coerceIn(.3f, 1f)

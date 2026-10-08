@@ -1,0 +1,16 @@
+{
+  "log": "native-final-landscape-card-repeat.log",
+  "elapsed_seconds": 125.827,
+  "test_count": 1,
+  "passed": 1,
+  "failed": 0,
+  "incomplete_logs": [],
+  "results": [
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory",
+      "status_code": 0,
+      "passed": true
+    }
+  ]
+}

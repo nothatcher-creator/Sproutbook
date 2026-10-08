@@ -1,0 +1,16 @@
+{
+  "log": "native-inventory-diagnostic.log",
+  "elapsed_seconds": 155.354,
+  "test_count": 1,
+  "passed": 0,
+  "failed": 1,
+  "incomplete_logs": [],
+  "results": [
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "inventorySaveAdjustAndDelete",
+      "status_code": -2,
+      "passed": false
+    }
+  ]
+}

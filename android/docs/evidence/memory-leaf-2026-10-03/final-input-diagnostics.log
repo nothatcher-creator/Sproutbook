@@ -1,0 +1,32 @@
+--------- beginning of main
+--------- beginning of system
+10-04 20:18:40.889  3330  3349 I SproutMemorySaveQa: stage=before; targetPx=Rect.fromLTRB(20.0, 612.0, 340.0, 664.0); targetCenterPx=Offset(180.0, 638.0); unclippedDp=DpRect(left=20.0.dp, top=612.0.dp, right=340.0.dp, bottom=664.0.dp); activityFocus=false
+10-04 20:18:40.889  3330  3349 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145084917)
+10-04 20:18:40.889  3330  3349 I SproutMemorySaveQa: grandparent=false
+10-04 20:18:48.316  3330  3349 I SproutMemorySaveQa: stage=after; targetPx=Rect.fromLTRB(0.0, 0.0, 0.0, 0.0); targetCenterPx=Offset(0.0, 0.0); unclippedDp=DpRect(left=20.0.dp, top=532.0.dp, right=340.0.dp, bottom=584.0.dp); activityFocus=false
+10-04 20:18:48.316  3330  3349 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145084917)
+10-04 20:18:48.316  3330  3349 I SproutMemorySaveQa: grandparent=false
+10-04 20:19:50.876  3330  3349 I SproutMemorySaveQa: stage=failed-db-wait; targetPx=Rect.fromLTRB(0.0, 0.0, 0.0, 0.0); targetCenterPx=Offset(0.0, 0.0); unclippedDp=DpRect(left=20.0.dp, top=532.0.dp, right=340.0.dp, bottom=584.0.dp); activityFocus=false
+10-04 20:19:50.876  3330  3349 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145084917)
+10-04 20:19:50.876  3330  3349 I SproutMemorySaveQa: grandparent=false
+10-04 20:22:00.930  3330  3349 I SproutInventoryQa: Before Use one: stock=[Inventory(id=9d4293d8-69cd-4718-89c7-3176d44f92c5, childId=qa-child, name=Wipes, quantity=3.0, unit=items, threshold=0.0, category=Supplies, updatedAt=1791145308548)]; activityFocus=true
+10-04 20:22:01.155  3330  3349 I SproutInventoryQa: stage=before-tap; targetPx=Rect.fromLTRB(38.0, 610.0, 132.0, 650.0); targetCenterPx=Offset(85.0, 630.0); unclippedDp=DpRect(left=38.0.dp, top=610.0.dp, right=132.0.dp, bottom=650.0.dp); viewportPx=Rect.fromLTRB(0.0, 92.0, 360.0, 672.0); activityFocus=true
+10-04 20:22:03.576  3330  3349 I SproutInventoryQa: stage=after-tap; targetPx=Rect.fromLTRB(38.0, 610.0, 132.0, 650.0); targetCenterPx=Offset(85.0, 630.0); unclippedDp=DpRect(left=38.0.dp, top=610.0.dp, right=132.0.dp, bottom=650.0.dp); viewportPx=Rect.fromLTRB(0.0, 92.0, 360.0, 672.0); activityFocus=true
+10-04 20:27:34.940  3656  3675 I SproutMemorySaveQa: stage=before; targetPx=Rect.fromLTRB(20.0, 612.0, 340.0, 664.0); targetCenterPx=Offset(180.0, 638.0); unclippedDp=DpRect(left=20.0.dp, top=612.0.dp, right=340.0.dp, bottom=664.0.dp); activityFocus=false
+10-04 20:27:34.940  3656  3675 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145597463)
+10-04 20:27:34.940  3656  3675 I SproutMemorySaveQa: grandparent=false
+10-04 20:27:38.018  3656  3675 I SproutMemorySaveQa: stage=after; targetPx=Rect.fromLTRB(20.0, 612.0, 340.0, 664.0); targetCenterPx=Offset(180.0, 638.0); unclippedDp=DpRect(left=20.0.dp, top=612.0.dp, right=340.0.dp, bottom=664.0.dp); activityFocus=false
+10-04 20:27:38.018  3656  3675 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145597463)
+10-04 20:27:38.018  3656  3675 I SproutMemorySaveQa: grandparent=false
+10-04 20:32:22.113  3844  3863 I SproutMemorySaveQa: stage=before; targetPx=Rect.fromLTRB(20.0, 642.0, 340.0, 694.0); targetCenterPx=Offset(180.0, 668.0); unclippedDp=DpRect(left=20.0.dp, top=642.0.dp, right=340.0.dp, bottom=694.0.dp); activityFocus=false
+10-04 20:32:22.113  3844  3863 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145897412)
+10-04 20:32:22.113  3844  3863 I SproutMemorySaveQa: grandparent=false
+10-04 20:32:25.128  3844  3863 I SproutMemorySaveQa: stage=after; targetPx=Rect.fromLTRB(20.0, 642.0, 340.0, 694.0); targetCenterPx=Offset(180.0, 668.0); unclippedDp=DpRect(left=20.0.dp, top=642.0.dp, right=340.0.dp, bottom=694.0.dp); activityFocus=false
+10-04 20:32:25.128  3844  3863 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=A picnic under the old oak, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791145944446)
+10-04 20:32:25.128  3844  3863 I SproutMemorySaveQa: grandparent=false
+10-04 20:57:27.279  4570  4589 I SproutMemorySaveQa: stage=before; targetPx=Rect.fromLTRB(100.0, 308.0, 700.0, 360.0); targetCenterPx=Offset(400.0, 334.0); unclippedDp=DpRect(left=100.0.dp, top=308.0.dp, right=700.0.dp, bottom=360.0.dp); activityFocus=false
+10-04 20:57:27.279  4570  4589 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=First woodland picnic, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791147386052)
+10-04 20:57:27.279  4570  4589 I SproutMemorySaveQa: grandparent=false
+10-04 20:57:30.152  4570  4589 I SproutMemorySaveQa: stage=after; targetPx=Rect.fromLTRB(100.0, 308.0, 700.0, 360.0); targetCenterPx=Offset(400.0, 334.0); unclippedDp=DpRect(left=100.0.dp, top=308.0.dp, right=700.0.dp, bottom=360.0.dp); activityFocus=false
+10-04 20:57:30.152  4570  4589 I SproutMemorySaveQa: memory=Memory(id=leaf-keepsake, childId=qa-child, title=A picnic under the old oak, occurredOn=20685, category=Family moment, notes=A little day to remember., photo=null, anchor=0, chapter=0, updatedAt=1791147449461)
+10-04 20:57:30.152  4570  4589 I SproutMemorySaveQa: grandparent=false

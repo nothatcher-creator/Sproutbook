@@ -1,0 +1,6 @@
+  isSleeping=false
+          state=RESUMED stopped=false delayedResume=false finishing=false
+  isSleeping=false
+    mKeyguardShowing=false
+  mCurrentFocus=null
+  mCurrentFocus=Window{b275db1 u0 com.nothatcher.sproutbook/com.nothatcher.sproutbook.MainActivity}

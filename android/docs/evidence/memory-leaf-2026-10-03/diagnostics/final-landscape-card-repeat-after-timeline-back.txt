@@ -1,0 +1,3 @@
+  mCurFocusedWindow=android.os.BinderProxy@53e234d softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE client=ClientState{2489bb2 uid=10116 pid=4570 displayId=0}
+  mShowRequested=false mShowExplicitlyRequested=false mShowForced=false mInputShown=false
+  mServedView=DecorView@70765f3[MainActivity]

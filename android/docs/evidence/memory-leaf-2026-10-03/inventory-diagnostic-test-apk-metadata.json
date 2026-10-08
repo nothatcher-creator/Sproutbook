@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-04T11:14:42.577954+00:00",
+  "reason": "Test-only readiness/diagnostic fixture rebuild after initial native run; production artifacts remain byte-identical to full integrated build.",
+  "build_log": "inventory-test-build.log",
+  "path": "/workspace/sprout-build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+  "bytes": 1706901,
+  "sha256": "0f5fc38bfe8ee47d1bbbba57172ee4ed3f18c0bb28d7c0980ce4a487b7539d60",
+  "certificate_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3",
+  "unchanged_full_build_artifacts": [
+    "debug_apk",
+    "unsigned_release_apk",
+    "unsigned_release_aab",
+    "r8_mapping"
+  ]
+}

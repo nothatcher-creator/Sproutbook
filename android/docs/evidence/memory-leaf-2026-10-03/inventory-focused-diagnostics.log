@@ -1,0 +1,82 @@
+--------- beginning of main
+--------- beginning of system
+--------- beginning of main
+--------- beginning of system
+10-04 11:23:27.463  3852  3871 I SproutInventoryQa: Before Use one: stock=[Inventory(id=3761718f-8cd8-4f53-87d4-53d8537c3c79, childId=qa-child, name=Wipes, quantity=3.0, unit=items, threshold=0.0, category=Supplies, updatedAt=1791112997861)]; activityFocus=true
+10-04 11:23:27.965  3852  3871 I SproutInventoryQa: stage=before-tap; targetPx=Rect.fromLTRB(38.0, 610.0, 132.0, 650.0); targetCenterPx=Offset(85.0, 630.0); unclippedDp=DpRect(left=38.0.dp, top=610.0.dp, right=132.0.dp, bottom=650.0.dp); viewportPx=Rect.fromLTRB(0.0, 92.0, 360.0, 672.0); activityFocus=true
+10-04 11:23:33.682  3852  3871 I SproutInventoryQa: stage=after-tap; targetPx=Rect.fromLTRB(38.0, 610.0, 132.0, 650.0); targetCenterPx=Offset(85.0, 630.0); unclippedDp=DpRect(left=38.0.dp, top=610.0.dp, right=132.0.dp, bottom=650.0.dp); viewportPx=Rect.fromLTRB(0.0, 92.0, 360.0, 672.0); activityFocus=true
+10-04 11:24:36.583  3852  3871 I SproutInventoryQa: stage=failure; targetPx=Rect.fromLTRB(38.0, 610.0, 132.0, 650.0); targetCenterPx=Offset(85.0, 630.0); unclippedDp=DpRect(left=38.0.dp, top=610.0.dp, right=132.0.dp, bottom=650.0.dp); viewportPx=Rect.fromLTRB(0.0, 92.0, 360.0, 672.0); activityFocus=true
+10-04 11:24:38.701  3852  3871 E SproutInventoryQa: After Use one: stock=[Inventory(id=3761718f-8cd8-4f53-87d4-53d8537c3c79, childId=qa-child, name=Wipes, quantity=3.0, unit=items, threshold=0.0, category=Supplies, updatedAt=1791112997861)]; grandparent=false; activityFocus=true
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa: printToLog:
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa: Printing with useUnmergedTree = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa: Node #1 at (l=0.0, t=0.0, r=360.0, b=800.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:  |-Node #5 at (l=0.0, t=0.0, r=360.0, b=800.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:    IsContainer = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |-Node #255 at (l=0.0, t=92.0, r=360.0, b=672.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     | CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@bfa5d01'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     | IsTraversalGroup = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=100.0, reverseScrolling=false)'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     | Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #258 at (l=20.0, t=110.0, r=44.0, b=134.0)px, Tag: 'motion-icon-inventory'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Woodland playback = 'Still'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | [HideFromAccessibility]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #260 at (l=56.0, t=104.0, r=340.0, b=176.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Text = '[The family cupboard]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #261 at (l=56.0, t=176.0, r=319.0, b=196.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Text = '[Small supplies, fewer last-minute surprises]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #263 at (l=20.0, t=210.0, r=340.0, b=298.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Focused = 'false'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Actions = [OnClick, RequestFocus]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | MergeDescendants = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #265 at (l=36.0, t=242.0, r=60.0, b=266.0)px, Tag: 'motion-icon-shopping'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Woodland playback = 'Still'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | [HideFromAccessibility]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #268 at (l=72.0, t=230.0, r=178.0, b=254.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Text = '[Shopping list]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #269 at (l=72.0, t=258.0, r=276.0, b=278.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Text = '[Low supplies and your next shop]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #270 at (l=308.0, t=246.0, r=324.0, b=262.0)px, Tag: 'motion-icon-next'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |    Woodland playback = 'Still'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |    [HideFromAccessibility]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #272 at (l=20.0, t=312.0, r=340.0, b=364.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Focused = 'false'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Role = 'Button'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Actions = [OnClick, RequestFocus]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | MergeDescendants = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #274 at (l=124.0, t=326.0, r=148.0, b=350.0)px, Tag: 'motion-icon-add'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Woodland playback = 'Still'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | [HideFromAccessibility]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #276 at (l=156.0, t=327.0, r=237.0, b=349.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |    Text = '[Add supply]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #277 at (l=20.0, t=364.0, r=340.0, b=428.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | EditableText = ''
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Focused = 'false'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | ImeAction = 'Default'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | InputText = ''
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | IsEditable = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | TextSelectionRange = 'TextRange(0, 0)'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | MergeDescendants = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #286 at (l=36.0, t=388.0, r=144.0, b=412.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |    Text = '[Find supplies]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |-Node #287 at (l=20.0, t=428.0, r=340.0, b=476.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | IsTraversalGroup = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  | Actions = [ScrollBy, ScrollByOffset]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |-Node #288 at (l=20.0, t=436.0, r=72.0, b=468.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Focused = 'false'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Role = 'Checkbox'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Selected = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | Actions = [OnClick, RequestFocus]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  | MergeDescendants = 'true'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |  |-Node #291 at (l=36.0, t=441.0, r=56.0, b=463.0)px
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |    Text = '[All]'
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:     |  |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+10-04 11:24:39.061  3852  3871 D SproutInventoryQa:   

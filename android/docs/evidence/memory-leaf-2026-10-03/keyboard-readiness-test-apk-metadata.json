@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-04T20:25:48.203619+00:00",
+  "reason": "Test-only keyboard readiness fixture rebuild after final-normal Save race; production artifacts remain byte-identical to final integrated build.",
+  "build_log": "keyboard-ready-test-build.log",
+  "path": "/workspace/sprout-build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+  "bytes": 1711884,
+  "sha256": "9e135776dcb7577f53a87dd16c4c36780fb87af69f908706725439363336d908",
+  "certificate_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3",
+  "unchanged_full_build_artifacts": [
+    "debug_apk",
+    "unsigned_release_apk",
+    "unsigned_release_aab",
+    "r8_mapping"
+  ]
+}

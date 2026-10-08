@@ -2,6 +2,7 @@ package com.nothatcher.sproutbook.data
 
 import com.nothatcher.sproutbook.core.ProfileRules
 import com.nothatcher.sproutbook.core.HomeOrganizerCatalog
+import com.nothatcher.sproutbook.core.TreeThemes
 import java.time.LocalDate
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.sync.Mutex
@@ -27,7 +28,7 @@ class FamilyRepository(
         require(ProfileRules.validName(child.name)) { "Enter a name between 1 and 80 characters." }
         require(child.stage in Stage.entries.map { it.name }) { "Choose a stage." }
         require(child.accent in listOf("Forest", "Moss", "Amber", "Sky")) { "Choose a profile accent." }
-        require(child.treeStyle in listOf("Summer", "Autumn", "Night")) { "Choose a memory tree style." }
+        require(TreeThemes.find(child.treeStyle) != null) { "Choose a memory tree style." }
         require(
             child.birthday == null ||
                 ProfileRules.validBirthday(LocalDate.ofEpochDay(child.birthday), LocalDate.now())

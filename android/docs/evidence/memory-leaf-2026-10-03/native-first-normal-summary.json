@@ -1,0 +1,102 @@
+{
+  "test_count": 16,
+  "passed": 9,
+  "results": [
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "grandparentCanReadPhotoAndLongStoryAndUseAccessibleOpenWithoutMutation",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "enablingGrandparentModeRevokesArrangementAndOpenEditorControls",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.MemoryLeafFlowTest",
+      "test": "todayLeafDeepLinkSurvivesRecreationAndDismissalStaysDismissed",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "pregnancySessionsPersist",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "foodAndMealSave",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "memoryAddTimelineEditDelete",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.CareFlowTest",
+      "test": "inventorySaveAdjustAndDelete",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "toothTapOnlyViewsLongPressChanges",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "arrangeLeafSnapsAndScrollDoesNotOpenIt",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "longPressDragSnapsToBranch",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "scrollingAcrossToothNeverChangesOrOpensIt",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.GestureTest",
+      "test": "calendarLongPressKeepsDate",
+      "status_code": 0,
+      "passed": true
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeAccessibilityTest",
+      "test": "nativeAccessibilityCanInspectFullCanopyAndArrange",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeThemeFlowTest",
+      "test": "profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild",
+      "status_code": -2,
+      "passed": false
+    },
+    {
+      "class": "com.nothatcher.sproutbook.TreeThemeFlowTest",
+      "test": "newThemeGalleryKeepsMemoryRecordsAndPlacementInLightAndDarkMode",
+      "status_code": 0,
+      "passed": true
+    }
+  ]
+}

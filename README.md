@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-debug.apk">
-    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.7.0 for Android" />
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SproutBook-3.8.0-debug.apk">
+    <img src="docs/assets/download-android.svg" width="360" alt="Download SproutBook 3.8.0 for Android" />
   </a>
 </p>
 <p align="center">
-  <strong>Android 8.0+ · Version 3.7.0 · Evaluation pre-release</strong><br />
-  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.7.0-debug.apk">Direct APK download</a> ·
-  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.7.0">Release notes</a> ·
+  <strong>Android 8.0+ · Version 3.8.0 · Evaluation pre-release</strong><br />
+  <a href="https://sproutbook-woodland.nothatch.chatgpt.site/downloads/SproutBook-3.8.0-debug.apk">Direct APK download</a> ·
+  <a href="https://github.com/nothatcher-creator/Sproutbook/releases/tag/v3.8.0">Release notes</a> ·
   <a href="docs/INSTALL.md">Installation guide</a>
 </p>
 
@@ -56,6 +56,13 @@ Make Today fit your family: choose the sections, put shortcuts in your preferred
 ### A closer look at the native app
 
 <p align="center">
+  <img src="website/assets/memory-leaf-screen-v38.png" width="230" alt="SproutBook 3.8 leaf-shaped memory keepsake with story details and Close and Edit memory controls" />
+  <img src="website/assets/memory-rainbow-screen-v38.png" width="230" alt="SproutBook 3.8 Rainbow Memory Tree with individually placed sample memory leaves" />
+</p>
+
+*Native 3.8 emulator screens use sample family data. The earlier screens below show the retained family tools.*
+
+<p align="center">
   <img src="docs/assets/home-organizer-screen-v37.png" width="230" alt="SproutBook 3.7 Home screen organizer with section visibility and move controls" />
   <img src="docs/assets/home-quick-actions-screen-v37.png" width="230" alt="SproutBook 3.7 chosen quick actions in a personal order" />
   <img src="docs/assets/custom-background-screen-v37.png" width="230" alt="SproutBook 3.7 Today page with a custom background photo and readable care cards" />
@@ -92,7 +99,17 @@ Make Today fit your family: choose the sections, put shortcuts in your preferred
 2. Open the APK on your Android phone. If prompted, allow installation from the browser or Files app you used.
 3. Install, open SproutBook, and add your child's profile.
 
-For updates, keep your existing app installed and use the same signing identity. Export and keep a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SHA256SUMS-3.7.0.txt) to verify the download.
+For updates, keep your existing app installed and use the same signing identity. Export and keep a backup before updating. See the [installation guide](docs/INSTALL.md) for details and the [SHA-256 checksums](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SHA256SUMS-3.8.0.txt) to verify the download.
+
+## Leaves worth keeping · 3.8.0
+
+Tap a memory leaf to open a leaf-shaped keepsake card with its story, photo, date and chapter. **Edit memory** opens the familiar editor; reading a memory no longer starts an edit. The same card opens from the timeline and Today tree. Long stories scroll within the card, and Grandparent mode keeps the view read-only.
+
+Choose **Summer, Autumn, Night, Spring, Blossom, Winter, or Rainbow** in each child's profile. Preview the woodland before saving. Seasonal details include flowers, blossom petals, frost and a rainbow, with the existing branch positions and category colors preserved.
+
+Room schema 13 and backup format 5 remain unchanged. Earlier 3.7 apps cannot restore a backup containing the four newly named themes; use 3.8 or newer to restore those exports. Keep your existing evaluation installation to retain records when updating.
+
+[Release notes](docs/RELEASE-3.8.0.md) · [Native verification](android/docs/QA-3.8.md)
 
 ## A personal Today · 3.7.0
 
@@ -142,6 +159,6 @@ Parenting and health guidance is general education. For an emergency, contact em
 
 [Showcase website](https://sproutbook-woodland.nothatch.chatgpt.site) · [Releases](https://github.com/nothatcher-creator/Sproutbook/releases) · [Report a problem or suggest an idea](https://github.com/nothatcher-creator/Sproutbook/issues) · [Figma design reference](https://www.figma.com/design/SjQl6MaLL4e5YqK10grN2c)
 
-The [3.7.0 source download](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-source.zip) contains the complete Kotlin source project, editable artwork, motion assets, and QA evidence. The recovered native project is now in [`android/`](android/); showcase source stays in [`website/`](website/). Build instructions and the persistent [continuation checkpoint](docs/CONTINUATION.md) let another session continue from verified work. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
+The [3.8.0 source download](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SproutBook-3.8.0-source.zip) contains the complete Kotlin source project, editable artwork, motion assets, and QA evidence. The recovered native project is now in [`android/`](android/); showcase source stays in [`website/`](website/). Build instructions and the persistent [continuation checkpoint](docs/CONTINUATION.md) let another session continue from verified work. The Figma reference includes the visual system and earlier artwork variants. Cloud sharing, partner accounts, widgets, and iOS are future work.
 
 <p align="center"><em>A small place to remember, plan, and grow together.</em></p>

@@ -1,0 +1,1280 @@
+--------- beginning of main
+10-04 02:27:10.022  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@4e70011
+10-04 02:27:10.023  1928  3163 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:10.083  1928  3163 I chatty  : uid=1000(system) Binder:1928_C identical 38 lines
+10-04 02:27:10.083  1928  3163 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:10.110  1709  1763 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+--------- beginning of system
+10-04 02:27:10.475  1928  1945 W Looper  : Slow dispatch took 130ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=31
+10-04 02:27:10.758  1709  1763 I chatty  : uid=1000(system) HwBinder:1709_2 identical 2 lines
+10-04 02:27:10.760  1709  1763 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:10.787  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:10.847  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:10.847  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:10.924  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:10.942  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:27:10.968  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:27:11.011  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dfe686e in: STOPPED
+10-04 02:27:11.041  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@dfe686e
+10-04 02:27:11.326  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:27:11.342  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:27:11.377  3380  3380 I Choreographer: Skipped 58 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:11.751  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:11.751  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 8 lines
+10-04 02:27:11.751  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:11.865  1928  3163 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:11.866  1928  3163 I chatty  : uid=1000(system) Binder:1928_C identical 8 lines
+10-04 02:27:11.866  1928  3163 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:12.076  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:12.076  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:12.140  1709  1763 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:12.162  1709  1763 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:12.173  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:12.211  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:12.259  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:12.260  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:27:12.260  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:12.291  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:12.300  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=19
+10-04 02:27:13.002  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:14.150  1928  2168 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1992) waiters=0 in void com.android.server.am.ActivityManagerService.unregisterReceiver(android.content.IIntentReceiver) for 973ms
+10-04 02:27:14.267  3434  3434 I Choreographer: Skipped 64 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:14.379  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:14.399  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:14.809  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:14.809  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:14.867  3227  3238 I ndroid.systemu: NativeAlloc concurrent copying GC freed 10039(683KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 4905KB/9811KB, paused 94us total 1.762s
+10-04 02:27:14.918  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dfe686e in: DESTROYED
+10-04 02:27:14.919  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:27:15.006  3380  3380 I Choreographer: Skipped 191 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:15.051  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@db6258]
+10-04 02:27:15.058  3380  3400 I TestRunner: finished: toothTapOnlyViewsLongPressChanges(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:15.087  3380  3400 I TestRunner: started: arrangeLeafSnapsAndScrollDoesNotOpenIt(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:15.127  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@9cabd1a]
+10-04 02:27:15.149  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:27:15.295  1928  2168 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:27:16.275  1928  1948 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at int com.android.server.wm.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.wm.SafeActivityOptions, boolean, int, com.android.server.wm.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord, boolean)(ActivityStarter.java:1217) waiters=0 in void com.android.server.wm.InputMonitor$1.run() for 976ms
+10-04 02:27:16.396  1928  1948 I Choreographer: Skipped 84 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:16.504  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:16.681  2288  2544 I OpenGLRenderer: Davey! duration=838ms; Flags=0, IntendedVsync=780226591987, Vsync=780226591987, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=780231143677, AnimationStart=780231178798, PerformTraversalsStart=780231539449, DrawStart=780231822946, SyncQueued=780232511859, SyncStart=780284552042, IssueDrawCommandsStart=780286935473, SwapBuffers=781111771818, FrameCompleted=781117071174, DequeueBufferDuration=682000, QueueBufferDuration=1004000, 
+10-04 02:27:16.684  2288  2288 I Choreographer: Skipped 38 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:16.708  1928  1947 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{c86c2b9 u0 com.android.launcher3/.Launcher t2}
+10-04 02:27:16.770  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:16.789  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 28 lines
+10-04 02:27:16.789  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:16.795  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@becf341
+10-04 02:27:16.810  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:16.929  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 18 lines
+10-04 02:27:16.929  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:17.112  1928  3163 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at void com.android.server.wm.ActivityTaskManagerService.activityPaused(android.os.IBinder)(ActivityTaskManagerService.java:1696) waiters=0 in void com.android.server.wm.WindowManagerService.setShelfHeight(boolean, int) for 338ms
+10-04 02:27:17.135  1928  1947 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at void com.android.server.wm.ActivityTaskManagerService.activityPaused(android.os.IBinder)(ActivityTaskManagerService.java:1696) waiters=1 in void com.android.server.wm.ActivityMetricsLogger.checkVisibility(com.android.server.wm.TaskRecord, com.android.server.wm.ActivityRecord) for 348ms
+10-04 02:27:17.230  2288  2288 I Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:17.314  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: PRE_ON_CREATE
+10-04 02:27:17.315  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:27:17.458  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: CREATED
+10-04 02:27:17.459  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@4a13640
+10-04 02:27:17.480  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: STARTED
+10-04 02:27:17.481  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@4a13640
+10-04 02:27:17.485  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: RESUMED
+10-04 02:27:17.487  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@4a13640
+10-04 02:27:17.497  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:18.329  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:18.374  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:18.399  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:18.483  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:18.505  3380  3402 I OpenGLRenderer: Davey! duration=1132ms; Flags=1, IntendedVsync=781833601160, Vsync=782016934486, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=782024105746, AnimationStart=782024205198, PerformTraversalsStart=782024214761, DrawStart=782904576550, SyncQueued=782946017425, SyncStart=782947925720, IssueDrawCommandsStart=782948518666, SwapBuffers=782964370511, FrameCompleted=782968173197, DequeueBufferDuration=488000, QueueBufferDuration=1644000, 
+10-04 02:27:18.573  3380  3380 I Choreographer: Skipped 56 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:18.720  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:27:18.721  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:27:18.721  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:27:18.721  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:27:19.034  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +1s96ms
+10-04 02:27:19.175  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:27:19.175  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:27:19.176  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:27:19.984  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:27:19.986  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:27:20.437  3380  3380 I Choreographer: Skipped 53 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:20.516  3380  3402 I OpenGLRenderer: Davey! duration=967ms; Flags=0, IntendedVsync=784010174858, Vsync=784893508156, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=784900636748, AnimationStart=784900769116, PerformTraversalsStart=784901146745, DrawStart=784901597860, SyncQueued=784939805327, SyncStart=784941183820, IssueDrawCommandsStart=784943546018, SwapBuffers=784963617583, FrameCompleted=784979290384, DequeueBufferDuration=566000, QueueBufferDuration=13877000, 
+10-04 02:27:20.797  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:27:20.813  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:27:20.814  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:27:20.857  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +3s248ms
+10-04 02:27:22.441  3380  3380 I Choreographer: Skipped 75 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:22.523  3380  3402 I OpenGLRenderer: Davey! duration=1340ms; Flags=0, IntendedVsync=785643518962, Vsync=786893518912, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=786904914899, AnimationStart=786905031615, PerformTraversalsStart=786906561058, DrawStart=786906979836, SyncQueued=786953478579, SyncStart=786955728668, IssueDrawCommandsStart=786960330242, SwapBuffers=786979997090, FrameCompleted=786986598947, DequeueBufferDuration=617000, QueueBufferDuration=4827000, 
+10-04 02:27:24.067  3380  3380 I Choreographer: Skipped 38 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:24.168  3380  3402 I OpenGLRenderer: Davey! duration=737ms; Flags=0, IntendedVsync=787893588210, Vsync=788526921518, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=788531074371, AnimationStart=788531212482, PerformTraversalsStart=788531224997, DrawStart=788531802373, SyncQueued=788600480418, SyncStart=788601610779, IssueDrawCommandsStart=788602105587, SwapBuffers=788624595396, FrameCompleted=788632010072, DequeueBufferDuration=620000, QueueBufferDuration=3757000, 
+10-04 02:27:24.821  3380  3380 I Choreographer: Skipped 34 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:26.441  3380  3380 I Choreographer: Skipped 77 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:26.779  3380  3402 I OpenGLRenderer: Davey! duration=1631ms; Flags=0, IntendedVsync=789610273463, Vsync=790893606745, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=790904992962, AnimationStart=790905241912, PerformTraversalsStart=790906281782, DrawStart=790906872822, SyncQueued=791022541289, SyncStart=791023613628, IssueDrawCommandsStart=791024158607, SwapBuffers=791223471040, FrameCompleted=791242904333, DequeueBufferDuration=6952000, QueueBufferDuration=11416000, 
+10-04 02:27:26.832  1928  1943 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:27:27.020  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:27.084  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: PAUSED
+10-04 02:27:27.086  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@4a13640
+10-04 02:27:27.114  1928  1943 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:27.134  1928  1943 I chatty  : uid=1000(system) Binder:1928_2 identical 28 lines
+10-04 02:27:27.134  1928  1943 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:27.141  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@e52f68
+10-04 02:27:27.145  1928  1943 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:27.223  1928  1943 I chatty  : uid=1000(system) Binder:1928_2 identical 38 lines
+10-04 02:27:27.223  1928  1943 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:27.233  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:27.280  1928  1948 W system_server: Long monitor contention with owner Binder:1928_2 (1943) at void com.android.server.wm.ActivityTaskManagerService.activityPaused(android.os.IBinder)(ActivityTaskManagerService.java:1696) waiters=0 in void com.android.server.wm.WindowAnimator.lambda$new$1$WindowAnimator(long) for 164ms
+10-04 02:27:27.611  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:27.795  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:27.809  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:27.811  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:27.841  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:27.846  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: STOPPED
+10-04 02:27:27.937  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@4a13640
+10-04 02:27:28.335  3380  3380 I Choreographer: Skipped 55 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:28.600  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:28.600  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 8 lines
+10-04 02:27:28.600  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:28.640  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:28.640  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 8 lines
+10-04 02:27:28.640  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:28.860  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:28.882  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:28.884  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:28.921  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:28.960  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:28.960  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:27:28.960  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:28.979  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:29.002  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=21
+10-04 02:27:29.740  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:29.788  1928  1928 W system_server: Long monitor contention with owner Binder:1928_2 (1943) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:556) waiters=0 in android.os.Message android.os.MessageQueue.next() for 561ms
+10-04 02:27:29.879  1928  1928 W Looper  : Slow delivery took 562ms main h=com.android.server.accessibility.AbstractAccessibilityServiceConnection$1 c=null m=32
+10-04 02:27:29.885  1928  1928 W Looper  : Drained
+10-04 02:27:30.024  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +1s93ms
+10-04 02:27:30.426  1928  1947 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=1 in int com.android.server.wm.ActivityTaskManagerService$LocalService.getTopProcessState() for 490ms
+10-04 02:27:30.429  1928  1948 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=2 in void com.android.server.wm.WindowAnimator.lambda$new$1$WindowAnimator(long) for 493ms
+10-04 02:27:30.437  1928  1943 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=2 in int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, int, int, long, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.view.DisplayCutout$ParcelableWrapper, android.util.MergedConfiguration, android.view.SurfaceControl, android.view.InsetsState) for 500ms
+10-04 02:27:30.437  1928  2168 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=3 in void com.android.server.wm.WindowManagerService.statusBarVisibilityChanged(int, int) for 494ms
+10-04 02:27:30.440  1928  3519 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=4 in int com.android.server.wm.ActivityTaskManagerService.getLastResumedActivityUserId() for 453ms
+10-04 02:27:30.690  1928  1945 W system_server: Long monitor contention with owner android.display (1947) at void com.android.server.am.ActivityManagerService.trimApplications(java.lang.String)(ActivityManagerService.java:17233) waiters=0 in void com.android.server.am.ActivityManagerService.dispatchProcessesChanged() for 158ms
+10-04 02:27:30.691  1928  1945 W Looper  : Slow dispatch took 160ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=31
+10-04 02:27:30.840  1928  1945 W Looper  : Slow dispatch took 145ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=53
+10-04 02:27:31.038  2288  2342 I droid.launcher: Waiting for a blocking GC ProfileSaver
+10-04 02:27:31.512  3380  3390 I cher.sproutboo: NativeAlloc concurrent copying GC freed 206222(7673KB) AllocSpace objects, 0(0B) LOS objects, 38% free, 9938KB/15MB, paused 5.182ms total 9.770s
+10-04 02:27:31.594  2288  2306 I droid.launcher: NativeAlloc concurrent copying GC freed 5897(411KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2614KB/5229KB, paused 376us total 2.435s
+10-04 02:27:31.595  2288  2342 I droid.launcher: WaitForGcToComplete blocked ProfileSaver on HeapTrim for 556.556ms
+10-04 02:27:31.658  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:27:31.902  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@4a13640 in: DESTROYED
+10-04 02:27:31.903  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:27:32.002  3380  3380 I Choreographer: Skipped 170 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:32.035  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@9cabd1a]
+10-04 02:27:32.049  3380  3400 E TestRunner: failed: arrangeLeafSnapsAndScrollDoesNotOpenIt(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:32.056  3380  3400 E TestRunner: ----- begin exception -----
+10-04 02:27:32.056  3380  3400 E TestRunner: java.lang.AssertionError: Action performScrollTo() failed.
+10-04 02:27:32.056  3380  3400 E TestRunner: Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+10-04 02:27:32.056  3380  3400 E TestRunner: 
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.GestureTest.arrangeLeafSnapsAndScrollDoesNotOpenIt(GestureTest.kt:60)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+10-04 02:27:32.056  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+10-04 02:27:32.057  3380  3400 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)
+10-04 02:27:32.058  3380  3400 E TestRunner: ----- end exception -----
+10-04 02:27:32.067  3380  3400 I TestRunner: finished: arrangeLeafSnapsAndScrollDoesNotOpenIt(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:32.084  3380  3400 I TestRunner: started: longPressDragSnapsToBranch(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:32.158  1928  1948 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at void com.android.server.wm.ActivityTaskManagerService.activityDestroyed(android.os.IBinder)(ActivityTaskManagerService.java:1751) waiters=0 in void com.android.server.wm.InputMonitor$1.run() for 118ms
+10-04 02:27:32.200  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@26b4855]
+10-04 02:27:32.428  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:27:31.868  1928  1946 I chatty  : uid=1000(system) android.io identical 2 lines
+10-04 02:27:31.944  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:27:32.540  1928  2168 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:27:32.992  1928  1948 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at int com.android.server.wm.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.wm.SafeActivityOptions, boolean, int, com.android.server.wm.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord, boolean)(ActivityStarter.java:1217) waiters=0 in void com.android.server.wm.WindowAnimator.lambda$new$1$WindowAnimator(long) for 324ms
+10-04 02:27:33.010  1928  1947 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at int com.android.server.wm.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.wm.SafeActivityOptions, boolean, int, com.android.server.wm.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord, boolean)(ActivityStarter.java:1217) waiters=1 in void com.android.server.wm.TaskChangeNotificationController.forAllRemoteListeners(com.android.server.wm.TaskChangeNotificationController$TaskStackConsumer, android.os.Message) for 334ms
+10-04 02:27:33.102  1928  1999 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:33.152  1928  1999 I chatty  : uid=1000(system) Binder:1928_3 identical 38 lines
+10-04 02:27:33.152  1928  1999 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:33.158  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@77db7f8
+10-04 02:27:33.470  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:33.660  1928  1948 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:33.720  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:33.721  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:27:33.721  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:33.724  1715  1715 W hw-IPCThreadState: All binder threads in pool (2 threads) busy for 232 ms
+10-04 02:27:33.951  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: PRE_ON_CREATE
+10-04 02:27:33.952  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:27:34.007  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: CREATED
+10-04 02:27:34.008  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@51f62d3
+10-04 02:27:34.139  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: STARTED
+10-04 02:27:34.140  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@51f62d3
+10-04 02:27:34.143  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: RESUMED
+10-04 02:27:34.144  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@51f62d3
+10-04 02:27:34.271  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:34.987  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:35.003  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:35.005  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:35.100  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:35.204  3380  3380 I Choreographer: Skipped 54 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:35.395  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:27:35.395  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:27:35.401  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:27:35.402  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:27:35.734  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:27:35.735  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:27:35.735  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:27:36.951  3380  3380 I Choreographer: Skipped 70 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:37.154  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +2s635ms
+10-04 02:27:37.248  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:37.248  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:37.568  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:37.568  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:38.829  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:38.829  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:38.864  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:27:38.990  3380  3380 I Choreographer: Skipped 72 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:40.012  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:27:40.627  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:27:40.629  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:27:41.010  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:27:42.197  3380  3408 I cher.sproutboo: IncrementDisableThreadFlip blocked for 16.353ms
+10-04 02:27:42.249  3380  3380 I Choreographer: Skipped 68 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:42.601  1928  1999 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:27:42.838  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: PAUSED
+10-04 02:27:42.839  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@51f62d3
+10-04 02:27:42.842  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.842  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 8 lines
+10-04 02:27:42.842  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.853  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:42.856  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.860  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 28 lines
+10-04 02:27:42.860  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.867  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@97e747b
+10-04 02:27:42.883  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.884  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 8 lines
+10-04 02:27:42.884  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.946  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.962  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 02:27:42.962  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:42.968  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:42.979  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:43.113  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:43.148  3434  3434 W sproutbook.tes: Long monitor contention with owner Binder:3434_3 (3450) at void android.os.MessageQueue.nativeWake(long)(MessageQueue.java:-2) waiters=0 in android.os.Message android.os.MessageQueue.next() for 212ms
+10-04 02:27:43.433  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:43.440  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:43.442  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:43.462  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:43.562  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: STOPPED
+10-04 02:27:43.573  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@51f62d3
+10-04 02:27:44.062  1928  1999 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:44.063  1928  1999 I chatty  : uid=1000(system) Binder:1928_3 identical 8 lines
+10-04 02:27:44.063  1928  1999 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:44.119  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:44.119  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 8 lines
+10-04 02:27:44.119  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:44.299  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:44.306  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:44.309  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:44.321  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:44.406  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:44.406  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:27:44.406  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:44.426  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:44.435  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=23
+10-04 02:27:44.961  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:45.238  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +937ms
+10-04 02:27:45.859  1928  1947 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1913) waiters=0 in void com.android.server.am.ActivityManagerService$LocalService.updateActivityUsageStats(android.content.ComponentName, int, int, android.os.IBinder, android.content.ComponentName) for 584ms
+10-04 02:27:46.162  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:46.163  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:46.268  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:27:46.489  3227  3238 I ndroid.systemu: NativeAlloc concurrent copying GC freed 9656(705KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 4953KB/9907KB, paused 14.377ms total 3.076s
+10-04 02:27:46.536  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:46.536  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:46.619  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@51f62d3 in: DESTROYED
+10-04 02:27:46.620  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:27:46.725  3380  3380 I Choreographer: Skipped 112 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:46.748  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@26b4855]
+10-04 02:27:46.766  3380  3400 E TestRunner: failed: longPressDragSnapsToBranch(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:46.770  3380  3400 E TestRunner: ----- begin exception -----
+10-04 02:27:46.770  3380  3400 E TestRunner: java.lang.AssertionError: Action performScrollTo() failed.
+10-04 02:27:46.770  3380  3400 E TestRunner: Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 1 leaves. A timeline is also available.' (ignoreCase: false))
+10-04 02:27:46.770  3380  3400 E TestRunner: 
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.GestureTest.longPressDragSnapsToBranch(GestureTest.kt:76)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+10-04 02:27:46.770  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+10-04 02:27:46.772  3380  3400 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)
+10-04 02:27:46.772  3380  3400 E TestRunner: ----- end exception -----
+10-04 02:27:46.783  3380  3400 I TestRunner: finished: longPressDragSnapsToBranch(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:46.800  3380  3400 I TestRunner: started: scrollingAcrossToothNeverChangesOrOpensIt(com.nothatcher.sproutbook.GestureTest)
+10-04 02:27:46.931  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@93cece5]
+10-04 02:27:46.971  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:27:46.991  1928  2168 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:27:47.062  3380  3390 I cher.sproutboo: NativeAlloc concurrent copying GC freed 213782(8303KB) AllocSpace objects, 0(0B) LOS objects, 43% free, 7901KB/13MB, paused 294us total 7.071s
+10-04 02:27:47.198  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:47.201  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 18 lines
+10-04 02:27:47.201  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:47.204  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@8e0d1c8
+10-04 02:27:47.205  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:47.225  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 18 lines
+10-04 02:27:47.225  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:47.268  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:47.359  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:47.359  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:27:47.359  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:47.612  1928  1947 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1992) waiters=0 in void com.android.server.am.ActivityManagerService$LocalService.updateCpuStats() for 512ms
+10-04 02:27:47.642  1928  1954 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1992) waiters=1 in void com.android.server.am.ActivityManagerService.idleUids() for 375ms
+10-04 02:27:47.697  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:27:47.893  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: PRE_ON_CREATE
+10-04 02:27:47.894  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:27:48.026  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: CREATED
+10-04 02:27:48.039  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@57d53e3
+10-04 02:27:48.054  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: STARTED
+10-04 02:27:48.055  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@57d53e3
+10-04 02:27:48.062  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: RESUMED
+10-04 02:27:48.085  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@57d53e3
+10-04 02:27:48.231  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:48.873  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:48.921  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:48.930  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:48.962  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.InputMonitor$1.run()(InputMonitor.java:117) waiters=0 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 118ms
+10-04 02:27:48.963  1928  1999 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.InputMonitor$1.run()(InputMonitor.java:117) waiters=1 in void com.android.server.wm.WindowManagerService.statusBarVisibilityChanged(int, int) for 117ms
+10-04 02:27:49.024  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:49.071  3380  3402 I OpenGLRenderer: Davey! duration=1072ms; Flags=1, IntendedVsync=812460372212, Vsync=812610372206, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=812618925935, AnimationStart=812619018903, PerformTraversalsStart=812619028655, DrawStart=813430331933, SyncQueued=813486817772, SyncStart=813488822279, IssueDrawCommandsStart=813491671513, SwapBuffers=813503024588, FrameCompleted=813534756607, DequeueBufferDuration=461000, QueueBufferDuration=1487000, 
+10-04 02:27:49.108  3380  3380 I Choreographer: Skipped 52 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:49.223  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:27:49.223  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:27:49.224  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:27:49.224  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:27:49.640  1928  1938 I system_server: NativeAlloc concurrent copying GC freed 67045(3950KB) AllocSpace objects, 47(1836KB) LOS objects, 42% free, 8286KB/14MB, paused 179us total 6.829s
+10-04 02:27:49.689  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:27:49.690  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:27:49.690  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:27:49.869  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +2s106ms
+10-04 02:27:50.220  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:27:50.221  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:27:50.909  3380  3380 I Choreographer: Skipped 56 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:50.989  3380  3402 I OpenGLRenderer: Davey! duration=1024ms; Flags=0, IntendedVsync=814427013431, Vsync=815360346727, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=815372818495, AnimationStart=815372950201, PerformTraversalsStart=815373320186, DrawStart=815373767144, SyncQueued=815418898883, SyncStart=815420045100, IssueDrawCommandsStart=815427307130, SwapBuffers=815445908052, FrameCompleted=815452826277, DequeueBufferDuration=987000, QueueBufferDuration=4749000, 
+10-04 02:27:52.542  3380  3380 I Choreographer: Skipped 67 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:52.609  3380  3402 I OpenGLRenderer: Davey! duration=1193ms; Flags=0, IntendedVsync=815877013942, Vsync=816993680564, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=817006474767, AnimationStart=817006627752, PerformTraversalsStart=817007957714, DrawStart=817008380778, SyncQueued=817039262678, SyncStart=817040800149, IssueDrawCommandsStart=817041320432, SwapBuffers=817062092080, FrameCompleted=817072298542, DequeueBufferDuration=567000, QueueBufferDuration=4622000, 
+10-04 02:27:53.097  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:27:56.051  3380  3380 I Choreographer: Skipped 83 frames!  The application may be doing too much work on its main thread.
+10-04 02:27:56.235  3380  3402 I OpenGLRenderer: Davey! duration=1569ms; Flags=0, IntendedVsync=819126936514, Vsync=820510269792, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=820514782714, AnimationStart=820514930351, PerformTraversalsStart=820516479129, DrawStart=820517109068, SyncQueued=820619086991, SyncStart=820621217325, IssueDrawCommandsStart=820624081174, SwapBuffers=820688260988, FrameCompleted=820698207984, DequeueBufferDuration=773000, QueueBufferDuration=2145000, 
+10-04 02:27:57.587  1928  3519 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:27:57.776  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:57.794  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: PAUSED
+10-04 02:27:57.795  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@57d53e3
+10-04 02:27:57.802  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:57.806  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 28 lines
+10-04 02:27:57.806  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:57.811  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@ab503ba
+10-04 02:27:57.817  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:57.844  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 18 lines
+10-04 02:27:57.844  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:57.990  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:57.992  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 02:27:57.992  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:58.009  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:58.149  1928  3519 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=2 in int com.android.server.wm.ActivityTaskManagerService.getLastResumedActivityUserId() for 103ms
+10-04 02:27:58.225  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:58.348  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 2 lines
+10-04 02:27:58.350  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:58.392  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:27:58.458  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:27:59.014  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: STOPPED
+10-04 02:27:59.016  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@57d53e3
+10-04 02:27:59.051  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:27:59.053  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:27:59.056  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:27:59.162  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:59.162  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 8 lines
+10-04 02:27:59.162  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:59.225  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:59.225  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 8 lines
+10-04 02:27:59.225  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:59.415  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:59.431  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:27:59.432  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:59.510  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:27:59.557  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:59.557  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:27:59.557  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:27:59.598  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:27:59.617  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=25
+10-04 02:28:00.254  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:00.457  1928  1928 W Looper  : Slow dispatch took 220ms main h=com.android.server.accessibility.AbstractAccessibilityServiceConnection$1 c=null m=2048
+10-04 02:28:00.461  1928  2168 I ActivityTaskManager: Activity reported stop, but no longer stopping: ActivityRecord{cb21730 u0 com.nothatcher.sproutbook/.MainActivity t26 f}
+10-04 02:28:01.093  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +952ms
+10-04 02:28:01.165  3434  3434 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:01.188  3227  3227 D KeyguardClockSwitch: Updating clock: 228
+10-04 02:28:01.427  3227  3227 I Choreographer: Skipped 55 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:01.570  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:01.607  3227  3285 I OpenGLRenderer: Davey! duration=1107ms; Flags=0, IntendedVsync=824960298931, Vsync=825876965561, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=825890811927, AnimationStart=825890854870, PerformTraversalsStart=825890859031, DrawStart=826031179364, SyncQueued=826032602367, SyncStart=826035742200, IssueDrawCommandsStart=826058434790, SwapBuffers=826066063104, FrameCompleted=826070799231, DequeueBufferDuration=1028000, QueueBufferDuration=2113000, 
+10-04 02:28:01.739  2288  2306 I droid.launcher: NativeAlloc concurrent copying GC freed 5858(424KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2648KB/5297KB, paused 106us total 2.047s
+10-04 02:28:01.759  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:28:01.828  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:28:01.988  3380  3390 I cher.sproutboo: Background young concurrent copying GC freed 130160(5027KB) AllocSpace objects, 0(0B) LOS objects, 35% free, 9108KB/13MB, paused 302us total 6.014s
+10-04 02:28:02.067  1928  3163 E memtrack: Couldn't load memtrack module
+10-04 02:28:02.067  1928  3163 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:28:02.167  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@57d53e3 in: DESTROYED
+10-04 02:28:02.168  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:28:02.292  3380  3380 I Choreographer: Skipped 103 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:02.405  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@93cece5]
+10-04 02:28:02.410  3380  3400 I TestRunner: finished: scrollingAcrossToothNeverChangesOrOpensIt(com.nothatcher.sproutbook.GestureTest)
+10-04 02:28:02.429  3380  3400 I TestRunner: started: calendarLongPressKeepsDate(com.nothatcher.sproutbook.GestureTest)
+10-04 02:28:02.484  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@a440bf1]
+10-04 02:28:02.505  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:28:02.118  1928  1946 I chatty  : uid=1000(system) android.io identical 2 lines
+10-04 02:28:02.142  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:28:02.523  1928  3163 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:28:02.678  1928  1942 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:02.684  1928  1942 I chatty  : uid=1000(system) Binder:1928_1 identical 18 lines
+10-04 02:28:02.684  1928  1942 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:02.689  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@6929544
+10-04 02:28:02.686  1928  1942 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:02.702  1928  1942 I chatty  : uid=1000(system) Binder:1928_1 identical 18 lines
+10-04 02:28:02.702  1928  1942 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:02.884  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at int com.android.server.wm.WindowManagerService.addWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.view.DisplayCutout$ParcelableWrapper, android.view.InputChannel, android.view.InsetsState)(WindowManagerService.java:1236) waiters=0 in void com.android.server.wm.WindowProcessController.onTopProcChanged() for 114ms
+10-04 02:28:03.024  3380  3380 W cher.sproutboo: Long monitor contention with owner Binder:3380_2 (3395) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:556) waiters=0 in android.os.Message android.os.MessageQueue.next() for 304ms
+10-04 02:28:03.179  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, int, int, long, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.view.DisplayCutout$ParcelableWrapper, android.util.MergedConfiguration, android.view.SurfaceControl, android.view.InsetsState)(WindowManagerService.java:1982) waiters=0 in void com.android.server.wm.WindowProcessController.onTopProcChanged() for 167ms
+10-04 02:28:03.201  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:03.474  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:03.474  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:03.474  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:03.588  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: PRE_ON_CREATE
+10-04 02:28:03.593  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:28:03.886  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: CREATED
+10-04 02:28:03.892  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@903594f
+10-04 02:28:03.923  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: STARTED
+10-04 02:28:03.924  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@903594f
+10-04 02:28:03.958  2288  2544 I OpenGLRenderer: Davey! duration=709ms; Flags=0, IntendedVsync=827559890611, Vsync=827676557273, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=827685831439, AnimationStart=827685874127, PerformTraversalsStart=827686356621, DrawStart=827687490497, SyncQueued=827688421354, SyncStart=827841507478, IssueDrawCommandsStart=827881051778, SwapBuffers=827885519911, FrameCompleted=828422129164, DequeueBufferDuration=10609000, QueueBufferDuration=523273000, 
+10-04 02:28:04.019  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: RESUMED
+10-04 02:28:04.020  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@903594f
+10-04 02:28:04.041  2288  2288 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:04.383  2288  2544 I OpenGLRenderer: Davey! duration=750ms; Flags=0, IntendedVsync=827893235589, Vsync=828493235565, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=828505337746, AnimationStart=828505931060, PerformTraversalsStart=828506837494, DrawStart=828507174813, SyncQueued=828508052256, SyncStart=828711064967, IssueDrawCommandsStart=828737767281, SwapBuffers=828791647332, FrameCompleted=828846869228, DequeueBufferDuration=9349000, QueueBufferDuration=10311000, 
+10-04 02:28:04.427  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:04.950  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:04.956  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:04.977  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:05.077  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:05.112  3380  3402 I OpenGLRenderer: Davey! duration=1246ms; Flags=1, IntendedVsync=828326646295, Vsync=828509979621, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=828526257652, AnimationStart=828526358249, PerformTraversalsStart=828526368299, DrawStart=829499804404, SyncQueued=829539185002, SyncStart=829541381563, IssueDrawCommandsStart=829544352823, SwapBuffers=829566449665, FrameCompleted=829575372648, DequeueBufferDuration=457000, QueueBufferDuration=2414000, 
+10-04 02:28:05.199  3380  3380 I Choreographer: Skipped 63 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:05.302  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:28:05.302  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:05.303  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:05.303  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:05.640  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:05.642  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:05.642  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:06.230  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +2s617ms
+10-04 02:28:06.752  3380  3380 I Choreographer: Skipped 59 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:06.846  3380  3402 I OpenGLRenderer: Davey! duration=1081ms; Flags=0, IntendedVsync=830226904214, Vsync=831210237508, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=831215991469, AnimationStart=831216112232, PerformTraversalsStart=831220909922, DrawStart=831221522813, SyncQueued=831281128514, SyncStart=831282153207, IssueDrawCommandsStart=831282781717, SwapBuffers=831302733613, FrameCompleted=831309626760, DequeueBufferDuration=1161000, QueueBufferDuration=4637000, 
+10-04 02:28:08.517  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:28:09.112  3380  3380 I Choreographer: Skipped 117 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:09.249  3380  3402 I OpenGLRenderer: Davey! duration=2100ms; Flags=0, IntendedVsync=831610245218, Vsync=833560245140, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=833576403698, AnimationStart=833576540569, PerformTraversalsStart=833581865259, DrawStart=833585414555, SyncQueued=833672662606, SyncStart=833674334679, IssueDrawCommandsStart=833676961296, SwapBuffers=833702007430, FrameCompleted=833712529664, DequeueBufferDuration=597000, QueueBufferDuration=8626000, 
+10-04 02:28:10.930  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:10.948  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:10.950  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:11.012  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:11.165  3227  3285 I chatty  : uid=10102(com.android.systemui) RenderThread identical 1 line
+10-04 02:28:11.174  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:11.192  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:11.928  3380  3380 I Choreographer: Skipped 139 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:12.294  3380  3380 D Autofill Status: Autofill popup isn't shown because autofill is not available.
+10-04 02:28:12.294  3380  3380 D Autofill Status: 
+10-04 02:28:12.294  3380  3380 D Autofill Status: Did you set up autofill?
+10-04 02:28:12.294  3380  3380 D Autofill Status: 1. Go to Settings > System > Languages&input > Advanced > Autofill Service
+10-04 02:28:12.294  3380  3380 D Autofill Status: 2. Pick a service
+10-04 02:28:12.294  3380  3380 D Autofill Status: 
+10-04 02:28:12.294  3380  3380 D Autofill Status: Did you add an account?
+10-04 02:28:12.294  3380  3380 D Autofill Status: 1. Go to Settings > System > Languages&input > Advanced
+10-04 02:28:12.294  3380  3380 D Autofill Status: 2. Click on the settings icon next to the Autofill Service
+10-04 02:28:12.294  3380  3380 D Autofill Status: 3. Add your account
+10-04 02:28:13.112  2364  2364 I LatinIME: Starting input. Cursor position = 0,0
+10-04 02:28:13.131  3380  3380 I Choreographer: Skipped 41 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:13.371  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1118208
+10-04 02:28:13.388  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:13.390  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1118208
+10-04 02:28:13.484  2364  3466 D EGL_emulation: eglMakeCurrent: 0x7c951c84bda0: ver 3 0 (tinfo 0x7c951c8187e0)
+10-04 02:28:13.559  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:28:13.559  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:28:13.824  2364  2364 W RichInputConnection: Slow InputConnection: GET_TEXT_AFTER_CURSOR took 299 ms.
+10-04 02:28:13.829  1928  1948 W system_server: Long monitor contention with owner Binder:1928_3 (1999) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, int, int, long, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.view.DisplayCutout$ParcelableWrapper, android.util.MergedConfiguration, android.view.SurfaceControl, android.view.InsetsState)(WindowManagerService.java:1982) waiters=1 in void com.android.server.wm.WindowAnimator.lambda$new$1$WindowAnimator(long) for 178ms
+10-04 02:28:14.248  3227  3227 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:15.030  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:28:15.030  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:28:15.431  3380  3380 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:16.283  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:16.334  1928  1999 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:28:16.467  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: PAUSED
+10-04 02:28:16.468  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@903594f
+10-04 02:28:16.495  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:16.499  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 28 lines
+10-04 02:28:16.499  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:16.503  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@1b2c955
+10-04 02:28:16.504  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:16.510  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 18 lines
+10-04 02:28:16.510  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:16.587  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:16.679  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:16.707  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 02:28:16.707  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:16.723  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:16.737  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=26
+10-04 02:28:16.878  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=0 in com.android.server.wm.WindowProcessController com.android.server.wm.ActivityTaskManagerService$LocalService.getTopApp() for 172ms
+10-04 02:28:16.908  1928  1953 W system_server: Long monitor contention with owner android.display (1947) at void com.android.server.am.ActivityManagerService.trimApplications(java.lang.String)(ActivityManagerService.java:17233) waiters=0 in void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message) for 194ms
+10-04 02:28:17.037  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:17.212  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:17.228  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:17.230  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:17.304  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:17.492  1928  3519 W system_server: Long monitor contention with owner Binder:1928_4 (2168) at com.android.internal.view.InputBindResult com.android.server.inputmethod.InputMethodManagerService.startInputOrWindowGainedFocus(int, com.android.internal.view.IInputMethodClient, android.os.IBinder, int, int, int, android.view.inputmethod.EditorInfo, com.android.internal.view.IInputContext, int, int)(InputMethodManagerService.java:2941) waiters=0 in void com.android.server.inputmethod.InputMethodManagerService.setImeWindowStatus(android.os.IBinder, int, int) for 157ms
+10-04 02:28:17.559  2364  3466 D EGL_emulation: eglMakeCurrent: 0x7c951c84bda0: ver 3 0 (tinfo 0x7c951c8187e0)
+10-04 02:28:17.838  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:17.839  1928  2168 I chatty  : uid=1000(system) Binder:1928_4 identical 8 lines
+10-04 02:28:17.839  1928  2168 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:17.891  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:17.891  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 8 lines
+10-04 02:28:17.891  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:18.163  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:18.175  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:18.177  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:18.261  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:18.324  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:18.325  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:18.325  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:18.366  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:18.372  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=27
+10-04 02:28:18.644  3227  3227 I Choreographer: Skipped 74 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:18.872  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:18.912  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:19.058  3227  3285 I OpenGLRenderer: Davey! duration=1651ms; Flags=0, IntendedVsync=841860335953, Vsync=843093669237, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=843107576403, AnimationStart=843107631313, PerformTraversalsStart=843109431026, DrawStart=843109739914, SyncQueued=843326163729, SyncStart=843336153689, IssueDrawCommandsStart=843503566519, SwapBuffers=843508127035, FrameCompleted=843521589914, DequeueBufferDuration=1036000, QueueBufferDuration=920000, 
+10-04 02:28:19.062  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: STOPPED
+10-04 02:28:19.076  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@903594f
+10-04 02:28:20.172  3227  3238 I ndroid.systemu: NativeAlloc concurrent copying GC freed 11066(749KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 5087KB/10175KB, paused 97us total 5.893s
+10-04 02:28:20.260  3227  3227 I Choreographer: Skipped 96 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:20.311  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:20.360  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:20.393  3227  3285 I OpenGLRenderer: Davey! duration=1744ms; Flags=0, IntendedVsync=843110361312, Vsync=844710361248, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=844724286718, AnimationStart=844724323702, PerformTraversalsStart=844773391747, DrawStart=844807824383, SyncQueued=844822575210, SyncStart=844824162893, IssueDrawCommandsStart=844843326736, SwapBuffers=844853968038, FrameCompleted=844856228298, DequeueBufferDuration=619000, QueueBufferDuration=1226000, 
+10-04 02:28:20.422  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:20.537  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +1s62ms
+10-04 02:28:21.404  3380  3390 I cher.sproutboo: NativeAlloc concurrent copying GC freed 137771(5307KB) AllocSpace objects, 2(48KB) LOS objects, 33% free, 11MB/17MB, paused 620us total 11.437s
+10-04 02:28:21.568  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@903594f in: DESTROYED
+10-04 02:28:21.569  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:28:21.762  3380  3380 I Choreographer: Skipped 159 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:21.801  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowAnimator.animate(long)(WindowAnimator.java:141) waiters=0 in void com.android.server.wm.TaskChangeNotificationController.forAllRemoteListeners(com.android.server.wm.TaskChangeNotificationController$TaskStackConsumer, android.os.Message) for 138ms
+10-04 02:28:22.033  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@a440bf1]
+10-04 02:28:22.068  3380  3400 I TestRunner: finished: calendarLongPressKeepsDate(com.nothatcher.sproutbook.GestureTest)
+10-04 02:28:22.108  3380  3400 I TestRunner: started: nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest)
+10-04 02:28:22.266  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@ec6284]
+10-04 02:28:22.315  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:28:22.342  1928  2168 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:28:22.541  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:22.582  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:22.591  1928  3519 I chatty  : uid=1000(system) Binder:1928_11 identical 38 lines
+10-04 02:28:22.591  1928  3519 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:22.667  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@f2bf33
+10-04 02:28:22.690  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: PRE_ON_CREATE
+10-04 02:28:22.691  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:28:22.790  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:22.791  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:22.791  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:22.830  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:23.181  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: CREATED
+10-04 02:28:23.182  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@df7a7fa
+10-04 02:28:23.193  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: STARTED
+10-04 02:28:23.194  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@df7a7fa
+10-04 02:28:23.204  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: RESUMED
+10-04 02:28:23.205  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@df7a7fa
+10-04 02:28:23.214  2288  2288 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:23.287  1928  2168 W system_server: Long monitor contention with owner android.bg (1953) at boolean com.android.server.pm.PackageManagerService$PackageManagerInternalImpl.isPackageEphemeral(int, java.lang.String)(PackageManagerService.java:24532) waiters=0 in int com.android.server.pm.PackageManagerService.getPackageUid(java.lang.String, int, int) for 617ms
+10-04 02:28:23.289  1928  3519 W system_server: Long monitor contention with owner android.bg (1953) at boolean com.android.server.pm.PackageManagerService$PackageManagerInternalImpl.isPackageEphemeral(int, java.lang.String)(PackageManagerService.java:24532) waiters=1 in int com.android.server.pm.PackageManagerService.checkUidPermission(java.lang.String, int) for 574ms
+10-04 02:28:23.291  1928  1942 W system_server: Long monitor contention with owner android.bg (1953) at boolean com.android.server.pm.PackageManagerService$PackageManagerInternalImpl.isPackageEphemeral(int, java.lang.String)(PackageManagerService.java:24532) waiters=2 in int com.android.server.pm.PackageManagerService.checkUidPermission(java.lang.String, int) for 547ms
+10-04 02:28:23.372  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:24.125  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:24.135  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:24.145  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:24.251  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:24.361  3380  3380 I Choreographer: Skipped 50 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:24.503  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:28:24.504  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:24.505  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:24.505  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:24.833  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:24.833  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:24.834  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:24.968  1928  1948 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=1 in void com.android.server.wm.WindowAnimator.animate(long) for 197ms
+10-04 02:28:24.972  2288  2288 W droid.launcher: Long monitor contention with owner UiThreadHelper (2363) at boolean android.os.BinderProxy.transactNative(int, android.os.Parcel, android.os.Parcel, int)(BinderProxy.java:-2) waiters=0 in void android.view.inputmethod.InputMethodManager.onViewDetachedFromWindow(android.view.View) for 165ms
+10-04 02:28:25.381  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +1s974ms
+10-04 02:28:25.388  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:28:25.389  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:28:25.392  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:28:25.393  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:28:25.701  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:28:25.701  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:28:25.787  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:28:26.030  3380  3380 I Choreographer: Skipped 69 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:29.538  3380  3380 I Choreographer: Skipped 88 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:30.987  3380  3380 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:33.225  3380  3380 I Choreographer: Skipped 69 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:33.546  1928  2395 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:28:33.724  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:33.767  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: PAUSED
+10-04 02:28:33.768  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@df7a7fa
+10-04 02:28:33.778  1928  2395 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:33.784  1928  2395 I chatty  : uid=1000(system) Binder:1928_8 identical 28 lines
+10-04 02:28:33.784  1928  2395 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:33.788  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@5c7a03c
+10-04 02:28:33.790  1928  2395 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:33.802  1928  2395 I chatty  : uid=1000(system) Binder:1928_8 identical 18 lines
+10-04 02:28:33.802  1928  2395 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:33.943  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:33.955  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 02:28:33.955  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:33.968  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:34.026  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=0 in com.android.server.wm.WindowProcessController com.android.server.wm.ActivityTaskManagerService$LocalService.getTopApp() for 115ms
+10-04 02:28:34.243  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:34.322  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:34.367  3380  3390 I cher.sproutboo: ThreadFlipBegin blocked for 30.333ms
+10-04 02:28:34.369  3380  3408 I cher.sproutboo: IncrementDisableThreadFlip blocked for 10.568ms
+10-04 02:28:34.531  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:34.548  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:34.550  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:34.595  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:34.819  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:34.820  1928  2479 I chatty  : uid=1000(system) Binder:1928_A identical 8 lines
+10-04 02:28:34.820  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:34.859  1928  2197 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:35.189  1928  1945 W Looper  : Slow dispatch took 165ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=31
+10-04 02:28:34.859  1928  2197 I chatty  : uid=1000(system) Binder:1928_6 identical 8 lines
+10-04 02:28:34.859  1928  2197 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:35.324  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:35.334  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:35.337  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:35.375  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: STOPPED
+10-04 02:28:35.376  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@df7a7fa
+10-04 02:28:35.395  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:35.512  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:35.512  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:35.512  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:35.538  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:35.545  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=29
+10-04 02:28:36.118  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:36.270  3380  3414 W cher.sproutboo: Verification of java.lang.Throwable kotlinx.coroutines.internal.StackTraceRecoveryKt.createFinalException(java.lang.Throwable, java.lang.Throwable, java.util.ArrayDeque) took 256.901ms
+10-04 02:28:36.778  3434  3434 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:37.177  1928  1948 W system_server: Long monitor contention with owner LazyTaskWriterThread (2453) at void com.android.server.wm.TaskPersister$TaskWriteQueueItem.process()(TaskPersister.java:547) waiters=0 in void com.android.server.wm.WindowAnimator.animate(long) for 484ms
+10-04 02:28:37.221  1928  1948 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:37.410  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +1s145ms
+10-04 02:28:37.532  2288  2306 I droid.launcher: NativeAlloc concurrent copying GC freed 5848(406KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2653KB/5307KB, paused 81us total 1.908s
+10-04 02:28:37.602  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:28:37.976  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@df7a7fa in: DESTROYED
+10-04 02:28:37.999  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:28:38.262  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@ec6284]
+10-04 02:28:38.285  3380  3400 E TestRunner: failed: nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest)
+10-04 02:28:38.293  3380  3400 E TestRunner: ----- begin exception -----
+10-04 02:28:38.293  3380  3400 E TestRunner: java.lang.AssertionError: Failed: assertExists.
+10-04 02:28:38.293  3380  3400 E TestRunner: Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = 'Memory tree, 32 leaves. A timeline is also available.' (ignoreCase: false))
+10-04 02:28:38.293  3380  3400 E TestRunner: 
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.TreeAccessibilityTest.actions(TreeAccessibilityTest.kt:15)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.TreeAccessibilityTest.inspectNativeTree(TreeAccessibilityTest.kt:18)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.TreeAccessibilityTest.nativeAccessibilityCanInspectFullCanopyAndArrange(TreeAccessibilityTest.kt:45)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:28:38.293  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+10-04 02:28:38.295  3380  3400 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)
+10-04 02:28:38.295  3380  3400 E TestRunner: ----- end exception -----
+10-04 02:28:38.306  3380  3400 I TestRunner: finished: nativeAccessibilityCanInspectFullCanopyAndArrange(com.nothatcher.sproutbook.TreeAccessibilityTest)
+10-04 02:28:38.337  3380  3400 I TestRunner: started: profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(com.nothatcher.sproutbook.TreeThemeFlowTest)
+10-04 02:28:38.434  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@73e4190]
+10-04 02:28:38.456  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:28:37.837  1928  1946 I chatty  : uid=1000(system) android.io identical 2 lines
+10-04 02:28:37.895  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:28:38.478  1928  3462 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:28:38.643  1928  3462 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:38.655  1928  3462 I chatty  : uid=1000(system) Binder:1928_10 identical 38 lines
+10-04 02:28:38.655  1928  3462 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:38.717  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:38.795  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@17e42af
+10-04 02:28:38.882  2288  2363 W droid.launcher: Long monitor contention with owner main (2288) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:556) waiters=0 in android.os.Message android.os.MessageQueue.next() for 116ms
+10-04 02:28:39.316  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:39.316  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:39.316  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:39.378  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=0 in com.android.server.wm.WindowProcessController com.android.server.wm.ActivityTaskManagerService$LocalService.getTopApp() for 557ms
+10-04 02:28:39.379  1928  3462 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=1 in int com.android.server.wm.ActivityTaskManagerService.getActivityDisplayId(android.os.IBinder) for 553ms
+10-04 02:28:39.380  1928  2479 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=2 in void com.android.server.wm.WindowManagerService.reportSystemGestureExclusionChanged(com.android.server.wm.Session, android.view.IWindow, java.util.List) for 448ms
+10-04 02:28:39.385  1928  2453 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=3 in void com.android.server.wm.TaskPersister.writeTaskIdsFiles() for 423ms
+10-04 02:28:39.398  1928  1948 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:39.641  1928  2197 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=4 in int com.android.server.wm.ActivityTaskManagerService.getLastResumedActivityUserId() for 315ms
+10-04 02:28:39.642  1928  1947 W system_server: Long monitor contention with owner Binder:1928_A (2479) at void com.android.server.wm.WindowManagerService.reportSystemGestureExclusionChanged(com.android.server.wm.Session, android.view.IWindow, java.util.List)(WindowManagerService.java:3882) waiters=3 in void com.android.server.wm.ActivityTaskManagerService$LocalService.rankTaskLayersIfNeeded() for 257ms
+10-04 02:28:39.645  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: PRE_ON_CREATE
+10-04 02:28:39.655  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:28:39.729  1928  1948 I Choreographer: Skipped 54 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:39.743  1928  1944 W Looper  : Slow dispatch took 130ms android.fg h=com.android.server.DropBoxManagerService$DropBoxManagerBroadcastHandler c=null m=2
+10-04 02:28:39.744  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:39.846  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: CREATED
+10-04 02:28:39.850  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@8fe6d66
+10-04 02:28:39.923  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: STARTED
+10-04 02:28:39.924  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@8fe6d66
+10-04 02:28:39.932  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: RESUMED
+10-04 02:28:39.934  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@8fe6d66
+10-04 02:28:40.090  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:40.769  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:40.785  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:40.787  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:40.909  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:40.945  3380  3402 I OpenGLRenderer: Davey! duration=1178ms; Flags=1, IntendedVsync=864226931670, Vsync=864476931660, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=864486974274, AnimationStart=864487105708, PerformTraversalsStart=864487118359, DrawStart=865332664182, SyncQueued=865370678083, SyncStart=865373560062, IssueDrawCommandsStart=865385451195, SwapBuffers=865403885069, FrameCompleted=865407964009, DequeueBufferDuration=591000, QueueBufferDuration=1579000, 
+10-04 02:28:41.024  3380  3380 I Choreographer: Skipped 54 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:41.265  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:28:41.265  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:41.266  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:41.266  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:41.390  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:41.672  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:41.673  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:41.673  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:42.057  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +2s517ms
+10-04 02:28:42.717  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:28:42.718  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:28:42.876  3380  3380 I Choreographer: Skipped 58 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:43.009  3380  3402 I OpenGLRenderer: Davey! duration=1111ms; Flags=0, IntendedVsync=866360313966, Vsync=867326980594, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=867339661553, AnimationStart=867339791659, PerformTraversalsStart=867353319865, DrawStart=867353909310, SyncQueued=867437387691, SyncStart=867438619792, IssueDrawCommandsStart=867439378173, SwapBuffers=867467096896, FrameCompleted=867472579328, DequeueBufferDuration=714000, QueueBufferDuration=3814000, 
+10-04 02:28:43.115  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:28:43.269  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:28:43.269  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:43.270  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:43.270  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:43.304  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:28:43.331  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:43.332  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:43.333  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:43.407  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:43.476  3380  3390 I cher.sproutboo: NativeAlloc concurrent copying GC freed 197548(7196KB) AllocSpace objects, 2(88KB) LOS objects, 31% free, 13MB/19MB, paused 123us total 11.985s
+10-04 02:28:43.507  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:43.509  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:43.509  3380  3513 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:43.517  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:28:44.431  3380  3380 I Choreographer: Skipped 50 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:44.525  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:44.571  3380  3402 I OpenGLRenderer: Davey! duration=972ms; Flags=1, IntendedVsync=868060323670, Vsync=868893656970, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=868894767394, AnimationStart=868894927322, PerformTraversalsStart=868895318845, DrawStart=868957370776, SyncQueued=868998621891, SyncStart=868999806510, IssueDrawCommandsStart=869000395805, SwapBuffers=869030962630, FrameCompleted=869034382324, DequeueBufferDuration=929000, QueueBufferDuration=1299000, 
+10-04 02:28:44.597  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:44.752  3227  3285 I chatty  : uid=10102(com.android.systemui) RenderThread identical 1 line
+10-04 02:28:44.819  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:46.327  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:28:46.340  3380  3380 I Choreographer: Skipped 83 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:46.419  3380  3402 I OpenGLRenderer: Davey! duration=1471ms; Flags=0, IntendedVsync=869410344194, Vsync=870793677472, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=870803769245, AnimationStart=870803876093, PerformTraversalsStart=870805300528, DrawStart=870805711214, SyncQueued=870852120835, SyncStart=870853434115, IssueDrawCommandsStart=870854077291, SwapBuffers=870873527995, FrameCompleted=870882960866, DequeueBufferDuration=4303000, QueueBufferDuration=2810000, 
+10-04 02:28:47.326  1928  2479 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:28:47.444  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: PAUSED
+10-04 02:28:47.445  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@8fe6d66
+10-04 02:28:47.501  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:47.508  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:47.520  1928  2479 I chatty  : uid=1000(system) Binder:1928_A identical 28 lines
+10-04 02:28:47.520  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:47.523  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@944c51f
+10-04 02:28:47.528  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:47.541  1928  2479 I chatty  : uid=1000(system) Binder:1928_A identical 18 lines
+10-04 02:28:47.541  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:47.635  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:47.658  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 02:28:47.658  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:47.668  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:47.757  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:28:47.795  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:47.812  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:48.060  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:48.068  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:48.070  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:48.098  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:48.100  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:28:48.100  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:28:48.294  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:48.350  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:48.427  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: STOPPED
+10-04 02:28:48.428  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@8fe6d66
+10-04 02:28:48.570  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:48.652  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:48.846  1928  1947 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1992) waiters=0 in void com.android.server.am.ProcessRecord.updateProcessInfo(boolean, boolean, boolean) for 706ms
+10-04 02:28:48.849  1928  2197 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1992) waiters=1 in int com.android.server.am.ActivityManagerService.broadcastIntent(android.app.IApplicationThread, android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], int, android.os.Bundle, boolean, boolean, int) for 677ms
+10-04 02:28:48.867  1928  2197 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:48.867  1928  2197 I chatty  : uid=1000(system) Binder:1928_6 identical 8 lines
+10-04 02:28:48.867  1928  2197 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:48.908  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:48.909  1928  2479 I chatty  : uid=1000(system) Binder:1928_A identical 8 lines
+10-04 02:28:48.909  1928  2479 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:49.133  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:49.152  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:49.153  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:49.194  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:49.244  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:49.244  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:49.244  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:49.261  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:49.279  1928  1948 I WindowManager: Queue is too deep! Purged item with taskid=31
+10-04 02:28:49.738  1928  1947 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1961) waiters=0 in void com.android.server.am.ActivityManagerService$LocalService.updateCpuStats() for 542ms
+10-04 02:28:49.860  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:28:51.526  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@8fe6d66 in: DESTROYED
+10-04 02:28:51.552  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +883ms
+10-04 02:28:51.591  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:28:51.774  3380  3380 I Choreographer: Skipped 200 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:51.805  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@73e4190]
+10-04 02:28:51.808  3227  3238 I ndroid.systemu: NativeAlloc concurrent copying GC freed 12256(762KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 4991KB/9982KB, paused 89us total 3.887s
+10-04 02:28:51.837  3380  3400 E TestRunner: failed: profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(com.nothatcher.sproutbook.TreeThemeFlowTest)
+10-04 02:28:51.841  3380  3400 E TestRunner: ----- begin exception -----
+10-04 02:28:51.841  3380  3400 E TestRunner: java.lang.AssertionError: Action performScrollTo() failed.
+10-04 02:28:51.841  3380  3400 E TestRunner: Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'Willow' (ignoreCase: false))
+10-04 02:28:51.841  3380  3400 E TestRunner: Nodes found:
+10-04 02:28:51.841  3380  3400 E TestRunner: 1) Node #6164 at (l=20.0, t=266.0, r=340.0, b=362.0)px
+10-04 02:28:51.841  3380  3400 E TestRunner: Focused = 'false'
+10-04 02:28:51.841  3380  3400 E TestRunner: Text = '[Willow, Baby · Selected
+10-04 02:28:51.841  3380  3400 E TestRunner: Forest accent · Summer tree]'
+10-04 02:28:51.841  3380  3400 E TestRunner: Woodland playback = 'Still'
+10-04 02:28:51.841  3380  3400 E TestRunner: Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+10-04 02:28:51.841  3380  3400 E TestRunner: MergeDescendants = 'true'
+10-04 02:28:51.841  3380  3400 E TestRunner: Has 4 siblings
+10-04 02:28:51.841  3380  3400 E TestRunner: 2) Node #6002 at (l=61.0, t=30.0, r=344.0, b=86.0)px
+10-04 02:28:51.841  3380  3400 E TestRunner: ContentDescription = '[Switch child]'
+10-04 02:28:51.841  3380  3400 E TestRunner: Focused = 'false'
+10-04 02:28:51.841  3380  3400 E TestRunner: Role = 'Button'
+10-04 02:28:51.841  3380  3400 E TestRunner: Text = '[Willow, Baby · Your growing family]'
+10-04 02:28:51.841  3380  3400 E TestRunner: Woodland playback = 'Still'
+10-04 02:28:51.841  3380  3400 E TestRunner: Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+10-04 02:28:51.841  3380  3400 E TestRunner: MergeDescendants = 'true'
+10-04 02:28:51.841  3380  3400 E TestRunner: Has 3 siblings
+10-04 02:28:51.841  3380  3400 E TestRunner: 
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.FlowFixture.pageClick(FeatureFlowTest.kt:38)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at com.nothatcher.sproutbook.TreeThemeFlowTest.profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(TreeThemeFlowTest.kt:26)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+10-04 02:28:51.841  3380  3400 E TestRunner: 	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+10-04 02:28:51.843  3380  3400 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)
+10-04 02:28:51.843  3380  3400 E TestRunner: ----- end exception -----
+10-04 02:28:51.856  3380  3400 I TestRunner: finished: profilePreviewDiscardsDismissedChangesAndSavesOnlyThisChild(com.nothatcher.sproutbook.TreeThemeFlowTest)
+10-04 02:28:51.873  3380  3400 I TestRunner: started: newThemeGalleryKeepsMemoryRecordsAndPlacementInLightAndDarkMode(com.nothatcher.sproutbook.TreeThemeFlowTest)
+10-04 02:28:51.918  3380  3400 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@f234031]
+10-04 02:28:51.939  3380  3400 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 02:28:51.956  1928  3462 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 02:28:52.062  1928  2197 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:52.074  1928  2197 I chatty  : uid=1000(system) Binder:1928_6 identical 38 lines
+10-04 02:28:52.074  1928  2197 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:52.178  3380  3380 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@6018684
+10-04 02:28:52.234  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:52.336  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:52.338  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:28:52.338  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:28:52.403  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: PRE_ON_CREATE
+10-04 02:28:52.404  3380  3380 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 02:28:52.729  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: CREATED
+10-04 02:28:52.731  3380  3380 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@a5cf8f
+10-04 02:28:52.755  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:28:52.823  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: STARTED
+10-04 02:28:52.824  3380  3380 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@a5cf8f
+10-04 02:28:52.828  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: RESUMED
+10-04 02:28:52.829  3380  3380 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@a5cf8f
+10-04 02:28:53.489  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:53.507  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:28:53.509  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:28:53.614  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:28:53.714  3380  3380 I Choreographer: Skipped 46 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:53.875  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:28:53.876  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:53.876  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:54.327  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:54.328  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:54.328  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:54.347  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +1s720ms
+10-04 02:28:54.401  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:54.402  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:28:54.403  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:54.404  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:54.453  3380  3544 I chatty  : uid=10116(com.nothatcher.sproutbook) identical 1 line
+10-04 02:28:54.486  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:54.503  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:54.503  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:55.363  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:55.618  3227  3285 I chatty  : uid=10102(com.android.systemui) RenderThread identical 2 lines
+10-04 02:28:55.636  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:28:56.440  3380  3380 I Choreographer: Skipped 45 frames!  The application may be doing too much work on its main thread.
+10-04 02:28:56.630  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:28:56.631  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:56.631  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:56.659  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:28:56.659  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:28:56.892  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:28:57.961  1809  1809 W livelock: sample 6.901s
+10-04 02:28:59.009  3380  3380 I Choreographer: Skipped 85 frames!  The application may be doing too much work on its main thread.
+10-04 02:29:00.090  3227  3227 D KeyguardClockSwitch: Updating clock: 229
+10-04 02:29:00.382  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:29:00.911  3380  3390 I cher.sproutboo: Background young concurrent copying GC freed 164258(6276KB) AllocSpace objects, 1(16KB) LOS objects, 23% free, 14MB/19MB, paused 6.499ms total 3.393s
+10-04 02:29:01.354  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:29:01.354  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:01.355  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:01.355  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:01.945  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:01.952  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:01.953  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:02.756  3380  3380 I Choreographer: Skipped 43 frames!  The application may be doing too much work on its main thread.
+10-04 02:29:03.707  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:29:03.758  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:29:03.762  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:29:03.837  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:29:03.958  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:04.732  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 02:29:04.733  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:04.733  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:04.734  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:05.716  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:06.415  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:06.416  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:06.416  3380  3544 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:07.273  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:07.991  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:07.992  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:07.992  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:08.849  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:09.424  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:09.424  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:09.460  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:09.463  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:09.469  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:09.624  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:09.629  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:10.332  3380  3380 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+10-04 02:29:10.457  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:29:10.670  3227  3285 I chatty  : uid=10102(com.android.systemui) RenderThread identical 1 line
+10-04 02:29:10.734  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:29:11.098  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:11.721  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:11.722  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:11.722  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:12.426  3380  3390 I cher.sproutboo: Background young concurrent copying GC freed 149738(5388KB) AllocSpace objects, 0(0B) LOS objects, 29% free, 13MB/19MB, paused 98us total 611.359ms
+10-04 02:29:12.501  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:13.183  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:13.184  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:13.184  3380  3406 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:13.951  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:14.343  3368  3373 I app_process: NativeAlloc concurrent copying GC freed 2685(488KB) AllocSpace objects, 0(0B) LOS objects, 93% free, 98KB/1634KB, paused 57.938ms total 339.358ms
+10-04 02:29:14.544  1928  1938 I system_server: NativeAlloc concurrent copying GC freed 58882(3729KB) AllocSpace objects, 41(1716KB) LOS objects, 42% free, 7726KB/13MB, paused 147us total 1.341s
+10-04 02:29:14.951  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 02:29:14.952  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:14.952  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:15.937  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:16.664  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:16.665  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:16.683  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:16.687  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 02:29:16.687  3380  3545 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 02:29:16.728  1928  2197 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 02:29:16.916  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: PAUSED
+10-04 02:29:16.919  3380  3380 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@a5cf8f
+10-04 02:29:16.923  1928  2345 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:16.926  1928  2345 I chatty  : uid=1000(system) Binder:1928_7 identical 28 lines
+10-04 02:29:16.926  1928  2345 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:16.934  3434  3434 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@d37f56e
+10-04 02:29:16.936  1928  2345 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:16.947  1928  2345 I chatty  : uid=1000(system) Binder:1928_7 identical 18 lines
+10-04 02:29:16.947  1928  2345 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:16.960  1928  1948 E system_server: Invalid ID 0x00000000.
+10-04 02:29:17.103  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:17.220  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:17.224  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 02:29:17.225  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:17.245  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:17.257  3380  3402 D EGL_emulation: eglMakeCurrent: 0x7c94d1a0df00: ver 3 0 (tinfo 0x7c951ab59560)
+10-04 02:29:17.291  1928  3462 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1913) waiters=1 in android.content.Intent com.android.server.am.ActivityManagerService.registerReceiver(android.app.IApplicationThread, java.lang.String, android.content.IIntentReceiver, android.content.IntentFilter, java.lang.String, int, int) for 143ms
+10-04 02:29:17.618  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:17.633  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:29:17.636  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:17.694  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:29:17.733  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:29:17.733  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:29:17.939  1928  2395 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:17.940  1928  2395 I chatty  : uid=1000(system) Binder:1928_8 identical 8 lines
+10-04 02:29:17.940  1928  2395 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:17.985  1928  2345 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:17.985  1928  2345 I chatty  : uid=1000(system) Binder:1928_7 identical 8 lines
+10-04 02:29:17.985  1928  2345 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:18.426  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:18.437  1709  1709 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+10-04 02:29:18.439  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:18.495  2288  2544 D EGL_emulation: eglMakeCurrent: 0x7c951c84b440: ver 3 0 (tinfo 0x7c951c8189e0)
+10-04 02:29:18.661  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:18.661  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 02:29:18.661  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 02:29:18.695  1709  1709 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 02:29:18.741  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=1 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 133ms
+10-04 02:29:18.744  1928  2168 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=3 in void com.android.server.wm.ActivityTaskManagerService.activityIdle(android.os.IBinder, android.content.res.Configuration, boolean) for 118ms
+10-04 02:29:19.090  1715  1736 W hw-IPCThreadState: All binder threads in pool (2 threads) busy for 133 ms
+10-04 02:29:19.177  1928  1944 W Looper  : Slow delivery took 949ms android.fg h=com.android.server.AppStateTracker$MyHandler c=null m=11
+10-04 02:29:19.372  1928  1944 W Looper  : Drained
+10-04 02:29:19.409  3434  3452 D EGL_emulation: eglMakeCurrent: 0x7c951c8496e0: ver 3 0 (tinfo 0x7c951c8186c0)
+10-04 02:29:20.789  2288  2306 I droid.launcher: NativeAlloc concurrent copying GC freed 5821(411KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2636KB/5273KB, paused 92us total 1.890s
+10-04 02:29:20.852  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:29:20.945  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:29:20.945  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:29:20.984  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:29:20.984  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:29:21.035  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: STOPPED
+10-04 02:29:21.036  3380  3380 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@a5cf8f
+10-04 02:29:21.127  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:29:21.128  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:29:21.257  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:29:21.257  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:29:21.309  3380  3380 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@a5cf8f in: DESTROYED
+10-04 02:29:21.327  3380  3380 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 02:29:21.542  3380  3400 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@f234031]
+10-04 02:29:21.628  3380  3400 I TestRunner: finished: newThemeGalleryKeepsMemoryRecordsAndPlacementInLightAndDarkMode(com.nothatcher.sproutbook.TreeThemeFlowTest)
+10-04 02:29:21.658  3380  3400 I TestRunner: run finished: 16 tests, 7 failed, 0 ignored
+10-04 02:29:21.775  1928  1947 W system_server: Long monitor contention with owner android.bg (1953) at void com.android.server.am.ActivityManagerService$5.handleMessage(android.os.Message)(ActivityManagerService.java:1992) waiters=0 in void com.android.server.am.ActivityManagerService$LocalService.updateActivityUsageStats(android.content.ComponentName, int, int, android.os.IBinder, android.content.ComponentName) for 302ms
+10-04 02:29:20.938  1928  1946 I chatty  : uid=1000(system) android.io identical 2 lines
+10-04 02:29:20.961  1928  1946 I DropBoxManagerService: add tag=system_app_strictmode isTagEnabled=true flags=0x2
+10-04 02:29:21.824  1928  2395 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@b0fd25e
+10-04 02:29:21.942  1928  2395 I ActivityManager: Force stopping com.nothatcher.sproutbook appid=10116 user=0: finished inst
+10-04 02:29:21.945  1928  2395 I ActivityManager: Killing 3380:com.nothatcher.sproutbook/u0a116 (adj 0): stop com.nothatcher.sproutbook
+10-04 02:29:21.929  1928  1928 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+10-04 02:29:21.989  1928  1928 W Looper  : Slow dispatch took 141ms main h=com.android.providers.settings.SettingsProvider$SettingsRegistry$MyHandler c=null m=1
+10-04 02:29:22.061  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 02:29:22.061  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:29:22.111  1928  3599 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+10-04 02:29:22.111  1928  3599 W Binder  : java.lang.Throwable
+10-04 02:29:22.111  1928  3599 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:480)
+10-04 02:29:22.111  1928  3599 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:205)
+10-04 02:29:22.111  1928  3599 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+10-04 02:29:22.385  3368  3368 D AndroidRuntime: Shutting down VM
+10-04 02:29:22.941  1928  2449 D HostConnection: HostConnection::get() New Host Connection established 0x7c94be648500, tid 2449
+10-04 02:29:22.942  1928  2449 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 02:29:23.128  1928  2449 D EGL_emulation: eglCreateContext: 0x7c94be648640: maj 3 min 0 rcv 3
+10-04 02:29:23.229  1928  2449 D EGL_emulation: eglMakeCurrent: 0x7c94be648640: ver 3 0 (tinfo 0x7c94ccb78da0)
+10-04 02:29:23.449  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +1s53ms
+10-04 02:29:23.541  1928  3599 I ActivityManager: Failure reporting to instrumentation watcher: comp=ComponentInfo{com.nothatcher.sproutbook.test/androidx.test.runner.AndroidJUnitRunner} results=Bundle[mParcelledData.dataSize=12972]
+10-04 02:29:23.800  1928  1947 W ActivityManager: setHasOverlayUi called on unknown pid: 3380
+10-04 02:29:23.832  1686  1686 I Zygote  : Process 3380 exited due to signal 9 (Killed)
+10-04 02:29:23.838  1928  1956 I libprocessgroup: Successfully killed process cgroup uid 10116 pid 3380 in 1878ms
+10-04 02:29:24.219  1928  2453 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 02:29:46.380  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:29:47.813  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:30:00.023  3227  3227 D KeyguardClockSwitch: Updating clock: 230
+10-04 02:30:00.081  3227  3285 D EGL_emulation: eglMakeCurrent: 0x7c951ac52de0: ver 3 0 (tinfo 0x7c94ce350220)
+10-04 02:30:46.397  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:30:47.867  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:31:00.037  3227  3227 D KeyguardClockSwitch: Updating clock: 231
+10-04 02:31:46.414  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:31:47.913  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:32:00.076  3227  3227 D KeyguardClockSwitch: Updating clock: 232
+10-04 02:32:14.582  1928  1944 W Looper  : Slow dispatch took 101ms android.fg h=com.android.server.location.GnssLocationProvider$ProviderHandler c=null m=18
+10-04 02:32:46.447  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:32:47.947  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:33:00.024  3227  3227 D KeyguardClockSwitch: Updating clock: 233
+10-04 02:33:02.750  1928  2395 E memtrack: Couldn't load memtrack module
+10-04 02:33:02.751  1928  2395 W android.os.Debug: failed to get memory consumption info: -1
+10-04 02:33:46.497  1756  1756 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 02:33:47.997  1741  1741 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 02:33:52.494  3227  3238 I ndroid.systemu: Background young concurrent copying GC freed 80827(4928KB) AllocSpace objects, 0(0B) LOS objects, 50% free, 4918KB/9982KB, paused 120us total 106.292ms
+10-04 02:34:00.009  3227  3227 D KeyguardClockSwitch: Updating clock: 234

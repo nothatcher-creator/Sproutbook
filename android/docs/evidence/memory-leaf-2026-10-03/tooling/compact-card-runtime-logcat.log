@@ -1,0 +1,572 @@
+--------- beginning of system
+10-04 20:48:41.764  1928  2372 I ActivityManager: Killing 4306:com.nothatcher.sproutbook/u0a116 (adj 0): stop com.nothatcher.sproutbook
+--------- beginning of main
+10-04 20:48:41.823  1928  4383 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+10-04 20:48:41.823  1928  4383 W Binder  : java.lang.Throwable
+10-04 20:48:41.823  1928  4383 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:480)
+10-04 20:48:41.823  1928  4383 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:205)
+10-04 20:48:41.823  1928  4383 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+10-04 20:48:41.839  4295  4295 D AndroidRuntime: Shutting down VM
+10-04 20:48:42.689  1928  1944 W Looper  : Slow dispatch took 201ms android.fg h=android.os.Handler c=com.android.server.Watchdog$HandlerChecker@a1b692f m=0
+10-04 20:48:42.951  1928  1947 W ActivityManager: setHasOverlayUi called on unknown pid: 4306
+10-04 20:48:42.962  1688  1688 I Zygote  : Process 4306 exited due to signal 9 (Killed)
+10-04 20:48:42.994  1928  1956 I libprocessgroup: Successfully killed process cgroup uid 10116 pid 4306 in 1221ms
+10-04 20:48:43.112  1928  4383 I ActivityManager: Failure reporting to instrumentation watcher: comp=ComponentInfo{com.nothatcher.sproutbook.test/androidx.test.runner.AndroidJUnitRunner} results=Bundle[mParcelledData.dataSize=1624]
+10-04 20:48:43.460  1928  2472 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 20:48:43.806  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:48:43.832  1569  1569 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device manifest.
+10-04 20:48:43.846  4381  4381 W Gralloc3: mapper 3.x is not supported
+10-04 20:48:43.952  4381  4381 D HostConnection: createUnique: call
+10-04 20:48:43.965  4381  4381 D HostConnection: HostConnection::get() New Host Connection established 0x787c00eae5a0, tid 4381
+10-04 20:48:43.977  4381  4381 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:48:43.983  4381  4381 D eglCodecCommon: allocate: Ask for block of size 0x1000
+10-04 20:48:43.983  4381  4381 D eglCodecCommon: allocate: ioctl allocate returned offset 0x3ffff4000 size 0x2000
+10-04 20:48:44.004  4381  4381 D eglCodecCommon: allocate: Ask for block of size 0x11a000
+10-04 20:48:44.004  4381  4381 D eglCodecCommon: allocate: ioctl allocate returned offset 0x3ffdb6000 size 0x11b000
+10-04 20:48:45.566  1928  2443 D HostConnection: HostConnection::get() New Host Connection established 0x714825095520, tid 2443
+10-04 20:48:45.567  1928  2443 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:48:45.577  1928  2443 D EGL_emulation: eglCreateContext: 0x714825095660: maj 3 min 0 rcv 3
+10-04 20:48:45.580  1928  2443 D EGL_emulation: eglMakeCurrent: 0x714825095660: ver 3 0 (tinfo 0x71482d684080)
+10-04 20:49:00.027  3158  3158 D KeyguardClockSwitch: Updating clock: 849
+10-04 20:49:08.641  1784  1784 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 20:49:11.742  1801  1801 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 20:49:58.185  1928  1953 I UsageStatsService: User[0] Flushing usage stats to disk
+10-04 20:50:00.050  3158  3158 D KeyguardClockSwitch: Updating clock: 850
+10-04 20:50:08.643  1784  1784 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 20:50:11.744  1801  1801 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 20:50:44.866  1928  1962 W system_server: Long monitor contention with owner HwBinder:1928_4 (2166) at void com.android.server.power.PowerManagerService.acquireWakeLockInternal(android.os.IBinder, int, java.lang.String, java.lang.String, android.os.WorkSource, java.lang.String, int, int)(PowerManagerService.java:1044) waiters=0 in void com.android.server.power.PowerManagerService.handleSandman() for 104ms
+10-04 20:51:00.057  3158  3158 D KeyguardClockSwitch: Updating clock: 851
+10-04 20:51:08.659  1784  1784 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 20:51:11.812  1801  1801 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 20:52:00.044  3158  3158 D KeyguardClockSwitch: Updating clock: 852
+10-04 20:52:04.314  3087  3087 I abb     : StartCommandInProcess(73657474696e67730067657400676c6f settings.get.glo [truncated])
+10-04 20:52:04.409  3087  3087 I abb     : StartCommandInProcess(7061636b61676500696e7374616c6c00 package.install. [truncated])
+10-04 20:52:04.390  1928  1928 W Binder:1928_8: type=1400 audit(0.0:121): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:04.390  1928  1928 I chatty  : uid=1000 system_server identical 1 line
+10-04 20:52:04.390  1928  1928 W Binder:1928_8: type=1400 audit(0.0:123): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:04.390  1746  1746 W adbd    : type=1400 audit(0.0:124): avc: denied { shutdown } for scontext=u:r:adbd:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:05.500  1928  1928 W Binder:1928_8: type=1400 audit(0.0:125): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:06.046  1928  1967 W PackageParser: Unknown element under <manifest>: queries at /data/app/vmdl25619347.tmp/base.apk Binary XML file line #16
+10-04 20:52:06.061  1928  1967 W PackageParser: No actions in intent filter at /data/app/vmdl25619347.tmp/base.apk Binary XML file line #36
+10-04 20:52:06.062  1928  1967 W PackageParser: No actions in intent filter at /data/app/vmdl25619347.tmp/base.apk Binary XML file line #44
+10-04 20:52:06.062  1928  1967 W PackageParser: No actions in intent filter at /data/app/vmdl25619347.tmp/base.apk Binary XML file line #52
+10-04 20:52:06.067  1928  1967 I PackageParser: Parse times for '/data/app/vmdl25619347.tmp': parse=105ms, update_cache=0 ms
+10-04 20:52:06.105  1928  1954 I ActivityManager: Force stopping com.nothatcher.sproutbook.test appid=10117 user=-1: installPackageLI
+10-04 20:52:06.127  1928  1954 I ActivityManager: Killing 4355:com.nothatcher.sproutbook.test/u0a117 (adj 900): stop com.nothatcher.sproutbook.test
+10-04 20:52:06.224  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:06.224  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:06.288  1928  1967 I PackageManager: Update package com.nothatcher.sproutbook.test code path from /data/app/com.nothatcher.sproutbook.test-d3y-8L0kQ7toAzAanzDQMQ== to /data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==; Retain data and using new
+10-04 20:52:06.289  1928  1967 I PackageManager: Update package com.nothatcher.sproutbook.test resource path from /data/app/com.nothatcher.sproutbook.test-d3y-8L0kQ7toAzAanzDQMQ== to /data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==; Retain data and using new
+10-04 20:52:06.368  1928  1947 W ActivityManager: setHasOverlayUi called on unknown pid: 4355
+10-04 20:52:06.373  1688  1688 I Zygote  : Process 4355 exited due to signal 9 (Killed)
+10-04 20:52:06.394  1928  1956 I libprocessgroup: Successfully killed process cgroup uid 10117 pid 4355 in 232ms
+10-04 20:52:06.401  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:06.402  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:06.444  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:06.445  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:06.476  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:06.476  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:06.501  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:06.501  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:06.537  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:06.537  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:06.982  1928  1967 I PackageManager: Un-granting permission android.permission.GLOBAL_SEARCH from package com.android.quicksearchbox (protectionLevel=18 flags=0x3088be45)
+10-04 20:52:06.994  1928  1967 I PackageManager: Un-granting permission android.permission.BIND_WALLPAPER from package com.android.camera2 (protectionLevel=18 flags=0x20d8bc45)
+10-04 20:52:07.021  1928  1967 I PackageManager: Un-granting permission android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS from package com.android.captiveportallogin (protectionLevel=18 flags=0x38c8be45)
+10-04 20:52:07.022  1928  1967 I PackageManager: Un-granting permission android.permission.NETWORK_BYPASS_PRIVATE_DNS from package com.android.captiveportallogin (protectionLevel=2 flags=0x38c8be45)
+10-04 20:52:07.318  1928  1967 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+10-04 20:52:07.318  1928  1967 D PackageManager: Clear ephemeral installer activity
+10-04 20:52:07.319  1928  1953 W system_server: Long monitor contention with owner PackageManager (1967) at void com.android.server.pm.PackageManagerService.installPackagesLI(java.util.List)(PackageManagerService.java:17017) waiters=0 in void com.android.server.pm.Settings$RuntimePermissionPersistence.writePermissionsSync(int) for 114ms
+10-04 20:52:07.415  1762  1762 E         : Couldn't opendir /data/app/vmdl25619347.tmp: No such file or directory
+10-04 20:52:07.417  1762  1762 E installd: Failed to delete /data/app/vmdl25619347.tmp: No such file or directory
+10-04 20:52:07.420  1928  1928 W Binder:1928_8: type=1400 audit(0.0:126): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:07.420  1928  1928 I chatty  : uid=1000 system_server identical 1 line
+10-04 20:52:07.420  1928  1928 W Binder:1928_8: type=1400 audit(0.0:128): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:07.430  1746  1746 W adbd    : type=1400 audit(0.0:129): avc: denied { shutdown } for scontext=u:r:adbd:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+10-04 20:52:07.459  1928  1967 I ActivityManager: Force stopping com.nothatcher.sproutbook.test appid=10117 user=0: pkg removed
+10-04 20:52:07.615  1928  1954 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.nothatcher.sproutbook.test flg=0x4000010 (has extras) } to com.android.gallery3d/.app.PackagesMonitor
+10-04 20:52:07.703  1928  2024 I InputReader: Reconfiguring input devices.  changes=0x00000010
+10-04 20:52:07.764  1928  1954 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.nothatcher.sproutbook.test flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+10-04 20:52:07.770  1928  1928 W Looper  : Slow dispatch took 210ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@c347d4e m=0
+10-04 20:52:07.771  1928  1928 W Looper  : Slow delivery took 220ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@8db4e6f m=0
+10-04 20:52:07.896  1928  1954 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.nothatcher.sproutbook.test flg=0x4000010 (has extras) } to com.android.packageinstaller/.PackageInstalledReceiver
+10-04 20:52:07.943  1928  1928 W Looper  : Slow dispatch took 110ms main h=com.android.server.media.MediaRouterService$UserHandler c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@20677c m=0
+10-04 20:52:07.955  1928  1954 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.nothatcher.sproutbook.test flg=0x4000010 (has extras) } to com.android.gallery3d/.app.PackagesMonitor
+10-04 20:52:07.955  1928  1954 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.nothatcher.sproutbook.test flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+10-04 20:52:08.219  1928  1928 W Looper  : Slow dispatch took 249ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@3df205a m=0
+10-04 20:52:07.960  1928  2024 I InputReader: Reconfiguring input devices.  changes=0x00000010
+10-04 20:52:08.264  1928  2372 W system_server: Long monitor contention with owner android.fg (1944) at int com.android.server.pm.PackageManagerService.checkPermission(java.lang.String, java.lang.String, int)(PackageManagerService.java:5610) waiters=1 in java.lang.String com.android.server.pm.PackageManagerService.getInstantAppPackageName(int) for 144ms
+10-04 20:52:08.376  1928  1954 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:com.nothatcher.sproutbook.test flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+10-04 20:52:08.398  1928  2024 I InputReader: Reconfiguring input devices.  changes=0x00000010
+10-04 20:52:08.447  1928  1944 W Looper  : Slow dispatch took 471ms android.fg h=android.os.Handler c=<recycled PooledLambda@178628b> m=0
+10-04 20:52:08.567  1928  1944 W Looper  : Slow delivery took 619ms android.fg h=android.os.Handler c=<recycled PooledLambda@3cb80a7> m=0
+10-04 20:52:08.567  1928  1944 W Looper  : Slow dispatch took 119ms android.fg h=android.os.Handler c=<recycled PooledLambda@3cb80a7> m=0
+10-04 20:52:08.704  1784  1784 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 20:52:08.742  1928  1944 W Looper  : Slow dispatch took 122ms android.fg h=android.os.Handler c=<recycled PooledLambda@ca7f68> m=0
+10-04 20:52:08.928  1928  1944 W Looper  : Slow dispatch took 165ms android.fg h=android.os.Handler c=<recycled PooledLambda@b7a1f81> m=0
+10-04 20:52:09.002  1928  1928 W Looper  : Slow dispatch took 782ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@75ee826 m=0
+10-04 20:52:09.034  1928  1944 W Looper  : Slow dispatch took 107ms android.fg h=android.os.Handler c=<recycled PooledLambda@1889c67> m=0
+10-04 20:52:09.076  2225  2225 D CarrierSvcBindHelper: No carrier app for: 0
+10-04 20:52:09.110  1928  1928 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@ACs
+10-04 20:52:09.097  2225  2225 D CarrierSvcBindHelper: No carrier app for: 0
+10-04 20:52:09.150  2225  2225 E VvmPkgInstalledRcvr: cannot create TelephonyManager from ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, ***, UserHandle{0}
+10-04 20:52:09.159  1928  1928 V BackupManagerConstants: getFullBackupIntervalMilliseconds(...) returns 86400000
+10-04 20:52:09.159  1928  1928 V BackupManagerConstants: getFullBackupRequiredNetworkType(...) returns 2
+10-04 20:52:09.160  1928  1928 V BackupManagerConstants: getFullBackupRequireCharging(...) returns true
+10-04 20:52:09.196  2225  2225 D CarrierConfigLoader: mHandler: 9 phoneId: 0
+10-04 20:52:09.461  1928  1938 I system_server: Background concurrent copying GC freed 65843(4351KB) AllocSpace objects, 40(1780KB) LOS objects, 42% free, 7761KB/13MB, paused 462us total 1.926s
+10-04 20:52:09.563  1928  1953 W VoiceInteractionManagerService: no available voice recognition services found for user 0
+10-04 20:52:09.797  1928  1944 W Looper  : Drained
+10-04 20:52:11.864  1801  1801 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 20:52:22.049  4393  4393 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-04 20:52:22.090  4393  4393 W app_process: type=1400 audit(0.0:130): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:22.101  4393  4393 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+10-04 20:52:22.102  4393  4393 I AndroidRuntime: Using default boot image
+10-04 20:52:22.105  4393  4393 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+10-04 20:52:22.105  4393  4393 I AndroidRuntime: Leaving lock profiling enabled
+10-04 20:52:22.115  4393  4393 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+10-04 20:52:22.090  4393  4393 W app_process: type=1400 audit(0.0:131): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:22.110  4393  4393 W app_process: type=1400 audit(0.0:132): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:22.238  4393  4393 I app_process: Core platform API reporting enabled, enforcing=false
+10-04 20:52:24.361  4393  4393 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-04 20:52:24.685  4393  4393 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+10-04 20:52:24.821  4393  4393 I app_process: The ClassLoaderContext is a special shared library.
+10-04 20:52:24.983  4393  4393 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+10-04 20:52:25.066  4393  4393 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-04 20:52:25.140  4393  4393 D AndroidRuntime: Shutting down VM
+10-04 20:52:27.749  4409  4409 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-04 20:52:27.826  4409  4409 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+10-04 20:52:27.827  4409  4409 I AndroidRuntime: Using default boot image
+10-04 20:52:27.828  4409  4409 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+10-04 20:52:27.828  4409  4409 I AndroidRuntime: Leaving lock profiling enabled
+10-04 20:52:27.842  4409  4409 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+10-04 20:52:27.810  4409  4409 W app_process: type=1400 audit(0.0:133): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:27.820  4409  4409 I chatty  : uid=2000(shell) app_process identical 1 line
+10-04 20:52:27.820  4409  4409 W app_process: type=1400 audit(0.0:135): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:27.985  4409  4409 I app_process: Core platform API reporting enabled, enforcing=false
+10-04 20:52:28.776  4409  4409 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-04 20:52:28.905  4409  4409 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+10-04 20:52:28.939  4409  4409 I app_process: The ClassLoaderContext is a special shared library.
+10-04 20:52:29.079  4409  4409 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+10-04 20:52:29.159  4409  4409 D AndroidRuntime: Calling main entry com.android.commands.svc.Svc
+10-04 20:52:29.235  4409  4409 D AndroidRuntime: Shutting down VM
+10-04 20:52:31.230  4428  4428 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-04 20:52:31.250  4428  4428 W app_process: type=1400 audit(0.0:136): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:31.260  4428  4428 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_apex_image"
+10-04 20:52:31.261  4428  4428 I AndroidRuntime: Using default boot image
+10-04 20:52:31.264  4428  4428 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.disable_lock_profiling"
+10-04 20:52:31.264  4428  4428 I AndroidRuntime: Leaving lock profiling enabled
+10-04 20:52:31.250  4428  4428 W app_process: type=1400 audit(0.0:137): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:31.260  4428  4428 W app_process: type=1400 audit(0.0:138): avc: denied { read } for name="u:object_r:device_config_runtime_native_boot_prop:s0" dev="tmpfs" ino=6676 scontext=u:r:shell:s0 tcontext=u:object_r:device_config_runtime_native_boot_prop:s0 tclass=file permissive=0
+10-04 20:52:31.269  4428  4428 E libc    : Access denied finding property "persist.device_config.runtime_native_boot.enable_generational_cc"
+10-04 20:52:31.338  4428  4428 I app_process: Core platform API reporting enabled, enforcing=false
+10-04 20:52:31.874  4428  4428 D ICU     : Time zone APEX file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-04 20:52:31.962  4428  4428 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+10-04 20:52:31.988  4428  4428 I app_process: The ClassLoaderContext is a special shared library.
+10-04 20:52:32.120  4428  4428 W app_process: JNI RegisterNativeMethods: attempt to register 0 native methods for android.media.AudioAttributes
+10-04 20:52:32.192  4428  4428 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-04 20:52:32.267  1928  3417 I ActivityManager: Force stopping com.nothatcher.sproutbook appid=10116 user=0: start instr
+10-04 20:52:32.366  1928  1928 W Looper  : Drained
+10-04 20:52:32.543  1688  1688 D Zygote  : Forked child process 4438
+10-04 20:52:32.618  1928  1955 W ActivityManager: Slow operation: 309ms so far, now at startProcess: returned from zygote!
+10-04 20:52:32.620  1928  1955 W ActivityManager: Slow operation: 310ms so far, now at startProcess: done updating battery stats
+10-04 20:52:32.621  1928  1955 W ActivityManager: Slow operation: 311ms so far, now at startProcess: building log message
+10-04 20:52:32.621  1928  1955 I ActivityManager: Start proc 4438:com.nothatcher.sproutbook/u0a116 for added application com.nothatcher.sproutbook
+10-04 20:52:32.621  1928  1955 W ActivityManager: Slow operation: 312ms so far, now at startProcess: starting to update pids map
+10-04 20:52:32.626  1928  1955 W ActivityManager: Slow operation: 316ms so far, now at startProcess: done updating pids map
+10-04 20:52:32.678  4438  4438 I cher.sproutboo: Late-enabling -Xcheck:jni
+10-04 20:52:32.771  4438  4438 E cher.sproutboo: Unknown bits set in runtime_flags: 0x8000
+10-04 20:52:32.804  4438  4438 W cher.sproutboo: Unexpected CPU variant for X86 using defaults: x86_64
+10-04 20:52:33.211  4438  4438 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.nothatcher.sproutbook]: x86_64, null instrumentation[com.nothatcher.sproutbook.test]: null, null
+10-04 20:52:33.527  4438  4438 W cher.sproutboo: ClassLoaderContext classpath size mismatch. expected=0, found=5 (PCL[] | PCL[/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk*3609744611:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes2.dex*2985056070:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes3.dex*3673778918:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes4.dex*3088407889:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes5.dex*2095582180])
+10-04 20:52:33.566  4438  4438 W cher.sproutboo: Found duplicate classes, falling back to extracting from APK : /data/app/com.nothatcher.sproutbook-FpXNx39QX6Ethya_glGwLw==/base.apk
+10-04 20:52:33.566  4438  4438 W cher.sproutboo: NOTE: This wastes RAM and hurts startup performance.
+10-04 20:52:33.566  4438  4438 W cher.sproutboo: Found duplicated class when checking oat files: 'Lcom/android/tools/r8/annotations/LambdaMethod;' in /data/app/com.nothatcher.sproutbook-FpXNx39QX6Ethya_glGwLw==/base.apk!classes16.dex and /data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes5.dex
+10-04 20:52:33.567  4438  4438 W cher.sproutboo: 
+10-04 20:52:34.953  4438  4448 I cher.sproutboo: Background young concurrent copying GC freed 21501(3811KB) AllocSpace objects, 0(0B) LOS objects, 86% free, 960KB/7104KB, paused 868us total 169.846ms
+10-04 20:52:36.835  4438  4438 W cher.sproutboo: ClassLoaderContext classpath size mismatch. expected=0, found=5 (PCL[] | PCL[/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk*3609744611:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes2.dex*2985056070:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes3.dex*3673778918:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes4.dex*3088407889:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes5.dex*2095582180];PCL[/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk*3609744611:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes2.dex*2985056070:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes3.dex*3673778918:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!classes4.dex*3088407889:/data/app/com.nothatcher.sproutbook.test-eVNFlcu2G974M7IbMSqunw==/base.apk!c
+10-04 20:52:36.848  4438  4438 W cher.sproutboo: Found duplicate classes, falling back to extracting from APK : /data/app/com.nothatcher.sproutbook-FpXNx39QX6Ethya_glGwLw==/base.apk
+10-04 20:52:36.848  4438  4438 W cher.sproutboo: NOTE: This wastes RAM and hurts startup performance.
+10-04 20:52:36.849  4438  4438 W cher.sproutboo: Found duplicated class when checking oat files: 'L_COROUTINE/ArtificialStackFrames;' in /data/app/com.nothatcher.sproutbook-FpXNx39QX6Ethya_glGwLw==/base.apk and /data/app/com.nothatcher.sproutbook-FpXNx39QX6Ethya_glGwLw==/base.apk
+10-04 20:52:36.849  4438  4438 W cher.sproutboo: 
+10-04 20:52:42.156  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult; (greylist, linking, allowed)
+10-04 20:52:42.158  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult; (greylist, linking, allowed)
+10-04 20:52:42.225  4438  4438 I AndroidJUnitRunner: newApplication com.nothatcher.sproutbook.BabyForgeApp
+10-04 20:52:42.512  4438  4438 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-04 20:52:43.507  4438  4438 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+10-04 20:52:43.507  4438  4438 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+10-04 20:52:44.110  4438  4456 D WM-ForceStopRunnable: The default process name was not specified.
+10-04 20:52:44.128  4438  4456 D WM-ForceStopRunnable: Performing cleanup operations.
+10-04 20:52:44.532  4438  4456 W cher.sproutboo: JNI critical lock held for 35.028ms on Thread[4,tid=4456,Runnable,Thread*=0x71487ce3ec00,peer=0x12d3f748,"WM.task-1"]
+10-04 20:52:44.670  4438  4438 I AndroidJUnitRunner: onCreate Bundle[mParcelledData.dataSize=380]
+10-04 20:52:44.679  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:44.679  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:44.697  4438  4438 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+10-04 20:52:44.954  4438  4438 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+10-04 20:52:44.980  4438  4457 D AndroidJUnitRunner: onStart is called.
+10-04 20:52:45.420  4438  4457 I TestRunner: run started: 1 tests
+10-04 20:52:45.450  4438  4457 I TestRunner: started: treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(com.nothatcher.sproutbook.MemoryLeafFlowTest)
+10-04 20:52:46.429  4438  4457 W FileTestStorage: Output properties is not supported.
+10-04 20:52:46.434  4438  4457 W cher.sproutboo: Accessing hidden method Landroid/os/Trace;->setAppTracingAllowed(Z)V (greylist, reflection, allowed)
+10-04 20:52:46.436  4438  4457 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+10-04 20:52:46.578  4438  4438 D EventInjectionStrategy: Creating injection strategy with input manager.
+10-04 20:52:46.579  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (greylist, reflection, allowed)
+10-04 20:52:46.580  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (greylist, reflection, allowed)
+10-04 20:52:46.580  4438  4438 W cher.sproutboo: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (greylist, reflection, allowed)
+10-04 20:52:46.844  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (greylist, reflection, allowed)
+10-04 20:52:46.849  4438  4438 W cher.sproutboo: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (greylist, reflection, allowed)
+10-04 20:52:46.850  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (greylist, reflection, allowed)
+10-04 20:52:46.857  4438  4457 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@4edec08]
+10-04 20:52:47.111  4438  4457 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-04 20:52:47.162  1928  3417 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.nothatcher.sproutbook/.MainActivity} from uid 10116
+10-04 20:52:47.209  4438  4459 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+10-04 20:52:47.567  1928  1947 W system_server: Long monitor contention with owner Binder:1928_F (3417) at int com.android.server.wm.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.wm.SafeActivityOptions, boolean, int, com.android.server.wm.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord, boolean)(ActivityStarter.java:1217) waiters=1 in void com.android.server.wm.TaskChangeNotificationController.forAllRemoteListeners(com.android.server.wm.TaskChangeNotificationController$TaskStackConsumer, android.os.Message) for 228ms
+10-04 20:52:47.660  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:52:47.688  1928  2372 I chatty  : uid=1000(system) Binder:1928_8 identical 18 lines
+10-04 20:52:47.688  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:52:47.712  4438  4438 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@c79e987
+10-04 20:52:47.715  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:52:47.733  1928  2372 I chatty  : uid=1000(system) Binder:1928_8 identical 18 lines
+10-04 20:52:47.733  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:52:47.787  1928  1947 W system_server: Long monitor contention with owner Binder:1928_8 (2372) at void com.android.server.wm.ActivityTaskManagerService.activityPaused(android.os.IBinder)(ActivityTaskManagerService.java:1696) waiters=0 in void com.android.server.wm.ActivityMetricsLogger.checkVisibility(com.android.server.wm.TaskRecord, com.android.server.wm.ActivityRecord) for 101ms
+10-04 20:52:48.063  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:52:48.357  1730  1852 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-04 20:52:48.385  1730  1852 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-04 20:52:48.455  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 20:52:48.456  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 20:52:48.456  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 20:52:48.477  4438  4463 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+10-04 20:52:48.520  2312  2312 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+10-04 20:52:48.470  4438  4438 W RenderThread: type=1400 audit(0.0:139): avc: denied { write } for name="property_service" dev="tmpfs" ino=6770 scontext=u:r:untrusted_app:s0:c116,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0 app=com.nothatcher.sproutbook
+10-04 20:52:48.612  4438  4463 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+10-04 20:52:49.072  1928  1947 W system_server: Long monitor contention with owner android.anim (1948) at void com.android.server.wm.WindowSurfacePlacer.lambda$new$0$WindowSurfacePlacer()(WindowSurfacePlacer.java:61) waiters=0 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 172ms
+10-04 20:52:49.093  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: PRE_ON_CREATE
+10-04 20:52:49.096  4438  4438 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-04 20:52:49.152  4438  4463 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-04 20:52:49.315  4438  4463 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-04 20:52:49.424  4438  4463 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-04 20:52:49.545  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: CREATED
+10-04 20:52:49.553  4438  4438 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.nothatcher.sproutbook.MainActivity@dcc827f
+10-04 20:52:49.589  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: STARTED
+10-04 20:52:49.592  4438  4438 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.nothatcher.sproutbook.MainActivity@dcc827f
+10-04 20:52:49.616  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: RESUMED
+10-04 20:52:49.617  4438  4438 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.nothatcher.sproutbook.MainActivity@dcc827f
+10-04 20:52:50.030  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 290816
+10-04 20:52:50.254  3158  3198 I OpenGLRenderer: Davey! duration=960ms; Flags=0, IntendedVsync=2661251134178, Vsync=2661701134160, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2661707294069, AnimationStart=2661707531912, PerformTraversalsStart=2661719153403, DrawStart=2661719504957, SyncQueued=2661881084765, SyncStart=2661886729669, IssueDrawCommandsStart=2661890997796, SwapBuffers=2662185439295, FrameCompleted=2662216878117, DequeueBufferDuration=1170000, QueueBufferDuration=24213000, 
+10-04 20:52:50.259  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:52:50.283  3158  3158 I Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+10-04 20:52:50.371  3158  3198 I OpenGLRenderer: Davey! duration=780ms; Flags=0, IntendedVsync=2661251134178, Vsync=2661701134160, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2661707294069, AnimationStart=2661707531912, PerformTraversalsStart=2661719153403, DrawStart=2661921262342, SyncQueued=2661922188806, SyncStart=2662238823142, IssueDrawCommandsStart=2662262977204, SwapBuffers=2662270445299, FrameCompleted=2662347840499, DequeueBufferDuration=14901000, QueueBufferDuration=1443000, 
+10-04 20:52:50.386  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:52:50.409  2312  2541 I OpenGLRenderer: Davey! duration=2498ms; Flags=0, IntendedVsync=2659884435231, Vsync=2660484435207, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2660497289859, AnimationStart=2660497498751, PerformTraversalsStart=2660497503656, DrawStart=2660499330261, SyncQueued=2661209562782, SyncStart=2661212219305, IssueDrawCommandsStart=2661319514944, SwapBuffers=2662166377493, FrameCompleted=2662385492856, DequeueBufferDuration=7619000, QueueBufferDuration=16823000, 
+10-04 20:52:50.493  2312  2541 D EGL_emulation: eglMakeCurrent: 0x71487d24b800: ver 3 0 (tinfo 0x71487d218be0)
+10-04 20:52:50.520  1928  3682 D HostConnection: HostConnection::get() New Host Connection established 0x714824e783c0, tid 3682
+10-04 20:52:50.734  1928  3682 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:52:50.802  1928  3682 D EGL_emulation: eglCreateContext: 0x714824e78460: maj 3 min 0 rcv 3
+10-04 20:52:50.856  1928  3682 D EGL_emulation: eglMakeCurrent: 0x714824e78460: ver 3 0 (tinfo 0x71482d5c19c0)
+10-04 20:52:55.406  4438  4438 W cher.sproutboo: Accessing hidden method Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl; (greylist, reflection, allowed)
+10-04 20:52:55.410  4438  4438 W cher.sproutboo: Accessing hidden field Landroid/view/View$AttachInfo;->mVisibleInsets:Landroid/graphics/Rect; (greylist, reflection, allowed)
+10-04 20:52:55.410  4438  4438 W cher.sproutboo: Accessing hidden field Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo; (greylist, reflection, allowed)
+10-04 20:52:55.675  4438  4464 W cher.sproutboo: Verification of java.io.File androidx.datastore.DataStoreFile.dataStoreFile(android.content.Context, java.lang.String) took 100.991ms
+10-04 20:52:55.894  4438  4464 W cher.sproutboo: Verification of boolean kotlin.io.FilesKt__UtilsKt.copyRecursively(java.io.File, java.io.File, boolean, kotlin.jvm.functions.Function2) took 113.701ms
+10-04 20:52:56.060  1928  2472 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 20:52:56.706  4438  4464 W cher.sproutboo: Verification of okio.Sink okio.Okio__JvmOkioKt.sink(java.net.Socket) took 115.551ms
+10-04 20:52:56.906  4438  4464 W cher.sproutboo: Verification of void okio.Timeout.<clinit>() took 124.852ms
+10-04 20:52:57.079  4438  4464 W cher.sproutboo: Verification of boolean okio.RealBufferedSource.rangeEquals(long, okio.ByteString) took 139.033ms
+10-04 20:52:57.395  4438  4464 W cher.sproutboo: Verification of androidx.datastore.preferences.protobuf.Internal$IntList androidx.datastore.preferences.protobuf.GeneratedMessageLite.emptyIntList() took 113.874ms
+10-04 20:52:57.477  1928  1947 W ActivityTaskManager: Launch timeout has expired, giving up wake lock!
+10-04 20:52:57.530  4438  4464 W cher.sproutboo: Verification of androidx.datastore.preferences.protobuf.GeneratedMessageLite$GeneratedExtension androidx.datastore.preferences.protobuf.GeneratedMessageLite.newRepeatedGeneratedExtension(androidx.datastore.preferences.protobuf.MessageLite, androidx.datastore.preferences.protobuf.MessageLite, androidx.datastore.preferences.protobuf.Internal$EnumLiteMap, int, androidx.datastore.preferences.protobuf.WireFormat$FieldType, boolean, java.lang.Class) took 129.285ms
+10-04 20:52:58.069  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.MapFieldLite.clear() took 185.467ms
+10-04 20:52:58.203  1928  1953 E memtrack: Couldn't load memtrack module
+10-04 20:52:58.203  1928  1953 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:52:58.385  4438  4464 W cher.sproutboo: Verification of androidx.datastore.preferences.protobuf.Schema androidx.datastore.preferences.protobuf.ManifestSchemaFactory.newSchema(java.lang.Class, androidx.datastore.preferences.protobuf.MessageInfo) took 112.047ms
+10-04 20:52:59.115  4438  4460 D HostConnection: HostConnection::get() New Host Connection established 0x71487cda3fa0, tid 4460
+10-04 20:52:59.139  4438  4460 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:52:59.196  4438  4460 D EGL_emulation: eglCreateContext: 0x71487cda6ca0: maj 3 min 0 rcv 3
+10-04 20:52:59.198  4438  4460 D EGL_emulation: eglMakeCurrent: 0x71487cda6ca0: ver 3 0 (tinfo 0x71490cd13040)
+10-04 20:52:59.295  4438  4464 W cher.sproutboo: Verification of androidx.datastore.preferences.protobuf.ByteString androidx.datastore.preferences.protobuf.ByteString.copyFrom(java.nio.ByteBuffer) took 372.203ms
+10-04 20:52:59.320  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:52:59.333  1569  1569 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device manifest.
+10-04 20:52:59.335  4438  4460 W Gralloc3: mapper 3.x is not supported
+10-04 20:52:59.392  4438  4460 D HostConnection: createUnique: call
+10-04 20:52:59.394  4438  4460 D HostConnection: HostConnection::get() New Host Connection established 0x71487cda6de0, tid 4460
+10-04 20:52:59.396  4438  4460 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:52:59.398  4438  4460 D eglCodecCommon: allocate: Ask for block of size 0x1000
+10-04 20:52:59.398  4438  4460 D eglCodecCommon: allocate: ioctl allocate returned offset 0x3ffff4000 size 0x2000
+10-04 20:52:59.413  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:52:59.416  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:52:59.560  4438  4464 W cher.sproutboo: Verification of byte[] androidx.datastore.preferences.protobuf.ByteString$SystemByteArrayCopier.copyFrom(byte[], int, int) took 118.838ms
+10-04 20:52:59.929  4438  4460 D EGL_emulation: eglMakeCurrent: 0x71487cda6ca0: ver 3 0 (tinfo 0x71490cd13040)
+10-04 20:53:00.055  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.ManifestSchemaFactory$2.<clinit>() took 121.427ms
+10-04 20:53:00.387  4438  4464 W cher.sproutboo: Verification of int androidx.datastore.preferences.protobuf.MessageSchema.decodeMapEntryValue(byte[], int, int, androidx.datastore.preferences.protobuf.WireFormat$FieldType, java.lang.Class, androidx.datastore.preferences.protobuf.ArrayDecoders$Registers) took 114.402ms
+10-04 20:53:00.427  3158  3158 D KeyguardClockSwitch: Updating clock: 853
+10-04 20:53:00.611  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.MessageSchema.mergeFromHelper(androidx.datastore.preferences.protobuf.UnknownFieldSchema, androidx.datastore.preferences.protobuf.ExtensionSchema, java.lang.Object, androidx.datastore.preferences.protobuf.Reader, androidx.datastore.preferences.protobuf.ExtensionRegistryLite) took 133.428ms
+10-04 20:53:00.613  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 20:53:00.667  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 20:53:00.777  4438  4464 W cher.sproutboo: Verification of androidx.datastore.preferences.protobuf.MessageSchema androidx.datastore.preferences.protobuf.MessageSchema.newSchemaForMessageInfo(androidx.datastore.preferences.protobuf.StructuralMessageInfo, androidx.datastore.preferences.protobuf.NewInstanceSchema, androidx.datastore.preferences.protobuf.ListFieldSchema, androidx.datastore.preferences.protobuf.UnknownFieldSchema, androidx.datastore.preferences.protobuf.ExtensionSchema, androidx.datastore.preferences.protobuf.MapFieldSchema) took 105.859ms
+10-04 20:53:00.778  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
+10-04 20:53:00.783  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:00.822  4438  4460 I OpenGLRenderer: Davey! duration=11013ms; Flags=1, IntendedVsync=2661767817358, Vsync=2661801150690, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2661807356743, AnimationStart=2661807554207, PerformTraversalsStart=2661807572066, DrawStart=2671710364272, SyncQueued=2671899068951, SyncStart=2671906735225, IssueDrawCommandsStart=2671917835031, SwapBuffers=2672704812617, FrameCompleted=2672789139056, DequeueBufferDuration=816000, QueueBufferDuration=4825000, 
+10-04 20:53:00.861  4438  4438 I Choreographer: Skipped 651 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:01.296  3158  3198 I OpenGLRenderer: Davey! duration=1137ms; Flags=0, IntendedVsync=2672134489543, Vsync=2672501156195, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2672506696150, AnimationStart=2672506762323, PerformTraversalsStart=2672506768834, DrawStart=2673249135469, SyncQueued=2673254196812, SyncStart=2673255457480, IssueDrawCommandsStart=2673260339629, SwapBuffers=2673269055539, FrameCompleted=2673273000764, DequeueBufferDuration=621000, QueueBufferDuration=1134000, 
+10-04 20:53:01.326  4438  4438 W cher.sproutboo: Verification of void androidx.core.os.TraceCompat.beginAsyncSection(java.lang.String, int) took 458.790ms
+10-04 20:53:01.335  4438  4464 W cher.sproutboo: Verification of int androidx.datastore.preferences.protobuf.MessageSchema.parseOneofField(java.lang.Object, byte[], int, int, int, int, int, int, int, long, int, androidx.datastore.preferences.protobuf.ArrayDecoders$Registers) took 552.268ms
+10-04 20:53:01.349  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:01.352  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+10-04 20:53:01.622  4438  4469 D ProfileInstaller: Installing profile for com.nothatcher.sproutbook
+10-04 20:53:01.613  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.MessageSchema.writeFieldsInDescendingOrder(java.lang.Object, androidx.datastore.preferences.protobuf.Writer) took 259.824ms
+10-04 20:53:01.636  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:01.638  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+10-04 20:53:01.745  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+10-04 20:53:01.766  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->allocateInstance(Ljava/lang/Class;)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 20:53:01.834  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->peekLong(JZ)J (greylist, reflection, allowed)
+10-04 20:53:01.835  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->pokeLong(JJZ)V (greylist, reflection, allowed)
+10-04 20:53:01.835  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->pokeInt(JIZ)V (greylist, reflection, allowed)
+10-04 20:53:01.835  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->peekInt(JZ)I (greylist, reflection, allowed)
+10-04 20:53:01.835  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+10-04 20:53:01.835  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+10-04 20:53:01.836  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->pokeByteArray(J[BII)V (greylist, reflection, allowed)
+10-04 20:53:01.836  4438  4464 W cher.sproutboo: Accessing hidden method Llibcore/io/Memory;->peekByteArray(J[BII)V (greylist, reflection, allowed)
+10-04 20:53:01.837  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, linking, allowed)
+10-04 20:53:01.837  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, linking, allowed)
+10-04 20:53:01.837  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:01.837  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, linking, allowed)
+10-04 20:53:01.864  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+10-04 20:53:01.865  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+10-04 20:53:01.865  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+10-04 20:53:01.865  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+10-04 20:53:01.866  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+10-04 20:53:01.866  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+10-04 20:53:01.891  4438  4464 W cher.sproutboo: Accessing hidden field Ljava/nio/Buffer;->address:J (greylist, reflection, allowed)
+10-04 20:53:02.138  4438  4467 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 20:53:02.138  4438  4467 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:02.139  4438  4467 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:02.352  4438  4448 I cher.sproutboo: NativeAlloc concurrent copying GC freed 27017(3389KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 4146KB/8292KB, paused 65.557ms total 3.805s
+10-04 20:53:02.619  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 20:53:02.619  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 20:53:02.620  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:02.621  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:02.660  1928  1953 I ActivityTaskManager: Displayed com.nothatcher.sproutbook/.MainActivity: +13s715ms
+10-04 20:53:02.796  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 20:53:02.797  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 20:53:02.797  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:02.797  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:08.396  4438  4474 W cher.sproutboo: Long monitor contention with owner arch_disk_io_0 (4466) at android.database.sqlite.SQLiteConnection android.database.sqlite.SQLiteConnectionPool.waitForConnection(java.lang.String, int, android.os.CancellationSignal)(SQLiteConnectionPool.java:684) waiters=0 in void android.database.sqlite.SQLiteConnectionPool.releaseConnection(android.database.sqlite.SQLiteConnection) for 282ms
+10-04 20:53:08.401  4438  4470 W cher.sproutboo: Long monitor contention with owner arch_disk_io_0 (4466) at android.database.sqlite.SQLiteConnection android.database.sqlite.SQLiteConnectionPool.waitForConnection(java.lang.String, int, android.os.CancellationSignal)(SQLiteConnectionPool.java:684) waiters=1 in android.database.sqlite.SQLiteConnection android.database.sqlite.SQLiteConnectionPool.waitForConnection(java.lang.String, int, android.os.CancellationSignal) for 237ms
+10-04 20:53:08.765  1784  1784 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 20:53:09.224  4438  4438 I Choreographer: Skipped 237 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:10.004  4438  4464 W cher.sproutboo: Verification of java.lang.Object androidx.datastore.core.okio.OkioWriteScope.writeData(java.lang.Object, kotlin.coroutines.Continuation) took 232.503ms
+10-04 20:53:10.113  4438  4460 I OpenGLRenderer: Davey! duration=4854ms; Flags=1, IntendedVsync=2677234607880, Vsync=2681184607722, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2681204203526, AnimationStart=2681204383926, PerformTraversalsStart=2681205340311, DrawStart=2681289046101, SyncQueued=2681440999297, SyncStart=2681442335289, IssueDrawCommandsStart=2681452093533, SwapBuffers=2682030698653, FrameCompleted=2682090255846, DequeueBufferDuration=784000, QueueBufferDuration=3831000, 
+10-04 20:53:10.422  3158  3198 I OpenGLRenderer: Davey! duration=1145ms; Flags=0, IntendedVsync=2681251285532, Vsync=2681684618848, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2681693697269, AnimationStart=2681693767061, PerformTraversalsStart=2681783630019, DrawStart=2681783824958, SyncQueued=2682315062644, SyncStart=2682316732093, IssueDrawCommandsStart=2682380332963, SwapBuffers=2682394894858, FrameCompleted=2682398291212, DequeueBufferDuration=797000, QueueBufferDuration=1714000, 
+10-04 20:53:10.462  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:10.539  4438  4464 W cher.sproutboo: Verification of androidx.datastore.preferences.protobuf.GeneratedMessageLite androidx.datastore.preferences.protobuf.GeneratedMessageLite$Builder.build() took 147.960ms
+10-04 20:53:10.680  3158  3198 I OpenGLRenderer: Davey! duration=1403ms; Flags=0, IntendedVsync=2681251285532, Vsync=2681684618848, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2681693697269, AnimationStart=2681693767061, PerformTraversalsStart=2681783630019, DrawStart=2682435526189, SyncQueued=2682437025838, SyncStart=2682439548002, IssueDrawCommandsStart=2682463160242, SwapBuffers=2682502133744, FrameCompleted=2682657071459, DequeueBufferDuration=5525000, QueueBufferDuration=71807000, 
+10-04 20:53:10.798  3158  3158 I Choreographer: Skipped 59 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:10.968  4438  4438 I Choreographer: Skipped 61 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:10.981  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:11.038  4438  4460 I OpenGLRenderer: Davey! duration=1095ms; Flags=0, IntendedVsync=2681917948267, Vsync=2682934614893, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2682945707236, AnimationStart=2682945913186, PerformTraversalsStart=2682945928334, DrawStart=2682946606035, SyncQueued=2682964126726, SyncStart=2682965693735, IssueDrawCommandsStart=2682971570082, SwapBuffers=2682995188196, FrameCompleted=2683015318320, DequeueBufferDuration=827000, QueueBufferDuration=3220000, 
+10-04 20:53:11.136  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:10.983  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 20:53:11.146  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 20:53:11.236  3158  3198 I OpenGLRenderer: Davey! duration=1424ms; Flags=0, IntendedVsync=2681784631226, Vsync=2682767964520, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2682775510559, AnimationStart=2682775570016, PerformTraversalsStart=2683046853708, DrawStart=2683047006599, SyncQueued=2683111634836, SyncStart=2683114182111, IssueDrawCommandsStart=2683142108979, SwapBuffers=2683168597945, FrameCompleted=2683211598652, DequeueBufferDuration=690000, QueueBufferDuration=41127000, 
+10-04 20:53:11.257  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:11.316  3158  3198 I OpenGLRenderer: Davey! duration=1414ms; Flags=0, IntendedVsync=2681784631226, Vsync=2682767964520, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2682775510559, AnimationStart=2682775570016, PerformTraversalsStart=2683046853708, DrawStart=2683159542751, SyncQueued=2683159988399, SyncStart=2683253861163, IssueDrawCommandsStart=2683261301050, SwapBuffers=2683263824597, FrameCompleted=2683292611262, DequeueBufferDuration=1811000, QueueBufferDuration=26278000, 
+10-04 20:53:11.340  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.FieldType.<clinit>() took 191.824ms
+10-04 20:53:11.510  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.JavaType.<clinit>() took 109.197ms
+10-04 20:53:11.662  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.CodedOutputStream.<init>(androidx.datastore.preferences.protobuf.CodedOutputStream$1) took 128.655ms
+10-04 20:53:11.854  4438  4464 W cher.sproutboo: Verification of void androidx.datastore.preferences.protobuf.FieldSet.<init>(androidx.datastore.preferences.protobuf.SmallSortedMap, androidx.datastore.preferences.protobuf.FieldSet$1) took 112.917ms
+10-04 20:53:11.886  4438  4467 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:11.931  1801  1801 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe
+10-04 20:53:11.990  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:12.170  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+10-04 20:53:12.171  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:12.172  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:12.336  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+10-04 20:53:12.337  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:12.338  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:12.431  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:12.455  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:12.456  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+10-04 20:53:12.639  4438  4464 W cher.sproutboo: Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+10-04 20:53:15.861  1928  3417 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 10116
+10-04 20:53:16.018  1928  1948 E system_server: Invalid ID 0x00000000.
+10-04 20:53:16.070  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: PAUSED
+10-04 20:53:16.071  4438  4438 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.nothatcher.sproutbook.MainActivity@dcc827f
+10-04 20:53:16.093  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:16.095  1928  2372 I chatty  : uid=1000(system) Binder:1928_8 identical 18 lines
+10-04 20:53:16.095  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:16.185  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:53:16.480  1688  1688 D Zygote  : Forked child process 4477
+10-04 20:53:16.556  4477  4477 I sproutbook.tes: Late-enabling -Xcheck:jni
+10-04 20:53:16.595  1928  1955 W ActivityManager: Slow operation: 480ms so far, now at startProcess: returned from zygote!
+10-04 20:53:16.596  1928  1955 W ActivityManager: Slow operation: 480ms so far, now at startProcess: done updating battery stats
+10-04 20:53:16.596  1928  1955 W ActivityManager: Slow operation: 481ms so far, now at startProcess: building log message
+10-04 20:53:16.596  1928  1955 I ActivityManager: Start proc 4477:com.nothatcher.sproutbook.test/u0a117 for activity {com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity}
+10-04 20:53:16.596  1928  1955 W ActivityManager: Slow operation: 481ms so far, now at startProcess: starting to update pids map
+10-04 20:53:16.597  1928  1955 W ActivityManager: Slow operation: 482ms so far, now at startProcess: done updating pids map
+10-04 20:53:16.836  4477  4477 E sproutbook.tes: Unknown bits set in runtime_flags: 0x8000
+10-04 20:53:16.841  4477  4477 W sproutbook.tes: Unexpected CPU variant for X86 using defaults: x86_64
+10-04 20:53:17.078  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:17.154  1928  2372 I chatty  : uid=1000(system) Binder:1928_8 identical 28 lines
+10-04 20:53:17.154  1928  2372 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:17.195  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:17.197  1928  1948 I chatty  : uid=1000(system) android.anim identical 18 lines
+10-04 20:53:17.197  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:17.207  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:53:17.293  4438  4460 D EGL_emulation: eglMakeCurrent: 0x71487cda6ca0: ver 3 0 (tinfo 0x71490cd13040)
+10-04 20:53:17.295  1928  2372 W ActivityManager: Slow operation: 237ms so far, now at attachApplicationLocked: after mServices.attachApplicationLocked
+10-04 20:53:17.482  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:17.520  1928  3417 E memtrack: Couldn't load memtrack module
+10-04 20:53:17.520  1928  3417 W android.os.Debug: failed to get memory consumption info: -1
+10-04 20:53:17.536  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:17.598  3158  3198 I chatty  : uid=10102(com.android.systemui) RenderThread identical 1 line
+10-04 20:53:17.617  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:18.137  1730  1852 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-04 20:53:18.149  1730  1852 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-04 20:53:18.216  4477  4497 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+10-04 20:53:18.230  4477  4497 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+10-04 20:53:18.471  4477  4497 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-04 20:53:18.646  4477  4497 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-04 20:53:18.781  1928  3417 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:18.781  1928  3417 I chatty  : uid=1000(system) Binder:1928_F identical 8 lines
+10-04 20:53:18.781  1928  3417 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:18.899  4477  4497 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-04 20:53:18.918  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: STOPPED
+10-04 20:53:18.922  4438  4438 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.nothatcher.sproutbook.MainActivity@dcc827f
+10-04 20:53:18.210  4477  4477 W RenderThread: type=1400 audit(0.0:140): avc: denied { write } for name="property_service" dev="tmpfs" ino=6770 scontext=u:r:untrusted_app:s0:c117,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0 app=com.nothatcher.sproutbook.test
+10-04 20:53:19.270  4477  4495 D HostConnection: HostConnection::get() New Host Connection established 0x71487d2495a0, tid 4495
+10-04 20:53:19.277  1928  1947 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{59e1aca u0 com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t117 f}
+10-04 20:53:19.287  1928  1947 W ActivityTaskManager: Activity pause timeout for ActivityRecord{59e1aca u0 com.nothatcher.sproutbook.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t117 f}
+10-04 20:53:19.301  1928  1947 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:19.301  1928  1947 I chatty  : uid=1000(system) android.display identical 8 lines
+10-04 20:53:19.301  1928  1947 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:19.514  4477  4495 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:53:19.631  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 319488
+10-04 20:53:19.665  1710  1766 I chatty  : uid=1000(system) HwBinder:1710_2 identical 1 line
+10-04 20:53:19.667  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 319488
+10-04 20:53:19.702  2312  2541 D EGL_emulation: eglMakeCurrent: 0x71487d24b800: ver 3 0 (tinfo 0x71487d218be0)
+10-04 20:53:19.747  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:19.748  1928  1948 I chatty  : uid=1000(system) android.anim identical 8 lines
+10-04 20:53:19.748  1928  1948 W InputReader: Device has associated, but no associated display id.
+10-04 20:53:19.776  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:53:20.406  4477  4495 D EGL_emulation: eglCreateContext: 0x71487d249780: maj 3 min 0 rcv 3
+10-04 20:53:20.526  1928  2372 W system_server: Long monitor contention with owner Binder:1928_14 (4136) at void com.android.server.wm.RemoteAnimationController.onAnimationFinished()(RemoteAnimationController.java:193) waiters=2 in int com.android.server.wm.ActivityTaskManagerService.getLastResumedActivityUserId() for 106ms
+10-04 20:53:20.704  4477  4495 D EGL_emulation: eglMakeCurrent: 0x71487d249780: ver 3 0 (tinfo 0x71487d218700)
+10-04 20:53:20.952  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:21.069  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:21.169  3158  3198 I OpenGLRenderer: Davey! duration=730ms; Flags=0, IntendedVsync=2692401400801, Vsync=2692701400789, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2692713030889, AnimationStart=2692713118695, PerformTraversalsStart=2692926456313, DrawStart=2693031862078, SyncQueued=2693033007197, SyncStart=2693047123693, IssueDrawCommandsStart=2693115799444, SwapBuffers=2693130898147, FrameCompleted=2693146255009, DequeueBufferDuration=13133000, QueueBufferDuration=1626000, 
+10-04 20:53:21.615  3158  3158 I Choreographer: Skipped 52 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:21.670  3158  3198 D EGL_emulation: eglMakeCurrent: 0x71487d24bf80: ver 3 0 (tinfo 0x71487d30c2a0)
+10-04 20:53:21.718  3158  3198 I OpenGLRenderer: Davey! duration=974ms; Flags=0, IntendedVsync=2692718044044, Vsync=2693584710676, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2693591953172, AnimationStart=2693591959075, PerformTraversalsStart=2693644986001, DrawStart=2693645148482, SyncQueued=2693645193615, SyncStart=2693647521168, IssueDrawCommandsStart=2693673972930, SwapBuffers=2693681310270, FrameCompleted=2693694639366, DequeueBufferDuration=1272000, QueueBufferDuration=9307000, 
+10-04 20:53:21.970  1928  1944 W Looper  : Slow dispatch took 138ms android.fg h=com.android.server.location.GnssLocationProvider$ProviderHandler c=null m=18
+10-04 20:53:21.979  1928  2443 D HostConnection: HostConnection::get() New Host Connection established 0x714825095520, tid 2443
+10-04 20:53:21.980  1928  2443 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:53:22.016  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:53:22.034  1569  1569 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device manifest.
+10-04 20:53:22.064  4477  4495 W Gralloc3: mapper 3.x is not supported
+10-04 20:53:22.134  4477  4495 D HostConnection: createUnique: call
+10-04 20:53:22.137  4477  4495 D HostConnection: HostConnection::get() New Host Connection established 0x71487d2498c0, tid 4495
+10-04 20:53:22.138  4477  4495 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_sync_buffer_data ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0 
+10-04 20:53:22.140  4477  4495 D eglCodecCommon: allocate: Ask for block of size 0x1000
+10-04 20:53:22.140  4477  4495 D eglCodecCommon: allocate: ioctl allocate returned offset 0x3ffff8000 size 0x2000
+10-04 20:53:22.181  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:53:22.185  1710  1766 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1155072
+10-04 20:53:22.214  4477  4495 D EGL_emulation: eglMakeCurrent: 0x71487d249780: ver 3 0 (tinfo 0x71487d218700)
+10-04 20:53:22.553  1928  2443 D EGL_emulation: eglCreateContext: 0x714825095660: maj 3 min 0 rcv 3
+10-04 20:53:22.638  1928  2443 D EGL_emulation: eglMakeCurrent: 0x714825095660: ver 3 0 (tinfo 0x71482d684080)
+10-04 20:53:22.648  4477  4495 I OpenGLRenderer: Davey! duration=3941ms; Flags=1, IntendedVsync=2690668024262, Vsync=2690784690924, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=2690795381620, AnimationStart=2690795583968, PerformTraversalsStart=2690795611569, DrawStart=2694172790026, SyncQueued=2694177534633, SyncStart=2694191388492, IssueDrawCommandsStart=2694207637650, SwapBuffers=2694504778400, FrameCompleted=2694623358846, DequeueBufferDuration=38838000, QueueBufferDuration=1725000, 
+10-04 20:53:22.783  4477  4477 I Choreographer: Skipped 229 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:22.806  4477  4495 D EGL_emulation: eglMakeCurrent: 0x71487d249780: ver 3 0 (tinfo 0x71487d218700)
+10-04 20:53:23.281  4438  4438 D LifecycleMonitor: Lifecycle status change: com.nothatcher.sproutbook.MainActivity@dcc827f in: DESTROYED
+10-04 20:53:23.283  4438  4438 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-04 20:53:23.702  4438  4438 W cher.sproutboo: Verification of kotlin.sequences.Sequence androidx.core.view.ViewKt.getAncestors(android.view.View) took 381.249ms
+10-04 20:53:24.054  4438  4438 W cher.sproutboo: Verification of void androidx.core.view.ViewKt$ancestors$1.<clinit>() took 302.907ms
+10-04 20:53:24.288  4438  4438 I Choreographer: Skipped 313 frames!  The application may be doing too much work on its main thread.
+10-04 20:53:24.455  1928  2472 W system_server: Long monitor contention with owner Binder:1928_8 (2372) at void com.android.server.wm.ActivityTaskManagerService.activityDestroyed(android.os.IBinder)(ActivityTaskManagerService.java:1751) waiters=0 in void com.android.server.wm.TaskPersister.writeTaskIdsFiles() for 138ms
+10-04 20:53:24.528  1928  1948 W system_server: Long monitor contention with owner Binder:1928_8 (2372) at void com.android.server.wm.ActivityTaskManagerService.activityDestroyed(android.os.IBinder)(ActivityTaskManagerService.java:1751) waiters=1 in void com.android.server.wm.InputMonitor$1.run() for 209ms
+10-04 20:53:24.787  3158  3168 I ndroid.systemu: NativeAlloc concurrent copying GC freed 76604(4629KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 5303KB/10MB, paused 379us total 4.057s
+10-04 20:53:24.886  4438  4457 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@4edec08]
+10-04 20:53:24.932  4438  4457 E TestRunner: failed: treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(com.nothatcher.sproutbook.MemoryLeafFlowTest)
+10-04 20:53:24.971  4438  4457 E TestRunner: ----- begin exception -----
+10-04 20:53:24.971  4438  4457 E TestRunner: android.util.AndroidRuntimeException: Animators may only be run on Looper threads
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.animation.ValueAnimator.start(ValueAnimator.java:1044)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.animation.ValueAnimator.start(ValueAnimator.java:1098)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.animation.ObjectAnimator.start(ObjectAnimator.java:852)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.graphics.drawable.RippleForeground.startSoftwareEnter(RippleForeground.java:224)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.graphics.drawable.RippleForeground.enter(RippleForeground.java:303)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.graphics.drawable.RippleDrawable.tryRippleEnter(RippleDrawable.java:576)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.graphics.drawable.RippleDrawable.setRippleActive(RippleDrawable.java:279)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.graphics.drawable.RippleDrawable.onStateChange(RippleDrawable.java:269)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at android.graphics.drawable.Drawable.setState(Drawable.java:844)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.RippleHostView.setRippleState(RippleHostView.android.kt:231)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.RippleHostView.addRipple-KOepWvA(RippleHostView.android.kt:155)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.AndroidRippleNode.addRipple-12SF9DM(Ripple.android.kt:156)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.RippleNode.handlePressInteraction(Ripple.kt:382)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.RippleNode.access$handlePressInteraction(Ripple.kt:309)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.RippleNode$onAttach$1$1.emit(Ripple.kt:368)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material.ripple.RippleNode$onAttach$1$1.emit(Ripple.kt:364)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.material3.internal.MappedInteractionSource$special$$inlined$map$1$2.emit(Emitters.kt:223)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.flow.SharedFlowImpl.collect$suspendImpl(SharedFlow.kt:397)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.flow.SharedFlowImpl$collect$1.invokeSuspend(Unknown Source:15)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.ApplyingContinuationInterceptor$SendApplyContinuation.resumeWith(ApplyingContinuationInterceptor.kt:52)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.FrameDeferringContinuationInterceptor$TrampolinedTask.resume(FrameDeferringContinuationInterceptor.jvm.kt:131)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.FrameDeferringContinuationInterceptor.runWithoutResumingCoroutines(FrameDeferringContinuationInterceptor.jvm.kt:71)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.TestMonotonicFrameClock.performFrame(TestMonotonicFrameClock.jvm.kt:135)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.TestMonotonicFrameClock.access$performFrame(TestMonotonicFrameClock.jvm.kt:55)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.TestMonotonicFrameClock$withFrameNanos$2$1$2.invokeSuspend(TestMonotonicFrameClock.jvm.kt:113)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:375)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable(Cancellable.kt:26)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:358)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:134)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:53)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch$default(Builders.common.kt:44)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.BuildersKt.launch$default(Unknown Source:1)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.TestMonotonicFrameClock.withFrameNanos(TestMonotonicFrameClock.jvm.kt:111)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2.invokeSuspend(Recomposer.kt:591)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.ApplyingContinuationInterceptor$SendApplyContinuation.resumeWith(ApplyingContinuationInterceptor.kt:52)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at androidx.compose.ui.test.FrameDeferringContinuationInterceptor$FrameDeferredContinuation.resumeWith(FrameDeferringContinuationInterceptor.jvm.kt:187)
+10-04 20:53:24.971  4438  4457 E TestRunner: 	at kotlinx.coroutines.DispatchedTaskKt.resume(DispatchedTask.kt:163)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:152)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:470)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core(CancellableContinuationImpl.kt:504)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core$default(CancellableContinuationImpl.kt:493)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.CancellableContinuationImpl.resumeWith(CancellableContinuationImpl.kt:359)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.runtime.Recomposer$recompositionRunner$2$unregisterApplyObserver$1.invoke(Recomposer.kt:1062)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.runtime.Recomposer$recompositionRunner$2$unregisterApplyObserver$1.invoke(Recomposer.kt:1044)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.runtime.snapshots.SnapshotKt.advanceGlobalSnapshot(Snapshot.kt:1982)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.runtime.snapshots.SnapshotKt.advanceGlobalSnapshot(Snapshot.kt:1996)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.runtime.snapshots.SnapshotKt.access$advanceGlobalSnapshot(Snapshot.kt:1)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.runtime.snapshots.Snapshot$Companion.sendApplyNotifications(Snapshot.kt:679)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.ui.test.ApplyingContinuationInterceptor$SendApplyContinuation.resumeWith(ApplyingContinuationInterceptor.kt:53)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at androidx.compose.ui.test.FrameDeferringContinuationInterceptor$FrameDeferredContinuation.resumeWith(FrameDeferringContinuationInterceptor.jvm.kt:187)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:279)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.DispatchedCoroutine.afterResume(Builders.common.kt:256)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+10-04 20:53:24.986  4438  4457 E TestRunner: 	at java.lang.Thread.run(Thread.java:919)
+10-04 20:53:24.986  4438  4457 E TestRunner: ----- end exception -----
+10-04 20:53:25.051  4438  4457 I TestRunner: finished: treeOpensKeepsakeBeforeEditingAndTimelineReopensTheSavedStory(com.nothatcher.sproutbook.MemoryLeafFlowTest)
+10-04 20:53:25.090  4438  4457 I TestRunner: run finished: 1 tests, 1 failed, 0 ignored
+10-04 20:53:25.231  1928  2372 I ActivityManager: Force stopping com.nothatcher.sproutbook appid=10116 user=0: finished inst
+10-04 20:53:25.240  1928  2372 I ActivityManager: Killing 4438:com.nothatcher.sproutbook/u0a116 (adj 0): stop com.nothatcher.sproutbook
+10-04 20:53:25.304  1928  4501 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+10-04 20:53:25.304  1928  4501 W Binder  : java.lang.Throwable
+10-04 20:53:25.304  1928  4501 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:480)
+10-04 20:53:25.304  1928  4501 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:205)
+10-04 20:53:25.304  1928  4501 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+10-04 20:53:25.332  4428  4428 D AndroidRuntime: Shutting down VM
+10-04 20:53:26.390  1928  4501 I ActivityManager: Failure reporting to instrumentation watcher: comp=ComponentInfo{com.nothatcher.sproutbook.test/androidx.test.runner.AndroidJUnitRunner} results=Bundle[mParcelledData.dataSize=12356]
+10-04 20:53:26.612  1928  1947 W ActivityManager: setHasOverlayUi called on unknown pid: 4438
+10-04 20:53:26.628  1928  1956 I libprocessgroup: Successfully killed process cgroup uid 10116 pid 4438 in 1371ms
+10-04 20:53:26.648  1688  1688 I Zygote  : Process 4438 exited due to signal 9 (Killed)
+10-04 20:53:27.050  1928  2472 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-04 20:53:45.185  1928  1944 W Looper  : Slow dispatch took 135ms android.fg h=com.android.server.location.GnssLocationProvider$ProviderHandler c=null m=18
+10-04 20:54:00.011  3158  3158 D KeyguardClockSwitch: Updating clock: 854
+10-04 20:54:08.797  1784  1784 E netmgr  : Failed to open QEMU pipe 'qemud:network': Invalid argument
+10-04 20:54:11.961  1801  1801 E wifi_forwarder: RemoteConnection failed to initialize: RemoteConnection failed to open pipe

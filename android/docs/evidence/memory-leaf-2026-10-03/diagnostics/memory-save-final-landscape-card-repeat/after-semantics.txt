@@ -1,0 +1,198 @@
+Printing with useUnmergedTree = 'true'
+Node #1 at (l=0.0, t=0.0, r=800.0, b=360.0)px
+ |-Node #5 at (l=0.0, t=0.0, r=800.0, b=360.0)px
+   IsContainer = 'true'
+    |-Node #288 at (l=0.0, t=108.0, r=752.0, b=280.0)px
+    | CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@7f587aa'
+    | IsTraversalGroup = 'true'
+    | VerticalScrollAxisRange = 'ScrollAxisRange(value=1024.0, maxValue=1124.0, reverseScrolling=false)'
+    | Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+    |  |-Node #302 at (l=20.0, t=96.0, r=732.0, b=144.0)px
+    |  | HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+    |  | IsTraversalGroup = 'true'
+    |  | Actions = [ScrollBy, ScrollByOffset]
+    |  |  |-Node #303 at (l=20.0, t=104.0, r=98.0, b=136.0)px
+    |  |  | Focused = 'false'
+    |  |  | Role = 'Checkbox'
+    |  |  | Selected = 'false'
+    |  |  | Actions = [OnClick, RequestFocus]
+    |  |  | MergeDescendants = 'true'
+    |  |  |  |-Node #306 at (l=36.0, t=104.0, r=82.0, b=136.0)px
+    |  |  |    Text = '[Tree]'
+    |  |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |  |-Node #307 at (l=106.0, t=104.0, r=228.0, b=136.0)px
+    |  |    Focused = 'false'
+    |  |    Role = 'Checkbox'
+    |  |    Selected = 'true'
+    |  |    Actions = [OnClick, RequestFocus]
+    |  |    MergeDescendants = 'true'
+    |  |     |-Node #310 at (l=122.0, t=104.0, r=212.0, b=136.0)px
+    |  |       Text = '[Timeline]'
+    |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #323 at (l=20.0, t=158.0, r=732.0, b=254.0)px
+    |    Focused = 'false'
+    |    Actions = [OnClick, RequestFocus]
+    |    MergeDescendants = 'true'
+    |     |-Node #325 at (l=36.0, t=194.0, r=60.0, b=218.0)px, Tag: 'motion-icon-profile'
+    |     | Woodland playback = 'Still'
+    |     | [HideFromAccessibility]
+    |     |-Node #328 at (l=72.0, t=172.0, r=353.0, b=204.0)px
+    |     | Text = '[A picnic under the old oak]'
+    |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #329 at (l=72.0, t=208.0, r=347.0, b=240.0)px
+    |     | Text = '[2026-08-20 · Family moment]'
+    |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #330 at (l=700.0, t=198.0, r=716.0, b=214.0)px, Tag: 'motion-icon-next'
+    |       Woodland playback = 'Still'
+    |       [HideFromAccessibility]
+    |-Node #285 at (l=20.0, t=46.0, r=60.0, b=86.0)px
+    | Focused = 'false'
+    | Role = 'Button'
+    | Actions = [OnClick, RequestFocus]
+    | MergeDescendants = 'true'
+    |  |-Node #286 at (l=28.0, t=54.0, r=52.0, b=78.0)px, Tag: 'motion-icon-back'
+    |    ContentDescription = '[Back]'
+    |    Role = 'Image'
+    |    Woodland playback = 'Still'
+    |-Node #10 at (l=64.0, t=36.0, r=114.0, b=96.0)px
+    | IsContainer = 'true'
+    |  |-Node #11 at (l=78.0, t=50.0, r=100.0, b=82.0)px
+    |    Text = '[W]'
+    |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #12 at (l=114.0, t=30.0, r=784.0, b=102.0)px
+    | Focused = 'false'
+    | Role = 'Button'
+    | Actions = [OnClick, RequestFocus]
+    | MergeDescendants = 'true'
+    |  |-Node #15 at (l=126.0, t=38.0, r=198.0, b=70.0)px
+    |  | Text = '[Willow]'
+    |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #16 at (l=126.0, t=70.0, r=365.0, b=94.0)px
+    |  | Text = '[Baby · Your growing family]'
+    |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #17 at (l=748.0, t=54.0, r=772.0, b=78.0)px, Tag: 'motion-icon-profile'
+    |    ContentDescription = '[Switch child]'
+    |    Role = 'Image'
+    |    Woodland playback = 'Still'
+    |-Node #438 at (l=88.0, t=232.0, r=712.0, b=280.0)px
+    | LiveRegion = 'Polite'
+    | Actions = [Dismiss]
+    |  |-Node #439 at (l=88.0, t=232.0, r=712.0, b=280.0)px
+    |    IsContainer = 'true'
+    |     |-Node #443 at (l=104.0, t=240.0, r=136.0, b=272.0)px, Tag: 'motion-feedback-saved'
+    |     | Woodland playback = 'Still'
+    |     | [HideFromAccessibility]
+    |     |-Node #444 at (l=146.0, t=240.0, r=207.0, b=272.0)px
+    |       Text = '[Saved]'
+    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #22 at (l=0.0, t=280.0, r=800.0, b=360.0)px
+      IsContainer = 'true'
+       |-Node #23 at (l=0.0, t=280.0, r=752.0, b=360.0)px
+         [SelectableGroup]
+          |-Node #24 at (l=0.0, t=280.0, r=182.0, b=360.0)px, Tag: 'nav-today'
+          | Focused = 'false'
+          | Role = 'Tab'
+          | Selected = 'false'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |  |-Node #32 at (l=64.0, t=324.0, r=118.0, b=348.0)px
+          |  | Text = '[Today]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #29 at (l=79.0, t=292.0, r=103.0, b=316.0)px
+          |    ClearAndSetSemantics = 'true'
+          |     |-Node #30 at (l=79.0, t=292.0, r=103.0, b=316.0)px, Tag: 'motion-icon-today'
+          |       Woodland playback = 'Still'
+          |       [HideFromAccessibility]
+          |-Node #33 at (l=190.0, t=280.0, r=372.0, b=360.0)px, Tag: 'nav-schedule'
+          | Focused = 'false'
+          | Role = 'Tab'
+          | Selected = 'false'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |  |-Node #41 at (l=239.0, t=324.0, r=323.0, b=348.0)px
+          |  | Text = '[Schedule]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #38 at (l=269.0, t=292.0, r=293.0, b=316.0)px
+          |    ClearAndSetSemantics = 'true'
+          |     |-Node #39 at (l=269.0, t=292.0, r=293.0, b=316.0)px, Tag: 'motion-icon-schedule'
+          |       Woodland playback = 'Still'
+          |       [HideFromAccessibility]
+          |-Node #42 at (l=380.0, t=280.0, r=562.0, b=360.0)px, Tag: 'nav-care'
+          | Focused = 'false'
+          | Role = 'Tab'
+          | Selected = 'false'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |  |-Node #50 at (l=449.0, t=324.0, r=492.0, b=348.0)px
+          |  | Text = '[Care]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #47 at (l=459.0, t=292.0, r=483.0, b=316.0)px
+          |    ClearAndSetSemantics = 'true'
+          |     |-Node #48 at (l=459.0, t=292.0, r=483.0, b=316.0)px, Tag: 'motion-icon-care'
+          |       Woodland playback = 'Still'
+          |       [HideFromAccessibility]
+          |-Node #51 at (l=570.0, t=280.0, r=752.0, b=360.0)px, Tag: 'nav-more'
+            Focused = 'false'
+            Role = 'Tab'
+            Selected = 'false'
+            Actions = [OnClick, RequestFocus]
+            MergeDescendants = 'true'
+             |-Node #59 at (l=637.0, t=324.0, r=684.0, b=348.0)px
+             | Text = '[More]'
+             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+             |-Node #56 at (l=649.0, t=292.0, r=673.0, b=316.0)px
+               ClearAndSetSemantics = 'true'
+                |-Node #57 at (l=649.0, t=292.0, r=673.0, b=316.0)px, Tag: 'motion-icon-more'
+                  Woodland playback = 'Still'
+                  [HideFromAccessibility]
+Printing with useUnmergedTree = 'true'
+Node #437 at (l=0.0, t=0.0, r=752.0, b=336.0)px
+ |-Node #445 at (l=0.0, t=0.0, r=752.0, b=336.0)px
+   [IsDialog]
+    |-Node #448 at (l=116.0, t=12.0, r=636.0, b=324.0)px, Tag: 'memory-leaf-card'
+      PaneTitle = 'Memory keepsake'
+       |-Node #450 at (l=210.0, t=71.0, r=558.0, b=205.0)px, Tag: 'memory-leaf-scroll'
+       | IsTraversalGroup = 'true'
+       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=295.0, reverseScrolling=false)'
+       | Actions = [ScrollBy, ScrollByOffset]
+       |  |-Node #451 at (l=210.0, t=71.0, r=400.0, b=103.0)px
+       |  | Text = '[A moment to keep]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #452 at (l=210.0, t=115.0, r=558.0, b=193.0)px
+       |  | Text = '[A picnic under the old oak]'
+       |  | [Heading]
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #453 at (l=210.0, t=205.0, r=452.0, b=237.0)px
+       |  | Text = '[Willow's story · Chapter 1]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #455 at (l=210.0, t=262.0, r=395.0, b=297.0)px
+       |  | Text = '[August 20, 2026]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #456 at (l=210.0, t=309.0, r=371.0, b=341.0)px
+       |  | Text = '[Family moment]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #457 at (l=210.0, t=353.0, r=457.0, b=377.0)px
+       |  | Text = '[Age at this moment · 1 year]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #458 at (l=210.0, t=389.0, r=489.0, b=424.0)px
+       |  | Text = '[A little day to remember.]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #459 at (l=210.0, t=436.0, r=558.0, b=500.0)px
+       |    Text = '[A little part of Willow's story, kept close.]'
+       |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #463 at (l=210.0, t=217.0, r=318.0, b=265.0)px
+       | Focused = 'false'
+       | Role = 'Button'
+       | Actions = [OnClick, RequestFocus]
+       | MergeDescendants = 'true'
+       |  |-Node #465 at (l=235.0, t=225.0, r=294.0, b=257.0)px
+       |    Text = '[Close]'
+       |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #466 at (l=326.0, t=217.0, r=558.0, b=265.0)px
+         Focused = 'false'
+         Role = 'Button'
+         Actions = [OnClick, RequestFocus]
+         MergeDescendants = 'true'
+          |-Node #468 at (l=377.0, t=225.0, r=508.0, b=257.0)px
+            Text = '[Edit memory]'
+            Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]

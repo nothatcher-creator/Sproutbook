@@ -1,8 +1,8 @@
-# SproutBook · native Android 3.7.0
+# SproutBook · native Android 3.8.0
 
 A fresh Kotlin / Jetpack Compose parenting application. Package: `com.nothatcher.sproutbook`. There is no WebView, website runtime, Godot dependency, account requirement or Internet permission.
 
-Version `3.7.0` / code `30700` supports Android 8.0+ (min SDK 26), with compile/target SDK 37. [Download the evaluation APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.7.0/SproutBook-3.7.0-debug.apk) · [Installation guide](../docs/INSTALL.md) · [Release notes](../docs/RELEASE-3.7.0.md).
+Version `3.8.0` / code `30800` supports Android 8.0+ (min SDK 26), with compile/target SDK 37. [Download the evaluation APK](https://github.com/nothatcher-creator/Sproutbook/releases/download/v3.8.0/SproutBook-3.8.0-debug.apk) · [Installation guide](../docs/INSTALL.md) · [Release notes](../docs/RELEASE-3.8.0.md).
 
 ## Build and install
 
@@ -55,6 +55,14 @@ Room is the source of truth. JSON is used only as a versioned, validated interch
 Daily routines/responsibilities with dated completion and undo; potty visits; individual milk freezer containers linked to saved pumps; native diaper logs and daily counts; recorded weight/height trends; prepared bottles linked to feeding; shopping linked to low supplies; stage-aware family profiles and Today dashboard; per-child memory tree with chapters, snapping and timeline; connected calendar/appointments; bottle, nursing and pumping logs; formula planning; sleep timers/manual logs and eight native sounds with pause/resume and timers; solids, reactions, allergens and weekly meals; visual teeth and milestones; pregnancy sessions and preparation; searchable parent advice and immediate help; inventory, emergency card, health journal, caregiver read-only mode; optional appointment notifications; backup/import and diagnostics.
 
 All personal records work offline. Guidance is general education, with primary-source links that require a browser only when opened. The app does not diagnose illness, labour, food allergies or developmental conditions, or calculate medication doses. See `docs/Guidance.md` and [the 3.6 birth-source review](docs/BIRTH-SOURCES-3.6.md) for content review notes.
+
+## Leaves worth keeping · 3.8.0
+
+Tree, timeline and Today leaf taps open a separate native keepsake card with a leaf outline, scrollable story, optional private photo, date, child and chapter. **Edit memory** opens the existing editor. Reading does not save or mutate records, and Grandparent mode has no edit action.
+
+The profile previews seven per-child tree themes: Summer, Autumn, Night, Spring, Blossom, Winter and Rainbow. Their static scenery keeps the original anchors, arranging gestures and memory-category colors. A shared core catalogue drives choices, repository validation and backup validation.
+
+Room schema 13 and backup format 5 remain unchanged. Older 3.7 apps do not recognize the four newly named themes in exports; restore those backups with 3.8 or newer. See [QA-3.8](docs/QA-3.8.md) for fresh verification and [release notes](../docs/RELEASE-3.8.0.md).
 
 ## A personal Today · 3.7.0
 
@@ -126,13 +134,13 @@ Milk freezer inventory counts Frozen containers and orders them by recorded date
 
 Room schema 13 retains exported schema history and explicit migrations; destructive migration fallback is not enabled. Android system/cloud backup is disabled; use the in-app export. Backups contain sensitive family information and photos as readable JSON/Base64, so store and share them carefully.
 
-Exports use SproutBook backup format version 5. Import supports versions 1–5, upgrading older native backups with appropriate appearance, Wishlist and Today defaults. Referenced background photos are included and remapped to fresh private filenames on restore. Older apps cannot restore format-5 exports, so retain a pre-update backup before installing. Imports are limited to 32 MiB including at most 20 MiB of photos and 50,000 records. It validates all tables, ownership, identities, dates, amounts and photos before asking to replace the current family data. Restore is transactional and imports photos under fresh filenames. Notifications remain off after restore. Old HTML/WebView exports are not compatible with this format.
+Exports use SproutBook backup format version 5. Import supports versions 1–5, upgrading older native backups with appropriate appearance, Wishlist and Today defaults. Referenced background photos are included and remapped to fresh private filenames on restore. 3.6 and earlier cannot restore format-5 exports. 3.7 accepts the original three tree styles, but cannot restore an export containing Spring, Blossom, Winter or Rainbow; use 3.8 or newer for those themes. Retain a pre-update backup before installing. Imports are limited to 32 MiB including at most 20 MiB of photos and 50,000 records. It validates all tables, ownership, identities, dates, amounts and photos before asking to replace the current family data. Restore is transactional and imports photos under fresh filenames. Notifications remain off after restore. Old HTML/WebView exports are not compatible with this format.
 
 Grandparent mode prevents accidental changes; it is a convenience mode, not account authentication or a security boundary. Anyone using the unlocked app can turn it off in settings.
 
 ## Release checklist and evidence
 
-Read [QA-3.7](docs/QA-3.7.md) and [the 3.7 release notes](../docs/RELEASE-3.7.0.md) for this evaluation build; `docs/QA.md`, `docs/Review.md`, `docs/Progress.md` and `docs/Plan.md` retain earlier evidence and plans. The QA ledger distinguishes actual executed checks from remaining hardware/store gates. Before a production/store release, complete real-device audio and background tests, Android 17/API 37 notification/foreground-service checks, spoken accessibility review, clinical/editorial review, production signing, privacy policy and Play Console declarations. No claim of Play approval is made.
+Read [QA-3.8](docs/QA-3.8.md) and [the 3.8 release notes](../docs/RELEASE-3.8.0.md) for this evaluation build; `docs/QA.md`, `docs/Review.md`, `docs/Progress.md` and `docs/Plan.md` retain earlier evidence and plans. The QA ledger distinguishes actual executed checks from remaining hardware/store gates. Before a production/store release, complete real-device audio and background tests, Android 17/API 37 notification/foreground-service checks, spoken accessibility review, clinical/editorial review, production signing, privacy policy and Play Console declarations. No claim of Play approval is made.
 
 Branding is centralized in `res/values/strings.xml`, `res/drawable/ic_sprout.xml` and `ui/Theme.kt`. Future enhancements in the project plan are not presented as working UI buttons.
 

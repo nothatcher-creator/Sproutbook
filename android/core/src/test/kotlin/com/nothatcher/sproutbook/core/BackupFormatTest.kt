@@ -150,6 +150,39 @@ class BackupFormatTest {
     }
 
     @Test
+    fun newTreeStylesRoundTripWithoutChangingMemoryPlacement() {
+        listOf("Summer", "Autumn", "Night", "Spring", "Blossom", "Winter", "Rainbow").forEach { style ->
+            val backup = base()
+            val tables = backup.getAsJsonObject("tables")
+            tables.getAsJsonArray("children")[0].asJsonObject.addProperty("treeStyle", style)
+            tables.getAsJsonArray("memorys").add(
+                JsonParser.parseString(
+                    """{"id":"leaf","childId":"a","title":"First laugh","occurredOn":1,"anchor":31,"chapter":2,"notes":"With their sister","updatedAt":1000}"""
+                )
+            )
+
+            val imported = BackupFormat.validate(backup.toString())
+            val exportedAgain = BackupFormat.validate(imported.toString())
+            val restored = exportedAgain.getAsJsonObject("tables")
+            assertEquals(style, restored.getAsJsonArray("children")[0].asJsonObject["treeStyle"].asString)
+            val memory = restored.getAsJsonArray("memorys")[0].asJsonObject
+            assertEquals(31, memory["anchor"].asInt)
+            assertEquals(2, memory["chapter"].asInt)
+            assertEquals("With their sister", memory["notes"].asString)
+        }
+    }
+
+    @Test
+    fun unknownTreeStylesAreRejectedInsteadOfSilentlyChangingAppearance() {
+        listOf("Space", "spring", "").forEach { style ->
+            invalid {
+                it.getAsJsonObject("tables").getAsJsonArray("children")[0].asJsonObject
+                    .addProperty("treeStyle", style)
+            }
+        }
+    }
+
+    @Test
     fun rejectPhotoPathTraversal() {
         invalid { it.getAsJsonObject("photos").addProperty("../bad.jpg", "AA==") }
     }

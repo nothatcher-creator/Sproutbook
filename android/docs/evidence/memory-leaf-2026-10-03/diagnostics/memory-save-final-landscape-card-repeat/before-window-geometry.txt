@@ -1,0 +1,1 @@
+decorSizePx=800x360; decorLocationPx=[0, 0]; visibleFramePx=Rect(0, 24 - 752, 360); bottomSystemInsetPx=0

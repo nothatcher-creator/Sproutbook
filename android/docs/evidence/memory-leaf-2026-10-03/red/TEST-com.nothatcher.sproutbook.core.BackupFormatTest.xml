@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.BackupFormatTest" tests="19" skipped="0" failures="1" errors="0" timestamp="2026-10-03T22:58:24.858Z" hostname="a100580314a4" time="0.386">
+  <properties/>
+  <testcase name="rejectPhotoPathTraversal" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.181"/>
+  <testcase name="rejectFutureHistoricalRecords" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.077"/>
+  <testcase name="rejectShoppingForeignChildLink" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.003"/>
+  <testcase name="newBackupRequiresNewTables" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.005"/>
+  <testcase name="unknownTreeStylesAreRejectedInsteadOfSilentlyChangingAppearance" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.011"/>
+  <testcase name="rejectDuplicateTreeSlots" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.02"/>
+  <testcase name="rejectDuplicateIdentities" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.002"/>
+  <testcase name="futurePlanningRemainsValid" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.017"/>
+  <testcase name="rejectInvalidPreparedBottle" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.043"/>
+  <testcase name="legacyBackupUpgradesWithoutLosingRecords" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectFutureVersion" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.005"/>
+  <testcase name="newTreeStylesRoundTripWithoutChangingMemoryPlacement" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.003">
+    <failure message="java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: This backup is incomplete or contains invalid records. Nothing has been replaced.
+	at com.nothatcher.sproutbook.core.BackupFormat.fail(BackupFormat.kt:200)
+	at com.nothatcher.sproutbook.core.BackupFormat.checkRecord$one(BackupFormat.kt:446)
+	at com.nothatcher.sproutbook.core.BackupFormat.checkRecord(BackupFormat.kt:452)
+	at com.nothatcher.sproutbook.core.BackupFormat.validate(BackupFormat.kt:303)
+	at com.nothatcher.sproutbook.core.BackupFormatTest.newTreeStylesRoundTripWithoutChangingMemoryPlacement(BackupFormatTest.kt:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.runRequest(JUnitTestExecutor.java:175)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:84)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:47)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestDefinitionProcessor.processTestDefinition(AbstractJUnitTestDefinitionProcessor.java:65)
+	at org.gradle.api.internal.tasks.testing.SuiteTestDefinitionProcessor.processTestDefinition(SuiteTestDefinitionProcessor.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.MethodInvocation.invokeOn(MethodInvocation.java:77)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:28)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:19)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:88)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestDefinition(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:178)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="rejectOrphanRecord" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.002"/>
+  <testcase name="rejectInvalidEnum" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="pastRemindersDoNotSpam" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.009"/>
+  <testcase name="missingOptionalFieldsRepair" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectToothIndexBeforeIntegerNarrowing" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectMissingTables" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.001"/>
+  <testcase name="rejectWrongTypes" classname="com.nothatcher.sproutbook.core.BackupFormatTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

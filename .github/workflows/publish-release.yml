@@ -6,7 +6,7 @@ on:
       version:
         description: Semantic version of built, tested artifacts already hosted on Sites
         required: true
-        default: '3.7.0'
+        default: '3.8.0'
 
 permissions:
   contents: write
@@ -58,4 +58,4 @@ jobs:
             echo "Release v$RELEASE_VERSION already exists; refusing to replace published artifacts."
             exit 1
           fi
-          gh release create "v$RELEASE_VERSION" --target "$RELEASE_COMMIT" --title "SproutBook $RELEASE_VERSION · A personal Today" --notes-file "RELEASE-$RELEASE_VERSION.md" --prerelease "SproutBook-$RELEASE_VERSION-debug.apk" "SproutBook-$RELEASE_VERSION-source.zip" "SHA256SUMS-$RELEASE_VERSION.txt"
+          gh release create "v$RELEASE_VERSION" --target "$RELEASE_COMMIT" --title "SproutBook $RELEASE_VERSION · Leaves worth keeping" --notes-file "RELEASE-$RELEASE_VERSION.md" --prerelease "SproutBook-$RELEASE_VERSION-debug.apk" "SproutBook-$RELEASE_VERSION-source.zip" "SHA256SUMS-$RELEASE_VERSION.txt"

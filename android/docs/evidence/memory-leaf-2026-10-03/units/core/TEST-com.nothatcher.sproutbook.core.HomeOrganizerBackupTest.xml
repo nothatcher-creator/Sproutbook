@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-04T11:43:58.835Z" hostname="a100580314a4" time="0.049">
+  <properties/>
+  <testcase name="oldVersion4StillRequiresItsAppearanceFields" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.001"/>
+  <testcase name="customizedSectionsShortcutsAndBackgroundPhotoRoundTripTogether" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.001"/>
+  <testcase name="version5RequiresEveryOrganizerFieldIncludingExplicitNullPhoto" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.003"/>
+  <testcase name="invalidOrganizerChoicesAndWrongTypesAreRejectedBeforeRestore" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.025"/>
+  <testcase name="hiddenAllSectionsAndNoShortcutsAreValidSavedChoices" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.002"/>
+  <testcase name="versions1Through4ReceiveNonDestructiveOrganizerDefaults" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.006"/>
+  <testcase name="backgroundPhotoMustBeIncludedAndCannotEscapePrivatePhotos" classname="com.nothatcher.sproutbook.core.HomeOrganizerBackupTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

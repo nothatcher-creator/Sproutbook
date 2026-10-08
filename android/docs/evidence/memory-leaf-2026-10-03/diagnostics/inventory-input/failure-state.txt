@@ -1,0 +1,3 @@
+stage=failure; targetPx=Rect.fromLTRB(38.0, 610.0, 132.0, 650.0); targetCenterPx=Offset(85.0, 630.0); unclippedDp=DpRect(left=38.0.dp, top=610.0.dp, right=132.0.dp, bottom=650.0.dp); viewportPx=Rect.fromLTRB(0.0, 92.0, 360.0, 672.0); activityFocus=true
+stock=[Inventory(id=3761718f-8cd8-4f53-87d4-53d8537c3c79, childId=qa-child, name=Wipes, quantity=3.0, unit=items, threshold=0.0, category=Supplies, updatedAt=1791112997861)]
+grandparent=false

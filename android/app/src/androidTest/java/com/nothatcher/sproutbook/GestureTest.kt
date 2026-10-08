@@ -9,6 +9,16 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class GestureTest : FlowFixture() {
+    private val singleLeafTreeLabel = "Memory tree, 1 leaves. A timeline is also available."
+
+    private fun awaitSingleLeafTree() {
+        // Repository writes finish before the lifecycle-collected Room rows reach the Canvas.
+        // Arrange is disabled until that leaf is visible, so wait before clicking it.
+        compose.waitUntil(60000) {
+            compose.onAllNodesWithContentDescription(singleLeafTreeLabel).fetchSemanticsNodes().isNotEmpty()
+        }
+    }
+
     @Test
     fun calendarLongPressKeepsDate() {
         compose.onNodeWithTag("nav-schedule").performClick()
@@ -52,11 +62,9 @@ class GestureTest : FlowFixture() {
             )
         }
         care("Memory tree")
+        awaitSingleLeafTree()
         compose.onNodeWithText("Arrange").performScrollTo().performClick()
-        val tree =
-            compose.onNodeWithContentDescription(
-                "Memory tree, 1 leaves. A timeline is also available."
-            )
+        val tree = compose.onNodeWithContentDescription(singleLeafTreeLabel)
         tree.performScrollTo()
         tree.performTouchInput { click(Offset(width * .22f, height * .22f)) }
         tree.performTouchInput { click(Offset(width * .35f, height * .14f)) }
@@ -71,8 +79,9 @@ class GestureTest : FlowFixture() {
     fun longPressDragSnapsToBranch() {
         runBlocking { app.repository.saveMemory(Memory(id="drag-leaf",childId="qa-child",title="A new day",occurredOn=1)) }
         care("Memory tree")
+        awaitSingleLeafTree()
         compose.onNodeWithText("Arrange").performScrollTo().performClick()
-        val tree=compose.onNodeWithContentDescription("Memory tree, 1 leaves. A timeline is also available.")
+        val tree=compose.onNodeWithContentDescription(singleLeafTreeLabel)
         tree.performScrollTo()
         tree.performTouchInput {
             down(Offset(width*.22f,height*.22f))

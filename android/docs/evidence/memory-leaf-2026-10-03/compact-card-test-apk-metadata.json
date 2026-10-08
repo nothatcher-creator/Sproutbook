@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-04T20:52:04.453517+00:00",
+  "reason": "Test-only compact fixture rebuild: scope initial card metadata and Edit action to the open card, capture immediately after card readiness. Preserve one native Save action and the confirmed IME readiness gate. Production artifact hashes remain unchanged.",
+  "build_log": "compact-card-test-build.log",
+  "path": "/workspace/sprout-build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+  "bytes": 1712160,
+  "sha256": "825ddc21e06c5f3d98e9570916efd7b98ea5d80fcee485a479e6c94c16dd028c",
+  "certificate_sha256": "9c97e149698a89e51ef69e5a6af1649b1b55004f72f8cf57fd7993c5290ec0f3",
+  "unchanged_full_build_artifacts": [
+    "debug_apk",
+    "unsigned_release_apk",
+    "unsigned_release_aab",
+    "r8_mapping"
+  ],
+  "duration_seconds": 76,
+  "actionable_tasks": 57,
+  "executed_tasks": 5,
+  "up_to_date_tasks": 52
+}

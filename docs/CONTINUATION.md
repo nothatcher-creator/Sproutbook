@@ -1,8 +1,64 @@
 # SproutBook continuation checkpoint
 
-Updated: 2026-10-03 UTC. Native 3.7.0, GitHub evaluation prerelease and public
-Sites version 6 are delivered and verified. Older QA ledgers are historical
-verification, not fresh testing. Do not regenerate immutable release artifacts.
+Updated: 2026-10-08 UTC. Native 3.8.0 memory keepsakes and seven tree themes
+are implemented and verified; publication is in progress. Older QA
+ledgers are historical verification, not fresh testing. Do not regenerate
+immutable release artifacts.
+
+## Memory keepsakes and tree themes — 3.8.0
+
+Recovered the native GitHub project at `1790b5bd854c771d165384834cfa23f3af912cf2`
+and the existing public Sites source at
+`78352f41cb7b2af2207258b634bdc1ae30c08657`; no work was rebuilt from scratch.
+
+- Memory Tree, Timeline and Today leaves open a leaf-shaped keepsake with child,
+  chapter, localized date, age, category, optional private photo and full story.
+  Explicit Edit opens the existing editor and returns to the viewer after Save
+  or Cancel. Grandparent mode has no edit/arrange controls and revokes controls
+  when enabled while a viewer/editor is open. Deep-link dismissal survives
+  recreation; state is scoped by child and deleted cards disappear.
+- Spring, Blossom, Winter and Rainbow join Summer, Autumn and Night. A central
+  catalogue drives native validation, backup validation and profile choices.
+  Per-child profile previews are drafts until Save. Day/night seasonal artwork
+  keeps exact original leaf anchors, category colors and gestures. Room schema
+  13 / backup format 5 are unchanged. Apps before 3.8 reject backups containing
+  the four new names; they can still restore exports using the original three.
+- Final integrated build passed after responsive card buttons: 126 core + 3 app
+  units (129 total), no failures, errors or skips; debug/test APK, unsigned R8
+  APK/AAB and vital lint, 141 tasks in 7m22s. Version 3.8.0 / code 30800,
+  min SDK 26, target SDK 37. Retained
+  evaluation certificate verified; no key or credential is in source.
+- Independent source review found no Important/Critical findings. The first
+  native16 suite passed nine and exposed seven fixture/navigation timing
+  failures; original logs are retained. The corrected 541.585-second run passed
+  15/16, including all new card/profile checks. Inventory diagnostics showed
+  the Saved snackbar covering the Use one tap. The fixture now waits for that
+  overlay to clear before its single tap, and the final inventory check passed.
+  A captured keyboard entrance race required a test-only readiness gate before
+  the single Save tap. The corrected writable flow passed in 118.221 seconds.
+  All four final 150% card checks passed in 252.345 seconds. Compact Timeline
+  viewing/editing/Save/reopening/Back passed at actual 800×360 bounds and 150%
+  text in 125.827 seconds. Card queries are scoped to the viewer; compact setup
+  scrolls to the seeded chapter. Earlier fixture/test-clock failures remain in
+  the QA ledger. No product changes were made for those test corrections.
+  The completed selection covers 16 unique successful methods and six separate
+  viewport repeats: ten fresh affected executions, eleven reused unaffected
+  normal checks and one reused profile repeat. It is not a fresh full16 batch.
+  The gallery case already verified ten unchanged memory records/placements
+  across all four new themes in light and dark mode, with eight captures.
+- Rendered Chromium151 verified all seven website themes, view/edit/save/cancel,
+  keyboard focus/Escape, Add/Reset, feeding/teeth, reduced motion and long text
+  at 200% on narrow/mobile/landscape screens. Twelve leaves retain separate
+  44px targets at 320px/390px. Actual 3.8 native screenshots join the gallery.
+  Journey CSS/motion JS retain the delivered baseline bytes.
+
+Evidence: [native QA](../android/docs/QA-3.8.md),
+[website QA](../website/QA-3.8.md), and their memory-leaf evidence directories.
+Next: freeze source/APK with checksums, publish the existing public Site and GitHub evaluation release,
+then record exact commits, deployment IDs and artifact verification here.
+Production signing, installed minified runtime, spoken TalkBack, physical-phone
+performance and Android17 background behavior remain outside emulator evidence.
+
 
 ## Home screen organizer delivered — 3.7.0
 
@@ -98,7 +154,7 @@ Evidence: `android/docs/QA-3.7.md` and
 `android/docs/evidence/home-organizer-2026-10-03/`. Do not restart recovery or
 repeat completed native suites without a relevant change or unresolved concern.
 Continue from schema 13 / backup 5; preserve every child's data and the evaluation
-signing identity. Publication is the remaining task for this update.
+signing identity. Publication of 3.7.0 is complete.
 
 ## Native 3.6 delivered
 

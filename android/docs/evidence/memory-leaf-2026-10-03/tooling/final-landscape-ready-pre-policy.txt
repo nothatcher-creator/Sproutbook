@@ -1,0 +1,8 @@
+    mDisplayHomeButtonHandlers=    mKeyguardOccluded=false mKeyguardOccludedChanged=false mPendingKeyguardOccluded=false
+    KeyguardServiceDelegate
+      showing=false
+      showingAndNotOccluded=true
+      deviceHasKeyguard=true
+      interactiveState=INTERACTIVE_STATE_AWAKE
+      KeyguardStateMonitor
+        mIsShowing=false
