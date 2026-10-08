@@ -52,9 +52,18 @@ and the existing public Sites source at
   44px targets at 320px/390px. Actual 3.8 native screenshots join the gallery.
   Journey CSS/motion JS retain the delivered baseline bytes.
 
+Frozen implementation/source checkpoint: `429a8307ca3ec5b722d0adfb0b6fc68c3ea47020`.
+The installable evaluation APK is 15,220,916 bytes, SHA-256
+`c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f`.
+The complete source ZIP is 48,778,099 bytes, SHA-256
+`83c4de6c98dd8b97dc4a3ccbbce0b6d4718988b7c030da41580381e26bc206c0`.
+ZIP CRC/native-source/no-signing-key checks passed. Artifacts are frozen in
+`artifacts/3.8.0/`; later delivery documentation must not regenerate them.
+Static website checks verified the APK, reassembled source and file-size limits.
+
 Evidence: [native QA](../android/docs/QA-3.8.md),
 [website QA](../website/QA-3.8.md), and their memory-leaf evidence directories.
-Next: freeze source/APK with checksums, publish the existing public Site and GitHub evaluation release,
+Next: publish the existing public Site and GitHub evaluation release,
 then record exact commits, deployment IDs and artifact verification here.
 Production signing, installed minified runtime, spoken TalkBack, physical-phone
 performance and Android17 background behavior remain outside emulator evidence.

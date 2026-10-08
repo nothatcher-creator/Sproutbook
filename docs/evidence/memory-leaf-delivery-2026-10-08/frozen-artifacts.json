@@ -1,0 +1,32 @@
+{
+  "version": "3.8.0",
+  "frozen_at_utc": "2026-10-08T08:20:35.970081+00:00",
+  "source_commit": "429a8307ca3ec5b722d0adfb0b6fc68c3ea47020",
+  "files": {
+    "SproutBook-3.8.0-debug.apk": {
+      "bytes": 15220916,
+      "sha256": "c7f97bcb07d3d9fbac3af9e9b2745d616f770e9eab2fd73cc51d2ca2c916ef0f"
+    },
+    "SproutBook-3.8.0-source.zip": {
+      "bytes": 48778099,
+      "sha256": "83c4de6c98dd8b97dc4a3ccbbce0b6d4718988b7c030da41580381e26bc206c0"
+    }
+  },
+  "hosted_source_parts": [
+    {
+      "name": "SproutBook-3.8.0-source.zip.part1",
+      "bytes": 24389050,
+      "sha256": "1b8a75f9bbb1ce37119ebc9e9fca036b597deabc001ba1d751fd010611e0fd28"
+    },
+    {
+      "name": "SproutBook-3.8.0-source.zip.part2",
+      "bytes": 24389049,
+      "sha256": "a475c4fa4690682798ed5e59e4bad8b4ccaa5945b1027e40ec1ace813f1cd81e"
+    }
+  ],
+  "units_passed": 129,
+  "unique_native_methods_passed": 16,
+  "separate_viewport_repeats_passed": 6,
+  "native_summary": "android/docs/evidence/memory-leaf-2026-10-03/final-summary.json",
+  "note": "Do not regenerate artifacts for later documentation changes. Native ledger explicitly identifies reused unchanged checks."
+}
