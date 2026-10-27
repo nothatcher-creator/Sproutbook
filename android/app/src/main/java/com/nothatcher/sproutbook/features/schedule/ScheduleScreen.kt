@@ -11,7 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.*
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
@@ -70,6 +72,11 @@ fun ScheduleScreen(vm: FamilyViewModel, state: FamilyState) {
                         Modifier.weight(1f),
                         style = MaterialTheme.typography.titleLarge,
                     )
+                    if (month != YearMonth.now() || day != LocalDate.now())
+                        TextButton(onClick = {
+                            month = YearMonth.now()
+                            day = LocalDate.now()
+                        }) { Text("Today") }
                     TextButton(
                         onClick = { month = month.plusMonths(1) },
                         Modifier.semantics { contentDescription = "Next month" },
@@ -92,10 +99,14 @@ fun ScheduleScreen(vm: FamilyViewModel, state: FamilyState) {
                                 Modifier.weight(1f)
                                     .height(49.dp)
                                     .testTag("day-${date.toEpochDay()}")
-                                    .semantics { contentDescription = "$date, $count events" }
+                                    .semantics {
+                                        contentDescription = date.format(DateTimeFormatter.ofPattern("EEEE, MMMM d")) +
+                                            ", " + if (count == 1) "1 event" else "$count events"
+                                        if (date == day) selected = true
+                                    }
                                     .combinedClickable(
                                         onClick = { day = date },
-                                        onLongClickLabel = "Create appointment on $date",
+                                        onLongClickLabel = "Create appointment on ${friendlyDate(date)}",
                                         onLongClick = {
                                             day = date
                                             if (!state.prefs.grandparent) {
@@ -108,11 +119,13 @@ fun ScheduleScreen(vm: FamilyViewModel, state: FamilyState) {
                                     ),
                                 contentAlignment = Alignment.Center,
                             ) {
+                                val isToday = date == LocalDate.now()
                                 Surface(
                                     shape = CircleShape,
                                     color =
                                         if (date == day) MaterialTheme.colorScheme.primaryContainer
                                         else MaterialTheme.colorScheme.surfaceContainer,
+                                    border = if (isToday) BorderStroke(1.5.dp, MaterialTheme.colorScheme.primary) else null,
                                 ) {
                                     Column(
                                         Modifier.size(38.dp),
@@ -124,10 +137,15 @@ fun ScheduleScreen(vm: FamilyViewModel, state: FamilyState) {
                                             color =
                                                 if (YearMonth.from(date) == month)
                                                     MaterialTheme.colorScheme.onSurface
-                                                else MaterialTheme.colorScheme.onSurfaceVariant,
+                                                else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = .6f),
+                                            fontWeight = if (isToday || date == day) FontWeight.Bold else null,
                                         )
-                                        if (count > 0)
-                                            Text("•", style = MaterialTheme.typography.labelSmall)
+                                        Box(
+                                            Modifier.padding(top = 2.dp).size(5.dp).background(
+                                                if (count > 0) MaterialTheme.colorScheme.secondary else Color.Transparent,
+                                                CircleShape,
+                                            )
+                                        )
                                     }
                                 }
                             }
@@ -137,8 +155,16 @@ fun ScheduleScreen(vm: FamilyViewModel, state: FamilyState) {
                 Muted("Tap a day to see plans. Long press to add an appointment.")
             }
         }
-        item { Action("Add appointment · $day", !state.prefs.grandparent) { create(day) } }
-        item { Section(day.format(DateTimeFormatter.ofPattern("EEEE, MMMM d"))) }
+        item { Action("Add appointment · ${friendlyDate(day)}", !state.prefs.grandparent) { create(day) } }
+        item {
+            Section(
+                when (day) {
+                    LocalDate.now() -> "Today · "
+                    LocalDate.now().plusDays(1) -> "Tomorrow · "
+                    else -> ""
+                } + day.format(DateTimeFormatter.ofPattern("EEEE, MMMM d"))
+            )
+        }
         familyDates[day].orEmpty().forEach { event ->
             item {
                 Panel {
@@ -151,18 +177,18 @@ fun ScheduleScreen(vm: FamilyViewModel, state: FamilyState) {
         if (selected.isEmpty() && familyDates[day].isNullOrEmpty())
             item { Empty("A little breathing room", "No plans recorded for this day.") }
         items(selected, key = { "day-${it.id}" }) { a ->
-            EntryRow(a.title, "${stamp(a.startsAt,state.prefs.time24)} · ${a.category}") {
+            EntryRow(a.title, listOf(stamp(a.startsAt, state.prefs.time24), a.category, a.location).filter { it.isNotBlank() }.joinToString(" · ")) {
                 edit = a
             }
         }
+        val upcoming = appointments
+            .filter { it.startsAt >= System.currentTimeMillis() }
+            .sortedBy { it.startsAt }
+            .take(12)
         item { Section("Coming up") }
-        items(
-            appointments
-                .filter { it.startsAt >= System.currentTimeMillis() }
-                .sortedBy { it.startsAt }
-                .take(12),
-            key = { "upcoming-${it.id}" },
-        ) { a ->
+        if (upcoming.isEmpty())
+            item { Muted("Nothing coming up yet. Long press a day or use Add appointment to plan ahead.") }
+        items(upcoming, key = { "upcoming-${it.id}" }) { a ->
             EntryRow(a.title, stamp(a.startsAt, state.prefs.time24)) { edit = a }
         }
     }
@@ -218,7 +244,7 @@ private fun AppointmentEditor(
             Field("Questions for the visit", questions, { questions = it }, lines = 2)
             Field("After the visit · notes & results", results, { results = it }, lines = 3)
             Section("Reminder")
-            Choices(reminders.keys.toList(), reminders.entries.first { it.value == reminder }.key) {
+            Choices(reminders.keys.toList(), reminders.entries.firstOrNull { it.value == reminder }?.key ?: "Off") {
                 reminder = reminders.getValue(it)
             }
             if (reminder > 0 && !state.prefs.notifications)

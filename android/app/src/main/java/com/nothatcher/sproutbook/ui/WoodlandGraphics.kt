@@ -95,9 +95,10 @@ fun PaintedBanner(title: String, detail: String, @DrawableRes art: Int) {
     Box(Modifier.fillMaxWidth().heightIn(min = 128.dp).clip(RoundedCornerShape(24.dp)),
         contentAlignment = Alignment.CenterStart) {
         Image(painterResource(art), null, Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+        // Keep the words on a deep shade while letting the painting breathe on the right.
         Box(Modifier.matchParentSize().background(Brush.horizontalGradient(
-            listOf(Color(0xFF10261C).copy(alpha = .88f), Color(0xFF10261C).copy(alpha = .84f),
-                Color(0xFF10261C).copy(alpha = .78f)))))
+            0f to Color(0xFF10261C).copy(alpha = .9f), .5f to Color(0xFF10261C).copy(alpha = .78f),
+            1f to Color(0xFF10261C).copy(alpha = .28f))))
         val accent = when (title) {
             "Today" -> "brand-sprout-book"
             "Schedule" -> "woodland-butterfly"

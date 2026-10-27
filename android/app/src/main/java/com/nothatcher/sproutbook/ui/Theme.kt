@@ -1,10 +1,20 @@
 package com.nothatcher.sproutbook.ui
 
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+private val WoodlandShapes = Shapes(
+    extraSmall = RoundedCornerShape(8.dp),
+    small = RoundedCornerShape(12.dp),
+    medium = RoundedCornerShape(16.dp),
+    large = RoundedCornerShape(24.dp),
+    extraLarge = RoundedCornerShape(28.dp),
+)
 
 val Moss = Color(0xFFB6D59C)
 val Gold = Color(0xFFE5BF7B)
@@ -74,6 +84,7 @@ fun BabyTheme(dark: Boolean, accent: String = "Forest", content: @Composable () 
     val base = Typography()
     MaterialTheme(
         colorScheme = woodlandColorScheme(dark, accent),
+        shapes = WoodlandShapes,
         typography =
             base.copy(
                 headlineLarge =
@@ -81,7 +92,9 @@ fun BabyTheme(dark: Boolean, accent: String = "Forest", content: @Composable () 
                 headlineMedium =
                     base.headlineMedium.copy(fontFamily = FontFamily.Serif, fontSize = 27.sp),
                 headlineSmall = base.headlineSmall.copy(fontFamily = FontFamily.Serif, fontSize = 22.sp, lineHeight = 31.sp),
+                titleLarge = base.titleLarge.copy(fontFamily = FontFamily.Serif),
                 titleMedium = base.titleMedium.copy(fontSize = 18.sp, lineHeight = 24.sp),
+                labelMedium = base.labelMedium.copy(letterSpacing = .4.sp),
                 labelLarge = base.labelLarge.copy(fontSize = 16.sp, lineHeight = 22.sp),
                 bodyLarge = base.bodyLarge.copy(fontSize = 16.sp, lineHeight = 24.sp),
             ),

@@ -91,7 +91,7 @@ fun TeethScreen(vm: FamilyViewModel, state: FamilyState) {
                     TextButton(onClick = { viewing = t }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
                         Column(Modifier.fillMaxWidth()) {
                             Section(toothName(t.toothIndex))
-                            Muted("${t.stage} · ${t.eruptedOn?.let { LocalDate.ofEpochDay(it).toString() } ?: "Date not recorded"}")
+                            Muted("${t.stage} · ${t.eruptedOn?.let { friendlyDate(LocalDate.ofEpochDay(it)) } ?: "Date not recorded"}")
                         }
                     }
                 }
@@ -114,7 +114,7 @@ fun TeethScreen(vm: FamilyViewModel, state: FamilyState) {
         Editor(toothName(t.toothIndex), { viewing = null }) {
             Section(t.stage)
             Muted(
-                t.eruptedOn?.let { "Erupted · ${LocalDate.ofEpochDay(it)}" }
+                t.eruptedOn?.let { "Erupted · ${friendlyDate(LocalDate.ofEpochDay(it))}" }
                     ?: "No eruption date recorded"
             )
             Muted("To change this record, close this view and long-press the tooth.")

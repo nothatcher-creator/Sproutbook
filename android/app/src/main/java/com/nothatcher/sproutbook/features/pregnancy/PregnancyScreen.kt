@@ -63,7 +63,7 @@ fun PregnancyScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Uni
                             "${days/7} weeks · ${days%7} days",
                             style = MaterialTheme.typography.headlineLarge,
                         )
-                        Muted("Due · ${LocalDate.ofEpochDay(due)}")
+                        Muted("Due · ${friendlyDate(LocalDate.ofEpochDay(due))}")
                         LinearProgressIndicator(
                             progress = { (days / 280f).coerceIn(0f, 1f) },
                             modifier = Modifier.fillMaxWidth(),

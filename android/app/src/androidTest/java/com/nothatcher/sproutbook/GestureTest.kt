@@ -3,6 +3,7 @@ package com.nothatcher.sproutbook
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.test.*
 import com.nothatcher.sproutbook.data.*
+import com.nothatcher.sproutbook.ui.friendlyDate
 import java.time.LocalDate
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
@@ -25,7 +26,7 @@ class GestureTest : FlowFixture() {
         val day = LocalDate.now()
         compose.onNodeWithTag("day-${day.toEpochDay()}").performTouchInput { longClick() }
         compose.onNodeWithText("Appointment title").performTextInput("Check-up")
-        compose.onNodeWithText("Date · $day").assertExists()
+        compose.onNodeWithText("Date · ${friendlyDate(day)}").assertExists()
         compose.onNodeWithText("Save appointment").performScrollTo().performClick()
         awaitDb { app.db.appointments().all().size == 1 }
         assertEquals(

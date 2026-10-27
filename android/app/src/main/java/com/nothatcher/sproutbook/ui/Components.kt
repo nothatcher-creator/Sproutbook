@@ -5,6 +5,7 @@ import android.app.TimePickerDialog
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
@@ -75,18 +76,23 @@ fun EntryRow(title: String, detail: String, enabled: Boolean, onClick: () -> Uni
         border = BorderStroke(.7.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = .55f)),
     ) {
         Row(
-            Modifier.fillMaxWidth().heightIn(min = 88.dp).padding(horizontal = 16.dp, vertical = 14.dp),
+            Modifier.fillMaxWidth().heightIn(min = 80.dp).padding(horizontal = 16.dp, vertical = 14.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            WoodlandIcon(woodlandIconFor(title), tint = MaterialTheme.colorScheme.primary)
-            Spacer(Modifier.width(12.dp))
+            Box(
+                Modifier.size(44.dp).background(MaterialTheme.colorScheme.primary.copy(alpha = .12f), CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                WoodlandIcon(woodlandIconFor(title), tint = MaterialTheme.colorScheme.primary)
+            }
+            Spacer(Modifier.width(14.dp))
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Section(title)
                 Muted(detail)
             }
             WoodlandIcon(com.nothatcher.sproutbook.R.drawable.woodland_next,
                 modifier = Modifier.padding(start = 12.dp).size(16.dp),
-                tint = MaterialTheme.colorScheme.primary)
+                tint = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -172,7 +178,7 @@ fun DateButton(label: String, date: LocalDate?, onPick: (LocalDate) -> Unit) {
     ) {
         WoodlandIcon(com.nothatcher.sproutbook.R.drawable.woodland_schedule)
         Spacer(Modifier.width(8.dp))
-        Text("$label · ${date ?: "Choose date"}")
+        Text("$label · ${date?.let { friendlyDate(it) } ?: "Choose date"}")
     }
 }
 
@@ -239,6 +245,10 @@ fun stamp(millis: Long, use24: Boolean = false) =
 
 fun at(date: LocalDate, time: LocalTime) =
     date.atTime(time).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+
+/** "Tue, Oct 27", with the year only when it isn't this year. */
+fun friendlyDate(date: LocalDate, today: LocalDate = LocalDate.now()): String =
+    date.format(DateTimeFormatter.ofPattern(if (date.year == today.year) "EEE, MMM d" else "EEE, MMM d, yyyy"))
 
 fun dateOf(millis: Long) = Instant.ofEpochMilli(millis).atZone(ZoneId.systemDefault()).toLocalDate()
 

@@ -2,6 +2,7 @@ package com.nothatcher.sproutbook
 import androidx.compose.ui.test.*
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.services.SoundService
+import com.nothatcher.sproutbook.ui.friendlyDate
 import java.time.LocalDate
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
@@ -56,7 +57,7 @@ class CareUpgradeTest : FlowFixture() {
         compose.onNodeWithTag("tooth-14").performScrollTo()
         screenshot("teeth")
         compose.onNodeWithTag("tooth-4").performScrollTo().performClick()
-        compose.onNode(hasText("Erupted · ${LocalDate.ofEpochDay(day)}") and hasAnyAncestor(isDialog())).assertExists()
+        compose.onNode(hasText("Erupted · ${friendlyDate(LocalDate.ofEpochDay(day))}") and hasAnyAncestor(isDialog())).assertExists()
         back()
         runBlocking { app.settings.boolean("grandparent", true) }
         waitText("Grandparent mode · Read only")

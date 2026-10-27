@@ -132,7 +132,7 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
             items(rows, key = { it.id }) { m ->
                 EntryRow(
                     m.title,
-                    "${LocalDate.ofEpochDay(m.occurredOn)} · ${m.category}${if(m.photo!=null)" · Photo" else ""}",
+                    "${friendlyDate(LocalDate.ofEpochDay(m.occurredOn))} · ${m.category}${if(m.photo!=null)" · Photo" else ""}",
                 ) {
                     viewingId = m.id
                 }

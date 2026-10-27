@@ -6,8 +6,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
+import com.nothatcher.sproutbook.core.FriendlyTime
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.ui.*
 import java.time.*
@@ -19,7 +21,8 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
     val rows by
         remember(child.id, limit) { vm.repo.db.diapers().observe(child.id, limit + 1) }
             .collectAsStateWithLifecycle(emptyList())
-    val today = dateOf(rememberNow(interval = 60000))
+    val now = rememberNow(interval = 60000)
+    val today = dateOf(now)
     val daily by
         remember(child.id, today) {
                 vm.repo.db.diapers().since(child.id, at(today, LocalTime.MIDNIGHT))
@@ -35,7 +38,7 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
                     "${daily.count {it.kind in listOf("Wet","Mixed")}} wet · ${daily.count {it.kind in listOf("Dirty","Mixed")}} dirty · Mixed counts in both"
                 )
                 rows.firstOrNull()?.let {
-                    Muted("Last change · ${stamp(it.recordedAt,state.prefs.time24)}")
+                    Muted("Last change · ${stamp(it.recordedAt,state.prefs.time24)} (${FriendlyTime.ago(it.recordedAt, now)})")
                 }
             }
         }
@@ -47,7 +50,7 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
                     )
                 }
             }
-            Row {
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 OutlinedButton(
                     onClick = {
                         vm.perform("Dirty diaper logged") {
@@ -61,7 +64,7 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
                         }
                     },
                     enabled = !state.prefs.grandparent,
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.weight(1f).heightIn(min = 52.dp),
                 ) {
                     Text("Log dirty")
                 }
@@ -78,7 +81,7 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
                         }
                     },
                     enabled = !state.prefs.grandparent,
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.weight(1f).heightIn(min = 52.dp),
                 ) {
                     Text("Log mixed")
                 }
@@ -134,7 +137,7 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
                     }
                 }
                 if (rows.any { it.id == d.id })
-                    TextButton(onClick = { deleting = true }) { Text("Delete diaper") }
+                    TextButton(onClick = { deleting = true }) { Text("Delete diaper", color = MaterialTheme.colorScheme.error) }
             }
         }
         if (deleting)

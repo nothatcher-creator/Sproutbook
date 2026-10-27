@@ -103,7 +103,11 @@ fun FeedingScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit)
                     val day = today.minusDays(offset)
                     val feeds = week.filter { dateOf(it.startsAt) == day && it.kind != "Pump" }
                     Row {
-                        Text(day.dayOfWeek.name.take(3), Modifier.weight(1f))
+                        Text(
+                            if (offset == 0L) "Today"
+                            else day.dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, java.util.Locale.getDefault()),
+                            Modifier.weight(1f),
+                        )
                         Muted(
                             "${feeds.size} feeds · ${volume(feeds.filter{it.kind=="Bottle"}.sumOf{it.amountMl},state.prefs.volumeUnit)}"
                         )
@@ -134,7 +138,8 @@ private fun FeedEditor(
     var duration by
         remember(value.id) {
             mutableStateOf(
-                if (value.durationSeconds == 0L) "" else (value.durationSeconds / 60.0).toString()
+                if (value.durationSeconds == 0L) ""
+                else "%.1f".format(java.util.Locale.US, value.durationSeconds / 60.0).removeSuffix(".0")
             )
         }
     var side by remember(value.id) { mutableStateOf(value.side) }

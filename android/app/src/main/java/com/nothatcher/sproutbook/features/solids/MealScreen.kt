@@ -69,7 +69,7 @@ fun MealScreen(vm: FamilyViewModel, state: FamilyState) {
         var title by remember(meal.id) { mutableStateOf(meal.title) }
         var notes by remember(meal.id) { mutableStateOf(meal.notes) }
         var deleting by remember { mutableStateOf(false) }
-        Editor("${meal.slot} · ${LocalDate.ofEpochDay(meal.day)}", { edit = null }) {
+        Editor("${meal.slot} · ${friendlyDate(LocalDate.ofEpochDay(meal.day))}", { edit = null }) {
             if (state.prefs.grandparent) {
                 Text(title.ifBlank { "No meal planned" })
                 Text(notes)

@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.testTag
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
+import com.nothatcher.sproutbook.core.FriendlyTime
 import com.nothatcher.sproutbook.core.RoutineRules
 import com.nothatcher.sproutbook.core.HomeCustomization
 import com.nothatcher.sproutbook.core.HomeOrganizerCatalog
@@ -57,7 +58,9 @@ fun HomeScreen(
     val preparedCount by
         remember(child.id) { vm.repo.db.bottlePreps().preparedCount(child.id) }
             .collectAsStateWithLifecycle(0)
-    val today = dateOf(rememberNow(interval = 60000))
+    val now = rememberNow(interval = 60000)
+    val today = dateOf(now)
+    fun ago(millis: Long) = FriendlyTime.ago(millis, now)
     val routines by
         remember(child.id) { vm.repo.db.routines().observe(child.id, 10000) }
             .collectAsStateWithLifecycle(emptyList())
@@ -77,7 +80,7 @@ fun HomeScreen(
     val remaining = due.filter { it.id !in doneIds }
     val chapter = memories.firstOrNull()?.chapter ?: 0
     val config = customization ?: child.homeCustomization()
-    val nextAppointment = appointments.filter { it.startsAt >= System.currentTimeMillis() }.minByOrNull { it.startsAt }
+    val nextAppointment = appointments.filter { it.startsAt >= now }.minByOrNull { it.startsAt }
     val lowStock = stock.filter { it.quantity <= it.threshold }.take(3)
     val latestMilestone = milestones.firstOrNull { it.completedOn != null }
     val babyOrToddler = child.stage in listOf("BABY", "TODDLER")
@@ -108,7 +111,8 @@ fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             item(key = "today-header") {
-                WoodlandHeader("Today", today.format(DateTimeFormatter.ofPattern("EEEE, MMMM d")))
+                val hour = java.time.Instant.ofEpochMilli(now).atZone(java.time.ZoneId.systemDefault()).hour
+                WoodlandHeader("Today", "${FriendlyTime.greeting(hour)} · ${today.format(DateTimeFormatter.ofPattern("EEEE, MMMM d"))}")
             }
             if (photoUnavailable) item(key = "background-unavailable") {
                 Panel {
@@ -143,11 +147,19 @@ fun HomeScreen(
                             Muted("${child.name}'s day, all in one place.")
                         }
                         "up_next" -> nextAppointment?.let { a ->
-                            EntryRow("Up next · ${a.title}", stamp(a.startsAt, state.prefs.time24), !preview) { go("schedule") }
+                            val day = dateOf(a.startsAt)
+                            val time = java.time.Instant.ofEpochMilli(a.startsAt).atZone(java.time.ZoneId.systemDefault()).toLocalTime()
+                                .format(DateTimeFormatter.ofPattern(if (state.prefs.time24) "HH:mm" else "h:mm a"))
+                            val whenText = when (day) {
+                                today -> "Today · $time"
+                                today.plusDays(1) -> "Tomorrow · $time"
+                                else -> "${friendlyDate(day, today)} · $time"
+                            }
+                            EntryRow("Up next · ${a.title}", listOf(whenText, a.location).filter { it.isNotBlank() }.joinToString(" · "), !preview) { go("schedule") }
                         }
                         "low_stock" -> Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
                             lowStock.forEach { i ->
-                                EntryRow("Low stock · ${i.name}", "${i.quantity.toString().removeSuffix(".0")} ${i.unit} left", !preview) { go("inventory") }
+                                EntryRow("Low stock · ${i.name}", "${i.quantity.toString().removeSuffix(".0")} ${i.unit} left · Restock soon", !preview) { go("inventory") }
                             }
                         }
                         "shopping" -> EntryRow("Shopping · $shoppingCount to buy", "Your next shop, ready to go", !preview) { go("shopping") }
@@ -159,33 +171,39 @@ fun HomeScreen(
                         } else EntryRow("Routines & responsibilities", "Shared tasks and your family’s daily rhythm", !preview) { go("routines") }
                         "milk_freezer" -> EntryRow("Milk freezer · ${volume(milkStock.totalMl, state.prefs.volumeUnit)}", "${milkStock.count} frozen containers", !preview) { go("milk") }
                         "pregnancy" -> EntryRow("Your pregnancy", "Movements, appointments and preparation", !preview) { go("pregnancy") }
-                        "sleep" -> EntryRow("Log sleep", sleep.firstOrNull()?.let { "Last sleep · ${stamp(it.startsAt, state.prefs.time24)}" }
+                        "sleep" -> EntryRow("Log sleep", sleep.firstOrNull()?.let { s -> s.endsAt?.let { end -> "Woke ${ago(end)} · ${durationText(end - s.startsAt)} sleep" }
+                            ?: "Sleeping now · since ${stamp(s.startsAt, state.prefs.time24)}" }
                             ?: "Start a nap or settle in for the night", !preview) { go("sleep") }
                         "milestones" -> EntryRow("Milestones & achievements", "A growing story of their own", !preview) { go("milestones") }
-                        "feeding" -> EntryRow("Log feeding", feeds.firstOrNull { it.kind != "Pump" }?.let { "Last feed · ${stamp(it.startsAt, state.prefs.time24)}" }
+                        "feeding" -> EntryRow("Log feeding", feeds.firstOrNull { it.kind != "Pump" }?.let { "Last feed ${ago(it.startsAt)} · ${it.kind.lowercase()}" }
                             ?: "Bottle, breast or pump", !preview) { go("feeding") }
-                        "diapers" -> EntryRow("Log diaper", diaper.firstOrNull()?.let { "Last change · ${stamp(it.recordedAt, state.prefs.time24)}" }
+                        "diapers" -> EntryRow("Log diaper", diaper.firstOrNull()?.let { "Last change ${ago(it.recordedAt)} · ${it.kind.lowercase()}" }
                             ?: "Wet, dirty or mixed, in a tap", !preview) { go("diapers") }
                         "growth" -> EntryRow("Growth journal", "Weight, height and their recorded trends", !preview) { go("growth") }
                         "quick_actions" -> Panel {
                             Section("Quick actions")
-                            BoxWithConstraints {
-                                val buttonWidth = (maxWidth - 10.dp) / 2
+                            run {
+                                // Weights instead of computed widths: exact halves could round over and wrap.
                                 FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp),
                                     maxItemsInEachRow = 2) {
                                     config.quickActions.forEach { actionId ->
                                         val action = HomeOrganizerCatalog.quickActions.first { it.id == actionId }
                                         FilledTonalButton(onClick = { go(action.route) },
                                             enabled = !preview && !(state.prefs.grandparent && actionId == "memory"),
-                                            modifier = Modifier.width(buttonWidth).heightIn(min = 52.dp).testTag("today-quick-$actionId")) {
-                                            Text(action.title)
+                                            shape = MaterialTheme.shapes.medium,
+                                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 10.dp),
+                                            modifier = Modifier.weight(1f).heightIn(min = 56.dp).testTag("today-quick-$actionId")) {
+                                            WoodlandIcon(woodlandIconFor(action.title), modifier = Modifier.size(20.dp))
+                                            Spacer(Modifier.width(8.dp))
+                                            Text(action.title, Modifier.weight(1f, fill = false), maxLines = 2)
                                         }
                                     }
                                 }
                             }
                         }
                         "memory_tree" -> Panel {
-                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                                 Section("Growing memories")
                                 TextButton(onClick = { go("memories") }, enabled = !preview) { Text("Open tree") }
                             }
@@ -196,7 +214,7 @@ fun HomeScreen(
                                 ?: "Every story begins with a first leaf.")
                         }
                         "latest_milestone" -> latestMilestone?.let { m ->
-                            EntryRow("A growing moment · ${m.title}", "Celebrated ${LocalDate.ofEpochDay(m.completedOn!!)}", !preview) { go("milestones") }
+                            EntryRow("A growing moment · ${m.title}", "Celebrated ${friendlyDate(LocalDate.ofEpochDay(m.completedOn!!), today)}", !preview) { go("milestones") }
                         }
                         "health" -> EntryRow("Health & important records", "Keep their care notes together", !preview) { go("health") }
                         "potty" -> EntryRow("Potty journal", "A little visit, remembered", !preview) { go("potty") }

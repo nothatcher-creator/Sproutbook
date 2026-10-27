@@ -98,7 +98,7 @@ fun SolidsScreen(vm: FamilyViewModel, state: FamilyState, go: (String) -> Unit) 
             items(visible, key = { it.id }) { f ->
                 EntryRow(
                     f.name,
-                    "${LocalDate.ofEpochDay(f.introducedOn)} · ${f.liking}${if(f.reaction.isNotBlank())" · Possible reaction" else ""}",
+                    "${friendlyDate(LocalDate.ofEpochDay(f.introducedOn))} · ${f.liking}${if(f.reaction.isNotBlank())" · Possible reaction" else ""}",
                 ) {
                     edit = f
                 }

@@ -43,7 +43,7 @@ fun MilestoneScreen(vm: FamilyViewModel, state: FamilyState) {
         items(rows.filter { it.stage == stage }, key = { it.id }) { m ->
             EntryRow(
                 m.title,
-                m.completedOn?.let { "Celebrated · ${LocalDate.ofEpochDay(it)}" } ?: "Still growing",
+                m.completedOn?.let { "Celebrated · ${friendlyDate(LocalDate.ofEpochDay(it))}" } ?: "Still growing",
             ) {
                 edit = m
             }

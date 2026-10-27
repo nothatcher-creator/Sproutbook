@@ -18,6 +18,12 @@ import androidx.navigation.compose.*
 import androidx.navigation.navArgument
 import androidx.navigation.NavType
 import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
+import com.nothatcher.sproutbook.core.FriendlyTime
+import java.time.LocalDate
 import com.nothatcher.sproutbook.core.HomeCustomization
 import com.nothatcher.sproutbook.*
 import com.nothatcher.sproutbook.R
@@ -108,27 +114,22 @@ fun AppRoot(
                         }) {
                             WoodlandIcon(R.drawable.woodland_back, "Back")
                         }
-                    Surface(
-                        shape = CircleShape,
-                        color = MaterialTheme.colorScheme.primaryContainer,
-                    ) {
-                        Text(
-                            state.child?.name?.take(1)?.uppercase() ?: "S",
-                            Modifier.padding(14.dp),
-                            style = MaterialTheme.typography.titleMedium,
-                        )
-                    }
+                    ChildAvatar(state.child?.name ?: "SproutBook", MaterialTheme.colorScheme.primary,
+                        MaterialTheme.colorScheme.onPrimary, 44.dp)
                     TextButton(onClick = { switcher = true }, Modifier.weight(1f)) {
                         Column(Modifier.weight(1f)) {
                             Text(
                                 state.child?.name ?: "SproutBook",
                                 style = MaterialTheme.typography.titleMedium,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
                             Text(
-                                state.child?.let {
-                                    Stage.valueOf(it.stage).label + " · Your growing family"
-                                } ?: "A little care, every day",
+                                state.child?.let { childSummary(it) } ?: "A little care, every day",
                                 style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
                         }
                         WoodlandIcon(R.drawable.woodland_profile, "Switch child")
@@ -300,10 +301,30 @@ fun AppRoot(
     }
     if (switcher)
         Editor("Your growing family", { switcher = false }) {
+            Muted("Choose whose day you're looking after.")
             state.children.forEach { child ->
-                EntryRow(child.name, Stage.valueOf(child.stage).label) {
-                    vm.select(child.id)
-                    switcher = false
+                val current = child.id == state.child?.id
+                Surface(
+                    onClick = {
+                        vm.select(child.id)
+                        switcher = false
+                    },
+                    shape = MaterialTheme.shapes.large,
+                    color = if (current) MaterialTheme.colorScheme.primaryContainer
+                        else MaterialTheme.colorScheme.surfaceContainer,
+                    modifier = Modifier.fillMaxWidth().semantics(mergeDescendants = true) { selected = current },
+                ) {
+                    Row(Modifier.heightIn(min = 72.dp).padding(horizontal = 16.dp, vertical = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                        ChildAvatar(child.name, MaterialTheme.colorScheme.primary, MaterialTheme.colorScheme.onPrimary, 40.dp)
+                        Column(Modifier.weight(1f)) {
+                            Text(child.name, style = MaterialTheme.typography.titleMedium)
+                            Muted(childSummary(child))
+                        }
+                        if (current) Text("Selected", style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary)
+                    }
                 }
             }
             Action("Add another child", !state.prefs.grandparent) {
@@ -312,5 +333,19 @@ fun AppRoot(
             }
         }
     if (adding) ChildEditor(null, state.prefs.grandparent, vm) { adding = false }
+    }
+}
+
+/** Stage plus age when a birthday is known, e.g. "Baby · 7 months". */
+private fun childSummary(child: Child): String {
+    val stage = Stage.valueOf(child.stage).label
+    val age = child.birthday?.let { FriendlyTime.age(LocalDate.ofEpochDay(it), LocalDate.now()) }
+    return if (age != null) "$stage · $age" else "$stage · Your growing family"
+}
+
+@Composable
+private fun ChildAvatar(name: String, color: Color, onColor: Color, size: Dp) {
+    Box(Modifier.size(size).background(color, CircleShape).clearAndSetSemantics {}, contentAlignment = Alignment.Center) {
+        Text(name.trim().take(1).uppercase().ifEmpty { "S" }, color = onColor, style = MaterialTheme.typography.titleMedium)
     }
 }

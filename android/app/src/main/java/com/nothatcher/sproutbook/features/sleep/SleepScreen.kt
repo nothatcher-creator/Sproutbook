@@ -10,6 +10,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nothatcher.sproutbook.*
+import com.nothatcher.sproutbook.core.FriendlyTime
 import com.nothatcher.sproutbook.core.SleepMath
 import com.nothatcher.sproutbook.data.*
 import com.nothatcher.sproutbook.services.SoundService
@@ -23,7 +24,8 @@ fun SleepScreen(vm: FamilyViewModel, state: FamilyState) {
     val rows by
         remember(child.id, limit) { vm.repo.db.sleeps().history(child.id, "All", limit + 1) }
             .collectAsStateWithLifecycle(emptyList())
-    val day = dateOf(rememberNow(interval = 60000))
+    val minuteNow = rememberNow(interval = 60000)
+    val day = dateOf(minuteNow)
     val start = at(day, LocalTime.MIDNIGHT)
     val today by
         remember(child.id, day) { vm.repo.db.sleeps().since(child.id, start) }
@@ -56,7 +58,8 @@ fun SleepScreen(vm: FamilyViewModel, state: FamilyState) {
                 )
                 Muted(
                     rows.firstOrNull()?.let {
-                        "Last sleep · ${stamp(it.startsAt,state.prefs.time24)}"
+                        "Last sleep · ${stamp(it.startsAt,state.prefs.time24)}" +
+                            (it.endsAt?.let { end -> " · woke ${FriendlyTime.ago(end, minuteNow)}" } ?: "")
                     } ?: "Your sleep history starts here."
                 )
                 if (naps.isNotEmpty())
@@ -178,7 +181,7 @@ private fun SleepEditor(
                 }
             }
             if (existing && !state.prefs.grandparent)
-                TextButton(onClick = { deleting = true }) { Text("Delete sleep") }
+                TextButton(onClick = { deleting = true }) { Text("Delete sleep", color = MaterialTheme.colorScheme.error) }
         }
     }
     if (deleting)
