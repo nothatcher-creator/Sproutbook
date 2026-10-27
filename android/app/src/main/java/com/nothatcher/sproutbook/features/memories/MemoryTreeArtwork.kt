@@ -1,9 +1,11 @@
 package com.nothatcher.sproutbook.features.memories
 
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
@@ -142,52 +144,61 @@ private val limbs = listOf(
     Triple(Offset(.5f, .43f), Offset(.64f, .25f), listOf(3, 4, 8, 28)),
 )
 
+private fun crownPath(center: Offset, rx: Float, ry: Float) = Path().apply {
+    moveTo(center.x - rx, center.y)
+    cubicTo(center.x - rx * 1.06f, center.y - ry * .36f,
+        center.x - rx * .85f, center.y - ry * .65f,
+        center.x - rx * .57f, center.y - ry * .64f)
+    cubicTo(center.x - rx * .59f, center.y - ry * 1.05f,
+        center.x - rx * .13f, center.y - ry * 1.11f,
+        center.x + rx * .12f, center.y - ry * .82f)
+    cubicTo(center.x + rx * .43f, center.y - ry * 1.03f,
+        center.x + rx * .84f, center.y - ry * .74f,
+        center.x + rx * .83f, center.y - ry * .39f)
+    cubicTo(center.x + rx * 1.12f, center.y - ry * .09f,
+        center.x + rx, center.y + ry * .42f,
+        center.x + rx * .68f, center.y + ry * .53f)
+    cubicTo(center.x + rx * .60f, center.y + ry * .97f,
+        center.x + rx * .11f, center.y + ry,
+        center.x - rx * .16f, center.y + ry * .76f)
+    cubicTo(center.x - rx * .43f, center.y + ry * .93f,
+        center.x - rx * .91f, center.y + ry * .63f,
+        center.x - rx * .83f, center.y + ry * .30f)
+    cubicTo(center.x - rx * .98f, center.y + ry * .25f,
+        center.x - rx * 1.03f, center.y + ry * .11f,
+        center.x - rx, center.y)
+    close()
+}
+
+/** Opaque shapes drawn inside one translucent layer give an even crown with no blotchy overlaps. */
+private fun DrawScope.crownLayer(alpha: Float, scale: Float, shift: Offset, brush: (Offset, Float) -> Brush) {
+    val w = size.width
+    val h = size.height
+    drawContext.canvas.saveLayer(Rect(Offset.Zero, size), Paint().apply { this.alpha = alpha })
+    crownWashes.forEach { wash ->
+        val center = Offset(w * wash.x, h * wash.y) + Offset(w * shift.x, h * shift.y)
+        val rx = w * wash.width * scale
+        rotate(wash.tilt, center) { drawPath(crownPath(center, rx, h * wash.height * scale), brush(center, rx)) }
+    }
+    drawContext.canvas.restore()
+}
+
 internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette: MemoryTreePalette) {
     val w = size.width
     val h = size.height
     drawTreeSky(palette)
-    // Large irregular washes give the crown depth without suggesting extra tappable leaves.
-    crownWashes.forEachIndexed { i, wash ->
-        val center = Offset(w * wash.x, h * wash.y)
-        val rx = w * wash.width
-        val ry = h * wash.height
-        val crown = Path().apply {
-            moveTo(center.x - rx, center.y)
-            cubicTo(center.x - rx * 1.06f, center.y - ry * .36f,
-                center.x - rx * .85f, center.y - ry * .65f,
-                center.x - rx * .57f, center.y - ry * .64f)
-            cubicTo(center.x - rx * .59f, center.y - ry * 1.05f,
-                center.x - rx * .13f, center.y - ry * 1.11f,
-                center.x + rx * .12f, center.y - ry * .82f)
-            cubicTo(center.x + rx * .43f, center.y - ry * 1.03f,
-                center.x + rx * .84f, center.y - ry * .74f,
-                center.x + rx * .83f, center.y - ry * .39f)
-            cubicTo(center.x + rx * 1.12f, center.y - ry * .09f,
-                center.x + rx, center.y + ry * .42f,
-                center.x + rx * .68f, center.y + ry * .53f)
-            cubicTo(center.x + rx * .60f, center.y + ry * .97f,
-                center.x + rx * .11f, center.y + ry,
-                center.x - rx * .16f, center.y + ry * .76f)
-            cubicTo(center.x - rx * .43f, center.y + ry * .93f,
-                center.x - rx * .91f, center.y + ry * .63f,
-                center.x - rx * .83f, center.y + ry * .30f)
-            cubicTo(center.x - rx * .98f, center.y + ry * .25f,
-                center.x - rx * 1.03f, center.y + ry * .11f,
-                center.x - rx, center.y)
-            close()
-        }
-        rotate(wash.tilt, center) {
-            drawPath(crown, Brush.radialGradient(
-                colors = listOf(palette.foliage.copy(alpha = .23f), palette.canopy.copy(alpha = .11f)),
-                center = center - Offset(rx * .25f, ry * .30f),
-                radius = rx * 1.35f,
-            ))
-            if (i < 3) drawPath(crown, Brush.radialGradient(
-                colors = listOf(palette.light.copy(alpha = .10f), Color.Transparent),
-                center = center - Offset(rx * .20f, ry * .50f),
-                radius = rx * .9f,
-            ))
-        }
+    // Three soft passes build a full, painterly crown: a deep back layer, a lighter
+    // middle and a sunlit top. Memory leaves keep their outlines, so they still read clearly.
+    crownLayer(if (palette.night) .55f else .42f, 1.14f, Offset(0f, .01f)) { center, rx ->
+        Brush.radialGradient(listOf(palette.foliage, palette.canopy), center - Offset(rx * .3f, rx * .3f), rx * 1.6f)
+    }
+    crownLayer(.34f, .82f, Offset(-.01f, -.025f)) { center, rx ->
+        Brush.radialGradient(listOf(palette.light, palette.foliage), center - Offset(rx * .35f, rx * .4f), rx * 1.2f)
+    }
+    crownWashes.take(3).forEach { wash ->
+        val center = Offset(w * (wash.x - .03f), h * (wash.y - .05f))
+        drawCircle(Brush.radialGradient(listOf(palette.light.copy(alpha = .28f), Color.Transparent), center, w * wash.width),
+            w * wash.width, center)
     }
 
     if (palette.night) {
@@ -200,8 +211,8 @@ internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette:
         }
     }
 
-    drawOval(palette.barkShade.copy(alpha = .10f),
-        Offset(w * .23f, h * .93f), Size(w * .54f, h * .048f))
+    drawOval(palette.barkShade.copy(alpha = .16f),
+        Offset(w * .25f, h * .925f), Size(w * .50f, h * .05f))
     val ground = Path().apply {
         moveTo(w * .16f, h * .96f)
         cubicTo(w * .29f, h * .90f, w * .37f, h * .93f, w * .49f, h * .92f)
@@ -209,8 +220,8 @@ internal fun DrawScope.drawMemoryTreeScenery(points: List<BranchPoint>, palette:
         cubicTo(w * .67f, h * .985f, w * .35f, h * .99f, w * .16f, h * .96f)
         close()
     }
-    drawPath(ground, Brush.verticalGradient(listOf(palette.ground.copy(alpha = .30f),
-        palette.ground.copy(alpha = .06f)), startY = h * .90f, endY = h * .99f))
+    drawPath(ground, Brush.verticalGradient(listOf(palette.ground.copy(alpha = .62f),
+        palette.ground.copy(alpha = .14f)), startY = h * .90f, endY = h * .99f))
 
     val barkBrush = Brush.horizontalGradient(
         listOf(palette.barkShade, palette.bark, palette.barkLight, palette.bark),

@@ -45,27 +45,32 @@ fun woodlandIconFor(label: String): Int {
         text.startsWith("delete") || text.startsWith("remove") -> R.drawable.woodland_delete
         text.startsWith("save") || text.startsWith("complete") -> R.drawable.woodland_save
         text.startsWith("add") || text.startsWith("create") -> R.drawable.woodland_add
-        "sleep" in text || "nap" in text -> R.drawable.woodland_sleep
+        "sleep" in text || "nap" in text || text.startsWith("rest ") -> R.drawable.woodland_sleep
         "pump" in text || "milk" in text -> R.drawable.woodland_pump
         "feed" in text || "bottle" in text || "formula" in text -> R.drawable.woodland_feeding
         "memor" in text || "tree" in text -> R.drawable.woodland_memory
-        "help" in text || "emergency" in text -> R.drawable.woodland_help
+        "help" in text || "emergency" in text || "chok" in text || "breath" in text || "crying" in text ||
+            "fever" in text || "unwell" in text || "injur" in text || "overwhelm" in text -> R.drawable.woodland_help
         "teeth" in text || "tooth" in text -> R.drawable.woodland_teeth
-        "milestone" in text -> R.drawable.woodland_milestones
+        "milestone" in text || "growing, their way" in text || "smile" in text || "word" in text || "sitting" in text ||
+            "crawl" in text || "walk" in text || "achievement" in text || "growing moment" in text -> R.drawable.woodland_milestones
         "stock" in text || "cupboard" in text || "invent" in text -> R.drawable.woodland_inventory
-        "meal" in text || "solid" in text || "food" in text -> R.drawable.woodland_solids
+        "meal" in text || "solid" in text || "food" in text || "tastes" in text || "eating" in text -> R.drawable.woodland_solids
+        "latch" in text || "spit" in text || "gas" in text -> R.drawable.woodland_feeding
         "diaper" in text || "potty" in text -> R.drawable.woodland_diapers
         "health" in text -> R.drawable.woodland_health
-        "advice" in text || "mom" in text || "dad" in text -> R.drawable.woodland_advice
-        "pregnan" in text || "kick" in text || "birth" in text -> R.drawable.woodland_pregnancy
+        "advice" in text || "mom" in text || "dad" in text || "guidance" in text || "readiness" in text -> R.drawable.woodland_advice
+        "pregnan" in text || "kick" in text || "birth" in text || "labour" in text || "contraction" in text ||
+            "waiting for you" in text || "prenatal" in text -> R.drawable.woodland_pregnancy
         "growth" in text -> R.drawable.woodland_growth
         "routine" in text -> R.drawable.woodland_routine
         "shopping" in text || "wishlist" in text -> R.drawable.woodland_shopping
         "photo" in text -> R.drawable.woodland_photo
         "sound" in text -> R.drawable.woodland_sound
         "schedule" in text || "appointment" in text || "up next" in text -> R.drawable.woodland_schedule
-        "backup" in text || "diagnostic" in text || "setting" in text -> R.drawable.woodland_settings
-        else -> R.drawable.woodland_profile
+        "backup" in text || "diagnostic" in text || "setting" in text || "organizer" in text -> R.drawable.woodland_settings
+        "profile" in text || "family" in text || "caregiver" in text -> R.drawable.woodland_profile
+        else -> R.drawable.woodland_care
     }
 }
 

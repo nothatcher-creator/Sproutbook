@@ -50,10 +50,9 @@ fun SleepScreen(vm: FamilyViewModel, state: FamilyState) {
         item {
             Panel {
                 Section("Sleep today")
+                val slept = SleepMath.total(today.map { it.startsAt to (it.endsAt ?: now) }, start, now)
                 Text(
-                    durationText(
-                        SleepMath.total(today.map { it.startsAt to (it.endsAt ?: now) }, start, now)
-                    ),
+                    if (slept < 60_000 && running == null) "None yet" else durationText(slept),
                     style = MaterialTheme.typography.headlineLarge,
                 )
                 Muted(

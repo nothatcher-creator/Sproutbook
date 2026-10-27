@@ -8,7 +8,16 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextOverflow
+import com.nothatcher.sproutbook.core.TreeLayout
+import java.time.format.DateTimeFormatter
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -79,8 +88,11 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
         if (mode == "Tree") {
             item {
                 Panel {
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Section("Chapter ${chapter+1}")
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Section("Chapter ${chapter+1}")
+                            Muted("${child.treeStyle} woodland · ${visible.size} of ${TreeLayout.anchors.size} leaves")
+                        }
                         TextButton(
                             onClick = { arrange = !arrange },
                             enabled = !state.prefs.grandparent && visible.isNotEmpty(),
@@ -88,7 +100,6 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                             Text(if (arrange) "Done arranging" else "Arrange")
                         }
                     }
-                    Muted("${child.treeStyle} woodland · ${child.name}'s growing story")
                     MemoryTree(
                         visible,
                         canArrange,
@@ -98,16 +109,39 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                         },
                         treeStyle = child.treeStyle,
                     )
-                    Muted(
-                        if (canArrange)
-                            "Long press and drag a leaf to a glowing branch. Or tap a leaf, then a branch."
-                        else "Tap a leaf to revisit its story. New moments bring this tree to life."
-                    )
+                    if (canArrange)
+                        Muted("Long press and drag a leaf to a glowing branch. Or tap a leaf, then a branch.")
+                    else {
+                        visible.maxByOrNull { it.occurredOn }?.let { newest ->
+                            Surface(
+                                onClick = { viewingId = newest.id },
+                                shape = MaterialTheme.shapes.medium,
+                                color = MaterialTheme.colorScheme.surfaceContainerHigh,
+                            ) {
+                                Row(Modifier.fillMaxWidth().heightIn(min = 52.dp).padding(horizontal = 12.dp, vertical = 8.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    LeafMarker(newest.category)
+                                    Column(Modifier.weight(1f)) {
+                                        Text("Newest leaf", style = MaterialTheme.typography.labelMedium,
+                                            color = MaterialTheme.colorScheme.primary)
+                                        Text(newest.title, style = MaterialTheme.typography.bodyLarge, maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis)
+                                    }
+                                    Muted(friendlyDate(LocalDate.ofEpochDay(newest.occurredOn)))
+                                }
+                            }
+                        }
+                        if (visible.isNotEmpty()) LeafLegend(visible.map { leafGroup(it.category) }.toSet())
+                        Muted("Tap a leaf to revisit its story. New moments grow on the little buds.")
+                    }
                     if (last > 0)
-                        Row {
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically) {
                             TextButton(onClick = { chapter-- }, enabled = chapter > 0) {
                                 Text("Previous")
                             }
+                            Muted("${chapter + 1} of ${last + 1}")
                             TextButton(onClick = { chapter++ }, enabled = chapter < last) {
                                 Text("Next chapter")
                             }
@@ -129,12 +163,14 @@ fun MemoryScreen(vm: FamilyViewModel, state: FamilyState, openId: String? = null
                         "Your memories will appear here in date order.",
                     )
                 }
-            items(rows, key = { it.id }) { m ->
-                EntryRow(
-                    m.title,
-                    "${friendlyDate(LocalDate.ofEpochDay(m.occurredOn))} · ${m.category}${if(m.photo!=null)" · Photo" else ""}",
-                ) {
-                    viewingId = m.id
+            rows.groupBy { YearMonth.from(LocalDate.ofEpochDay(it.occurredOn)) }.forEach { (month, moments) ->
+                item(key = "month-$month") {
+                    Text(month.format(DateTimeFormatter.ofPattern("MMMM yyyy")),
+                        Modifier.padding(top = 6.dp, start = 4.dp).semantics { heading() },
+                        style = MaterialTheme.typography.titleLarge)
+                }
+                items(moments, key = { it.id }) { m ->
+                    TimelineMoment(m, last = m == moments.last()) { viewingId = m.id }
                 }
             }
         }
@@ -245,4 +281,48 @@ private fun MemoryEditor(
                 close()
             }
         }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun LeafLegend(present: Set<String>) {
+    FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        leafGroups.filter { it.first in present }.forEach { (label, color) ->
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                Canvas(Modifier.size(10.dp)) { drawCircle(color) }
+                Text(label, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
+}
+
+/** A timeline entry: a coloured leaf on a quiet vine, then the moment itself. */
+@Composable
+private fun TimelineMoment(m: Memory, last: Boolean, onOpen: () -> Unit) {
+    val vine = MaterialTheme.colorScheme.outlineVariant
+    Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min)) {
+        Box(Modifier.width(40.dp).fillMaxHeight(), contentAlignment = Alignment.TopCenter) {
+            Canvas(Modifier.fillMaxSize()) {
+                drawLine(vine, Offset(size.width / 2, 0f), Offset(size.width / 2, if (last) size.height / 2 else size.height),
+                    2.dp.toPx())
+            }
+            Box(Modifier.padding(top = 22.dp)) { LeafMarker(m.category) }
+        }
+        Surface(
+            onClick = onOpen,
+            shape = MaterialTheme.shapes.large,
+            color = MaterialTheme.colorScheme.surfaceContainer,
+            border = androidx.compose.foundation.BorderStroke(.7.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = .55f)),
+            modifier = Modifier.weight(1f).padding(vertical = 5.dp),
+        ) {
+            Column(Modifier.fillMaxWidth().heightIn(min = 72.dp).padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                Text(m.title, style = MaterialTheme.typography.titleMedium)
+                Muted(listOf(friendlyDate(LocalDate.ofEpochDay(m.occurredOn)), m.category,
+                    if (m.photo != null) "Photo" else "").filter { it.isNotEmpty() }.joinToString(" · "))
+                if (m.notes.isNotBlank()) Text(m.notes, style = MaterialTheme.typography.bodyMedium, maxLines = 2,
+                    overflow = TextOverflow.Ellipsis, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
 }

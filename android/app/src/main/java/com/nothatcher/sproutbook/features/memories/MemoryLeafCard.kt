@@ -143,7 +143,10 @@ internal fun MemoryLeafCard(
                         HorizontalDivider(color = colors.primary.copy(alpha = .18f))
                         Text(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)),
                             style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Medium)
-                        Text(memory.category, style = MaterialTheme.typography.labelLarge, color = colors.primary)
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            LeafMarker(memory.category, 24.dp)
+                            Text(memory.category, style = MaterialTheme.typography.labelLarge, color = colors.primary)
+                        }
                         age?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant) }
                         if (readOnly) Text("Read-only keepsake", style = MaterialTheme.typography.bodySmall,
                             color = colors.onSurfaceVariant)

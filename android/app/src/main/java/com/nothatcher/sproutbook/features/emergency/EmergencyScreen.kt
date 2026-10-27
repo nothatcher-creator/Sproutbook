@@ -39,7 +39,7 @@ fun EmergencyScreen(vm: FamilyViewModel, state: FamilyState) {
         item {
             Panel {
                 Text(child.name, style = MaterialTheme.typography.headlineLarge)
-                Text("Born · ${child.birthday?.let(LocalDate::ofEpochDay) ?: "Not recorded"}")
+                Text("Born · ${child.birthday?.let { friendlyDate(LocalDate.ofEpochDay(it)) } ?: "Not recorded"}")
                 Section("Allergies")
                 Text(
                     card.allergies.ifBlank { "Not recorded" },

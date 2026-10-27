@@ -1,6 +1,7 @@
 package com.nothatcher.sproutbook.features.memories
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.foundation.gestures.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
@@ -17,7 +18,7 @@ import com.nothatcher.sproutbook.data.Memory
 import com.nothatcher.sproutbook.ui.*
 import kotlin.math.*
 
-private fun leafColor(category: String) =
+internal fun leafColor(category: String) =
     when (category) {
         "First",
         "Achievement" -> Gold
@@ -27,6 +28,50 @@ private fun leafColor(category: String) =
         "Health" -> Color(0xFFB6A6CF)
         else -> Moss
     }
+
+/** Leaf colours as a reader would name them, in a stable legend order. */
+internal fun leafGroup(category: String) =
+    when (category) {
+        "First", "Achievement" -> "Firsts & wins"
+        "Milestone" -> "Milestones"
+        "Funny moment", "Family moment" -> "Fun & family"
+        "Health" -> "Health"
+        else -> "Everyday"
+    }
+
+internal val leafGroups = listOf("Firsts & wins" to Gold, "Milestones" to Sky, "Fun & family" to Rose,
+    "Health" to Color(0xFFB6A6CF), "Everyday" to Moss)
+
+/** A memory leaf centred on [pos], pointing right; callers rotate it into place. */
+internal fun DrawScope.drawMemoryLeaf(pos: Offset, color: Color, outline: Color, scale: Float = 1f) {
+    fun d(v: Float) = v.dp.toPx() * scale
+    val leaf = Path().apply {
+        moveTo(pos.x - d(13f), pos.y)
+        cubicTo(pos.x - d(7f), pos.y - d(14f), pos.x + d(9f), pos.y - d(13f), pos.x + d(17f), pos.y - d(1f))
+        cubicTo(pos.x + d(9f), pos.y + d(12f), pos.x - d(7f), pos.y + d(13f), pos.x - d(13f), pos.y)
+        close()
+    }
+    // Stem first, so the blade sits on top of it.
+    drawLine(outline.copy(alpha = .7f), Offset(pos.x - d(12f), pos.y), Offset(pos.x - d(18f), pos.y + d(2f)),
+        d(1.4f), StrokeCap.Round)
+    translate(d(1f), d(2f)) { drawPath(leaf, Color(0xFF10251E).copy(alpha = .2f)) }
+    drawPath(leaf, Brush.linearGradient(
+        listOf(lerp(color, Color.White, .28f), color, lerp(color, outline, .14f)),
+        start = pos - Offset(d(6f), d(11f)), end = pos + Offset(d(6f), d(11f)),
+    ))
+    drawPath(leaf, outline.copy(alpha = .85f), style = Stroke(d(1f)))
+    val veins = Path().apply {
+        moveTo(pos.x - d(11f), pos.y)
+        quadraticTo(pos.x + d(2f), pos.y - d(1.5f), pos.x + d(14f), pos.y - d(1f))
+        listOf(-5f, 1f, 7f).forEach { x ->
+            moveTo(pos.x + d(x), pos.y - d(.8f)); lineTo(pos.x + d(x + 4f), pos.y - d(6f))
+            moveTo(pos.x + d(x), pos.y - d(.6f)); lineTo(pos.x + d(x + 4f), pos.y + d(5f))
+        }
+    }
+    drawPath(veins, outline.copy(alpha = .32f), style = Stroke(d(.8f), cap = StrokeCap.Round))
+    // A soft sheen on the upper blade.
+    drawOval(Color.White.copy(alpha = .28f), Offset(pos.x - d(5f), pos.y - d(8.5f)), androidx.compose.ui.geometry.Size(d(9f), d(3.2f)))
+}
 
 @Composable
 fun MemoryTree(
@@ -187,56 +232,37 @@ fun MemoryTree(
                 )
                 drawCircle(Gold.copy(alpha = .7f), 2.dp.toPx(), center)
             }
+        val occupied = safe.map { it.anchor }.toSet()
+        val newest = safe.maxByOrNull { it.occurredOn }?.id
+        // Little buds on empty branches show where the next moments will grow.
+        if (!arrange) points.forEachIndexed { i, a ->
+            if (i !in occupied) {
+                val bud = Offset(w * a.x, h * a.y)
+                drawCircle(palette.light.copy(alpha = .55f), 3.4.dp.toPx(), bud)
+                drawCircle(palette.leafOutline.copy(alpha = .35f), 3.4.dp.toPx(), bud, style = Stroke(.8.dp.toPx()))
+            }
+        }
         safe.forEach { m ->
             val a = points[m.anchor]
             val pos = if (m.id == selected && drag != null) drag!! else Offset(w * a.x, h * a.y)
             if (selected == m.id) {
                 drawCircle(Gold.copy(alpha = .25f), 23.dp.toPx(), pos)
                 drawCircle(Gold.copy(alpha = .85f), 23.dp.toPx(), pos, style = Stroke(1.5.dp.toPx()))
+            } else if (m.id == newest && !arrange) {
+                drawCircle(Brush.radialGradient(listOf(palette.light.copy(alpha = .75f), Color.Transparent), pos, 26.dp.toPx()),
+                    26.dp.toPx(), pos)
             }
             rotate(if (a.x < .5f) -38f else 38f, pivot = pos) {
-                val leaf =
-                    Path().apply {
-                        moveTo(pos.x - 14.dp.toPx(), pos.y)
-                        cubicTo(
-                            pos.x - 6.dp.toPx(),
-                            pos.y - 19.dp.toPx(),
-                            pos.x + 12.dp.toPx(),
-                            pos.y - 13.dp.toPx(),
-                            pos.x + 16.dp.toPx(),
-                            pos.y,
-                        )
-                        cubicTo(
-                            pos.x + 8.dp.toPx(),
-                            pos.y + 15.dp.toPx(),
-                            pos.x - 8.dp.toPx(),
-                            pos.y + 13.dp.toPx(),
-                            pos.x - 14.dp.toPx(),
-                            pos.y,
-                        )
-                        close()
-                    }
-                translate(1.dp.toPx(), 2.dp.toPx()) {
-                    drawPath(leaf, Color(0xFF10251E).copy(alpha = .18f))
-                }
-                val color = leafColor(m.category)
-                drawPath(leaf, Brush.linearGradient(
-                    listOf(lerp(color, Color.White, .18f), color, lerp(color, palette.leafOutline, .10f)),
-                    start = pos - Offset(8.dp.toPx(), 12.dp.toPx()),
-                    end = pos + Offset(8.dp.toPx(), 12.dp.toPx()),
-                ))
-                drawPath(leaf, palette.leafOutline, style = Stroke(1.dp.toPx()))
-                val vein = Path().apply {
-                    moveTo(pos.x - 11.dp.toPx(), pos.y)
-                    quadraticTo(pos.x, pos.y - 2.dp.toPx(), pos.x + 12.dp.toPx(), pos.y)
-                    moveTo(pos.x - 3.dp.toPx(), pos.y - .8.dp.toPx())
-                    quadraticTo(pos.x - 3.dp.toPx(), pos.y - 4.dp.toPx(), pos.x - 1.dp.toPx(), pos.y - 7.dp.toPx())
-                    moveTo(pos.x + 4.dp.toPx(), pos.y - .5.dp.toPx())
-                    quadraticTo(pos.x + 3.dp.toPx(), pos.y + 3.dp.toPx(), pos.x + 2.dp.toPx(), pos.y + 6.dp.toPx())
-                }
-                drawPath(vein, palette.leafOutline.copy(alpha = .4f),
-                    style = Stroke(.8.dp.toPx(), cap = StrokeCap.Round))
+                drawMemoryLeaf(pos, leafColor(m.category), palette.leafOutline, if (m.id == newest) 1.12f else 1f)
             }
         }
+    }
+}
+
+@Composable
+internal fun LeafMarker(category: String, size: androidx.compose.ui.unit.Dp = 32.dp) {
+    val outline = MaterialTheme.colorScheme.primary
+    Canvas(Modifier.size(size).clearAndSetSemantics {}) {
+        rotate(-35f) { drawMemoryLeaf(center + Offset(1.dp.toPx(), 0f), leafColor(category), outline, this.size.width / 40.dp.toPx()) }
     }
 }

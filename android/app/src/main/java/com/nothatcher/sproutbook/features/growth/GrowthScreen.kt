@@ -73,8 +73,11 @@ fun GrowthScreen(vm: FamilyViewModel, state: FamilyState) {
                         style = MaterialTheme.typography.headlineLarge,
                     )
                 }
-                Muted("Your most recent 30 measurements · $unit")
-                GrowthChart(points, unit)
+                if (points.isEmpty()) Muted("Your first ${kind.lowercase()} measurement will start the trend line.")
+                else {
+                    Muted("Your most recent 30 measurements · $unit")
+                    GrowthChart(points, unit)
+                }
                 Muted(
                     "A record of measurements, without growth percentiles or medical interpretation. Share concerns with your clinician."
                 )
