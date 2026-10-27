@@ -8,6 +8,9 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 
+/** A completed change the user can take back from the snackbar. */
+class Undoable(val text: String, val undo: suspend () -> Unit)
+
 data class FamilyState(
     val loading: Boolean = true,
     val children: List<Child> = emptyList(),
@@ -21,6 +24,8 @@ class FamilyViewModel(app: Application) : AndroidViewModel(app) {
     val repo = (app as BabyForgeApp).repository
     private val events = Channel<String>(Channel.BUFFERED)
     val messages = events.receiveAsFlow()
+    private val undoEvents = Channel<Undoable>(Channel.BUFFERED)
+    val undos = undoEvents.receiveAsFlow()
     private val retry = MutableStateFlow(0)
     val state =
         retry
@@ -61,18 +66,34 @@ class FamilyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun perform(success: String = "Saved", block: suspend () -> Unit) {
         viewModelScope.launch {
-            try {
+            guarded {
                 block()
                 if (success.isNotEmpty()) events.send(success)
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                events.send(
-                    if (e is IllegalArgumentException || e is IllegalStateException)
-                        e.message ?: "Check your entry."
-                    else "Could not save. Your existing records are safe. Please try again."
-                )
             }
+        }
+    }
+
+    /** One-tap changes confirm with an Undo action instead of a plain message. */
+    fun performUndoable(text: String, block: suspend () -> Unit, undo: suspend () -> Unit) {
+        viewModelScope.launch {
+            guarded {
+                block()
+                undoEvents.send(Undoable(text, undo))
+            }
+        }
+    }
+
+    private suspend fun guarded(block: suspend () -> Unit) {
+        try {
+            block()
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            events.send(
+                if (e is IllegalArgumentException || e is IllegalStateException)
+                    e.message ?: "Check your entry."
+                else "Could not save. Your existing records are safe. Please try again."
+            )
         }
     }
 

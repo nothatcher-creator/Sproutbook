@@ -41,6 +41,9 @@ private val Dark =
         onSurfaceVariant = Color(0xFFC2CEBF),
         outlineVariant = Color(0xFF49634F),
         error = Color(0xFFFFB4AB),
+        inverseSurface = Color(0xFFEDEADF),
+        inverseOnSurface = Color(0xFF18352A),
+        inversePrimary = Color(0xFF365B35),
     )
 private val Light =
     lightColorScheme(
@@ -62,6 +65,9 @@ private val Light =
         surfaceContainerHighest = Color(0xFFE5E9DD),
         onSurface = Color(0xFF18352A),
         onBackground = Color(0xFF18352A),
+        inverseSurface = Color(0xFF203C30),
+        inverseOnSurface = Color(0xFFF5F2E7),
+        inversePrimary = Moss,
     )
 
 internal fun woodlandColorScheme(dark: Boolean, accent: String): ColorScheme {

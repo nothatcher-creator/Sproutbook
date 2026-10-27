@@ -61,6 +61,7 @@ fun HomeScreen(
     val now = rememberNow(interval = 60000)
     val today = dateOf(now)
     fun ago(millis: Long) = FriendlyTime.ago(millis, now)
+    val quick = !state.prefs.grandparent
     val routines by
         remember(child.id) { vm.repo.db.routines().observe(child.id, 10000) }
             .collectAsStateWithLifecycle(emptyList())
@@ -171,14 +172,48 @@ fun HomeScreen(
                         } else EntryRow("Routines & responsibilities", "Shared tasks and your family’s daily rhythm", !preview) { go("routines") }
                         "milk_freezer" -> EntryRow("Milk freezer · ${volume(milkStock.totalMl, state.prefs.volumeUnit)}", "${milkStock.count} frozen containers", !preview) { go("milk") }
                         "pregnancy" -> EntryRow("Your pregnancy", "Movements, appointments and preparation", !preview) { go("pregnancy") }
-                        "sleep" -> EntryRow("Log sleep", sleep.firstOrNull()?.let { s -> s.endsAt?.let { end -> "Woke ${ago(end)} · ${durationText(end - s.startsAt)} sleep" }
-                            ?: "Sleeping now · since ${stamp(s.startsAt, state.prefs.time24)}" }
+                        "sleep" -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            EntryRow("Log sleep", sleep.firstOrNull()?.let { s -> s.endsAt?.let { end -> "Woke ${ago(end)} · ${durationText(end - s.startsAt)} sleep" }
+                            ?: ("Sleeping now · since " + if (dateOf(s.startsAt) == today) java.time.Instant.ofEpochMilli(s.startsAt)
+                                .atZone(java.time.ZoneId.systemDefault()).format(DateTimeFormatter.ofPattern(if (state.prefs.time24) "HH:mm" else "h:mm a"))
+                                else stamp(s.startsAt, state.prefs.time24)) }
                             ?: "Start a nap or settle in for the night", !preview) { go("sleep") }
+                            if (quick) {
+                                val current = sleep.firstOrNull()?.takeIf { it.endsAt == null }
+                                QuickLogRow(
+                                    if (current != null) listOf("Stop ${current.kind.lowercase()}" + ((now - current.startsAt) / 60_000).let { m ->
+                                        when { m < 1 -> ""; m < 60 -> " · $m min"; else -> " · ${m / 60} h ${m % 60} min" } })
+                                    else listOf("Start nap", "Start night"),
+                                    enabled = !preview, tag = "sleep",
+                                ) { label ->
+                                    if (current != null) vm.performUndoable("${current.kind} ended", {
+                                        vm.repo.saveSleep(current.copy(endsAt = System.currentTimeMillis()))
+                                    }) { vm.repo.saveSleep(current) }
+                                    else {
+                                        val started = Sleep(childId = child.id, startsAt = System.currentTimeMillis(),
+                                            kind = if (label.endsWith("night")) "Night" else "Nap")
+                                        vm.performUndoable("${started.kind} started", { vm.repo.saveSleep(started) }) {
+                                            vm.repo.write { vm.repo.db.sleeps().delete(started.id, started.childId) }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         "milestones" -> EntryRow("Milestones & achievements", "A growing story of their own", !preview) { go("milestones") }
                         "feeding" -> EntryRow("Log feeding", feeds.firstOrNull { it.kind != "Pump" }?.let { "Last feed ${ago(it.startsAt)} · ${it.kind.lowercase()}" }
                             ?: "Bottle, breast or pump", !preview) { go("feeding") }
-                        "diapers" -> EntryRow("Log diaper", diaper.firstOrNull()?.let { "Last change ${ago(it.recordedAt)} · ${it.kind.lowercase()}" }
+                        "diapers" -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            EntryRow("Log diaper", diaper.firstOrNull()?.let { "Last change ${ago(it.recordedAt)} · ${it.kind.lowercase()}" }
                             ?: "Wet, dirty or mixed, in a tap", !preview) { go("diapers") }
+                            if (quick) {
+                                QuickLogRow(listOf("Wet", "Dirty", "Mixed"), enabled = !preview, tag = "diaper") { kind ->
+                                    val change = Diaper(childId = child.id, recordedAt = System.currentTimeMillis(), kind = kind)
+                                    vm.performUndoable("$kind diaper logged", { vm.repo.saveDiaper(change) }) {
+                                        vm.repo.write { vm.repo.db.diapers().delete(change.id, change.childId) }
+                                    }
+                                }
+                            }
+                        }
                         "growth" -> EntryRow("Growth journal", "Weight, height and their recorded trends", !preview) { go("growth") }
                         "quick_actions" -> Panel {
                             Section("Quick actions")
@@ -225,6 +260,20 @@ fun HomeScreen(
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@Composable
+private fun QuickLogRow(labels: List<String>, enabled: Boolean, tag: String, onLog: (String) -> Unit) {
+    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        labels.forEach { label ->
+            FilledTonalButton(onClick = { onLog(label) }, enabled = enabled, shape = MaterialTheme.shapes.medium,
+                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp),
+                modifier = Modifier.weight(1f).heightIn(min = 48.dp)
+                    .testTag("today-log-$tag-${label.substringBefore(" ·").lowercase().replace(' ', '-')}")) {
+                Text(label, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
             }
         }
     }

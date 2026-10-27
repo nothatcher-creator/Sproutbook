@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.*
+import kotlinx.coroutines.flow.collectLatest
 import androidx.navigation.navArgument
 import androidx.navigation.NavType
 import androidx.compose.ui.semantics.clearAndSetSemantics
@@ -83,6 +84,13 @@ fun AppRoot(
     LaunchedEffect(route) { if (route != "home-organizer") organizerPreview = null }
     BackHandler(enabled = route == "home-organizer" && organizerPreview != null) { organizerPreview = null }
     LaunchedEffect(vm) { vm.messages.collect { snackbar.showSnackbar(it) } }
+    LaunchedEffect(vm) {
+        // collectLatest replaces an older Undo with the newest, so Undo always reverses the last tap.
+        vm.undos.collectLatest { change ->
+            if (snackbar.showSnackbar(change.text, "Undo", duration = SnackbarDuration.Long) == SnackbarResult.ActionPerformed)
+                vm.perform("Undone") { change.undo() }
+        }
+    }
     WoodlandMotionProvider(state.prefs.reduceMotion, !switcher && !adding && !state.loading) {
     Box(Modifier.fillMaxSize()) {
     WoodlandBackground(route in listOf("schedule", "care", "more") && state.child != null)
@@ -91,7 +99,14 @@ fun AppRoot(
         contentColor = MaterialTheme.colorScheme.onBackground,
         snackbarHost = {
             SnackbarHost(snackbar) { data ->
-                Snackbar {
+                Snackbar(Modifier.padding(horizontal = 12.dp, vertical = 8.dp), shape = MaterialTheme.shapes.medium,
+                    action = data.visuals.actionLabel?.let { label ->
+                    {
+                        TextButton(onClick = { data.performAction() }, Modifier.testTag("snackbar-undo")) {
+                            Text(label, color = MaterialTheme.colorScheme.inversePrimary)
+                        }
+                    }
+                }) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         if (data.visuals.message == "Saved") WoodlandMotionAsset("feedback-saved", Modifier.size(32.dp),
                             play = true, dark = MaterialTheme.colorScheme.background.red < .3f,

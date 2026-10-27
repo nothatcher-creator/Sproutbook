@@ -44,23 +44,17 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
         }
         item {
             Action("Log wet diaper", !state.prefs.grandparent) {
-                vm.perform("Wet diaper logged") {
-                    vm.repo.saveDiaper(
-                        Diaper(childId = child.id, recordedAt = System.currentTimeMillis())
-                    )
+                val change = Diaper(childId = child.id, recordedAt = System.currentTimeMillis())
+                vm.performUndoable("Wet diaper logged", { vm.repo.saveDiaper(change) }) {
+                    vm.repo.write { vm.repo.db.diapers().delete(change.id, change.childId) }
                 }
             }
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 OutlinedButton(
                     onClick = {
-                        vm.perform("Dirty diaper logged") {
-                            vm.repo.saveDiaper(
-                                Diaper(
-                                    childId = child.id,
-                                    recordedAt = System.currentTimeMillis(),
-                                    kind = "Dirty",
-                                )
-                            )
+                        val change = Diaper(childId = child.id, recordedAt = System.currentTimeMillis(), kind = "Dirty")
+                        vm.performUndoable("Dirty diaper logged", { vm.repo.saveDiaper(change) }) {
+                            vm.repo.write { vm.repo.db.diapers().delete(change.id, change.childId) }
                         }
                     },
                     enabled = !state.prefs.grandparent,
@@ -70,14 +64,9 @@ fun DiaperScreen(vm: FamilyViewModel, state: FamilyState) {
                 }
                 OutlinedButton(
                     onClick = {
-                        vm.perform("Mixed diaper logged") {
-                            vm.repo.saveDiaper(
-                                Diaper(
-                                    childId = child.id,
-                                    recordedAt = System.currentTimeMillis(),
-                                    kind = "Mixed",
-                                )
-                            )
+                        val change = Diaper(childId = child.id, recordedAt = System.currentTimeMillis(), kind = "Mixed")
+                        vm.performUndoable("Mixed diaper logged", { vm.repo.saveDiaper(change) }) {
+                            vm.repo.write { vm.repo.db.diapers().delete(change.id, change.childId) }
                         }
                     },
                     enabled = !state.prefs.grandparent,
